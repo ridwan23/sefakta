@@ -8,19 +8,22 @@ Identitas resmi SeFakta berada di `docs/brand/IDENTITAS-BRAND-SEFAKTA.md` dan `d
 
 Baca `docs/brand/PANDUAN-AI-AGENT-PRODUKSI.md` sebelum memproduksi atau merevisi episode. Panduan tersebut menetapkan standar cerita, retensi, riset, alignment caption, audio, dan pemeriksaan editorial. Jangan menyebut timestamp perkiraan berdasarkan panjang kata sebagai subtitle yang sudah tersinkron akurat.
 
-1. Baca atau buat brief di `briefs/<episode>.json` (format ada di panduan produksi) dan jalankan `npm run validate:facts`.
-2. Buat storyboard singkat: tujuan setiap scene, durasi, headline, aset, dan fokus visual.
-3. Gunakan scene dan komponen yang tersedia sebelum membuat yang baru.
-4. Buka Remotion Studio dan periksa frame awal, tengah, perpindahan scene, serta akhir.
-5. Jalankan `npm run quality` sebelum menyerahkan preview.
-6. Render MP4 hanya ketika pengguna memintanya secara eksplisit.
+1. Buat kerangka episode: `npm run new:episode -- <id> --title="…" --series=<Pilar>`. Isi naskah per scene dan `facts[]` di `briefs/<id>.json`, lalu `npm run validate:facts` sampai bersih.
+2. Buat storyboard singkat: tujuan setiap scene, durasi, headline, aset, dan fokus visual (isi `headline` dan `visual` per scene di brief).
+3. Voice-over Fish Audio: `npm run vo -- --brief=briefs/<id>.json` (cek dulu dengan `--dry-run`). Audio dinormalisasi ke -14 LUFS otomatis. Dengarkan hasilnya.
+4. Caption tersinkron: `npm run align -- --brief=briefs/<id>.json` (whisper.cpp + penyelarasan ke naskah). Kata yang dilaporkan "tidak terdengar" wajib didengarkan; buat ulang scene itu bila salah ucap (`--scene=<id> --force`).
+5. Buat visual per scene di `src/topics/<id>/scenes.tsx`. Gunakan scene dan komponen yang tersedia sebelum membuat yang baru. Durasi scene mengikuti audio; jangan mengubah template di `src/shared/episode/` untuk satu episode.
+6. Buka Remotion Studio dan periksa frame awal, tengah, perpindahan scene, serta akhir.
+7. Jalankan `npm run quality` sebelum menyerahkan preview; sebelum tayang `npm run check:publish`.
+8. Render MP4 hanya ketika pengguna memintanya secara eksplisit.
 
 ## Batas arsitektur
 
 - `src/topics/<topik>/`: kode satu topik video. `compositions.tsx` mendaftarkan komposisinya; `src/Root.tsx` hanya memanggil per topik.
-- `src/shared/`: elemen reusable lintas topik: `brand/` (watermark, CTA, font), `captions/`, `motion.ts`. Jangan menaruh logika satu topik di sini.
+- `src/shared/`: elemen reusable lintas topik: `episode/` (template episode: timeline dari audio, VO, caption, watermark, CTA), `brand/` (watermark, CTA, font), `captions/`, `motion.ts`. Jangan menaruh logika satu topik di sini.
 - `briefs/`: brief dan fakta per episode (`<episode>.json`).
-- `scripts/`: validator fakta (`validate-facts.ts`) dan sinkronisasi CTA (`sync-cta.ts`).
+- `scripts/`: `new-episode.ts`, `vo-fish.ts` (Fish Audio + loudness), `align-captions.ts` (whisper), `check-episodes.ts`, `validate-facts.ts`, `sync-cta.ts`; pengujian di `scripts/tests/`.
+- `.env`: kunci Fish Audio (`FISH_AUDIO_API_KEY`, `FISH_AUDIO_REFERENCE_ID`); jangan dicetak, disalin ke manifest, atau di-commit.
 - `docs/`: `brand/` (identitas dan panduan) serta dokumen per topik.
 - `public/`: aset runtime, dibaca lewat `staticFile()`: `brand/` dan `<topik>/`.
 - `out/<topik>/`: hasil render.
@@ -52,7 +55,8 @@ Keputusan pemilik (2026-11-07): font Poppins, pembuka narasi "SeFakta hari ini: 
 
 ## Quality gate
 
-- Tidak ada error TypeScript, ESLint, atau bundle.
+- Tidak ada error TypeScript, ESLint, atau bundle (`npm run quality`).
+- Episode lolos `npm run check:episodes`: VO sesuai naskah, loudness -14 ±1 LUFS dan true peak ≤ -1 dBTP, caption tersinkron dengan cakupan kata ≥ 90%, durasi cerita 55–65 dtk; sebelum tayang tidak ada visual placeholder (`--publish`).
 - Fakta episode lolos `npm run validate:facts`; sebelum publikasi jalankan dengan `-- --publish`.
 - Tidak ada frame kosong yang tidak disengaja.
 - Copy tidak overflow dan hierarchy tetap jelas.

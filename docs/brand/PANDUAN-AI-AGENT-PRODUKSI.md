@@ -1,6 +1,6 @@
 # Panduan produksi AI agent — SeFakta
 
-Versi 1.1 · 7 November 2026
+Versi 1.2 · 7 November 2026
 
 ## Tujuan dan prioritas
 
@@ -88,7 +88,7 @@ Jeda narator harus memiliki fungsi: membaca data, mengamati perubahan, atau mera
 - Regenerasi hanya scene yang perlu diperbaiki. Jangan menjalankan `--force` seluruh episode tanpa kebutuhan.
 - Aktifkan audio otomatis hanya setelah semua aset episode tersedia dan valid. Metadata harus mencerminkan teks dan pengaturan yang benar-benar menghasilkan file tersebut.
 
-Generator Fish Audio (`voiceover:fish`) ada di proyek `sefakta-builder` dan belum dipindahkan ke sini. Sampai itu terjadi, VO disiapkan di luar proyek dan disimpan di `public/<topik>/` (contoh: `public/matrix-effect/vo_v3_narasi.wav`); ukur durasinya dengan `ffprobe`.
+Perintah: `npm run vo -- --brief=briefs/<episode>.json --dry-run` (cek teks tanpa kredit), `npm run vo -- --brief=…` (membuat scene yang belum ada atau naskahnya berubah), dan `npm run vo -- --brief=… --scene=<id> --force` (satu scene). Audio per scene disimpan di `public/<episode>/vo/` dan dinormalisasi ke -14 LUFS (true peak -1,5 dBTP); manifest mencatat hash naskah, durasi, dan loudness. Durasi scene di video mengikuti audio (minimal `durationSeconds` brief).
 
 ## 5. Caption yang benar-benar sinkron
 
@@ -97,6 +97,8 @@ Agent memilih mode caption sesuai konsep visual episode dan mencatatnya di brief
 Timestamp kata harus berasal dari transkripsi, alignment audio, atau timing provider yang diverifikasi. Membagi durasi MP3 berdasarkan panjang kata hanya menghasilkan perkiraan, bukan sinkronisasi ucapan yang akurat.
 
 Timestamp hasil pembobotan panjang kata — termasuk interpolasi antar kata kunci di `src/topics/matrix-effect/2d/timeline.ts` — adalah draft. Sebelum menyatakan subtitle sinkron atau siap publikasi, ganti dengan alignment nyata dan periksa awal, tengah, serta akhir setiap scene sambil mendengarkan audio.
+
+`npm run align -- --brief=…` membuat timestamp kata dari audio: whisper.cpp (model multilingual `small`) mentranskripsi tiap scene, lalu kata naskah dicocokkan ke kata yang terdengar. Waktu diambil dari audio, teks dari naskah. Hasil uji pada VO lama: selisih rata-rata 0,18 dtk terhadap timing terukur (maks 0,74 dtk). Kata yang tidak cocok dilaporkan sebagai "tidak terdengar" dan waktunya diinterpolasi (`confidence: null`); dengarkan dan buat ulang scene bila salah ucap. Caption menjadi usang otomatis bila audio diganti.
 
 Gunakan struktur `Caption` Remotion dengan `startMs`, `endMs`, `timestampMs`, dan `confidence`. Simpan data JSON, relatif terhadap sumber audio. Audio dan caption harus berada dalam kelompok timeline yang sama. Jika audio diganti, caption lama menjadi tidak valid dan harus dibuat ulang.
 
@@ -162,4 +164,5 @@ Bandingkan episode pada platform, panjang, dan audiens yang sebanding. Uji satu 
 
 ## Riwayat revisi
 
+- **1.2 (7 Nov 2026):** Fish Audio dipindah ke proyek ini (`npm run vo`, normalisasi -14 LUFS); caption tersinkron via whisper.cpp (`npm run align`); template episode `src/shared/episode/`; `npm run new:episode`, `check:episodes`, `check:publish`.
 - **1.1 (7 Nov 2026):** format fakta dan validator (`validate:facts`); mode caption dipilih agent (`captionMode`); CTA resmi = `SeFaktaCta` di atas frame akhir (tanpa end card terpisah); aturan margin/area aman dihapus; rujukan Fish Audio disesuaikan dengan proyek ini.

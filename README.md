@@ -62,18 +62,34 @@ File yang disebut dokumen brand tetapi belum ada di `docs/brand/`: `logo-utama.p
 
 Preview: `npm start` (Studio mengelompokkan komposisi per topik). Render MP4 hanya bila diminta; hasilnya masuk ke `out/<topik>/`.
 
+## Alur episode baru
+
+```bash
+npm run new:episode -- tambora-1815 --title="Letusan Tambora 1815" --series=Alam
+# isi naskah per scene + facts[] di briefs/tambora-1815.json
+npm run validate:facts                                   # fakta & angka
+npm run vo -- --brief=briefs/tambora-1815.json --dry-run # cek teks tanpa kredit
+npm run vo -- --brief=briefs/tambora-1815.json           # Fish Audio → public/tambora-1815/vo/ (-14 LUFS)
+npm run align -- --brief=briefs/tambora-1815.json        # whisper → caption tersinkron
+# buat visual per scene di src/topics/tambora-1815/scenes.tsx, pratinjau: npm start
+npm run quality                                          # fakta, episode, ESLint, tsc, bundle
+npm run check:publish                                    # sebelum tayang: URL sumber + tanpa placeholder
+```
+
+Template (`src/shared/episode/`) menghitung durasi dari audio, memutar VO per scene, menampilkan caption sesuai `captionMode`, watermark, lalu klip CTA bersuara. Butuh `.env` berisi kunci Fish Audio (lihat `.env.example`). Whisper (±540 MB) terpasang di `.whisper/` saat `npm run align` pertama kali.
+
 ## Validator fakta
 
 ```bash
 npm run validate:facts                # mode draft: fakta belum terverifikasi = peringatan
 npm run validate:facts -- --publish   # sebelum publikasi: peringatan itu menjadi error
 npm run validate:facts:online         # --publish + buka semua URL (butuh internet)
-npm run quality                       # validator + cek CTA sinkron + tsc
+npm run test:validator                # 46 pengujian validator
 ```
 
 Memeriksa `briefs/*.json`: minimal dua sumber dengan `origin` berbeda, angka tertulis di `quote` sumber, setiap angka di narasi tercakup fakta yang dirujuk scene, fakta yang bertentangan dengan sumber tidak boleh dipakai, durasi 55–65 dtk, dan panjang caption pada mode `ringkasan`. Dengan `--check-urls` ia juga membuka setiap URL: link mati = error, dan `quote` harus tertulis verbatim di halamannya. Format brief ada di panduan produksi (§1).
 
-**Video lama:** `briefs/matrix-effect.json` berstatus `arsip` dan dilewati validator. Video lama dibiarkan apa adanya; aturan berlaku untuk video berikutnya. Catatan kesalahan angkanya tetap ada di brief dan `docs/matrix-effect/NASKAH-REVISI.md`.
+**Video lama:** `briefs/matrix-effect.json` berstatus `arsip` dan dilewati validator. Video lama dibiarkan apa adanya; aturan berlaku untuk video berikutnya.
 
 ## CTA dan watermark
 - **CTA**: `shared/brand/CtaClip.tsx` memutar `public/brand/cta-opsi1.mp4` (4 dtk, **bersuara**) setelah transisi iris dari frame terakhir. `docs/brand/cta-sefakta.tsx` tetap sumber desain; komponen `SeFaktaCta` (`npm run sync:cta`) tersedia tetapi belum dipakai.
