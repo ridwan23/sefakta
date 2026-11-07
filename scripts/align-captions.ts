@@ -135,13 +135,22 @@ export const alignScene = (text: string, heardWords: Word[], durationMs: number)
 };
 
 // ---------------------------------------------------------------- CLI
-if (import.meta.url === `file://${process.argv[1]}`) {
+/** Pasang whisper.cpp + model ke .whisper/ (dipakai juga oleh `npm run setup:whisper`). */
+export const ensureWhisper = async () => {
+  await installWhisperCpp({ to: WHISPER_DIR, version: WHISPER_VERSION, printOutput: false });
+  await downloadWhisperModel({ model: MODEL, folder: WHISPER_DIR, printOutput: false });
+};
+if (process.argv.includes('--setup-only')) {
+  console.log(`Memasang whisper.cpp ${WHISPER_VERSION} + model "${MODEL}" ke .whisper/ (±540 MB, beberapa menit)…`);
+  await ensureWhisper();
+  console.log('✓ Whisper siap.');
+} else if (import.meta.url === `file://${process.argv[1]}`) {
   const { brief } = loadBrief();
   const P = paths(brief.projectId);
   if (!existsSync(P.manifest)) throw new Error(`Manifest VO belum ada. Jalankan dulu: npm run vo -- --brief=...`);
   const manifest = JSON.parse(readFileSync(P.manifest, 'utf8'));
-  await installWhisperCpp({ to: WHISPER_DIR, version: WHISPER_VERSION, printOutput: false });
-  await downloadWhisperModel({ model: MODEL, folder: WHISPER_DIR, printOutput: false });
+  if (!existsSync(join(WHISPER_DIR, `ggml-${MODEL}.bin`))) console.log('Whisper belum terpasang: memasang dulu (±540 MB, sekali saja)…');
+  await ensureWhisper();
 
   const result: Record<string, unknown> = {};
   let worst = 1;

@@ -2,12 +2,17 @@
   "name": "sefakta-remotion",
   "version": "1.0.0",
   "private": true,
+  "engines": {
+    "node": ">=22.6"
+  },
   "scripts": {
     "start": "remotion preview",
     "build:matrix2d": "remotion render MatrixEffect2D out/matrix-effect/matrix_effect_2d.mp4",
     "validate:facts": "node --no-warnings --experimental-strip-types scripts/validate-facts.ts",
     "validate:facts:online": "node --no-warnings --experimental-strip-types scripts/validate-facts.ts --publish --check-urls",
     "test:validator": "python3 scripts/tests/test_validator.py && python3 scripts/tests/test_urls.py",
+    "doctor": "node --no-warnings --experimental-strip-types scripts/doctor.ts",
+    "setup:whisper": "node --no-warnings --experimental-strip-types scripts/align-captions.ts --setup-only",
     "new:episode": "node --no-warnings --experimental-strip-types scripts/new-episode.ts",
     "vo": "node --env-file-if-exists=.env --no-warnings --experimental-strip-types scripts/vo-fish.ts",
     "align": "node --no-warnings --experimental-strip-types scripts/align-captions.ts",

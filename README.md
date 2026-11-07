@@ -4,12 +4,15 @@ Video vertikal 9:16 (1080×1920) untuk YouTube Shorts dan Facebook Reels. **Satu
 
 Aturan produksi untuk agent ada di [AGENTS.md](AGENTS.md) (dimuat otomatis lewat `CLAUDE.md`). Baca juga [panduan produksi](docs/brand/PANDUAN-AI-AGENT-PRODUKSI.md).
 
+**Mesin baru?** Ikuti [docs/SETUP.md](docs/SETUP.md): `npm install` → isi `.env` → `npm run setup:whisper` → `npm run doctor`.
+
 ## Struktur
 
 ```
 AGENTS.md, CLAUDE.md          aturan produksi untuk agent
 briefs/<episode>.json         naskah per scene + fakta, sumber, dan angka (diperiksa validator)
 scripts/
+  doctor.ts                   cek lingkungan (alat, .env, whisper, disk)
   new-episode.ts              kerangka episode baru (brief + topik + Root)
   vo-fish.ts                  voice-over Fish Audio, normalisasi -14 LUFS
   align-captions.ts           caption tersinkron (whisper.cpp + penyelarasan ke naskah)
@@ -45,6 +48,7 @@ out/
 | Dokumen | Fungsi | Status |
 |---|---|---|
 | `AGENTS.md` | Aturan kerja agent | Berlaku |
+| `docs/SETUP.md` | Persiapan lingkungan, Whisper, `.env`, pemecahan masalah | Berlaku |
 | `docs/brand/IDENTITAS-BRAND-SEFAKTA.md`, `PANDUAN-BRAND-SEFAKTA.md` | Identitas dan aturan brand | Kanonis |
 | `docs/brand/PANDUAN-AI-AGENT-PRODUKSI.md` | Riset, cerita, VO, caption, gaya visual, rubrik, format `briefs/` | Berlaku (v1.3) |
 | `docs/brand/cta-sefakta.tsx` | Desain asli CTA (video memakai klip `cta-opsi1.mp4`) | Referensi |
