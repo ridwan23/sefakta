@@ -27,6 +27,9 @@ Baca `docs/brand/PANDUAN-AI-AGENT-PRODUKSI.md` sebelum memproduksi atau merevisi
 
 ## Identitas SeFakta yang dikunci
 
+Keputusan pemilik (2026-11-07): font Poppins, pembuka narasi "SeFakta hari ini: …", dan gaya watercolor yang disebut dokumen brand dan panduan produksi **tidak wajib**. Bila dokumen lain menyebutnya, `AGENTS.md` yang berlaku.
+
+
 - Format utama: vertikal 1080×1920, 30 fps, sekitar 60 detik.
 - Username resmi: `@sefaktaofficial`.
 - Biru SeFakta `#0D2250`, Kuning Fakta `#FFB000`, Biru Malam `#081736`.

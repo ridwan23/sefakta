@@ -8,7 +8,7 @@ Hasilkan satu pengetahuan yang jelas, benar, dan menarik dalam video vertikal se
 
 Prioritas keputusan: akurasi → kejelasan → alur cerita → keterbacaan dan audio → keindahan. Jangan mengorbankan fakta untuk kejutan atau memperpanjang video hanya untuk mencapai durasi.
 
-Acuan brand: `IDENTITAS-BRAND-SEFAKTA.md` dan `PANDUAN-BRAND-SEFAKTA.md`. Gunakan watercolor + motion graphic, warna resmi, Poppins ExtraBold untuk judul, Poppins/Inter untuk isi. Format utama 1080×1920, 30 fps, 55–65 detik. Narasi dimulai pada frame 0 dengan “SeFakta hari ini: …”. Gunakan watermark resmi dan klip CTA resmi (`public/brand/cta-opsi1.mp4`, bersuara) setelah transisi iris dari frame fakta terakhir.
+Acuan brand: `IDENTITAS-BRAND-SEFAKTA.md` dan `PANDUAN-BRAND-SEFAKTA.md`. *(Catatan 2026-11-07: watercolor, Poppins, dan pembuka "SeFakta hari ini" di paragraf ini kini opsional; lihat `AGENTS.md`.)* Gunakan watercolor + motion graphic, warna resmi, Poppins ExtraBold untuk judul, Poppins/Inter untuk isi. Format utama 1080×1920, 30 fps, 55–65 detik. Narasi dimulai pada frame 0 dengan “SeFakta hari ini: …”. Gunakan watermark resmi dan klip CTA resmi (`public/brand/cta-opsi1.mp4`, bersuara) setelah transisi iris dari frame fakta terakhir.
 
 ## 1. Riset sebelum produksi
 
