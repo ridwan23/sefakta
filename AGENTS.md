@@ -27,6 +27,8 @@ Baca `docs/brand/PANDUAN-AI-AGENT-PRODUKSI.md` sebelum memproduksi atau merevisi
 
 ## Identitas SeFakta yang dikunci
 
+Aturan di dokumen ini berlaku untuk video berikutnya. Video yang sudah ada (matrix-effect, file-deleted) dibiarkan apa adanya; brief-nya berstatus `arsip` dan dilewati validator.
+
 Keputusan pemilik (2026-11-07): font Poppins, pembuka narasi "SeFakta hari ini: …", dan gaya watercolor yang disebut dokumen brand dan panduan produksi **tidak wajib**. Bila dokumen lain menyebutnya, `AGENTS.md` yang berlaku.
 
 

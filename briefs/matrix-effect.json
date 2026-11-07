@@ -2,10 +2,10 @@
   "projectId": "matrix-effect",
   "title": "Efek Matrix: kenapa waktu terasa melambat saat panik",
   "series": "Sains",
-  "status": "draft",
+  "status": "arsip",
   "captionMode": "subtitle",
   "captionSource": "src/topics/matrix-effect/2d/timeline.ts",
-  "notes": "Naskah = VO v3 (public/matrix-effect/vo_v3_narasi.wav). Durasi scene = jarak antar awal kalimat VO.",
+  "notes": "ARSIP: video lama, dibuat sebelum aturan validator. Dibiarkan apa adanya; catatan fakta di bawah tetap sebagai riwayat. Naskah = VO v3 (public/matrix-effect/vo_v3_narasi.wav). Durasi scene = jarak antar awal kalimat VO.",
   "scenes": [
     {
       "id": "s1",

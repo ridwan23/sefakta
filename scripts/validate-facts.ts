@@ -30,7 +30,7 @@ const SERIES = ['Alam', 'Sains', 'Sejarah', 'Antariksa', 'Teknologi', 'Tubuh'];
 const KINDS = ['fakta', 'perkiraan', 'interpretasi', 'ilustrasi'];
 const STATUSES = ['terverifikasi', 'belum-terverifikasi', 'bertentangan'];
 const CAPTION_MODES = ['ringkasan', 'subtitle', 'headline'];
-const BRIEF_STATUSES = ['draft', 'siap-publikasi'];
+const BRIEF_STATUSES = ['draft', 'siap-publikasi', 'arsip']; // arsip = video lama, dilewati validator
 const MAX_QUOTE = 400;
 const STALE_DAYS = 120;
 
@@ -298,6 +298,7 @@ const main = async () => {
     let stats: Record<string, number> | undefined;
     try {
       const brief = JSON.parse(readFileSync(join(dir, f), 'utf8'));
+      if (brief.status === 'arsip') { console.log(`\n- ${f}  [arsip] dilewati (video lama, dibuat sebelum aturan ini)`); continue; }
       issues = validateBrief(brief, f, publish);
       issues.push(...(await checkCaptions(brief)));
       if (online) { const r = await checkUrls(brief, timeoutMs); issues.push(...r.issues); stats = r.stats; }

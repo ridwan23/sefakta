@@ -1,5 +1,7 @@
 # Usulan revisi naskah VO v3 — Efek Matrix
 
+> **Status: tidak dikerjakan.** Video ini diarsipkan apa adanya (keputusan pemilik 2026-11-07). Disimpan sebagai catatan bila suatu saat direvisi.
+
 Tiga kalimat VO v3 bertentangan dengan makalah sumbernya (Stetson, Fiesta & Eagleman 2007, PLoS ONE,
 [PMC2110887](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2110887/), dibaca 2026-11-07), dan satu kalimat terlalu pasti.
 Yang perlu direkam ulang hanya **S3, S10, S11**. Target durasi = panjang slot lama, supaya timing visual lain tidak bergeser.

@@ -73,7 +73,7 @@ npm run quality                       # validator + cek CTA sinkron + tsc
 
 Memeriksa `briefs/*.json`: minimal dua sumber dengan `origin` berbeda, angka tertulis di `quote` sumber, setiap angka di narasi tercakup fakta yang dirujuk scene, fakta yang bertentangan dengan sumber tidak boleh dipakai, durasi 55–65 dtk, dan panjang caption pada mode `ringkasan`. Dengan `--check-urls` ia juga membuka setiap URL: link mati = error, dan `quote` harus tertulis verbatim di halamannya. Format brief ada di panduan produksi (§1).
 
-**Keadaan sekarang:** `briefs/matrix-effect.json` gagal validator (3 error). Dibandingkan dengan teks makalah ([PMC2110887](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2110887/), dibaca 2026-11-07), VO v3 salah di tiga angka: "sembilan puluh kaki" (makalah: 31 m ≈ 102 kaki), "dua puluh tiga relawan" (makalah: 13 + 7 = 20 peserta), dan "lima kali lebih lama" (makalah: +36%). Angka "delapan puluh persen" tidak ada di makalah, dan peran amigdala di makalah hanya spekulasi ("we speculate … may"). Perbaiki naskah dan rekam ulang kalimat 3, 10, dan 11.
+**Video lama:** `briefs/matrix-effect.json` berstatus `arsip` dan dilewati validator. Video lama dibiarkan apa adanya; aturan berlaku untuk video berikutnya. Catatan kesalahan angkanya tetap ada di brief dan `docs/matrix-effect/NASKAH-REVISI.md`.
 
 ## CTA dan watermark
 - **CTA**: `shared/brand/CtaClip.tsx` memutar `public/brand/cta-opsi1.mp4` (4 dtk, **bersuara**) setelah transisi iris dari frame terakhir. `docs/brand/cta-sefakta.tsx` tetap sumber desain; komponen `SeFaktaCta` (`npm run sync:cta`) tersedia tetapi belum dipakai.

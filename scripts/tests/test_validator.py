@@ -40,6 +40,7 @@ check("T12 durasi 40 dtk: draft=warn",run(mut(lambda b:b["scenes"][0].update(dur
 check("T12b durasi 40 dtk: publish=error",run(mut(lambda b:b["scenes"][0].update(durationSeconds=10)),"--publish"),1)
 check("T13 ringkasan: caption 5 kata",run(mut(lambda b:(b.update(captionMode="ringkasan"),[s.update(caption="satu dua tiga empat lima") for s in b["scenes"]]))),1,"8–14 kata")
 check("T13b ringkasan: caption 10 kata",run(mut(lambda b:(b.update(captionMode="ringkasan"),[s.update(caption="kopi hitam itu terasa pahit tapi hangat di pagi hari") for s in b["scenes"]]))),0)
+check("T19 brief arsip dilewati walau berisi error",run(mut(lambda b:(b.update(status="arsip"),b["facts"][0].update(status="bertentangan")))),0,"dilewati")
 check("T14 series salah",run(mut(lambda b:b.update(series="Gosip"))),1,"series")
 check("T15 'tiga detik' tak tercakup",run(mut(lambda b:b["scenes"][1].update(voiceoverText="Melayang tiga detik."))),1,"= 3")
 check("T15b 'satu fakta' tanpa unit diabaikan",run(BASE),0)
