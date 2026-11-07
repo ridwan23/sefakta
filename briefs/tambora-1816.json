@@ -1,0 +1,390 @@
+{
+  "projectId": "tambora-1816",
+  "title": "Gunung di Indonesia yang Bikin Eropa Kehilangan Musim Panas",
+  "series": "Sejarah",
+  "status": "draft",
+  "captionMode": "subtitle",
+  "visualStyle": {
+    "name": "Peta arsip kertas tua abad ke-19",
+    "reason": "Kisah sejarah lintas benua (Sumbawa → Eropa → novel 1818): peta tinta di atas kertas arsip menjelaskan jarak dan arah sebab-akibat, dan diagram lapisan udara bergaya ukiran tetap menyatu dengan era 1815–1816. Satu warna bara untuk letusan, biru dingin untuk musim panas yang hilang.",
+    "tone": "light",
+    "palette": [
+      "#F3EAD7",
+      "#2B2118",
+      "#B23A0B",
+      "#3E5F8A",
+      "#8C7B62"
+    ],
+    "captionColors": {
+      "text": "#2B2118",
+      "highlight": "#B23A0B",
+      "highlightText": "#FFFFFF"
+    }
+  },
+  "scenes": [
+    {
+      "id": "hook",
+      "durationSeconds": 7,
+      "voiceoverText": "Gunung di Indonesia ini pernah bikin Eropa seolah kehilangan musim panas. Dan tanpa sengaja, ikut melahirkan Frankenstein.",
+      "caption": "",
+      "headline": "Musim panas yang hilang",
+      "visual": "Peta dunia kertas arsip: titik bara di Sumbawa, garis putus-putus melengkung ke Eropa; ikon matahari di atas Eropa meredup dan dicoret. Siluet buku 'Frankenstein' mengintip di sudut.",
+      "factIds": [
+        "f-1816",
+        "f-frankenstein"
+      ]
+    },
+    {
+      "id": "konteks",
+      "durationSeconds": 10.5,
+      "voiceoverText": "April seribu delapan ratus lima belas, Gunung Tambora di Pulau Sumbawa meletus. Ini letusan terbesar dalam sejarah yang tercatat. Sekitar sepuluh ribu orang meninggal seketika.",
+      "caption": "",
+      "headline": "Tambora, April 1815",
+      "visual": "Kamera peta menyelam ke Nusa Tenggara: label Sumbawa, stempel tanggal 'April 1815', gunung meletus dengan kolom abu tinta; penghitung '±10.000 jiwa'.",
+      "factIds": [
+        "f-letusan",
+        "f-terbesar",
+        "f-korban"
+      ]
+    },
+    {
+      "id": "mekanisme",
+      "durationSeconds": 14.5,
+      "voiceoverText": "Letusannya menyemburkan gas belerang sampai ke stratosfer, jauh di atas awan hujan. Di sana, gas itu menjadi kabut halus yang menyebar mengelilingi Bumi, dan memantulkan sebagian sinar Matahari. Cahaya yang sampai ke permukaan pun berkurang.",
+      "caption": "",
+      "headline": "Kabut di atas awan",
+      "visual": "Diagram lapisan udara bergaya ukiran: awan hujan di bawah, pita stratosfer di atas; kolom gas naik menembus awan, menjadi titik-titik kabut yang melebar membungkus bola Bumi; sinar Matahari memantul balik.",
+      "factIds": [
+        "f-aerosol"
+      ]
+    },
+    {
+      "id": "dampak",
+      "durationSeconds": 16,
+      "voiceoverText": "Akibatnya, musim panas seribu delapan ratus enam belas di Eropa dan Amerika Utara menjadi dingin, gelap, dan basah. Di beberapa tempat, salju turun di tengah musim panas. Panen gagal, dan kelaparan meluas. Tahun itu dijuluki tahun tanpa musim panas.",
+      "caption": "",
+      "headline": "1816: tahun tanpa musim panas",
+      "visual": "Peta Atlantik: Eropa dan Amerika Utara diwarnai biru dingin; termometer turun; ikon gandum layu; stempel '1816 — tahun tanpa musim panas'.",
+      "factIds": [
+        "f-1816",
+        "f-salju",
+        "f-panen"
+      ]
+    },
+    {
+      "id": "jawaban",
+      "durationSeconds": 13,
+      "voiceoverText": "Di tepi Danau Jenewa, Swiss, cuaca buruk mengurung Mary Shelley di dalam rumah. Lord Byron menantang teman-temannya menulis cerita hantu. Dari situlah lahir Frankenstein, monster yang ternyata berakar dari gunung di Sumbawa.",
+      "caption": "",
+      "headline": "Frankenstein lahir dari hujan",
+      "visual": "Rumah di tepi danau di bawah hujan, jendela menyala; buku 'Frankenstein' terbuka; tarik mundur ke peta: garis dari Sumbawa ke Jenewa menutup cerita.",
+      "factIds": [
+        "f-frankenstein",
+        "f-byron",
+        "f-1816"
+      ]
+    }
+  ],
+  "facts": [
+    {
+      "id": "f-letusan",
+      "claim": "Gunung Tambora di Pulau Sumbawa (Indonesia) meletus pada April 1815.",
+      "kind": "fakta",
+      "status": "terverifikasi",
+      "figures": [
+        {
+          "text": "1815",
+          "value": 1815
+        }
+      ],
+      "sources": [
+        {
+          "title": "The Eruption of Mount Tambora (1815-1818)",
+          "url": "https://www.science.smith.edu/climatelit/the-eruption-of-mount-tambora-1815-1818/",
+          "publisher": "Smith College — Climate in Arts and History",
+          "origin": "Smith College (ringkasan pendidikan)",
+          "primary": false,
+          "accessed": "2026-11-07",
+          "quote": "Mount Tambora (image above), a volcano on Sumbawa Island in present-day Indonesia (map below), erupted in April 1815."
+        },
+        {
+          "title": "How a volcano in Indonesia led to the creation of Frankenstein",
+          "url": "https://theconversation.com/how-a-volcano-in-indonesia-led-to-the-creation-of-frankenstein-65293",
+          "publisher": "The Conversation (Richard Gunderman, Indiana University)",
+          "origin": "Richard Gunderman / The Conversation",
+          "primary": false,
+          "accessed": "2026-11-07",
+          "quote": "On April 10, 1815, the volcano ejected an estimated volume of 36 cubic miles (150km³) of volcanic ash into the Earth’s atmosphere, the largest such eruption in recorded history."
+        }
+      ],
+      "limits": "Letusan berlangsung beberapa hari: ledakan pertama 5 April, puncak 10–11 April 1815. Narasi hanya menyebut 'April 1815'."
+    },
+    {
+      "id": "f-terbesar",
+      "claim": "Letusan Tambora 1815 adalah letusan terbesar dalam sejarah yang tercatat.",
+      "kind": "fakta",
+      "status": "terverifikasi",
+      "figures": [],
+      "sources": [
+        {
+          "title": "1815 eruption of Mount Tambora",
+          "url": "https://en.wikipedia.org/wiki/1815_eruption_of_Mount_Tambora",
+          "publisher": "Wikipedia",
+          "origin": "Wikipedia (kompilasi Oppenheimer 2003, Stothers 1984, dkk.)",
+          "primary": false,
+          "accessed": "2026-11-07",
+          "quote": "The 1815 Tambora eruption is the largest observed eruption in recorded history"
+        },
+        {
+          "title": "How a volcano in Indonesia led to the creation of Frankenstein",
+          "url": "https://theconversation.com/how-a-volcano-in-indonesia-led-to-the-creation-of-frankenstein-65293",
+          "publisher": "The Conversation (Richard Gunderman, Indiana University)",
+          "origin": "Richard Gunderman / The Conversation",
+          "primary": false,
+          "accessed": "2026-11-07",
+          "quote": "the largest such eruption in recorded history"
+        }
+      ],
+      "limits": "'Terbesar' = dalam sejarah tercatat (diamati manusia), bukan sepanjang sejarah geologi."
+    },
+    {
+      "id": "f-korban",
+      "claim": "Sekitar 10.000 orang tewas langsung akibat letusan.",
+      "kind": "perkiraan",
+      "status": "terverifikasi",
+      "figures": [
+        {
+          "text": "sepuluh ribu",
+          "value": 10000
+        }
+      ],
+      "sources": [
+        {
+          "title": "1815 eruption of Mount Tambora",
+          "url": "https://en.wikipedia.org/wiki/1815_eruption_of_Mount_Tambora",
+          "publisher": "Wikipedia",
+          "origin": "Zollinger (1855) via Wikipedia",
+          "primary": false,
+          "accessed": "2026-11-07",
+          "quote": "Zollinger (1855) puts the number of direct deaths at 10,000, probably caused by pyroclastic flows."
+        },
+        {
+          "title": "The Eruption of Mount Tambora (1815-1818)",
+          "url": "https://www.science.smith.edu/climatelit/the-eruption-of-mount-tambora-1815-1818/",
+          "publisher": "Smith College — Climate in Arts and History",
+          "origin": "Smith College (ringkasan pendidikan)",
+          "primary": false,
+          "accessed": "2026-11-07",
+          "quote": "10,000 people living on the island were killed in the eruption"
+        }
+      ],
+      "limits": "Angka korban langsung adalah perkiraan sejarah; total korban termasuk kelaparan dan penyakit diperkirakan puluhan ribu hingga lebih (perkiraan berbeda-beda). Narasi memakai 'sekitar' dan 'seketika'."
+    },
+    {
+      "id": "f-aerosol",
+      "claim": "Letusan menyuntikkan gas belerang (SO2) ke stratosfer; gas itu menjadi aerosol sulfat yang menyebar ke seluruh dunia dan memantulkan sebagian sinar Matahari. Akibatnya cahaya Matahari yang sampai ke permukaan berkurang.",
+      "kind": "fakta",
+      "status": "terverifikasi",
+      "figures": [],
+      "sources": [
+        {
+          "title": "The amplifying influence of increased ocean stratification on a future year without a summer",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5663761/",
+          "publisher": "Nature Communications (Fasullo dkk., 2017) via PubMed Central",
+          "origin": "Fasullo dkk. 2017 (penelitian NCAR)",
+          "primary": true,
+          "accessed": "2026-11-07",
+          "quote": "where it converted to sulfate aerosol and spread globally."
+        },
+        {
+          "title": "The Eruption of Mount Tambora (1815-1818)",
+          "url": "https://www.science.smith.edu/climatelit/the-eruption-of-mount-tambora-1815-1818/",
+          "publisher": "Smith College — Climate in Arts and History",
+          "origin": "Smith College (ringkasan pendidikan)",
+          "primary": false,
+          "accessed": "2026-11-07",
+          "quote": "have a prolonged effect on global climate by reflecting solar radiation and trapping heat."
+        },
+        {
+          "title": "1815 eruption of Mount Tambora",
+          "url": "https://en.wikipedia.org/wiki/1815_eruption_of_Mount_Tambora",
+          "publisher": "Wikipedia",
+          "origin": "Wikipedia (kompilasi Oppenheimer 2003, Stothers 1984, dkk.)",
+          "primary": false,
+          "accessed": "2026-11-07",
+          "quote": "It was later identified as a stratospheric sulfate aerosol veil."
+        }
+      ],
+      "limits": "Penyederhanaan: Fasullo dkk. menunjukkan pendinginan musim panas 1816 juga diperkuat respons laut dan es laut, dan bertepatan dengan aktivitas Matahari rendah (Dalton minimum). Besar pendinginan global berbeda antarsumber (±0,4–0,7 °C), maka tidak disebut."
+    },
+    {
+      "id": "f-1816",
+      "claim": "Musim panas 1816 di Eropa dan Amerika Utara sangat dingin; tahun itu dijuluki 'tahun tanpa musim panas'.",
+      "kind": "fakta",
+      "status": "terverifikasi",
+      "figures": [
+        {
+          "text": "1816",
+          "value": 1816
+        }
+      ],
+      "sources": [
+        {
+          "title": "The amplifying influence of increased ocean stratification on a future year without a summer",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5663761/",
+          "publisher": "Nature Communications (Fasullo dkk., 2017) via PubMed Central",
+          "origin": "Fasullo dkk. 2017 (penelitian NCAR)",
+          "primary": true,
+          "accessed": "2026-11-07",
+          "quote": "In 1816, the coldest summer of the past two centuries was observed over northeastern North America and western Europe."
+        },
+        {
+          "title": "Did Climate Inspire The Birth Of A Monster?",
+          "url": "https://www.npr.org/2007/08/13/12688403/did-climate-inspire-the-birth-of-a-monster",
+          "publisher": "NPR (All Things Considered, 2007)",
+          "origin": "NPR — wawancara Bill Phillips & John Clubbe",
+          "primary": false,
+          "accessed": "2026-11-07",
+          "quote": "Starting in the spring of 1816, people in Europe and North America saw skies that were strange, even alarming."
+        },
+        {
+          "title": "The Eruption of Mount Tambora (1815-1818)",
+          "url": "https://www.science.smith.edu/climatelit/the-eruption-of-mount-tambora-1815-1818/",
+          "publisher": "Smith College — Climate in Arts and History",
+          "origin": "Smith College (ringkasan pendidikan)",
+          "primary": false,
+          "accessed": "2026-11-07",
+          "quote": "As a result, Europe was hit especially hard by the 1816 Year without a Summer as temperatures decreased and precipitation increased."
+        }
+      ],
+      "limits": "Bukan seluruh dunia dan bukan harfiah tanpa musim panas: dinginnya terpusat di Eropa barat dan Amerika Utara bagian timur laut. Hook memakai kata 'seolah'."
+    },
+    {
+      "id": "f-salju",
+      "claim": "Pada musim panas 1816, salju masih turun di beberapa tempat (mis. New England; juga dilaporkan di Eropa).",
+      "kind": "fakta",
+      "status": "terverifikasi",
+      "figures": [],
+      "sources": [
+        {
+          "title": "The Eruption of Mount Tambora (1815-1818)",
+          "url": "https://www.science.smith.edu/climatelit/the-eruption-of-mount-tambora-1815-1818/",
+          "publisher": "Smith College — Climate in Arts and History",
+          "origin": "Smith College (ringkasan pendidikan)",
+          "primary": false,
+          "accessed": "2026-11-07",
+          "quote": "the usual growing season was disturbed by snow and frozen soil well into the summer."
+        },
+        {
+          "title": "Did Climate Inspire The Birth Of A Monster?",
+          "url": "https://www.npr.org/2007/08/13/12688403/did-climate-inspire-the-birth-of-a-monster",
+          "publisher": "NPR (All Things Considered, 2007)",
+          "origin": "NPR — wawancara Bill Phillips & John Clubbe",
+          "primary": false,
+          "accessed": "2026-11-07",
+          "quote": "He points out that in 1816, it was snowing in July."
+        }
+      ],
+      "limits": "Salju terjadi di sebagian wilayah dan pada hari-hari tertentu, bukan sepanjang musim. Narasi memakai 'di beberapa tempat'."
+    },
+    {
+      "id": "f-panen",
+      "claim": "Akibat cuaca 1816, panen gagal, terjadi kerusuhan pangan, dan kelaparan meluas.",
+      "kind": "fakta",
+      "status": "terverifikasi",
+      "figures": [],
+      "sources": [
+        {
+          "title": "Did Climate Inspire The Birth Of A Monster?",
+          "url": "https://www.npr.org/2007/08/13/12688403/did-climate-inspire-the-birth-of-a-monster",
+          "publisher": "NPR (All Things Considered, 2007)",
+          "origin": "NPR — wawancara Bill Phillips & John Clubbe",
+          "primary": false,
+          "accessed": "2026-11-07",
+          "quote": "There were food riots, and many people were dying from starvation."
+        },
+        {
+          "title": "How a volcano in Indonesia led to the creation of Frankenstein",
+          "url": "https://theconversation.com/how-a-volcano-in-indonesia-led-to-the-creation-of-frankenstein-65293",
+          "publisher": "The Conversation (Richard Gunderman, Indiana University)",
+          "origin": "Richard Gunderman / The Conversation",
+          "primary": false,
+          "accessed": "2026-11-07",
+          "quote": "throughout North America and Europe, resulting in the worst famine of the 19th century."
+        },
+        {
+          "title": "The Eruption of Mount Tambora (1815-1818)",
+          "url": "https://www.science.smith.edu/climatelit/the-eruption-of-mount-tambora-1815-1818/",
+          "publisher": "Smith College — Climate in Arts and History",
+          "origin": "Smith College (ringkasan pendidikan)",
+          "primary": false,
+          "accessed": "2026-11-07",
+          "quote": "crops failed due to cold weather and limited sunlight."
+        }
+      ],
+      "limits": "Kerusuhan dan kelaparan terjadi di sebagian wilayah, bukan merata di semua tempat."
+    },
+    {
+      "id": "f-frankenstein",
+      "claim": "Musim panas 1816 yang dingin dan basah membuat Mary Shelley dan kawan-kawan di tepi Danau Jenewa tinggal di dalam rumah; Byron menantang mereka menulis cerita hantu, dan dari situ lahir Frankenstein.",
+      "kind": "fakta",
+      "status": "terverifikasi",
+      "figures": [
+        {
+          "text": "1816",
+          "value": 1816
+        }
+      ],
+      "sources": [
+        {
+          "title": "How a volcano in Indonesia led to the creation of Frankenstein",
+          "url": "https://theconversation.com/how-a-volcano-in-indonesia-led-to-the-creation-of-frankenstein-65293",
+          "publisher": "The Conversation (Richard Gunderman, Indiana University)",
+          "origin": "Richard Gunderman / The Conversation",
+          "primary": false,
+          "accessed": "2026-11-07",
+          "quote": "In the summer of 1816, an extraordinary group gathered at a house at Lake Geneva, expecting to enjoy fresh air and sunshine."
+        },
+        {
+          "title": "Did Climate Inspire The Birth Of A Monster?",
+          "url": "https://www.npr.org/2007/08/13/12688403/did-climate-inspire-the-birth-of-a-monster",
+          "publisher": "NPR (All Things Considered, 2007)",
+          "origin": "NPR — wawancara Bill Phillips & John Clubbe",
+          "primary": false,
+          "accessed": "2026-11-07",
+          "quote": "Mary Shelley started writing the book in 1816, when she was just a teenager."
+        }
+      ],
+      "limits": "Hubungan Tambora → cuaca → Frankenstein adalah tafsiran sejarawan yang umum diterima; Mary Shelley sendiri tidak tahu penyebab cuacanya. Narasi memakai 'berakar dari', bukan 'disebabkan langsung'. Novel terbit 1818 (tidak disebut)."
+    },
+    {
+      "id": "f-byron",
+      "claim": "Lord Byron menantang rombongan itu menulis cerita hantu masing-masing.",
+      "kind": "fakta",
+      "status": "terverifikasi",
+      "figures": [],
+      "sources": [
+        {
+          "title": "How a volcano in Indonesia led to the creation of Frankenstein",
+          "url": "https://theconversation.com/how-a-volcano-in-indonesia-led-to-the-creation-of-frankenstein-65293",
+          "publisher": "The Conversation (Richard Gunderman, Indiana University)",
+          "origin": "Richard Gunderman / The Conversation",
+          "primary": false,
+          "accessed": "2026-11-07",
+          "quote": "Byron challenged each of the group’s members to devise their own ghost story and share it with the others."
+        },
+        {
+          "title": "Did Climate Inspire The Birth Of A Monster?",
+          "url": "https://www.npr.org/2007/08/13/12688403/did-climate-inspire-the-birth-of-a-monster",
+          "publisher": "NPR (All Things Considered, 2007)",
+          "origin": "NPR — wawancara Bill Phillips & John Clubbe",
+          "primary": false,
+          "accessed": "2026-11-07",
+          "quote": "it was Byron who came up with the idea that they should actually write a ghost story themselves"
+        }
+      ],
+      "limits": "Sumber primernya adalah kata pengantar Mary Shelley untuk edisi 1831."
+    }
+  ],
+  "numbersIgnored": []
+}

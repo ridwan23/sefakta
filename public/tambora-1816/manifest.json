@@ -1,0 +1,71 @@
+{
+  "projectId": "tambora-1816",
+  "sourceBrief": "tambora-1816.json",
+  "provider": "fish-audio",
+  "model": "s2.1-pro-free",
+  "referenceId": "544e7b0f4260485787b458ea24e0b47c",
+  "loudnessTarget": -14,
+  "generatedAt": "2026-11-07T08:21:34.250Z",
+  "scenes": [
+    {
+      "id": "hook",
+      "file": "tambora-1816/vo/hook.mp3",
+      "text": "Gunung di Indonesia ini pernah bikin Eropa seolah kehilangan musim panas. Dan tanpa sengaja, ikut melahirkan Frankenstein.",
+      "speed": 1.1,
+      "hash": "f26dd06b99ca",
+      "audioSeconds": 7.079,
+      "lufs": -15,
+      "truePeak": -2.1
+    },
+    {
+      "id": "konteks",
+      "file": "tambora-1816/vo/konteks.mp3",
+      "text": "April seribu delapan ratus lima belas, Gunung Tambora di Pulau Sumbawa meletus. Ini letusan terbesar dalam sejarah yang tercatat. Sekitar sepuluh ribu orang meninggal seketika.",
+      "speed": 1.1,
+      "hash": "6b695a4cb80e",
+      "audioSeconds": 10.083,
+      "lufs": -14.6,
+      "truePeak": -2
+    },
+    {
+      "id": "mekanisme",
+      "file": "tambora-1816/vo/mekanisme.mp3",
+      "text": "Letusannya menyemburkan gas belerang sampai ke stratosfer, jauh di atas awan hujan. Di sana, gas itu menjadi kabut halus yang menyebar mengelilingi Bumi, dan memantulkan sebagian sinar Matahari. Cahaya yang sampai ke permukaan pun berkurang.",
+      "speed": 1.1,
+      "hash": "faf8f3c08017",
+      "audioSeconds": 13.845,
+      "lufs": -14.4,
+      "truePeak": -2
+    },
+    {
+      "id": "dampak",
+      "file": "tambora-1816/vo/dampak.mp3",
+      "text": "Akibatnya, musim panas seribu delapan ratus enam belas di Eropa dan Amerika Utara menjadi dingin, gelap, dan basah. Di beberapa tempat, salju turun di tengah musim panas. Panen gagal, dan kelaparan meluas. Tahun itu dijuluki tahun tanpa musim panas.",
+      "speed": 1.1,
+      "hash": "3c2014a05868",
+      "audioSeconds": 14.655,
+      "lufs": -14.3,
+      "truePeak": -1.8
+    },
+    {
+      "id": "jawaban",
+      "file": "tambora-1816/vo/jawaban.mp3",
+      "text": "Di tepi Danau Jenewa, Swiss, cuaca buruk mengurung Mary Shelley di dalam rumah. Lord Byron menantang teman-temannya menulis cerita hantu. Dari situlah lahir Frankenstein, monster yang ternyata berakar dari gunung di Sumbawa.",
+      "speed": 1.1,
+      "hash": "5e6025643186",
+      "audioSeconds": 13.244,
+      "lufs": -14.4,
+      "truePeak": -2
+    },
+    {
+      "id": "cta",
+      "file": "tambora-1816/vo/cta.mp3",
+      "text": "Ikuti SeFakta. Fakta baru tiap hari.",
+      "speed": 1.1,
+      "hash": "40c26aa15bcc",
+      "audioSeconds": 2.612,
+      "lufs": -14.5,
+      "truePeak": -1.8
+    }
+  ]
+}

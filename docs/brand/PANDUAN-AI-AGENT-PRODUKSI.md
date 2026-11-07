@@ -1,6 +1,6 @@
 # Panduan produksi AI agent — SeFakta
 
-Versi 1.3 · 7 November 2026
+Versi 1.4 · 7 November 2026
 
 ## Tujuan dan prioritas
 
@@ -88,7 +88,7 @@ Jeda narator harus memiliki fungsi: membaca data, mengamati perubahan, atau mera
 - Regenerasi hanya scene yang perlu diperbaiki. Jangan menjalankan `--force` seluruh episode tanpa kebutuhan.
 - Aktifkan audio otomatis hanya setelah semua aset episode tersedia dan valid. Metadata harus mencerminkan teks dan pengaturan yang benar-benar menghasilkan file tersebut.
 
-Perintah: `npm run vo -- --brief=briefs/<episode>.json --dry-run` (cek teks tanpa kredit), `npm run vo -- --brief=…` (membuat scene yang belum ada atau naskahnya berubah), dan `npm run vo -- --brief=… --scene=<id> --force` (satu scene). Audio per scene disimpan di `public/<episode>/vo/` dan dinormalisasi ke -14 LUFS (true peak -1,5 dBTP); manifest mencatat hash naskah, durasi, dan loudness. Durasi scene di video mengikuti audio (minimal `durationSeconds` brief).
+Perintah: `npm run vo -- --brief=briefs/<episode>.json --dry-run` (cek teks tanpa kredit), `npm run vo -- --brief=…` (membuat scene yang belum ada atau naskahnya berubah), dan `npm run vo -- --brief=… --scene=<id> --force` (satu scene). VO CTA ("Ikuti SeFakta. Fakta baru tiap hari.") ikut dibuat sebagai `vo/cta.mp3` dengan narator dan kecepatan yang sama, lalu menggantikan audio asli klip CTA. Kecepatan default 1,1× (±150 kata/menit); bila durasi melebihi 65 dtk, pangkas naskah, jangan menaikkan kecepatan. Audio per scene disimpan di `public/<episode>/vo/` dan dinormalisasi ke -14 LUFS (true peak -1,5 dBTP); manifest mencatat hash naskah, durasi, dan loudness. Durasi scene di video mengikuti audio (minimal `durationSeconds` brief).
 
 ## 5. Caption yang benar-benar sinkron
 
@@ -111,7 +111,7 @@ Gunakan struktur `Caption` Remotion dengan `startMs`, `endMs`, `timestampMs`, da
 - Pilih gaya visual berdasarkan isi fakta episode dan catat di brief (`visualStyle`: nama, alasan, `tone` light/dark, palet dan `captionColors` opsional; diwajibkan validator, kontras caption minimal 4,5:1). `tone` menentukan watermark (terang/gelap) dan warna caption default. Contoh: sejarah → peta dan arsip, sains → diagram bersih, antariksa → latar gelap kosmik, tubuh → ilustrasi anatomi. Gunakan satu gaya untuk semua scene; aset ilustratif harus menyatu antarscene; hindari pergantian gaya yang tidak disengaja.
 - Gunakan kuning untuk satu penekanan utama, bukan seluruh paragraf. Jangan menumpuk efek atau menambahkan whoosh pada setiap gerakan kecil.
 - Periksa video pada ukuran layar ponsel. Teks harus terbaca dalam waktu tampilnya.
-- Klip CTA resmi diputar setelah jawaban selesai, lewat transisi iris dari frame fakta terakhir; audionya dipertahankan.
+- Klip CTA resmi diputar setelah jawaban selesai, lewat transisi iris dari frame fakta terakhir, dengan VO CTA episode (narator & kecepatan sama dengan narasi).
 
 ## 7. Musik dan sound design
 
@@ -164,6 +164,7 @@ Bandingkan episode pada platform, panjang, dan audiens yang sebanding. Uji satu 
 
 ## Riwayat revisi
 
+- **1.4 (7 Nov 2026):** VO CTA dibuat per episode dengan narator & kecepatan narasi (menggantikan audio asli klip); kecepatan VO default 1,25× → 1,1×.
 - **1.3 (7 Nov 2026):** gaya visual dipilih per episode berdasarkan isi fakta (`visualStyle` di brief, diwajibkan validator); kode legacy (`legacy-v1`, versi 3D, `SeFaktaCta`) dihapus.
 - **1.2 (7 Nov 2026):** Fish Audio dipindah ke proyek ini (`npm run vo`, normalisasi -14 LUFS); caption tersinkron via whisper.cpp (`npm run align`); template episode `src/shared/episode/`; `npm run new:episode`, `check:episodes`, `check:publish`.
 - **1.1 (7 Nov 2026):** format fakta dan validator (`validate:facts`); mode caption dipilih agent (`captionMode`); CTA resmi = `SeFaktaCta` di atas frame akhir (tanpa end card terpisah); aturan margin/area aman dihapus; rujukan Fish Audio disesuaikan dengan proyek ini.

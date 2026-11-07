@@ -23,6 +23,7 @@ src/
   index.ts, Root.tsx          Root hanya mendaftarkan topik (1 baris per topik)
   shared/
     episode/                  template episode (timeline dari audio, VO, caption, watermark, CTA)
+    maps/WorldMap.tsx         peta dunia/globe reusable (Natural Earth, sorot negara, zoom, busur)
     brand/                    Watermark, CtaClip (klip CTA bersuara), font
     captions/Overlay.tsx      teks narasi kata-per-kata (tema dark / pop / light)
     motion.ts                 easing, slam, kick, hash
@@ -30,6 +31,7 @@ src/
     matrix-effect/            "Kenapa waktu terasa melambat saat panik"
       2d/  compositions.tsx    (video lama, arsip)
     file-deleted/             "Apa yang terjadi pada file saat dihapus" (piktogram)
+    tambora-1816/             "Gunung di Indonesia yang bikin Eropa kehilangan musim panas" (Sejarah)
 docs/
   brand/                      identitas, panduan brand, panduan produksi AI, cta-sefakta.tsx, avatar, watermark
   matrix-effect/              SCRIPT.md, VO_GUIDE.md, storyboard.html, ref/
@@ -49,6 +51,7 @@ out/
 |---|---|---|
 | `AGENTS.md` | Aturan kerja agent | Berlaku |
 | `docs/SETUP.md` | Persiapan lingkungan, Whisper, `.env`, pemecahan masalah | Berlaku |
+| `docs/WORKFLOW-AI-AGENT.md` | Urutan kerja AI agent dari ide fakta sampai video siap tayang: gerbang per tahap, area aman, aturan pelafalan, verifikasi | Berlaku |
 | `docs/brand/IDENTITAS-BRAND-SEFAKTA.md`, `PANDUAN-BRAND-SEFAKTA.md` | Identitas dan aturan brand | Kanonis |
 | `docs/brand/PANDUAN-AI-AGENT-PRODUKSI.md` | Riset, cerita, VO, caption, gaya visual, rubrik, format `briefs/` | Berlaku (v1.3) |
 | `docs/brand/cta-sefakta.tsx` | Desain asli CTA (video memakai klip `cta-opsi1.mp4`) | Referensi |
@@ -83,6 +86,8 @@ npm run quality                                          # fakta, episode, ESLin
 npm run check:publish                                    # sebelum tayang: URL sumber + tanpa placeholder
 ```
 
+Komponen reusable untuk visual: `src/shared/maps/WorldMap.tsx` (peta dunia/globe dengan sorotan negara, zoom, busur) dan `src/shared/episode/cues.ts` (`cueFrames`: picu animasi tepat saat kata diucapkan).
+
 Template (`src/shared/episode/`) menghitung durasi dari audio, memutar VO per scene, menampilkan caption sesuai `captionMode`, watermark, lalu klip CTA bersuara. Butuh `.env` berisi kunci Fish Audio (lihat `.env.example`). Whisper (±540 MB) terpasang di `.whisper/` saat `npm run align` pertama kali.
 
 ## Validator fakta
@@ -99,7 +104,7 @@ Memeriksa `briefs/*.json`: `visualStyle` (gaya visual episode + alasannya) wajib
 **Video lama:** `briefs/matrix-effect.json` berstatus `arsip` dan dilewati validator. Video lama dibiarkan apa adanya; aturan berlaku untuk video berikutnya.
 
 ## CTA dan watermark
-- **CTA**: `shared/brand/CtaClip.tsx` memutar `public/brand/cta-opsi1.mp4` (4 dtk, **bersuara**) setelah transisi iris dari frame terakhir. `docs/brand/cta-sefakta.tsx` adalah desain asli CTA (referensi).
+- **CTA**: `shared/brand/CtaClip.tsx` memutar `public/brand/cta-opsi1.mp4` (4 dtk) setelah transisi iris dari frame terakhir, dengan **VO CTA episode** (`public/<id>/vo/cta.mp3`, dibuat `npm run vo` dengan suara & kecepatan narasi) menggantikan audio asli klip. `docs/brand/cta-sefakta.tsx` adalah desain asli CTA (referensi).
 - **Watermark**: `shared/brand/Watermark.tsx` (`tone="light"` / `"dark"`), kanan atas, 194 px (±18%), opacity 85%, memudar saat CTA masuk.
 
 ## Gaya visual

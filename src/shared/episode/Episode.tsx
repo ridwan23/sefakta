@@ -40,7 +40,7 @@ export const Episode: React.FC<EpisodeProps & { visuals: SceneVisuals }> = ({ br
       {/* latar terang → watermark terang (wordmark navy); latar gelap → watermark gelap (wordmark putih) */}
       <Watermark tone={brief.visualStyle.tone} hideFrom={timeline.storyFrames} />
       <Sequence name="CTA" from={timeline.storyFrames}>
-        <CtaClip />
+        <CtaClip voice={timeline.ctaAudio} />
       </Sequence>
     </AbsoluteFill>
   );

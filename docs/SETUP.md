@@ -29,7 +29,7 @@ npm run quality             # gerbang kualitas harus lolos
 1. Buat API key di https://fish.audio/app/developers/.
 2. `cp .env.example .env`, isi `FISH_AUDIO_API_KEY`.
 3. Isi `FISH_AUDIO_REFERENCE_ID` (id suara referensi) agar narator sama di setiap video.
-4. Opsional: `FISH_AUDIO_MODEL` (default `s2.1-pro-free`), `FISH_AUDIO_SPEED` (default `1.25`, rentang 0,5–2,0; per scene bisa diatur dengan `voiceoverSpeed` di brief).
+4. Opsional: `FISH_AUDIO_MODEL` (default `s2.1-pro-free`), `FISH_AUDIO_SPEED` (default `1.1` ≈ 150 kata/menit, rentang 0,5–2,0; per scene bisa diatur dengan `voiceoverSpeed` di brief). Kecepatan yang sama dipakai VO CTA.
 
 `.env` ada di `.gitignore`. Jangan mencetak, menyalin ke manifest, atau meng-commit nilainya. `npm run doctor` hanya melaporkan "terisi/kosong".
 Cek naskah tanpa memakai kredit: `npm run vo -- --brief=briefs/<id>.json --dry-run`.

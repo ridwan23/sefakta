@@ -5,17 +5,19 @@
 //   npm run vo -- --brief=... --scene=s3 --force               # buat ulang satu scene
 //
 // Kunci di .env: FISH_AUDIO_API_KEY (wajib), FISH_AUDIO_REFERENCE_ID (suara konsisten), FISH_AUDIO_MODEL, FISH_AUDIO_SPEED.
+// Juga membuat VO CTA (id 'cta', kalimat CTA_VO_TEXT atau cta.voiceoverText di brief) dengan suara & kecepatan sama.
 // Hasil: public/<projectId>/vo/<scene>.mp3 + public/<projectId>/manifest.json. API key tidak pernah ditulis ke file.
 // Scene dibuat ulang otomatis bila teks/kecepatannya berubah (dideteksi lewat hash di manifest).
 import { existsSync, mkdirSync, readFileSync, renameSync, writeFileSync, rmSync } from 'node:fs';
 import { basename } from 'node:path';
+import { CTA_VO_ID, CTA_VO_MAX_SECONDS, CTA_VO_TEXT } from '../src/shared/brand/ctaVoice.ts';
 import { arg, flag, loadBrief, paths, textHash, durationSeconds, loudness, run, LUFS_TARGET, TRUE_PEAK } from './lib/episode.ts';
 
 const API_URL = 'https://api.fish.audio/v1/tts';
 const apiKey = process.env.FISH_AUDIO_API_KEY;
 const referenceId = process.env.FISH_AUDIO_REFERENCE_ID || undefined;
 const model = process.env.FISH_AUDIO_MODEL ?? 's2.1-pro-free';
-const defaultSpeed = Number(process.env.FISH_AUDIO_SPEED ?? '1.25');
+const defaultSpeed = Number(process.env.FISH_AUDIO_SPEED ?? '1.1');
 const dryRun = flag('dry-run');
 const force = flag('force');
 const only = arg('scene');
@@ -25,7 +27,7 @@ if (!dryRun && !apiKey) throw new Error('FISH_AUDIO_API_KEY belum ada. Salin .en
 
 const { brief, path: briefPath } = loadBrief();
 const P = paths(brief.projectId);
-if (only && !brief.scenes.some((s) => s.id === only)) throw new Error(`Scene '${only}' tidak ada di brief.`);
+if (only && only !== CTA_VO_ID && !brief.scenes.some((s) => s.id === only)) throw new Error(`Scene '${only}' tidak ada di brief.`);
 
 type Entry = { id: string; file: string; text: string; speed: number; hash: string; audioSeconds: number; lufs: number; truePeak: number };
 const old: { scenes?: Entry[] } = existsSync(P.manifest) ? JSON.parse(readFileSync(P.manifest, 'utf8')) : {};
@@ -65,7 +67,9 @@ const normalizeWithLimiter = async (input: string, output: string, extraGainDb: 
 if (!dryRun) mkdirSync(P.voDir, { recursive: true });
 const entries: Entry[] = [];
 let made = 0;
-for (const scene of brief.scenes) {
+// CTA ikut dibuat seperti scene terakhir: narator & kecepatan default yang sama dengan narasi episode.
+const items = [...brief.scenes, { id: CTA_VO_ID, voiceoverText: brief.cta?.voiceoverText ?? CTA_VO_TEXT, voiceoverSpeed: undefined as number | undefined }];
+for (const scene of items) {
   const speed = scene.voiceoverSpeed ?? defaultSpeed;
   const hash = textHash(scene.voiceoverText, speed);
   const file = P.vo(scene.id);
@@ -100,6 +104,7 @@ for (const scene of brief.scenes) {
   const L = await loudness(file);
   entries.push({ id: scene.id, file: P.voStatic(scene.id), text: scene.voiceoverText, speed, hash, audioSeconds: Number((await durationSeconds(file)).toFixed(3)), lufs: L.lufs, truePeak: L.truePeak });
   console.log(`✓ ${scene.id}: ${entries.at(-1)!.audioSeconds.toFixed(2)} dtk · ${L.lufs} LUFS · TP ${L.truePeak} dBTP`);
+  if (scene.id === CTA_VO_ID && entries.at(-1)!.audioSeconds > CTA_VO_MAX_SECONDS) console.log(`! cta: ${entries.at(-1)!.audioSeconds.toFixed(2)} dtk > ${CTA_VO_MAX_SECONDS} dtk, terpotong klip 4 dtk. Pendekkan cta.voiceoverText.`);
 }
 
 if (dryRun) console.log('\nDry-run selesai: tidak ada panggilan API.');

@@ -23,7 +23,7 @@ export type Scene = {
   visual?: string;
   factIds?: string[];
 };
-export type Brief = { projectId: string; title: string; status: string; captionMode: string; scenes: Scene[]; [k: string]: unknown };
+export type Brief = { projectId: string; title: string; status: string; captionMode: string; scenes: Scene[]; cta?: { voiceoverText?: string }; [k: string]: unknown };
 
 export const arg = (name: string) => process.argv.slice(2).find((a) => a.startsWith(`--${name}=`))?.slice(name.length + 3);
 export const flag = (name: string) => process.argv.includes(`--${name}`);
@@ -86,6 +86,7 @@ export const normWords = (text: string): string[] =>
   text
     .toLowerCase()
     .replace(/(\d+)\s*%/g, '$1 persen')
+    .replace(/\b\d{1,3}(?:\.\d{3})+\b/g, (m) => numberToWords(Number(m.replace(/\./g, '')))) // 10.000 = pemisah ribuan
     .replace(/\d+(?:[.,]\d+)?/g, (m) => (/[.,]/.test(m) ? m.replace(/[.,]/, ' koma ') : numberToWords(Number(m))))
     .replace(/[^a-z0-9\s-]/g, ' ')
     .replace(/-/g, ' ')

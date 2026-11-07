@@ -1,4 +1,5 @@
 import { staticFile, type CalculateMetadataFunction } from 'remotion';
+import { CTA_VO_ID, CTA_VO_TEXT } from '../brand/ctaVoice';
 import type { EpisodeProps, EpisodeTimeline, ManifestEntry, SceneCaptions } from './types';
 
 export const FPS = 30;
@@ -34,6 +35,8 @@ export const calculateEpisodeMetadata: CalculateMetadataFunction<EpisodeProps> =
     cursor += frames;
     return entry;
   });
-  const timeline: EpisodeTimeline = { scenes, storyFrames: cursor, hasVo: scenes.every((s) => s.audio) };
+  const cta = byId.get(CTA_VO_ID);
+  const ctaAudio = cta && cta.text === (brief.cta?.voiceoverText ?? CTA_VO_TEXT) ? cta.file : null;
+  const timeline: EpisodeTimeline = { scenes, storyFrames: cursor, hasVo: scenes.every((s) => s.audio), ctaAudio };
   return { durationInFrames: cursor + CTA_FRAMES, fps: FPS, width: WIDTH, height: HEIGHT, props: { ...props, timeline } };
 };
