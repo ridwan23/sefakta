@@ -20,9 +20,9 @@ Baca `docs/brand/PANDUAN-AI-AGENT-PRODUKSI.md` sebelum memproduksi atau merevisi
 ## Batas arsitektur
 
 - `src/topics/<topik>/`: kode satu topik video. `compositions.tsx` mendaftarkan komposisinya; `src/Root.tsx` hanya memanggil per topik.
-- `src/shared/`: elemen reusable lintas topik: `episode/` (template episode: timeline dari audio, VO, caption, watermark, CTA), `brand/` (watermark, CTA, font), `captions/`, `motion.ts`. Jangan menaruh logika satu topik di sini.
+- `src/shared/`: elemen reusable lintas topik: `episode/` (template episode: timeline dari audio, VO, caption, watermark, CTA), `brand/` (watermark, klip CTA, font), `captions/`, `motion.ts`. Jangan menaruh logika satu topik di sini.
 - `briefs/`: brief dan fakta per episode (`<episode>.json`).
-- `scripts/`: `new-episode.ts`, `vo-fish.ts` (Fish Audio + loudness), `align-captions.ts` (whisper), `check-episodes.ts`, `validate-facts.ts`, `sync-cta.ts`; pengujian di `scripts/tests/`.
+- `scripts/`: `new-episode.ts`, `vo-fish.ts` (Fish Audio + loudness), `align-captions.ts` (whisper), `check-episodes.ts`, `validate-facts.ts`; pengujian di `scripts/tests/`.
 - `.env`: kunci Fish Audio (`FISH_AUDIO_API_KEY`, `FISH_AUDIO_REFERENCE_ID`); jangan dicetak, disalin ke manifest, atau di-commit.
 - `docs/`: `brand/` (identitas dan panduan) serta dokumen per topik.
 - `public/`: aset runtime, dibaca lewat `staticFile()`: `brand/` dan `<topik>/`.
@@ -37,12 +37,13 @@ Keputusan pemilik (2026-11-07): font Poppins, pembuka narasi "SeFakta hari ini: 
 
 - Format utama: vertikal 1080×1920, 30 fps, sekitar 60 detik.
 - Username resmi: `@sefaktaofficial`.
-- Biru SeFakta `#0D2250`, Kuning Fakta `#FFB000`, Biru Malam `#081736`.
+- Warna brand: Biru SeFakta `#0D2250`, Kuning Fakta `#FFB000`, Biru Malam `#081736` — untuk logo, watermark, dan CTA (sudah tertanam di asetnya). Palet video mengikuti gaya visual episode.
+- **Gaya visual dipilih per episode berdasarkan isi faktanya** (mis. sejarah → peta/arsip, sains → diagram, antariksa → gelap/kosmik) dan dicatat di brief: `visualStyle: { name, reason, palette? }`. Satu gaya konsisten untuk semua scene satu episode; teks utama harus kontras dengan latar. Yang tidak ikut berubah: watermark, klip CTA, logo, dan username.
 - Watermark selebar sekitar 18% frame, opacity 85%, di kanan atas.
 - Caption: agent memilih satu mode sesuai konsep visual episode — `ringkasan` (satu kalimat utuh 8–14 kata per scene), `subtitle` (kata per kata), atau `headline` — dan mencatatnya di brief (`captionMode`). Satu fokus baca pada satu waktu.
 - Penutup: klip CTA resmi `public/brand/cta-opsi1.mp4` (4 detik, bersuara) diputar setelah transisi iris dari frame fakta terakhir (`src/shared/brand/CtaClip.tsx`). Jangan membisukan audionya.
 - Logo dan watermark tidak boleh diubah warna, diputar, atau diberi efek baru.
-- `docs/brand/cta-sefakta.tsx` tetap sumber desain CTA; komponen turunannya `src/shared/brand/SeFaktaCta.tsx` (`npm run sync:cta`) belum dipakai di video mana pun.
+- `docs/brand/cta-sefakta.tsx` adalah desain asli CTA (referensi brand); video memakai klip `cta-opsi1.mp4`.
 
 ## Aturan Remotion
 

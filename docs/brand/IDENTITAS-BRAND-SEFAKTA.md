@@ -39,7 +39,7 @@ Judul: Poppins ExtraBold (alt. Montserrat ExtraBold) • Isi/caption: Poppins / 
 - 2026-10-20 16:53 — Ridwan mengunci paket sebagai brand resmi SeFakta.
 - 2026-10-20 16:59 — Ridwan memutuskan username seragam `@sefaktaofficial`.
 - 2026-10-20 17:59 — Ridwan menetapkan paket ini sebagai **brand identity SeFakta** (dokumen ini dibuat).
-- 2026-11-07 — Pemilik proyek menetapkan: caption dipilih agent sesuai konsep (default ringkasan 8–14 kata); penutup = klip CTA resmi `cta-opsi1.mp4` (bersuara) setelah transisi dari frame akhir beku; template caption memakai `@sefaktaofficial`.
+- 2026-11-07 — Pemilik proyek menetapkan: caption dipilih agent sesuai konsep (default ringkasan 8–14 kata); penutup = klip CTA resmi `cta-opsi1.mp4` (bersuara) setelah transisi dari frame akhir beku; template caption memakai `@sefaktaofficial`; gaya visual video dipilih per episode sesuai isi fakta (warna resmi tetap pada logo, watermark, CTA).
 
 Konsep logo cadangan (Watercolor & Play Satu) tersimpan sebagai arsip di folder induk `sefakta-brand/` — bukan identitas aktif.
 Arsip snapshot: `sefakta-brand/SEFAKTA-Brand-Identity-v1.0.zip`.

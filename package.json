@@ -4,8 +4,6 @@
   "private": true,
   "scripts": {
     "start": "remotion preview",
-    "build": "remotion render TimeSlowShort out/matrix-effect/legacy_v1.mp4",
-    "build:matrix": "remotion render MatrixEffect out/matrix-effect/matrix_effect.mp4 --gl=angle",
     "build:matrix2d": "remotion render MatrixEffect2D out/matrix-effect/matrix_effect_2d.mp4",
     "validate:facts": "node --no-warnings --experimental-strip-types scripts/validate-facts.ts",
     "validate:facts:online": "node --no-warnings --experimental-strip-types scripts/validate-facts.ts --publish --check-urls",
@@ -18,29 +16,22 @@
     "bundle": "remotion bundle --out-dir=build --log=error",
     "quality": "npm run validate:facts && npm run check:episodes && npm run lint && tsc --noEmit && npm run bundle",
     "check:publish": "npm run validate:facts:online && npm run check:episodes -- --publish",
-    "sync:cta": "node --no-warnings --experimental-strip-types scripts/sync-cta.ts",
     "build:pictogram": "remotion render FileDeletedPictogram out/file-deleted/file_deleted_pictogram.mp4"
   },
   "dependencies": {
-    "@react-three/fiber": "^8.17.10",
-    "@react-three/postprocessing": "^2.16.3",
     "@remotion/bundler": "4.0.541",
     "@remotion/captions": "4.0.541",
     "@remotion/cli": "4.0.541",
     "@remotion/google-fonts": "4.0.541",
     "@remotion/install-whisper-cpp": "4.0.541",
     "@remotion/renderer": "4.0.541",
-    "@remotion/three": "4.0.541",
-    "postprocessing": "^6.36.4",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "remotion": "4.0.541",
-    "three": "^0.170.0"
+    "remotion": "4.0.541"
   },
   "devDependencies": {
     "@remotion/eslint-config-flat": "4.0.541",
     "@types/react": "^18.3.12",
-    "@types/three": "^0.170.0",
     "eslint": "10.12.0",
     "typescript": "^5.6.3"
   }

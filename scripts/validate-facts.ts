@@ -98,6 +98,11 @@ export const validateBrief = (b: Json, file: string, forcePublish: boolean): Iss
   if (!SERIES.includes(b.series)) add('error', 'series', `harus salah satu dari: ${SERIES.join(', ')}`);
   if (!BRIEF_STATUSES.includes(b.status)) add('error', 'status', `harus ${BRIEF_STATUSES.join(' | ')}`);
   if (!CAPTION_MODES.includes(b.captionMode)) add('error', 'captionMode', `harus ${CAPTION_MODES.join(' | ')}`);
+  // gaya visual dipilih per episode sesuai isi fakta: wajib dicatat beserta alasannya
+  const vs = b.visualStyle;
+  if (!vs || !isStr(vs.name) || !isStr(vs.reason)) add('error', 'visualStyle', 'wajib { name, reason }: gaya visual episode dan alasannya terhadap isi fakta');
+  else if (/\bTODO\b/.test(`${vs.name} ${vs.reason}`)) add(publish ? 'error' : 'warn', 'visualStyle', 'masih TODO');
+  if (vs?.palette !== undefined && (!Array.isArray(vs.palette) || vs.palette.some((c: unknown) => typeof c !== 'string' || !/^#[0-9a-f]{6}$/i.test(c)))) add('error', 'visualStyle.palette', 'harus array warna hex 6 digit');
   if (!Array.isArray(b.scenes) || b.scenes.length === 0) { add('error', 'scenes', 'minimal 1 scene'); return issues; }
   if (!Array.isArray(b.facts)) { add('error', 'facts', 'wajib berupa array (boleh kosong bila tidak ada klaim)'); b.facts = []; }
 

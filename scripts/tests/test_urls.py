@@ -33,7 +33,7 @@ Q1="participants fell 31 m in a free fall and overestimated duration by 36%."
 Q1b="fell 31 m in a free fall and overestimated duration by 36%. They could not read the digits."
 Q2="a “richer” memory - not faster perception - explains why a 31 m fall seemed longer."
 def brief(a_path,qa=Q1,status="terverifikasi",a_url=None):
-    return {"projectId":"t","title":"t","series":"Sains","status":"draft","captionMode":"subtitle",
+    return {"projectId":"t","title":"t","series":"Sains","status":"draft","captionMode":"subtitle","visualStyle":{"name":"x","reason":"y"},
      "scenes":[{"id":"a","durationSeconds":60,"voiceoverText":"Jatuh tiga puluh satu meter.","factIds":["f1"]}],
      "facts":[{"id":"f1","claim":"jatuh 31 m","kind":"fakta","status":status,"figures":[{"text":"31 m","value":31}],
        "sources":[src("Studi A",a_url or U(a_path),qa),src("Liputan B",U("/ok2"),Q2)]}],"numbersIgnored":[]}

@@ -10,17 +10,22 @@ Aturan produksi untuk agent ada di [AGENTS.md](AGENTS.md) (dimuat otomatis lewat
 AGENTS.md, CLAUDE.md          aturan produksi untuk agent
 briefs/<episode>.json         naskah per scene + fakta, sumber, dan angka (diperiksa validator)
 scripts/
+  new-episode.ts              kerangka episode baru (brief + topik + Root)
+  vo-fish.ts                  voice-over Fish Audio, normalisasi -14 LUFS
+  align-captions.ts           caption tersinkron (whisper.cpp + penyelarasan ke naskah)
+  check-episodes.ts           pemeriksa kesiapan episode
   validate-facts.ts           validator fakta
-  sync-cta.ts                 membangun komponen CTA dari docs/brand/cta-sefakta.tsx
+  tests/                      pengujian validator
 src/
   index.ts, Root.tsx          Root hanya mendaftarkan topik (1 baris per topik)
   shared/
-    brand/                    Watermark, SeFaktaCta (generated), font Poppins
+    episode/                  template episode (timeline dari audio, VO, caption, watermark, CTA)
+    brand/                    Watermark, CtaClip (klip CTA bersuara), font
     captions/Overlay.tsx      teks narasi kata-per-kata (tema dark / pop / light)
     motion.ts                 easing, slam, kick, hash
   topics/
     matrix-effect/            "Kenapa waktu terasa melambat saat panik"
-      2d/  3d/  legacy-v1/  compositions.tsx
+      2d/  compositions.tsx    (video lama, arsip)
     file-deleted/             "Apa yang terjadi pada file saat dihapus" (piktogram)
 docs/
   brand/                      identitas, panduan brand, panduan produksi AI, cta-sefakta.tsx, avatar, watermark
@@ -28,7 +33,7 @@ docs/
   file-deleted/               TREATMENT.md
   es-batu-batavia/            index.html (prototipe)
 public/                       aset runtime (staticFile)
-  brand/                      watermark, sefakta-avatar.png
+  brand/                      watermark, cta-opsi1.mp4
   matrix-effect/              vo_v3_narasi.wav
 out/
   matrix-effect/, file-deleted/   hasil render
@@ -41,8 +46,8 @@ out/
 |---|---|---|
 | `AGENTS.md` | Aturan kerja agent | Berlaku |
 | `docs/brand/IDENTITAS-BRAND-SEFAKTA.md`, `PANDUAN-BRAND-SEFAKTA.md` | Identitas dan aturan brand | Kanonis |
-| `docs/brand/PANDUAN-AI-AGENT-PRODUKSI.md` | Riset, cerita, VO, caption, rubrik, format `briefs/` | Berlaku (v1.1) |
-| `docs/brand/cta-sefakta.tsx` | Sumber kanonis CTA | Kanonis |
+| `docs/brand/PANDUAN-AI-AGENT-PRODUKSI.md` | Riset, cerita, VO, caption, gaya visual, rubrik, format `briefs/` | Berlaku (v1.3) |
+| `docs/brand/cta-sefakta.tsx` | Desain asli CTA (video memakai klip `cta-opsi1.mp4`) | Referensi |
 | `docs/matrix-effect/SCRIPT.md`, `VO_GUIDE.md` | Naskah awal dan panduan VO 54 dtk | Riwayat (diganti VO v3) |
 | `docs/matrix-effect/storyboard.html` | Storyboard visual | Acuan visual |
 | `docs/file-deleted/TREATMENT.md` | Treatment piktogram | Belum diperiksa terhadap aturan fakta |
@@ -54,10 +59,8 @@ File yang disebut dokumen brand tetapi belum ada di `docs/brand/`: `logo-utama.p
 
 | Topik | Status | Komposisi (ID) | Durasi | Perintah render |
 |---|---|---|---|---|
-| matrix-effect · 2D | Dikunci ke VO v3 + klip CTA bersuara | `MatrixEffect2D` | 60 dtk | `npm run build:matrix2d` |
-| matrix-effect · 3D | Timing dan naskah lama, belum disinkron VO v3 | `MatrixEffect` | 54 dtk | `npm run build:matrix` |
-| matrix-effect · legacy-v1 | Percobaan pertama, tidak dipakai lagi | `TimeSlowShort` | 60 dtk | `npm run build` |
-| file-deleted | Selesai (belum ada VO dan brief fakta) | `FileDeletedPictogram` | 47 dtk @ 24 fps | `npm run build:pictogram` |
+| matrix-effect | Video lama (arsip): VO v3 + klip CTA bersuara | `MatrixEffect2D` | 60 dtk | `npm run build:matrix2d` |
+| file-deleted | Video lama (arsip) | `FileDeletedPictogram` | 47 dtk @ 24 fps | `npm run build:pictogram` |
 | es-batu-batavia | Baru prototipe HTML | — | 60 dtk (rencana) | — |
 
 Preview: `npm start` (Studio mengelompokkan komposisi per topik). Render MP4 hanya bila diminta; hasilnya masuk ke `out/<topik>/`.
@@ -84,22 +87,19 @@ Template (`src/shared/episode/`) menghitung durasi dari audio, memutar VO per sc
 npm run validate:facts                # mode draft: fakta belum terverifikasi = peringatan
 npm run validate:facts -- --publish   # sebelum publikasi: peringatan itu menjadi error
 npm run validate:facts:online         # --publish + buka semua URL (butuh internet)
-npm run test:validator                # 46 pengujian validator
+npm run test:validator                # 50 pengujian validator
 ```
 
-Memeriksa `briefs/*.json`: minimal dua sumber dengan `origin` berbeda, angka tertulis di `quote` sumber, setiap angka di narasi tercakup fakta yang dirujuk scene, fakta yang bertentangan dengan sumber tidak boleh dipakai, durasi 55–65 dtk, dan panjang caption pada mode `ringkasan`. Dengan `--check-urls` ia juga membuka setiap URL: link mati = error, dan `quote` harus tertulis verbatim di halamannya. Format brief ada di panduan produksi (§1).
+Memeriksa `briefs/*.json`: `visualStyle` (gaya visual episode + alasannya) wajib ada, minimal dua sumber dengan `origin` berbeda, angka tertulis di `quote` sumber, setiap angka di narasi tercakup fakta yang dirujuk scene, fakta yang bertentangan dengan sumber tidak boleh dipakai, durasi 55–65 dtk, dan panjang caption pada mode `ringkasan`. Dengan `--check-urls` ia juga membuka setiap URL: link mati = error, dan `quote` harus tertulis verbatim di halamannya. Format brief ada di panduan produksi (§1).
 
 **Video lama:** `briefs/matrix-effect.json` berstatus `arsip` dan dilewati validator. Video lama dibiarkan apa adanya; aturan berlaku untuk video berikutnya.
 
 ## CTA dan watermark
-- **CTA**: `shared/brand/CtaClip.tsx` memutar `public/brand/cta-opsi1.mp4` (4 dtk, **bersuara**) setelah transisi iris dari frame terakhir. `docs/brand/cta-sefakta.tsx` tetap sumber desain; komponen `SeFaktaCta` (`npm run sync:cta`) tersedia tetapi belum dipakai.
+- **CTA**: `shared/brand/CtaClip.tsx` memutar `public/brand/cta-opsi1.mp4` (4 dtk, **bersuara**) setelah transisi iris dari frame terakhir. `docs/brand/cta-sefakta.tsx` adalah desain asli CTA (referensi).
 - **Watermark**: `shared/brand/Watermark.tsx` (`tone="light"` / `"dark"`), kanan atas, 194 px (±18%), opacity 85%, memudar saat CTA masuk.
 
-## Menambah topik baru
-1. Buat `src/topics/<topik>/` berisi kode dan `compositions.tsx` (bungkus dengan `<Folder name="<topik>">`), lalu tambahkan satu baris di `src/Root.tsx`.
-2. Tulis `briefs/<episode>.json` dan loloskan `npm run validate:facts`.
-3. Taruh naskah/storyboard di `docs/<topik>/`, aset runtime di `public/<topik>/`, dan hasil render di `out/<topik>/`.
+## Gaya visual
+Dipilih per episode sesuai isi fakta (mis. sejarah → peta/arsip, sains → diagram, antariksa → kosmik) dan dicatat di brief: `visualStyle: { name, reason, palette? }`. Satu gaya untuk semua scene. Watermark, klip CTA, logo, dan username tidak ikut berubah.
 
 ## Catatan
-- Folder `out/matrix-effect/*.mp4` dirender sebelum perubahan CTA; render ulang bila dibutuhkan.
 - File VO asli dari pengisi suara bernama `VO v3 — narasi saja, 55,58 detik.wav` (isinya sama dengan `public/matrix-effect/vo_v3_narasi.wav`).

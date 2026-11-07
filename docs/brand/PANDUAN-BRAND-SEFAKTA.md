@@ -89,3 +89,4 @@ Caption maksimal ±150 karakter untuk versi singkat (di luar hashtag) bila platf
 ## Catatan Revisi (2026-11-07)
 - §7: caption mengikuti mode yang dipilih agent (default `ringkasan` 8–14 kata); penutup = CTA resmi di atas frame akhir beku, bukan end card terpisah.
 - §8: template caption memakai username resmi `@sefaktaofficial` (sebelumnya `@sefakta`).
+- §1/§3: gaya dan palet video dipilih per episode sesuai isi fakta; warna resmi tetap dipakai pada logo, watermark, dan CTA.

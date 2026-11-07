@@ -34,6 +34,11 @@ const brief = {
   series,
   status: 'draft',
   captionMode: 'subtitle',
+  visualStyle: {
+    name: 'TODO nama gaya (mis. peta arsip sepia, diagram sains bersih, infografis neon)',
+    reason: 'TODO kenapa gaya ini cocok dengan isi fakta episode',
+    palette: ['#0D2250', '#FFB000', '#FFFFFF'],
+  },
   scenes: [
     scene('hook', 5, 'hook: pertanyaan spesifik + objek/akibat utama'),
     scene('konteks', 10, 'konteks: siapa, kapan, di mana'),

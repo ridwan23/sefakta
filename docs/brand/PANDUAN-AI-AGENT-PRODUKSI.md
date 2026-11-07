@@ -1,6 +1,6 @@
 # Panduan produksi AI agent — SeFakta
 
-Versi 1.2 · 7 November 2026
+Versi 1.3 · 7 November 2026
 
 ## Tujuan dan prioritas
 
@@ -108,7 +108,7 @@ Gunakan struktur `Caption` Remotion dengan `startMs`, `endMs`, `timestampMs`, da
 - Untuk Tambora: lokasi → letusan → aerosol stratosfer → berkurangnya sinar Matahari → dampak regional. Jangan hanya mengulang layout teks di atas gambar berbeda.
 - Gunakan peta, diagram berlapis, garis waktu, angka dengan pembanding, atau transformasi sebelum/sesudah ketika membantu pemahaman.
 - Slow zoom pada satu gambar adalah gerak kamera; jangan menyebutnya parallax jika tidak ada lapisan dengan kedalaman dan gerak berbeda.
-- Utamakan komposisi watercolor dan palet SeFakta. Aset ilustratif harus menyatu antarscene; hindari pergantian gaya yang tidak disengaja.
+- Pilih gaya visual berdasarkan isi fakta episode dan catat di brief (`visualStyle`: nama, alasan, palet opsional; diwajibkan validator). Contoh: sejarah → peta dan arsip, sains → diagram bersih, antariksa → latar gelap kosmik, tubuh → ilustrasi anatomi. Gunakan satu gaya untuk semua scene; aset ilustratif harus menyatu antarscene; hindari pergantian gaya yang tidak disengaja.
 - Gunakan kuning untuk satu penekanan utama, bukan seluruh paragraf. Jangan menumpuk efek atau menambahkan whoosh pada setiap gerakan kecil.
 - Periksa video pada ukuran layar ponsel. Teks harus terbaca dalam waktu tampilnya.
 - Klip CTA resmi diputar setelah jawaban selesai, lewat transisi iris dari frame fakta terakhir; audionya dipertahankan.
@@ -164,5 +164,6 @@ Bandingkan episode pada platform, panjang, dan audiens yang sebanding. Uji satu 
 
 ## Riwayat revisi
 
+- **1.3 (7 Nov 2026):** gaya visual dipilih per episode berdasarkan isi fakta (`visualStyle` di brief, diwajibkan validator); kode legacy (`legacy-v1`, versi 3D, `SeFaktaCta`) dihapus.
 - **1.2 (7 Nov 2026):** Fish Audio dipindah ke proyek ini (`npm run vo`, normalisasi -14 LUFS); caption tersinkron via whisper.cpp (`npm run align`); template episode `src/shared/episode/`; `npm run new:episode`, `check:episodes`, `check:publish`.
 - **1.1 (7 Nov 2026):** format fakta dan validator (`validate:facts`); mode caption dipilih agent (`captionMode`); CTA resmi = `SeFaktaCta` di atas frame akhir (tanpa end card terpisah); aturan margin/area aman dihapus; rujukan Fish Audio disesuaikan dengan proyek ini.
