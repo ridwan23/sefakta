@@ -49,6 +49,10 @@ export const paths = (projectId: string) => {
 };
 
 /** Sidik teks + kecepatan: bila naskah berubah, audio/caption lama terdeteksi usang. */
+/** Tag ekspresi Fish Audio S2 di naskah (mis. `[excited]`, `[emphasis]`) dikirim ke TTS tetapi tidak diucapkan,
+ *  jadi dibuang untuk caption, alignment, dan hitung kata. */
+export const stripTags = (text: string) => text.replace(/\[[^\]]*\]\s*/g, '').replace(/\s{2,}/g, ' ').trim();
+
 export const textHash = (text: string, speed?: number) => createHash('sha1').update(`${text}|${speed ?? ''}`).digest('hex').slice(0, 12);
 
 export const durationSeconds = async (file: string) => {

@@ -1,133 +1,133 @@
 {
   "projectId": "tambora-1816",
   "method": "whisper.cpp 1.5.5 (small) + forced alignment ke naskah",
-  "generatedAt": "2026-11-07T08:22:23.653Z",
+  "generatedAt": "2026-11-07T13:46:12.966Z",
   "scenes": {
     "hook": {
       "hash": "f26dd06b99ca",
       "coverage": 1,
       "missing": [],
       "extra": [],
-      "heard": "Gunung di Indonesia ini pernah bikin Eropa seolah kehilangan musim panas dan tanpa sengaja ikut melahirkan Frankenstein.",
+      "heard": "Gunung di Indonesia ini pernah bikin Eropa seolah kehilangan musim panas, dan tanpa sengaja, ikut melahirkan Frankenstein.",
       "captions": [
         {
           "text": "Gunung",
-          "startMs": 180,
-          "endMs": 380,
-          "timestampMs": 280,
-          "confidence": 0.897096
+          "startMs": 160,
+          "endMs": 320,
+          "timestampMs": 240,
+          "confidence": 0.817123
         },
         {
           "text": " di",
-          "startMs": 380,
-          "endMs": 500,
-          "timestampMs": 440,
-          "confidence": 0.990964
+          "startMs": 320,
+          "endMs": 430,
+          "timestampMs": 375,
+          "confidence": 0.995063
         },
         {
           "text": " Indonesia",
-          "startMs": 500,
-          "endMs": 1080,
-          "timestampMs": 790,
-          "confidence": 0.98154
+          "startMs": 430,
+          "endMs": 920,
+          "timestampMs": 675,
+          "confidence": 0.990955
         },
         {
           "text": " ini",
-          "startMs": 1080,
-          "endMs": 1270,
-          "timestampMs": 1175,
-          "confidence": 0.946107
+          "startMs": 920,
+          "endMs": 1080,
+          "timestampMs": 1000,
+          "confidence": 0.940623
         },
         {
           "text": " pernah",
-          "startMs": 1270,
-          "endMs": 1650,
-          "timestampMs": 1460,
-          "confidence": 0.979002
+          "startMs": 1080,
+          "endMs": 1420,
+          "timestampMs": 1250,
+          "confidence": 0.974019
         },
         {
           "text": " bikin",
-          "startMs": 1650,
-          "endMs": 1960,
-          "timestampMs": 1805,
-          "confidence": 0.993524
+          "startMs": 1420,
+          "endMs": 1680,
+          "timestampMs": 1550,
+          "confidence": 0.991761
         },
         {
           "text": " Eropa",
-          "startMs": 1960,
-          "endMs": 2270,
-          "timestampMs": 2115,
-          "confidence": 0.583052
+          "startMs": 1680,
+          "endMs": 2000,
+          "timestampMs": 1840,
+          "confidence": 0.810566
         },
         {
           "text": " seolah",
-          "startMs": 2270,
-          "endMs": 2630,
-          "timestampMs": 2450,
-          "confidence": 0.859567
+          "startMs": 2000,
+          "endMs": 2420,
+          "timestampMs": 2210,
+          "confidence": 0.61616
         },
         {
           "text": " kehilangan",
-          "startMs": 2630,
-          "endMs": 3260,
-          "timestampMs": 2945,
-          "confidence": 0.853721
+          "startMs": 2420,
+          "endMs": 3130,
+          "timestampMs": 2775,
+          "confidence": 0.822768
         },
         {
           "text": " musim",
-          "startMs": 3260,
-          "endMs": 3570,
-          "timestampMs": 3415,
-          "confidence": 0.889271
+          "startMs": 3130,
+          "endMs": 3480,
+          "timestampMs": 3305,
+          "confidence": 0.980564
         },
         {
           "text": " panas.",
-          "startMs": 3570,
-          "endMs": 4190,
-          "timestampMs": 3880,
-          "confidence": 0.97596
+          "startMs": 3480,
+          "endMs": 4030,
+          "timestampMs": 3755,
+          "confidence": 0.986301
         },
         {
           "text": " Dan",
-          "startMs": 4190,
-          "endMs": 4230,
-          "timestampMs": 4210,
-          "confidence": 0.384138
+          "startMs": 4030,
+          "endMs": 4180,
+          "timestampMs": 4105,
+          "confidence": 0.526518
         },
         {
           "text": " tanpa",
-          "startMs": 4230,
-          "endMs": 4640,
-          "timestampMs": 4435,
-          "confidence": 0.956682
+          "startMs": 4180,
+          "endMs": 4520,
+          "timestampMs": 4350,
+          "confidence": 0.980659
         },
         {
           "text": " sengaja,",
-          "startMs": 4640,
-          "endMs": 5140,
-          "timestampMs": 4890,
-          "confidence": 0.694994
+          "startMs": 4520,
+          "endMs": 5200,
+          "timestampMs": 4860,
+          "confidence": 0.672146
         },
         {
           "text": " ikut",
-          "startMs": 5140,
-          "endMs": 5500,
-          "timestampMs": 5320,
-          "confidence": 0.80154
+          "startMs": 5200,
+          "endMs": 5360,
+          "timestampMs": 5280,
+          "confidence": 0.883491
         },
         {
           "text": " melahirkan",
-          "startMs": 5500,
-          "endMs": 6220,
-          "timestampMs": 5860,
-          "confidence": 0.940944
+          "startMs": 5360,
+          "endMs": 6080,
+          "timestampMs": 5720,
+          "confidence": 0.873854
         },
         {
           "text": " Frankenstein.",
-          "startMs": 6220,
-          "endMs": 7200,
-          "timestampMs": 6710,
-          "confidence": 0.982993
+          "startMs": 6080,
+          "endMs": 7000,
+          "timestampMs": 6540,
+          "confidence": 0.94405
         }
       ]
     },
@@ -136,182 +136,182 @@
       "coverage": 1,
       "missing": [],
       "extra": [],
-      "heard": "April 1815, gunung Tambora di Pulau Sumbawa meletus, ini letusan terbesar dalam sejarah yang tercatat, sekitar 10 ribu orang meninggal seketika.",
+      "heard": "April 1815. Gunung Tambora di Pulau Sumbawa meletus. Ini letusan terbesar dalam sejarah yang tercatat. Sekitar 10 ribu orang meninggal seketika.",
       "captions": [
         {
           "text": "April",
-          "startMs": 170,
-          "endMs": 630,
-          "timestampMs": 400,
-          "confidence": 0.907992
+          "startMs": 250,
+          "endMs": 660,
+          "timestampMs": 455,
+          "confidence": 0.85155
         },
         {
           "text": " seribu",
-          "startMs": 630,
-          "endMs": 950,
-          "timestampMs": 790,
-          "confidence": 0.750342
+          "startMs": 660,
+          "endMs": 996,
+          "timestampMs": 828,
+          "confidence": 0.847492
         },
         {
           "text": " delapan",
-          "startMs": 950,
-          "endMs": 1270,
-          "timestampMs": 1110,
-          "confidence": 0.750342
+          "startMs": 996,
+          "endMs": 1332,
+          "timestampMs": 1164,
+          "confidence": 0.847492
         },
         {
           "text": " ratus",
-          "startMs": 1270,
-          "endMs": 1590,
-          "timestampMs": 1430,
-          "confidence": 0.750342
+          "startMs": 1332,
+          "endMs": 1668,
+          "timestampMs": 1500,
+          "confidence": 0.847492
         },
         {
           "text": " lima",
-          "startMs": 1590,
-          "endMs": 1910,
-          "timestampMs": 1750,
-          "confidence": 0.750342
+          "startMs": 1668,
+          "endMs": 2004,
+          "timestampMs": 1836,
+          "confidence": 0.847492
         },
         {
           "text": " belas,",
-          "startMs": 1910,
-          "endMs": 2230,
-          "timestampMs": 2070,
-          "confidence": 0.750342
+          "startMs": 2004,
+          "endMs": 2340,
+          "timestampMs": 2172,
+          "confidence": 0.847492
         },
         {
           "text": " Gunung",
-          "startMs": 2230,
-          "endMs": 2680,
-          "timestampMs": 2455,
-          "confidence": 0.618789
+          "startMs": 2340,
+          "endMs": 2590,
+          "timestampMs": 2465,
+          "confidence": 0.632195
         },
         {
           "text": " Tambora",
-          "startMs": 2680,
-          "endMs": 3190,
-          "timestampMs": 2935,
-          "confidence": 0.807956
+          "startMs": 2590,
+          "endMs": 3000,
+          "timestampMs": 2795,
+          "confidence": 0.890755
         },
         {
           "text": " di",
-          "startMs": 3190,
-          "endMs": 3330,
-          "timestampMs": 3260,
-          "confidence": 0.506672
+          "startMs": 3000,
+          "endMs": 3190,
+          "timestampMs": 3095,
+          "confidence": 0.434379
         },
         {
           "text": " Pulau",
-          "startMs": 3330,
-          "endMs": 3710,
-          "timestampMs": 3520,
-          "confidence": 0.649165
+          "startMs": 3190,
+          "endMs": 3450,
+          "timestampMs": 3320,
+          "confidence": 0.680024
         },
         {
           "text": " Sumbawa",
-          "startMs": 3710,
-          "endMs": 4200,
-          "timestampMs": 3955,
-          "confidence": 0.90335
+          "startMs": 3450,
+          "endMs": 3810,
+          "timestampMs": 3630,
+          "confidence": 0.911238
         },
         {
           "text": " meletus.",
-          "startMs": 4200,
-          "endMs": 5030,
-          "timestampMs": 4615,
-          "confidence": 0.535162
+          "startMs": 3810,
+          "endMs": 4340,
+          "timestampMs": 4075,
+          "confidence": 0.683347
         },
         {
           "text": " Ini",
-          "startMs": 5030,
-          "endMs": 5070,
-          "timestampMs": 5050,
-          "confidence": 0.5681
+          "startMs": 4340,
+          "endMs": 4530,
+          "timestampMs": 4435,
+          "confidence": 0.966739
         },
         {
           "text": " letusan",
-          "startMs": 5060,
-          "endMs": 5480,
-          "timestampMs": 5270,
-          "confidence": 0.924275
+          "startMs": 4530,
+          "endMs": 4970,
+          "timestampMs": 4750,
+          "confidence": 0.902264
         },
         {
           "text": " terbesar",
-          "startMs": 5480,
-          "endMs": 6000,
-          "timestampMs": 5740,
-          "confidence": 0.990022
+          "startMs": 4970,
+          "endMs": 5460,
+          "timestampMs": 5215,
+          "confidence": 0.996141
         },
         {
           "text": " dalam",
-          "startMs": 6000,
-          "endMs": 6310,
-          "timestampMs": 6155,
-          "confidence": 0.967437
+          "startMs": 5460,
+          "endMs": 5770,
+          "timestampMs": 5615,
+          "confidence": 0.997097
         },
         {
           "text": " sejarah",
-          "startMs": 6310,
-          "endMs": 6730,
-          "timestampMs": 6520,
-          "confidence": 0.957284
+          "startMs": 5770,
+          "endMs": 6190,
+          "timestampMs": 5980,
+          "confidence": 0.958746
         },
         {
           "text": " yang",
-          "startMs": 6730,
-          "endMs": 7010,
-          "timestampMs": 6870,
-          "confidence": 0.994256
+          "startMs": 6190,
+          "endMs": 6430,
+          "timestampMs": 6310,
+          "confidence": 0.997737
         },
         {
           "text": " tercatat.",
-          "startMs": 7010,
-          "endMs": 7630,
-          "timestampMs": 7320,
-          "confidence": 0.936045
+          "startMs": 6430,
+          "endMs": 7160,
+          "timestampMs": 6795,
+          "confidence": 0.96736
         },
         {
           "text": " Sekitar",
-          "startMs": 7630,
-          "endMs": 7980,
-          "timestampMs": 7805,
-          "confidence": 0.657602
+          "startMs": 7160,
+          "endMs": 7550,
+          "timestampMs": 7355,
+          "confidence": 0.618891
         },
         {
           "text": " sepuluh",
-          "startMs": 7980,
-          "endMs": 8410,
-          "timestampMs": 8195,
-          "confidence": 0.645607
+          "startMs": 7550,
+          "endMs": 7850,
+          "timestampMs": 7700,
+          "confidence": 0.527093
         },
         {
           "text": " ribu",
-          "startMs": 8410,
-          "endMs": 8590,
-          "timestampMs": 8500,
-          "confidence": 0.761765
+          "startMs": 7850,
+          "endMs": 8060,
+          "timestampMs": 7955,
+          "confidence": 0.493891
         },
         {
           "text": " orang",
-          "startMs": 8590,
-          "endMs": 8900,
-          "timestampMs": 8745,
-          "confidence": 0.996972
+          "startMs": 8060,
+          "endMs": 8330,
+          "timestampMs": 8195,
+          "confidence": 0.995906
         },
         {
           "text": " meninggal",
-          "startMs": 8900,
-          "endMs": 9450,
-          "timestampMs": 9175,
-          "confidence": 0.996447
+          "startMs": 8330,
+          "endMs": 8820,
+          "timestampMs": 8575,
+          "confidence": 0.99549
         },
         {
           "text": " seketika.",
-          "startMs": 9450,
-          "endMs": 10200,
-          "timestampMs": 9825,
-          "confidence": 0.5961
+          "startMs": 8820,
+          "endMs": 9460,
+          "timestampMs": 9140,
+          "confidence": 0.582259
         }
       ]
     },
@@ -320,252 +320,252 @@
       "coverage": 1,
       "missing": [],
       "extra": [],
-      "heard": "Letusannya menyemburkan gas belerang sampai ke stratosphere jauh di atas awan hujan. Disana gas itu menjadi kabut halus yang menyebar mengelilingi bumi dan mementulkan sebagian sinar matahari. Cahaya yang sampai ke permukaan pun berkurang.",
+      "heard": "Letusannya menyemburkan gas berlarang sampai ke stratosphere, jauh di atas awan hujan. Disana, gas itu menjadi kabut halus yang menyebar mengelilingi bumi dan memantulkan sebagian sinar matahari. Cahaya yang sampai ke permukaan pun berkurang.",
       "captions": [
         {
           "text": "Letusannya",
           "startMs": 170,
-          "endMs": 570,
-          "timestampMs": 370,
-          "confidence": 0.766385
+          "endMs": 560,
+          "timestampMs": 365,
+          "confidence": 0.787297
         },
         {
           "text": " menyemburkan",
-          "startMs": 570,
-          "endMs": 1250,
-          "timestampMs": 910,
-          "confidence": 0.821065
+          "startMs": 560,
+          "endMs": 1240,
+          "timestampMs": 900,
+          "confidence": 0.649486
         },
         {
           "text": " gas",
-          "startMs": 1250,
-          "endMs": 1420,
-          "timestampMs": 1335,
-          "confidence": 0.959403
+          "startMs": 1240,
+          "endMs": 1410,
+          "timestampMs": 1325,
+          "confidence": 0.965957
         },
         {
           "text": " belerang",
-          "startMs": 1420,
-          "endMs": 1860,
-          "timestampMs": 1640,
-          "confidence": 0.470305
+          "startMs": 1410,
+          "endMs": 1920,
+          "timestampMs": 1665,
+          "confidence": 0.434392
         },
         {
           "text": " sampai",
-          "startMs": 1860,
+          "startMs": 1920,
           "endMs": 2260,
-          "timestampMs": 2060,
-          "confidence": 0.977281
+          "timestampMs": 2090,
+          "confidence": 0.97635
         },
         {
           "text": " ke",
           "startMs": 2260,
           "endMs": 2410,
           "timestampMs": 2335,
-          "confidence": 0.863037
+          "confidence": 0.955287
         },
         {
           "text": " stratosfer,",
           "startMs": 2410,
-          "endMs": 3200,
-          "timestampMs": 2805,
-          "confidence": 0.736248
+          "endMs": 3260,
+          "timestampMs": 2835,
+          "confidence": 0.841329
         },
         {
           "text": " jauh",
-          "startMs": 3200,
-          "endMs": 3450,
-          "timestampMs": 3325,
-          "confidence": 0.318718
+          "startMs": 3260,
+          "endMs": 3540,
+          "timestampMs": 3400,
+          "confidence": 0.796795
         },
         {
           "text": " di",
-          "startMs": 3450,
-          "endMs": 3620,
-          "timestampMs": 3535,
-          "confidence": 0.997285
+          "startMs": 3540,
+          "endMs": 3750,
+          "timestampMs": 3645,
+          "confidence": 0.998603
         },
         {
           "text": " atas",
-          "startMs": 3620,
+          "startMs": 3750,
           "endMs": 3960,
-          "timestampMs": 3790,
-          "confidence": 0.72107
+          "timestampMs": 3855,
+          "confidence": 0.746354
         },
         {
           "text": " awan",
           "startMs": 3960,
-          "endMs": 4300,
-          "timestampMs": 4130,
-          "confidence": 0.940127
+          "endMs": 4240,
+          "timestampMs": 4100,
+          "confidence": 0.96593
         },
         {
           "text": " hujan.",
-          "startMs": 4300,
-          "endMs": 4800,
-          "timestampMs": 4550,
-          "confidence": 0.987236
+          "startMs": 4240,
+          "endMs": 4600,
+          "timestampMs": 4420,
+          "confidence": 0.988757
         },
         {
           "text": " Di",
-          "startMs": 4800,
-          "endMs": 5015,
-          "timestampMs": 4908,
-          "confidence": 0.591104
+          "startMs": 4600,
+          "endMs": 4840,
+          "timestampMs": 4720,
+          "confidence": 0.578522
         },
         {
           "text": " sana,",
-          "startMs": 5015,
-          "endMs": 5230,
-          "timestampMs": 5123,
-          "confidence": 0.591104
+          "startMs": 4840,
+          "endMs": 5080,
+          "timestampMs": 4960,
+          "confidence": 0.578522
         },
         {
           "text": " gas",
-          "startMs": 5230,
-          "endMs": 5400,
-          "timestampMs": 5315,
-          "confidence": 0.649162
+          "startMs": 5080,
+          "endMs": 5370,
+          "timestampMs": 5225,
+          "confidence": 0.967572
         },
         {
           "text": " itu",
-          "startMs": 5400,
-          "endMs": 5740,
-          "timestampMs": 5570,
-          "confidence": 0.985073
+          "startMs": 5370,
+          "endMs": 5440,
+          "timestampMs": 5405,
+          "confidence": 0.984035
         },
         {
           "text": " menjadi",
-          "startMs": 5740,
-          "endMs": 6140,
-          "timestampMs": 5940,
-          "confidence": 0.981105
+          "startMs": 5440,
+          "endMs": 5880,
+          "timestampMs": 5660,
+          "confidence": 0.98711
         },
         {
           "text": " kabut",
-          "startMs": 6140,
-          "endMs": 6410,
-          "timestampMs": 6275,
-          "confidence": 0.884568
+          "startMs": 5880,
+          "endMs": 6200,
+          "timestampMs": 6040,
+          "confidence": 0.886303
         },
         {
           "text": " halus",
-          "startMs": 6410,
-          "endMs": 6740,
-          "timestampMs": 6575,
-          "confidence": 0.98609
+          "startMs": 6200,
+          "endMs": 6480,
+          "timestampMs": 6340,
+          "confidence": 0.989674
         },
         {
           "text": " yang",
-          "startMs": 6740,
-          "endMs": 7010,
-          "timestampMs": 6875,
-          "confidence": 0.990088
+          "startMs": 6480,
+          "endMs": 6730,
+          "timestampMs": 6605,
+          "confidence": 0.990565
         },
         {
           "text": " menyebar",
-          "startMs": 7010,
-          "endMs": 7540,
-          "timestampMs": 7275,
-          "confidence": 0.949303
+          "startMs": 6730,
+          "endMs": 7210,
+          "timestampMs": 6970,
+          "confidence": 0.95384
         },
         {
           "text": " mengelilingi",
-          "startMs": 7540,
-          "endMs": 8340,
-          "timestampMs": 7940,
-          "confidence": 0.903788
+          "startMs": 7210,
+          "endMs": 7950,
+          "timestampMs": 7580,
+          "confidence": 0.914691
         },
         {
           "text": " Bumi,",
-          "startMs": 8340,
-          "endMs": 8940,
-          "timestampMs": 8640,
-          "confidence": 0.932649
+          "startMs": 7950,
+          "endMs": 8420,
+          "timestampMs": 8185,
+          "confidence": 0.953927
         },
         {
           "text": " dan",
-          "startMs": 8940,
-          "endMs": 9020,
-          "timestampMs": 8980,
-          "confidence": 0.483313
+          "startMs": 8420,
+          "endMs": 8540,
+          "timestampMs": 8480,
+          "confidence": 0.483596
         },
         {
           "text": " memantulkan",
-          "startMs": 9020,
-          "endMs": 9720,
-          "timestampMs": 9370,
-          "confidence": 0.801796
+          "startMs": 8540,
+          "endMs": 9230,
+          "timestampMs": 8885,
+          "confidence": 0.803046
         },
         {
           "text": " sebagian",
-          "startMs": 9720,
-          "endMs": 10170,
-          "timestampMs": 9945,
-          "confidence": 0.926941
+          "startMs": 9230,
+          "endMs": 9730,
+          "timestampMs": 9480,
+          "confidence": 0.912098
         },
         {
           "text": " sinar",
-          "startMs": 10170,
-          "endMs": 10440,
-          "timestampMs": 10305,
-          "confidence": 0.928874
+          "startMs": 9730,
+          "endMs": 10060,
+          "timestampMs": 9895,
+          "confidence": 0.842259
         },
         {
           "text": " Matahari.",
-          "startMs": 10440,
-          "endMs": 11120,
-          "timestampMs": 10780,
-          "confidence": 0.380807
+          "startMs": 10060,
+          "endMs": 10580,
+          "timestampMs": 10320,
+          "confidence": 0.469912
         },
         {
           "text": " Cahaya",
-          "startMs": 11120,
-          "endMs": 11550,
-          "timestampMs": 11335,
-          "confidence": 0.79209
+          "startMs": 10580,
+          "endMs": 10940,
+          "timestampMs": 10760,
+          "confidence": 0.880898
         },
         {
           "text": " yang",
-          "startMs": 11550,
-          "endMs": 11840,
-          "timestampMs": 11695,
-          "confidence": 0.996449
+          "startMs": 10940,
+          "endMs": 11180,
+          "timestampMs": 11060,
+          "confidence": 0.997134
         },
         {
           "text": " sampai",
-          "startMs": 11840,
-          "endMs": 12280,
-          "timestampMs": 12060,
-          "confidence": 0.994103
+          "startMs": 11180,
+          "endMs": 11550,
+          "timestampMs": 11365,
+          "confidence": 0.993246
         },
         {
           "text": " ke",
-          "startMs": 12280,
-          "endMs": 12450,
-          "timestampMs": 12365,
-          "confidence": 0.938492
+          "startMs": 11550,
+          "endMs": 11670,
+          "timestampMs": 11610,
+          "confidence": 0.919356
         },
         {
           "text": " permukaan",
-          "startMs": 12450,
-          "endMs": 13070,
-          "timestampMs": 12760,
-          "confidence": 0.633864
+          "startMs": 11670,
+          "endMs": 12210,
+          "timestampMs": 11940,
+          "confidence": 0.628731
         },
         {
           "text": " pun",
-          "startMs": 13070,
-          "endMs": 13360,
-          "timestampMs": 13215,
-          "confidence": 0.998281
+          "startMs": 12210,
+          "endMs": 12390,
+          "timestampMs": 12300,
+          "confidence": 0.998015
         },
         {
           "text": " berkurang.",
-          "startMs": 13360,
-          "endMs": 14000,
-          "timestampMs": 13680,
-          "confidence": 0.99138
+          "startMs": 12390,
+          "endMs": 13080,
+          "timestampMs": 12735,
+          "confidence": 0.987733
         }
       ]
     },
@@ -574,516 +574,520 @@
       "coverage": 1,
       "missing": [],
       "extra": [],
-      "heard": "Akibatnya, musim panas 1816 di Eropa dan Amerika Utara menjadi dingin, gelap, dan basah. Di beberapa tempat, salju turun di tengah musim panas, panen gagal, dan kelaparan meluas. Tahun itu dijuluki tahun tanpa musim panas.",
+      "heard": "Akibatnya, musim panas 1800-16 di Eropa dan Amerika Utara menjadi dingin, gelap, dan basah. Di beberapa tempat, salju turun di tengah musim panas, panen gagal, dan kelaparan meluas. Tahun itu dijuluki tahun tanpa musim panas.",
       "captions": [
         {
           "text": "Akibatnya,",
-          "startMs": 160,
-          "endMs": 1120,
-          "timestampMs": 640,
-          "confidence": 0.808869
+          "startMs": 150,
+          "endMs": 1020,
+          "timestampMs": 585,
+          "confidence": 0.771526
         },
         {
           "text": " musim",
-          "startMs": 1120,
-          "endMs": 1300,
-          "timestampMs": 1210,
-          "confidence": 0.84842
+          "startMs": 1020,
+          "endMs": 1230,
+          "timestampMs": 1125,
+          "confidence": 0.804338
         },
         {
           "text": " panas",
-          "startMs": 1300,
-          "endMs": 1710,
-          "timestampMs": 1505,
-          "confidence": 0.927985
+          "startMs": 1230,
+          "endMs": 1650,
+          "timestampMs": 1440,
+          "confidence": 0.94466
         },
         {
           "text": " seribu",
-          "startMs": 1710,
-          "endMs": 1924,
-          "timestampMs": 1817,
-          "confidence": 0.539094
+          "startMs": 1650,
+          "endMs": 1930,
+          "timestampMs": 1790,
+          "confidence": 0.660387
         },
         {
           "text": " delapan",
-          "startMs": 1924,
-          "endMs": 2138,
-          "timestampMs": 2031,
-          "confidence": 0.539094
+          "startMs": 1930,
+          "endMs": 2210,
+          "timestampMs": 2070,
+          "confidence": 0.660387
         },
         {
           "text": " ratus",
-          "startMs": 2138,
-          "endMs": 2352,
-          "timestampMs": 2245,
-          "confidence": 0.539094
+          "startMs": 2210,
+          "endMs": 2490,
+          "timestampMs": 2350,
+          "confidence": 0.660387
         },
         {
           "text": " enam",
-          "startMs": 2352,
-          "endMs": 2566,
-          "timestampMs": 2459,
-          "confidence": 0.539094
+          "startMs": 2490,
+          "endMs": 2770,
+          "timestampMs": 2630,
+          "confidence": 0.660387
         },
         {
           "text": " belas",
-          "startMs": 2566,
-          "endMs": 2780,
-          "timestampMs": 2673,
-          "confidence": 0.539094
+          "startMs": 2770,
+          "endMs": 3050,
+          "timestampMs": 2910,
+          "confidence": 0.660387
         },
         {
           "text": " di",
-          "startMs": 2780,
-          "endMs": 2870,
-          "timestampMs": 2825,
-          "confidence": 0.967155
+          "startMs": 3050,
+          "endMs": 3200,
+          "timestampMs": 3125,
+          "confidence": 0.942336
         },
         {
           "text": " Eropa",
-          "startMs": 2870,
-          "endMs": 3280,
-          "timestampMs": 3075,
-          "confidence": 0.823549
+          "startMs": 3200,
+          "endMs": 3790,
+          "timestampMs": 3495,
+          "confidence": 0.82859
         },
         {
           "text": " dan",
-          "startMs": 3280,
-          "endMs": 3530,
-          "timestampMs": 3405,
-          "confidence": 0.985919
+          "startMs": 3790,
+          "endMs": 3860,
+          "timestampMs": 3825,
+          "confidence": 0.876737
         },
         {
           "text": " Amerika",
-          "startMs": 3530,
-          "endMs": 4110,
-          "timestampMs": 3820,
-          "confidence": 0.979071
+          "startMs": 3860,
+          "endMs": 4280,
+          "timestampMs": 4070,
+          "confidence": 0.975202
         },
         {
           "text": " Utara",
-          "startMs": 4110,
-          "endMs": 4600,
-          "timestampMs": 4355,
-          "confidence": 0.864201
+          "startMs": 4280,
+          "endMs": 4580,
+          "timestampMs": 4430,
+          "confidence": 0.853529
         },
         {
           "text": " menjadi",
-          "startMs": 4600,
-          "endMs": 4970,
-          "timestampMs": 4785,
-          "confidence": 0.917094
+          "startMs": 4580,
+          "endMs": 5010,
+          "timestampMs": 4795,
+          "confidence": 0.993182
         },
         {
           "text": " dingin,",
-          "startMs": 4970,
-          "endMs": 5400,
-          "timestampMs": 5185,
-          "confidence": 0.973905
+          "startMs": 5010,
+          "endMs": 5530,
+          "timestampMs": 5270,
+          "confidence": 0.983045
         },
         {
           "text": " gelap,",
-          "startMs": 5400,
-          "endMs": 5930,
-          "timestampMs": 5665,
-          "confidence": 0.301093
+          "startMs": 5530,
+          "endMs": 6030,
+          "timestampMs": 5780,
+          "confidence": 0.791158
         },
         {
           "text": " dan",
-          "startMs": 5930,
-          "endMs": 6160,
-          "timestampMs": 6045,
-          "confidence": 0.98576
+          "startMs": 6030,
+          "endMs": 6180,
+          "timestampMs": 6105,
+          "confidence": 0.97566
         },
         {
           "text": " basah.",
-          "startMs": 6160,
-          "endMs": 6560,
-          "timestampMs": 6360,
-          "confidence": 0.932202
+          "startMs": 6180,
+          "endMs": 6680,
+          "timestampMs": 6430,
+          "confidence": 0.783791
         },
         {
           "text": " Di",
-          "startMs": 6560,
-          "endMs": 6890,
-          "timestampMs": 6725,
-          "confidence": 0.971964
+          "startMs": 6680,
+          "endMs": 6800,
+          "timestampMs": 6740,
+          "confidence": 0.967449
         },
         {
           "text": " beberapa",
-          "startMs": 6890,
-          "endMs": 7270,
-          "timestampMs": 7080,
-          "confidence": 0.993737
+          "startMs": 6800,
+          "endMs": 7250,
+          "timestampMs": 7025,
+          "confidence": 0.996514
         },
         {
           "text": " tempat,",
-          "startMs": 7270,
-          "endMs": 7760,
-          "timestampMs": 7515,
-          "confidence": 0.994884
+          "startMs": 7250,
+          "endMs": 7870,
+          "timestampMs": 7560,
+          "confidence": 0.996379
         },
         {
           "text": " salju",
-          "startMs": 7760,
-          "endMs": 8080,
-          "timestampMs": 7920,
-          "confidence": 0.838263
+          "startMs": 7870,
+          "endMs": 7980,
+          "timestampMs": 7925,
+          "confidence": 0.890627
         },
         {
           "text": " turun",
-          "startMs": 8080,
-          "endMs": 8410,
-          "timestampMs": 8245,
-          "confidence": 0.994153
+          "startMs": 7980,
+          "endMs": 8260,
+          "timestampMs": 8120,
+          "confidence": 0.993932
         },
         {
           "text": " di",
-          "startMs": 8410,
-          "endMs": 8540,
-          "timestampMs": 8475,
-          "confidence": 0.947336
+          "startMs": 8260,
+          "endMs": 8370,
+          "timestampMs": 8315,
+          "confidence": 0.937514
         },
         {
           "text": " tengah",
-          "startMs": 8540,
-          "endMs": 8940,
-          "timestampMs": 8740,
-          "confidence": 0.998003
+          "startMs": 8370,
+          "endMs": 8710,
+          "timestampMs": 8540,
+          "confidence": 0.999079
         },
         {
           "text": " musim",
-          "startMs": 8940,
-          "endMs": 9270,
-          "timestampMs": 9105,
-          "confidence": 0.980804
+          "startMs": 8710,
+          "endMs": 8990,
+          "timestampMs": 8850,
+          "confidence": 0.9895
         },
         {
           "text": " panas.",
-          "startMs": 9270,
-          "endMs": 10000,
-          "timestampMs": 9635,
-          "confidence": 0.997303
+          "startMs": 8990,
+          "endMs": 9620,
+          "timestampMs": 9305,
+          "confidence": 0.997887
         },
         {
           "text": " Panen",
-          "startMs": 10000,
-          "endMs": 10180,
-          "timestampMs": 10090,
-          "confidence": 0.596332
+          "startMs": 9620,
+          "endMs": 9900,
+          "timestampMs": 9760,
+          "confidence": 0.748893
         },
         {
           "text": " gagal,",
-          "startMs": 10180,
-          "endMs": 10780,
-          "timestampMs": 10480,
-          "confidence": 0.979774
+          "startMs": 9900,
+          "endMs": 10520,
+          "timestampMs": 10210,
+          "confidence": 0.980656
         },
         {
           "text": " dan",
-          "startMs": 10780,
-          "endMs": 10900,
-          "timestampMs": 10840,
-          "confidence": 0.984628
+          "startMs": 10520,
+          "endMs": 10630,
+          "timestampMs": 10575,
+          "confidence": 0.984866
         },
         {
           "text": " kelaparan",
-          "startMs": 10900,
-          "endMs": 11450,
-          "timestampMs": 11175,
-          "confidence": 0.944862
+          "startMs": 10630,
+          "endMs": 11190,
+          "timestampMs": 10910,
+          "confidence": 0.816491
         },
         {
           "text": " meluas.",
-          "startMs": 11450,
-          "endMs": 12040,
-          "timestampMs": 11745,
-          "confidence": 0.932649
+          "startMs": 11190,
+          "endMs": 11600,
+          "timestampMs": 11395,
+          "confidence": 0.913964
         },
         {
           "text": " Tahun",
-          "startMs": 12040,
-          "endMs": 12400,
-          "timestampMs": 12220,
-          "confidence": 0.968713
+          "startMs": 11600,
+          "endMs": 11930,
+          "timestampMs": 11765,
+          "confidence": 0.962481
         },
         {
           "text": " itu",
-          "startMs": 12400,
-          "endMs": 12620,
-          "timestampMs": 12510,
-          "confidence": 0.995537
+          "startMs": 11930,
+          "endMs": 12130,
+          "timestampMs": 12030,
+          "confidence": 0.992297
         },
         {
           "text": " dijuluki",
-          "startMs": 12620,
-          "endMs": 13200,
-          "timestampMs": 12910,
-          "confidence": 0.948818
+          "startMs": 12130,
+          "endMs": 12670,
+          "timestampMs": 12400,
+          "confidence": 0.800924
         },
         {
           "text": " tahun",
-          "startMs": 13200,
-          "endMs": 13600,
-          "timestampMs": 13400,
-          "confidence": 0.874616
+          "startMs": 12670,
+          "endMs": 12980,
+          "timestampMs": 12825,
+          "confidence": 0.935397
         },
         {
           "text": " tanpa",
-          "startMs": 13600,
-          "endMs": 13930,
-          "timestampMs": 13765,
-          "confidence": 0.977359
+          "startMs": 12980,
+          "endMs": 13360,
+          "timestampMs": 13170,
+          "confidence": 0.99163
         },
         {
           "text": " musim",
-          "startMs": 13930,
-          "endMs": 14290,
-          "timestampMs": 14110,
-          "confidence": 0.995121
+          "startMs": 13360,
+          "endMs": 13640,
+          "timestampMs": 13500,
+          "confidence": 0.995986
         },
         {
           "text": " panas.",
-          "startMs": 14290,
-          "endMs": 14760,
-          "timestampMs": 14525,
-          "confidence": 0.99859
+          "startMs": 13640,
+          "endMs": 14000,
+          "timestampMs": 13820,
+          "confidence": 0.998452
         }
       ]
     },
     "jawaban": {
-      "hash": "5e6025643186",
-      "coverage": 0.938,
-      "missing": [
-        "Jenewa,",
-        "Swiss,"
-      ],
+      "hash": "2eada08d7f01",
+      "coverage": 1,
+      "missing": [],
       "extra": [],
-      "heard": "Di Tepidhanau Geneva, Suis, cuaca buruk mengurung Mary Shelley di dalam rumah. Lord Byron menantang teman-temannya menulis cerita hantu. Dari situlah lahir Frankenstein, monster yang ternyata berakar dari gunung di Sumbawa.",
+      "heard": "Di tepi sebuah danau di Swiss, cuaca buruk mengurung Mary Shelley di dalam rumah. Lord Byron menantang teman-temannya menulis cerita hantu. Dari situlah lahir Frankenstein, monster yang ternyata berakar dari gunung di Sumbawa.",
       "captions": [
         {
           "text": "Di",
-          "startMs": 130,
-          "endMs": 190,
+          "startMs": 140,
+          "endMs": 180,
           "timestampMs": 160,
-          "confidence": 0.753261
+          "confidence": 0.770366
         },
         {
           "text": " tepi",
-          "startMs": 190,
-          "endMs": 485,
-          "timestampMs": 338,
-          "confidence": 0.553436
+          "startMs": 170,
+          "endMs": 450,
+          "timestampMs": 310,
+          "confidence": 0.514466
         },
         {
-          "text": " Danau",
-          "startMs": 485,
-          "endMs": 780,
-          "timestampMs": 633,
-          "confidence": 0.553436
+          "text": " sebuah",
+          "startMs": 450,
+          "endMs": 840,
+          "timestampMs": 645,
+          "confidence": 0.926893
         },
         {
-          "text": " Jenewa,",
-          "startMs": 780,
-          "endMs": 1240,
-          "timestampMs": 1010,
-          "confidence": null
+          "text": " danau",
+          "startMs": 840,
+          "endMs": 1190,
+          "timestampMs": 1015,
+          "confidence": 0.575402
+        },
+        {
+          "text": " di",
+          "startMs": 1190,
+          "endMs": 1380,
+          "timestampMs": 1285,
+          "confidence": 0.994344
         },
         {
           "text": " Swiss,",
-          "startMs": 1240,
-          "endMs": 1700,
-          "timestampMs": 1470,
-          "confidence": null
+          "startMs": 1380,
+          "endMs": 1870,
+          "timestampMs": 1625,
+          "confidence": 0.0581557
         },
         {
           "text": " cuaca",
-          "startMs": 1700,
-          "endMs": 2230,
-          "timestampMs": 1965,
-          "confidence": 0.79857
+          "startMs": 1870,
+          "endMs": 2100,
+          "timestampMs": 1985,
+          "confidence": 0.619058
         },
         {
           "text": " buruk",
-          "startMs": 2230,
-          "endMs": 2360,
-          "timestampMs": 2295,
-          "confidence": 0.990552
+          "startMs": 2100,
+          "endMs": 2300,
+          "timestampMs": 2200,
+          "confidence": 0.992428
         },
         {
           "text": " mengurung",
-          "startMs": 2360,
-          "endMs": 2960,
-          "timestampMs": 2660,
-          "confidence": 0.97772
+          "startMs": 2300,
+          "endMs": 2760,
+          "timestampMs": 2530,
+          "confidence": 0.990025
         },
         {
           "text": " Mary",
-          "startMs": 2960,
-          "endMs": 3230,
-          "timestampMs": 3095,
-          "confidence": 0.930161
+          "startMs": 2760,
+          "endMs": 2970,
+          "timestampMs": 2865,
+          "confidence": 0.869244
         },
         {
           "text": " Shelley",
-          "startMs": 3230,
-          "endMs": 3700,
-          "timestampMs": 3465,
-          "confidence": 0.973155
+          "startMs": 2970,
+          "endMs": 3340,
+          "timestampMs": 3155,
+          "confidence": 0.973343
         },
         {
           "text": " di",
-          "startMs": 3700,
-          "endMs": 3830,
-          "timestampMs": 3765,
-          "confidence": 0.840888
+          "startMs": 3340,
+          "endMs": 3440,
+          "timestampMs": 3390,
+          "confidence": 0.892937
         },
         {
           "text": " dalam",
-          "startMs": 3830,
-          "endMs": 4170,
-          "timestampMs": 4000,
-          "confidence": 0.974239
+          "startMs": 3440,
+          "endMs": 3700,
+          "timestampMs": 3570,
+          "confidence": 0.978036
         },
         {
           "text": " rumah.",
-          "startMs": 4170,
-          "endMs": 4680,
-          "timestampMs": 4425,
-          "confidence": 0.997944
+          "startMs": 3700,
+          "endMs": 4180,
+          "timestampMs": 3940,
+          "confidence": 0.996478
         },
         {
           "text": " Lord",
-          "startMs": 4680,
-          "endMs": 5000,
-          "timestampMs": 4840,
-          "confidence": 0.99137
+          "startMs": 4180,
+          "endMs": 4440,
+          "timestampMs": 4310,
+          "confidence": 0.993887
         },
         {
           "text": " Byron",
-          "startMs": 5000,
-          "endMs": 5280,
-          "timestampMs": 5140,
-          "confidence": 0.937492
+          "startMs": 4440,
+          "endMs": 4770,
+          "timestampMs": 4605,
+          "confidence": 0.942704
         },
         {
           "text": " menantang",
-          "startMs": 5280,
-          "endMs": 5880,
-          "timestampMs": 5580,
-          "confidence": 0.931063
+          "startMs": 4770,
+          "endMs": 5390,
+          "timestampMs": 5080,
+          "confidence": 0.983262
         },
         {
           "text": " teman-temannya",
-          "startMs": 5880,
-          "endMs": 6980,
-          "timestampMs": 6430,
-          "confidence": 0.996869
+          "startMs": 5390,
+          "endMs": 6290,
+          "timestampMs": 5840,
+          "confidence": 0.998498
         },
         {
           "text": " menulis",
-          "startMs": 6980,
-          "endMs": 7390,
-          "timestampMs": 7185,
-          "confidence": 0.953103
+          "startMs": 6290,
+          "endMs": 6750,
+          "timestampMs": 6520,
+          "confidence": 0.98026
         },
         {
           "text": " cerita",
-          "startMs": 7390,
-          "endMs": 7670,
-          "timestampMs": 7530,
-          "confidence": 0.993521
+          "startMs": 6750,
+          "endMs": 7150,
+          "timestampMs": 6950,
+          "confidence": 0.998258
         },
         {
           "text": " hantu.",
-          "startMs": 7670,
-          "endMs": 8300,
-          "timestampMs": 7985,
-          "confidence": 0.929768
+          "startMs": 7150,
+          "endMs": 7560,
+          "timestampMs": 7355,
+          "confidence": 0.944409
         },
         {
           "text": " Dari",
-          "startMs": 8300,
-          "endMs": 8560,
-          "timestampMs": 8430,
-          "confidence": 0.975467
+          "startMs": 7560,
+          "endMs": 7800,
+          "timestampMs": 7680,
+          "confidence": 0.989857
         },
         {
           "text": " situlah",
-          "startMs": 8560,
-          "endMs": 9020,
-          "timestampMs": 8790,
-          "confidence": 0.777164
+          "startMs": 7800,
+          "endMs": 8220,
+          "timestampMs": 8010,
+          "confidence": 0.758659
         },
         {
           "text": " lahir",
-          "startMs": 9020,
-          "endMs": 9350,
-          "timestampMs": 9185,
-          "confidence": 0.962355
+          "startMs": 8220,
+          "endMs": 8520,
+          "timestampMs": 8370,
+          "confidence": 0.979372
         },
         {
           "text": " Frankenstein,",
-          "startMs": 9350,
-          "endMs": 10620,
-          "timestampMs": 9985,
-          "confidence": 0.972601
+          "startMs": 8520,
+          "endMs": 9540,
+          "timestampMs": 9030,
+          "confidence": 0.987148
         },
         {
           "text": " monster",
-          "startMs": 10620,
-          "endMs": 10780,
-          "timestampMs": 10700,
-          "confidence": 0.573324
+          "startMs": 9540,
+          "endMs": 9850,
+          "timestampMs": 9695,
+          "confidence": 0.748088
         },
         {
           "text": " yang",
-          "startMs": 10780,
-          "endMs": 11030,
-          "timestampMs": 10905,
-          "confidence": 0.994547
+          "startMs": 9850,
+          "endMs": 10050,
+          "timestampMs": 9950,
+          "confidence": 0.989583
         },
         {
           "text": " ternyata",
-          "startMs": 11030,
-          "endMs": 11510,
-          "timestampMs": 11270,
-          "confidence": 0.993527
+          "startMs": 10050,
+          "endMs": 10530,
+          "timestampMs": 10290,
+          "confidence": 0.993624
         },
         {
           "text": " berakar",
-          "startMs": 11510,
-          "endMs": 11930,
-          "timestampMs": 11720,
-          "confidence": 0.993443
+          "startMs": 10530,
+          "endMs": 10950,
+          "timestampMs": 10740,
+          "confidence": 0.994393
         },
         {
           "text": " dari",
-          "startMs": 11930,
-          "endMs": 12180,
-          "timestampMs": 12055,
-          "confidence": 0.997518
+          "startMs": 10950,
+          "endMs": 11190,
+          "timestampMs": 11070,
+          "confidence": 0.997798
         },
         {
           "text": " gunung",
-          "startMs": 12180,
-          "endMs": 12540,
-          "timestampMs": 12360,
-          "confidence": 0.958831
+          "startMs": 11190,
+          "endMs": 11550,
+          "timestampMs": 11370,
+          "confidence": 0.962986
         },
         {
           "text": " di",
-          "startMs": 12540,
-          "endMs": 12660,
-          "timestampMs": 12600,
-          "confidence": 0.546096
+          "startMs": 11550,
+          "endMs": 11670,
+          "timestampMs": 11610,
+          "confidence": 0.888972
         },
         {
           "text": " Sumbawa.",
-          "startMs": 12660,
-          "endMs": 13360,
-          "timestampMs": 13010,
-          "confidence": 0.828202
+          "startMs": 11670,
+          "endMs": 12240,
+          "timestampMs": 11955,
+          "confidence": 0.85028
         }
       ]
     }

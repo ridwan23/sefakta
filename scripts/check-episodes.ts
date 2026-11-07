@@ -40,6 +40,7 @@ const checkBrief = async (file: string): Promise<Issue[] | null> => {
   const manifest = existsSync(P.manifest) ? JSON.parse(readFileSync(P.manifest, 'utf8')) : null;
   const vo = new Map<string, { hash: string; audioSeconds: number; speed: number }>((manifest?.scenes ?? []).map((e: { id: string }) => [e.id, e]));
   if (!manifest) soft('VO belum dibuat (npm run vo)');
+  else if (new Set(manifest.scenes.map((e: { voice?: string }) => e.voice ?? '')).size > 1) soft('VO memakai lebih dari satu suara (reference id berganti di tengah); jalankan npm run vo');
   let story = 0;
   for (const s of b.scenes) {
     const e = vo.get(s.id);

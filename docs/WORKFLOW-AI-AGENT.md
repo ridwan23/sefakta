@@ -110,7 +110,7 @@ Catat hasil pengecekan manual itu di laporan serah terima.
 
 ### 3.2 Anggaran kata
 
-Pada 1,1×, Fish Audio menghasilkan ±153 kata/menit. Durasi cerita = audio + 0,5 dtk jeda per scene. Agar cerita 55–65 dtk, **targetkan 135–150 kata** (Tambora: 148 kata → audio 58 dtk → cerita 62,5 dtk). Bila kelebihan, pangkas kata yang tidak membawa fakta. Jangan menaikkan kecepatan.
+Pada 1,1×, Fish Audio menghasilkan ±150–160 kata/menit, tergantung suara referensi (ukur ulang setelah mengganti reference id). Durasi cerita = audio + 0,5 dtk jeda per scene. Agar cerita 55–65 dtk, **targetkan 135–150 kata** (Tambora: 148 kata → audio 58 dtk → cerita 62,5 dtk). Bila kelebihan, pangkas kata yang tidak membawa fakta. Jangan menaikkan kecepatan.
 
 ### 3.3 Aturan pelafalan (wajib, dicek sebelum VO)
 
@@ -120,6 +120,8 @@ Pada 1,1×, Fish Audio menghasilkan ±153 kata/menit. Durasi cerita = audio + 0,
 | Nama tempat asing diberi konteks | `Danau Jenewa` | `Danau Jenewa, Swiss` | membantu TTS dan penonton |
 | Hindari kata pendek yang mudah tertelan di akhir kalimat cepat | `orang tewas seketika` | `orang meninggal seketika` | "tewas" terdengar "tua" |
 | Satu gagasan per kalimat, kalimat ≤ 15 kata | | | intonasi lebih alami |
+
+**Ekspresi (opsional).** Fish Audio S2 menerima tag kurung siku di naskah, mis. `[excited]`, `[confident]`, `[emphasis]` sebelum kata yang ditekankan, atau deskripsi bebas seperti `[enthusiastic, warm and inviting]`. Tag tidak diucapkan dan otomatis dibuang dari caption/alignment. Bahasa Indonesia tidak termasuk daftar bahasa yang didukung resmi untuk tag, dan efeknya terukur kecil, jadi selalu bandingkan hasilnya dengan telinga dan pastikan lewat whisper bahwa tag tidak ikut terbaca.
 
 Validator tetap memahami angka berbentuk kata ("sepuluh ribu" = 10000), jadi `figures` di fakta tetap berupa angka. Di layar (stempel/label visual) angka boleh ditulis dengan digit.
 
@@ -138,7 +140,7 @@ Isi `briefs/<id>.json`:
   - isi `tone` sesuai kecerahan latar;
   - `captionColors` bila palet default tidak cocok (validator mengecek kontras ≥ 4,5:1).
 - **`captionMode`:** `subtitle` untuk cerita bernarasi padat, `ringkasan` untuk visual yang ramai, `headline` untuk visual yang sangat sederhana.
-- **`cta.voiceoverText`:** opsional. Default "Ikuti SeFakta. Fakta baru tiap hari."; maksimal 3,5 dtk.
+- **`cta.voiceoverText`:** opsional. Default "[excited] Ikuti Sefakta! Fakta baru, tiap hari!" (tag `[excited]` tidak diucapkan); maksimal 3,5 dtk.
 
 Gerbang: `npm run validate:facts` 0 error.
 
@@ -261,7 +263,7 @@ Ambil frame awal tiap scene dari timeline (`from`), lalu tambahkan frame cue:
 node -e "
 const m=require('./public/<id>/manifest.json'),b=require('./briefs/<id>.json');let f=0;
 for(const s of b.scenes){const e=m.scenes.find(x=>x.id===s.id);const n=Math.ceil(Math.max(s.durationSeconds,e.audioSeconds+0.5)*30);console.log(s.id,'mulai',f,'frame',n);f+=n}
-console.log('cerita',f,'total',f+120)"
+console.log('cerita',f,'CTA mulai',f+30,'total',f+30+120)"
 ```
 
 Per scene periksa:
@@ -269,7 +271,7 @@ Per scene periksa:
 - setiap frame cue + 15;
 - frame terakhir sebelum scene berikutnya.
 
-Periksa juga transisi CTA (cerita + 7) dan CTA penuh (cerita + 90).
+Periksa juga jeda sebelum CTA (cerita + 15: visual akhir tanpa caption), tengah iris (CTA mulai + 10), dan CTA penuh (CTA mulai + 90).
 
 ### 9.2 Render still satu per satu, lalu buat lembar kontak
 
@@ -357,6 +359,9 @@ Periksa MP4-nya, karena preview bukan bukti hasil ekspor:
 | sinar Matahari tak terbaca, hantu terlalu kecil | konsep belum diuji keterbacaannya | §7.4 bentuk pembeda, ikon ≥ 80 px |
 | suara CTA berbeda dari narator episode | audio aset brand tidak diperiksa | VO CTA dibuat per episode; dicek `check:episodes` |
 | VO terlalu cepat (1,25×) | kecepatan dipakai untuk mengejar durasi | §3.2 anggaran kata; default 1,1× |
+| reference id diganti, VO lama tidak terdeteksi usang | hash VO hanya dari teks + kecepatan | `vo-fish` mencatat sidik suara per scene; `check:episodes` menolak campuran suara |
+| proses VO mati di tengah, progres hilang | manifest baru ditulis di akhir | manifest ditulis setelah setiap scene |
+| suara baru melafalkan "Jenewa" seperti "Geneva" | nama asing + karakter suara | ganti kalimat ("sebuah danau di Swiss"), nama tetap di label layar |
 | `check:episodes` salah mendeteksi placeholder | regex membaca satu kunci per baris | sudah diperbaiki di skrip |
 
 Tambahkan baris baru ke tabel ini setiap kali sebuah episode menemukan kesalahan baru, beserta pencegahannya.

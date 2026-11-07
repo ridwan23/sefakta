@@ -6,6 +6,9 @@ export const FPS = 30;
 export const WIDTH = 1080;
 export const HEIGHT = 1920;
 export const CTA_FRAMES = 120; // klip CTA 4 dtk
+/** Jeda setelah scene terakhir selesai (visual akhir tetap tampil, tanpa narasi) sebelum transisi ke CTA,
+ *  agar payoff sempat dicerna dan perpindahan tidak terasa terburu-buru. */
+export const CTA_HOLD_SECONDS = 1;
 export const SCENE_PAD_SECONDS = 0.5; // jeda setelah kalimat sebelum scene berikutnya
 
 const readJson = async <T,>(path: string): Promise<T | null> => {
@@ -37,6 +40,7 @@ export const calculateEpisodeMetadata: CalculateMetadataFunction<EpisodeProps> =
   });
   const cta = byId.get(CTA_VO_ID);
   const ctaAudio = cta && cta.text === (brief.cta?.voiceoverText ?? CTA_VO_TEXT) ? cta.file : null;
-  const timeline: EpisodeTimeline = { scenes, storyFrames: cursor, hasVo: scenes.every((s) => s.audio), ctaAudio };
-  return { durationInFrames: cursor + CTA_FRAMES, fps: FPS, width: WIDTH, height: HEIGHT, props: { ...props, timeline } };
+  const ctaFrom = cursor + Math.round(CTA_HOLD_SECONDS * FPS);
+  const timeline: EpisodeTimeline = { scenes, storyFrames: cursor, ctaFrom, hasVo: scenes.every((s) => s.audio), ctaAudio };
+  return { durationInFrames: ctaFrom + CTA_FRAMES, fps: FPS, width: WIDTH, height: HEIGHT, props: { ...props, timeline } };
 };

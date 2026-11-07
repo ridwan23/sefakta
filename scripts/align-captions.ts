@@ -11,7 +11,7 @@ import { existsSync, readFileSync, writeFileSync, rmSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join, resolve } from 'node:path';
 import { installWhisperCpp, downloadWhisperModel, transcribe, toCaptions } from '@remotion/install-whisper-cpp';
-import { loadBrief, paths, run, normWords, textHash } from './lib/episode.ts';
+import { loadBrief, paths, run, normWords, stripTags, textHash } from './lib/episode.ts';
 
 const WHISPER_DIR = resolve('.whisper');
 const WHISPER_VERSION = '1.5.5';
@@ -159,7 +159,7 @@ if (process.argv.includes('--setup-only')) {
     if (!entry) throw new Error(`Scene ${scene.id} tidak ada di manifest VO.`);
     if (entry.hash !== textHash(scene.voiceoverText, scene.voiceoverSpeed ?? entry.speed)) throw new Error(`Audio ${scene.id} usang (naskah berubah). Jalankan npm run vo dulu.`);
     const heard = await transcribeScene(P.vo(scene.id));
-    const a = alignScene(scene.voiceoverText, heard, entry.audioSeconds * 1000);
+    const a = alignScene(stripTags(scene.voiceoverText), heard, entry.audioSeconds * 1000);
     worst = Math.min(worst, a.coverage);
     result[scene.id] = { hash: entry.hash, ...a };
     console.log(`${a.coverage >= 0.9 ? '✓' : '!'} ${scene.id}: ${(a.coverage * 100).toFixed(0)}% kata cocok${a.missing.length ? ` · tidak terdengar: ${a.missing.join(', ')}` : ''}${a.extra.length ? ` · tambahan di audio: ${a.extra.join(', ')}` : ''}`);

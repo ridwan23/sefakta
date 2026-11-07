@@ -6,7 +6,7 @@ import {CTA_VO_DELAY_FRAMES} from './ctaVoice';
  *  Transisi iris dari tengah layar membuka klip di atas frame fakta terakhir. Pasang di Sequence selebar 120 frame.
  *  `voice` = VO CTA episode (suara & kecepatan sama dengan narasi). Bila ada, audio asli klip diganti VO itu;
  *  bila belum dibuat, audio asli klip diputar (CTA tidak pernah bisu). */
-export const CTA_WIPE = 14; // frame
+export const CTA_WIPE = 22; // frame (±0,7 dtk)
 export const CtaClip: React.FC<{voice?: string | null}> = ({voice}) => {
   const f = useCurrentFrame();
   const r = interpolate(f, [0, CTA_WIPE], [0, 120], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp', easing: Easing.inOut(Easing.cubic)});

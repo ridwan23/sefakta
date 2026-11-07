@@ -24,7 +24,7 @@
   "scenes": [
     {
       "id": "hook",
-      "durationSeconds": 7,
+      "durationSeconds": 7.4,
       "voiceoverText": "Gunung di Indonesia ini pernah bikin Eropa seolah kehilangan musim panas. Dan tanpa sengaja, ikut melahirkan Frankenstein.",
       "caption": "",
       "headline": "Musim panas yang hilang",
@@ -36,7 +36,7 @@
     },
     {
       "id": "konteks",
-      "durationSeconds": 10.5,
+      "durationSeconds": 10.0,
       "voiceoverText": "April seribu delapan ratus lima belas, Gunung Tambora di Pulau Sumbawa meletus. Ini letusan terbesar dalam sejarah yang tercatat. Sekitar sepuluh ribu orang meninggal seketika.",
       "caption": "",
       "headline": "Tambora, April 1815",
@@ -49,7 +49,7 @@
     },
     {
       "id": "mekanisme",
-      "durationSeconds": 14.5,
+      "durationSeconds": 13.6,
       "voiceoverText": "Letusannya menyemburkan gas belerang sampai ke stratosfer, jauh di atas awan hujan. Di sana, gas itu menjadi kabut halus yang menyebar mengelilingi Bumi, dan memantulkan sebagian sinar Matahari. Cahaya yang sampai ke permukaan pun berkurang.",
       "caption": "",
       "headline": "Kabut di atas awan",
@@ -60,7 +60,7 @@
     },
     {
       "id": "dampak",
-      "durationSeconds": 16,
+      "durationSeconds": 14.5,
       "voiceoverText": "Akibatnya, musim panas seribu delapan ratus enam belas di Eropa dan Amerika Utara menjadi dingin, gelap, dan basah. Di beberapa tempat, salju turun di tengah musim panas. Panen gagal, dan kelaparan meluas. Tahun itu dijuluki tahun tanpa musim panas.",
       "caption": "",
       "headline": "1816: tahun tanpa musim panas",
@@ -73,8 +73,8 @@
     },
     {
       "id": "jawaban",
-      "durationSeconds": 13,
-      "voiceoverText": "Di tepi Danau Jenewa, Swiss, cuaca buruk mengurung Mary Shelley di dalam rumah. Lord Byron menantang teman-temannya menulis cerita hantu. Dari situlah lahir Frankenstein, monster yang ternyata berakar dari gunung di Sumbawa.",
+      "durationSeconds": 12.4,
+      "voiceoverText": "Di tepi sebuah danau di Swiss, cuaca buruk mengurung Mary Shelley di dalam rumah. Lord Byron menantang teman-temannya menulis cerita hantu. Dari situlah lahir Frankenstein, monster yang ternyata berakar dari gunung di Sumbawa.",
       "caption": "",
       "headline": "Frankenstein lahir dari hujan",
       "visual": "Rumah di tepi danau di bawah hujan, jendela menyala; buku 'Frankenstein' terbuka; tarik mundur ke peta: garis dari Sumbawa ke Jenewa menutup cerita.",

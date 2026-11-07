@@ -24,22 +24,23 @@ const SceneLayer: React.FC<{ scene: TimelineScene; Visual: React.FC<SceneVisualP
 };
 
 /** Template satu episode SeFakta: scene berurutan (VO per scene), caption sesuai mode brief, watermark,
- *  lalu klip CTA bersuara setelah transisi iris dari frame fakta terakhir yang dibekukan.
+ *  jeda singkat tanpa narasi, lalu klip CTA bersuara setelah transisi iris dari frame fakta terakhir yang dibekukan.
  *  `visuals` memetakan id scene → komponen visual; scene tanpa visual memakai placeholder. */
 export const Episode: React.FC<EpisodeProps & { visuals: SceneVisuals }> = ({ brief, timeline, visuals }) => {
   const { fps } = useVideoConfig();
   if (!timeline) return null;
   const last = timeline.scenes.length - 1;
+  const hold = timeline.ctaFrom - timeline.storyFrames; // jeda: visual akhir tetap bergerak, lalu dibekukan saat iris
   return (
     <AbsoluteFill style={{ background: '#081736' }}>
       {timeline.scenes.map((s, i) => (
-        <Sequence key={s.id} name={`Scene ${s.id}`} from={s.from} durationInFrames={i === last ? s.frames + CTA_WIPE : s.frames} premountFor={fps}>
-          <SceneLayer scene={s} Visual={visuals[s.id] ?? PlaceholderScene} mode={brief.captionMode} style={brief.visualStyle} freezeAfter={i === last ? s.frames - 1 : undefined} />
+        <Sequence key={s.id} name={`Scene ${s.id}`} from={s.from} durationInFrames={i === last ? s.frames + hold + CTA_WIPE : s.frames} premountFor={fps}>
+          <SceneLayer scene={s} Visual={visuals[s.id] ?? PlaceholderScene} mode={brief.captionMode} style={brief.visualStyle} freezeAfter={i === last ? s.frames + hold - 1 : undefined} />
         </Sequence>
       ))}
       {/* latar terang → watermark terang (wordmark navy); latar gelap → watermark gelap (wordmark putih) */}
-      <Watermark tone={brief.visualStyle.tone} hideFrom={timeline.storyFrames} />
-      <Sequence name="CTA" from={timeline.storyFrames}>
+      <Watermark tone={brief.visualStyle.tone} hideFrom={timeline.ctaFrom} />
+      <Sequence name="CTA" from={timeline.ctaFrom}>
         <CtaClip voice={timeline.ctaAudio} />
       </Sequence>
     </AbsoluteFill>

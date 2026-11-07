@@ -34,7 +34,8 @@ export type SceneCaptions = { hash: string; coverage: number; captions: Caption[
 /** Hasil calculateMetadata: posisi setiap scene di timeline + aset yang ditemukan. */
 export type TimelineScene = EpisodeScene & { from: number; frames: number; audio: string | null; captions: Caption[] | null };
 /** `ctaAudio` = VO CTA episode bila sudah dibuat dan teksnya masih sesuai. */
-export type EpisodeTimeline = { scenes: TimelineScene[]; storyFrames: number; hasVo: boolean; ctaAudio: string | null };
+/** `storyFrames` = akhir narasi scene terakhir; `ctaFrom` = awal transisi CTA (setelah jeda CTA_HOLD_SECONDS). */
+export type EpisodeTimeline = { scenes: TimelineScene[]; storyFrames: number; ctaFrom: number; hasVo: boolean; ctaAudio: string | null };
 
 /** Props yang bisa diserialisasi (aman untuk Studio dan render). */
 export type EpisodeProps = {
