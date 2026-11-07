@@ -2,6 +2,7 @@
 // saturated flat backgrounds that change per shot, thick ink outlines, hard offset sticker shadows,
 // comic halftone-dot shading, faint sunburst rays, chibi characters with big heads, chunky comic lettering.
 // Everything is SVG in a 1080x1920 viewBox.
+import { FONT_JAKARTA } from '../../../shared/brand/fonts';
 import React from 'react';
 import { AbsoluteFill } from 'remotion';
 
@@ -30,7 +31,7 @@ export const P = {
   bgBubble: '#FF9EC7',
   bgAlarm: '#FF6B5E',
 };
-export const FONT2D = '"Plus Jakarta Sans", Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif';
+export const FONT2D = `${FONT_JAKARTA}, Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif`;
 const STROKE = 6;
 const SHADOW = 10;
 

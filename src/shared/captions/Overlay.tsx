@@ -1,8 +1,9 @@
 // Word-by-word captions (vertical 9:16). Shared across topics: pass `lines` (+ optional per-word `anchors`) and a theme.
+import { FONT_JAKARTA } from '../brand/fonts';
 import React from 'react';
 import { AbsoluteFill, useCurrentFrame } from 'remotion';
 
-const FONT = '"Plus Jakarta Sans", Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif';
+const FONT = `${FONT_JAKARTA}, Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif`;
 
 type Theme = 'dark' | 'light' | 'pop';
 const STYLE: Record<Theme, { active: string; activeBg: string; past: string; future: string; shadow: string; stroke?: string; fade: string }> = {
