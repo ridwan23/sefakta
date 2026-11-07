@@ -1,0 +1,35 @@
+{
+  "name": "sefakta-remotion",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "remotion preview",
+    "build": "remotion render TimeSlowShort out/matrix-effect/legacy_v1.mp4",
+    "build:matrix": "remotion render MatrixEffect out/matrix-effect/matrix_effect.mp4 --gl=angle",
+    "build:matrix2d": "remotion render MatrixEffect2D out/matrix-effect/matrix_effect_2d.mp4",
+    "validate:facts": "node --no-warnings --experimental-strip-types scripts/validate-facts.ts",
+    "validate:facts:online": "node --no-warnings --experimental-strip-types scripts/validate-facts.ts --publish --check-urls",
+    "sync:cta": "node --no-warnings --experimental-strip-types scripts/sync-cta.ts",
+    "quality": "npm run validate:facts && npm run sync:cta -- --check && tsc --noEmit",
+    "build:pictogram": "remotion render FileDeletedPictogram out/file-deleted/file_deleted_pictogram.mp4"
+  },
+  "dependencies": {
+    "@react-three/fiber": "^8.17.10",
+    "@react-three/postprocessing": "^2.16.3",
+    "@remotion/bundler": "latest",
+    "@remotion/cli": "latest",
+    "@remotion/google-fonts": "4.0.541",
+    "@remotion/renderer": "latest",
+    "@remotion/three": "latest",
+    "postprocessing": "^6.36.4",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "remotion": "latest",
+    "three": "^0.170.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.12",
+    "@types/three": "^0.170.0",
+    "typescript": "^5.6.3"
+  }
+}

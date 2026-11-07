@@ -1,0 +1,281 @@
+{
+  "projectId": "matrix-effect",
+  "title": "Efek Matrix: kenapa waktu terasa melambat saat panik",
+  "series": "Sains",
+  "status": "draft",
+  "captionMode": "subtitle",
+  "notes": "Naskah = VO v3 (public/matrix-effect/vo_v3_narasi.wav). Durasi scene = jarak antar awal kalimat VO.",
+  "scenes": [
+    {
+      "id": "s1",
+      "durationSeconds": 4.53,
+      "voiceoverText": "Kamu terpeleset di lantai licin, semesta mendadak berhenti.",
+      "factIds": []
+    },
+    {
+      "id": "s2",
+      "durationSeconds": 3.62,
+      "voiceoverText": "Cangkir kopimu melayang tiga detik, berputar lambat.",
+      "factIds": [
+        "f-3-detik"
+      ]
+    },
+    {
+      "id": "s3",
+      "durationSeconds": 7.04,
+      "voiceoverText": "Dalam uji terjun bebas sembilan puluh kaki, dua puluh tiga relawan dipasangi kronometer digital.",
+      "factIds": [
+        "f-studi",
+        "f-tinggi",
+        "f-relawan"
+      ]
+    },
+    {
+      "id": "s4",
+      "durationSeconds": 4.2,
+      "voiceoverText": "Apakah mata menangkap lebih banyak frem per detik?",
+      "factIds": [
+        "f-studi"
+      ]
+    },
+    {
+      "id": "s5",
+      "durationSeconds": 5.63,
+      "voiceoverText": "Kalau waktu melambat, penerjun bisa membaca angka berkedip yang tak terlihat.",
+      "factIds": [
+        "f-studi"
+      ]
+    },
+    {
+      "id": "s6",
+      "durationSeconds": 2.5,
+      "voiceoverText": "Mereka melihat nol angka ekstra.",
+      "factIds": [
+        "f-studi"
+      ]
+    },
+    {
+      "id": "s7",
+      "durationSeconds": 1.89,
+      "voiceoverText": "Waktu tidak melambat.",
+      "factIds": [
+        "f-studi"
+      ]
+    },
+    {
+      "id": "s8",
+      "durationSeconds": 2.47,
+      "voiceoverText": "Tapi inilah bagian anehnya.",
+      "factIds": []
+    },
+    {
+      "id": "s9",
+      "durationSeconds": 3.76,
+      "voiceoverText": "Otakmu seperti smartfon overload yang mencadangkan data.",
+      "factIds": []
+    },
+    {
+      "id": "s10",
+      "durationSeconds": 6.99,
+      "voiceoverText": "Saat bahaya, amigdala menekan tombol rekam darurat, mencatat delapan puluh persen lebih banyak detail.",
+      "factIds": [
+        "f-amigdala",
+        "f-80-persen"
+      ]
+    },
+    {
+      "id": "s11",
+      "durationSeconds": 8.09,
+      "voiceoverText": "Saat memutar ulang ingatan itu, file masif menipu kesadaranmu: kejadian itu terasa lima kali lebih lama.",
+      "factIds": [
+        "f-studi",
+        "f-5x"
+      ]
+    },
+    {
+      "id": "s12",
+      "durationSeconds": 4.46,
+      "voiceoverText": "Jadi, waktu tidak pernah melambat. Otakmu hanya merekam lebih banyak.",
+      "factIds": [
+        "f-studi"
+      ]
+    }
+  ],
+  "facts": [
+    {
+      "id": "f-3-detik",
+      "claim": "Adegan pembuka: cangkir melayang tiga detik (ilustrasi, bukan klaim studi).",
+      "kind": "ilustrasi",
+      "status": "terverifikasi",
+      "figures": [
+        {
+          "text": "3 detik",
+          "value": 3
+        }
+      ]
+    },
+    {
+      "id": "f-studi",
+      "claim": "Studi 2007 (PLoS ONE): peserta tidak bisa membaca angka kronometer lebih baik saat jatuh bebas daripada di laboratorium; persepsi tidak menjadi lebih cepat.",
+      "kind": "fakta",
+      "status": "belum-terverifikasi",
+      "sources": [
+        {
+          "title": "Does Time Really Slow Down during a Frightening Event? (Stetson, Fiesta, Eagleman)",
+          "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2110887/",
+          "publisher": "PLoS ONE / PubMed Central",
+          "origin": "Stetson, Fiesta & Eagleman 2007, PLoS ONE 2(12):e1295",
+          "primary": true,
+          "accessed": "2026-11-07",
+          "quote": "We found no evidence of increased temporal resolution"
+        },
+        {
+          "title": "Time doesn't actually slow down in a crisis",
+          "url": "https://www.nationalgeographic.com/science/article/time-doesnt-actually-slow-down-in-a-crisis",
+          "publisher": "National Geographic",
+          "origin": "Stetson, Fiesta & Eagleman 2007, PLoS ONE 2(12):e1295",
+          "primary": false,
+          "accessed": "2026-11-07"
+        }
+      ],
+      "limits": "Teks makalah dibaca langsung 2026-11-07 (kutipan diverifikasi dengan --check-urls). Sumber kedua (National Geographic) hanya melaporkan studi yang sama, jadi bukan konfirmasi independen: status tetap belum-terverifikasi."
+    },
+    {
+      "id": "f-tinggi",
+      "claim": "Narasi: terjun bebas dari ketinggian sekitar 90 kaki.",
+      "kind": "fakta",
+      "status": "bertentangan",
+      "figures": [
+        {
+          "text": "90 kaki",
+          "value": 90
+        }
+      ],
+      "sources": [
+        {
+          "title": "Does Time Really Slow Down during a Frightening Event?",
+          "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2110887/",
+          "publisher": "PLoS ONE / PubMed Central",
+          "origin": "Stetson, Fiesta & Eagleman 2007, PLoS ONE 2(12):e1295",
+          "primary": true,
+          "accessed": "2026-11-07",
+          "quote": "participants experienced free fall for 31 m before landing safely in a net."
+        }
+      ],
+      "limits": "Makalah: jatuh bebas 31 m (±102 kaki) selama 2,49 dtk. Angka 90 kaki tidak ada di teks. Ganti narasi ke 31 meter."
+    },
+    {
+      "id": "f-relawan",
+      "claim": "Narasi: 23 relawan memakai kronometer.",
+      "kind": "fakta",
+      "status": "bertentangan",
+      "figures": [
+        {
+          "text": "23 relawan",
+          "value": 23
+        }
+      ],
+      "sources": [
+        {
+          "title": "Does Time Really Slow Down during a Frightening Event? (Stetson, Fiesta, Eagleman)",
+          "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2110887/",
+          "publisher": "PLoS ONE / PubMed Central",
+          "origin": "Stetson, Fiesta & Eagleman 2007, PLoS ONE 2(12):e1295",
+          "primary": true,
+          "accessed": "2026-11-07",
+          "quote": "We tested 13 participants during the daytime and 7 at nighttime"
+        }
+      ],
+      "limits": "Makalah: 13 peserta siang + 7 malam = 20 untuk uji ambang (7 menilai durasi). Angka 23 tidak ditemukan di teks (penjumlahan 13+7 adalah hitungan kami)."
+    },
+    {
+      "id": "f-amigdala",
+      "claim": "Narasi: amigdala 'menekan tombol rekam darurat' (penjelasan mekanisme).",
+      "kind": "interpretasi",
+      "status": "belum-terverifikasi",
+      "sources": [
+        {
+          "title": "Does Time Really Slow Down during a Frightening Event? (Stetson, Fiesta, Eagleman)",
+          "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2110887/",
+          "publisher": "PLoS ONE / PubMed Central",
+          "origin": "Stetson, Fiesta & Eagleman 2007, PLoS ONE 2(12):e1295",
+          "primary": true,
+          "accessed": "2026-11-07",
+          "quote": "we speculate that the involvement of the amygdala in emotional memory may lead to dilated duration judgments retrospectively"
+        }
+      ],
+      "limits": "Makalah menyebut peran amigdala sebagai SPEKULASI ('we speculate … may'), bukan temuan. Narasi 'amigdala menekan tombol rekam darurat' terlalu pasti; gunakan bahasa 'diduga'."
+    },
+    {
+      "id": "f-80-persen",
+      "claim": "Narasi: amigdala mencatat 80% lebih banyak detail.",
+      "kind": "fakta",
+      "status": "belum-terverifikasi",
+      "figures": [
+        {
+          "text": "80%",
+          "value": 80
+        }
+      ],
+      "sources": [],
+      "limits": "Angka 80% (dan 'eighty') tidak ditemukan di teks makalah. Tanpa sumber lain, hapus dari narasi."
+    },
+    {
+      "id": "f-5x",
+      "claim": "Narasi: kejadian terasa lima kali lebih lama.",
+      "kind": "fakta",
+      "status": "bertentangan",
+      "figures": [
+        {
+          "text": "5 kali",
+          "value": 5
+        }
+      ],
+      "sources": [
+        {
+          "title": "Does Time Really Slow Down during a Frightening Event?",
+          "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2110887/",
+          "publisher": "PLoS ONE / PubMed Central",
+          "origin": "Stetson, Fiesta & Eagleman 2007, PLoS ONE 2(12):e1295",
+          "primary": true,
+          "accessed": "2026-11-07",
+          "quote": "participants' duration estimates increased by an average of 36% when they recalled their own fall"
+        }
+      ],
+      "limits": "Makalah: estimasi durasi naik rata-rata 36% (2,17 → 2,96 dtk), bukan 5 kali. Lihat f-36-persen."
+    },
+    {
+      "id": "f-36-persen",
+      "claim": "Usulan pengganti S11: peserta menilai durasi jatuh 36% lebih lama dari yang sebenarnya.",
+      "kind": "fakta",
+      "status": "belum-terverifikasi",
+      "figures": [
+        {
+          "text": "36%",
+          "value": 36
+        }
+      ],
+      "sources": [
+        {
+          "title": "Does Time Really Slow Down during a Frightening Event?",
+          "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2110887/",
+          "publisher": "PLoS ONE / PubMed Central",
+          "origin": "Stetson, Fiesta & Eagleman 2007, PLoS ONE 2(12):e1295",
+          "primary": true,
+          "accessed": "2026-11-07",
+          "quote": "participants' duration estimates increased by an average of 36% when they recalled their own fall"
+        },
+        {
+          "title": "Time doesn't actually slow down in a crisis",
+          "url": "https://www.nationalgeographic.com/science/article/time-doesnt-actually-slow-down-in-a-crisis",
+          "publisher": "National Geographic",
+          "origin": "Stetson, Fiesta & Eagleman 2007, PLoS ONE 2(12):e1295",
+          "primary": false,
+          "accessed": "2026-11-07"
+        }
+      ],
+      "limits": "Kutipan dari teks makalah (diverifikasi --check-urls). Sumber National Geographic = studi yang sama, jadi belum dua origin independen."
+    }
+  ],
+  "numbersIgnored": []
+}
