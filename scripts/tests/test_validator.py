@@ -2,7 +2,7 @@ import json, copy, subprocess, os, shutil, sys, tempfile
 ROOT=os.path.abspath(os.path.join(os.path.dirname(__file__),"..",".."))
 TMP=tempfile.mkdtemp(prefix="sefakta_fx_")
 def src(origin,url,quote,acc="2026-11-01"): return {"title":"T","url":url,"publisher":"P","origin":origin,"accessed":acc,"quote":quote}
-BASE={"projectId":"t","title":"t","series":"Alam","status":"draft","captionMode":"subtitle","visualStyle":{"name":"diagram sains","reason":"menjelaskan mekanisme"},
+BASE={"projectId":"t","title":"t","series":"Alam","status":"draft","captionMode":"subtitle","visualStyle":{"name":"diagram sains","reason":"menjelaskan mekanisme","tone":"dark"},
  "scenes":[{"id":"a","durationSeconds":30,"voiceoverText":"Gunung itu setinggi seribu delapan ratus lima belas meter.","factIds":["f1"]},
            {"id":"b","durationSeconds":30,"voiceoverText":"Satu fakta saja.","factIds":[]}],
  "facts":[{"id":"f1","claim":"Tinggi gunung","kind":"fakta","status":"terverifikasi","figures":[{"text":"1815 m","value":1815}],
@@ -45,6 +45,10 @@ check("V1 visualStyle tidak ada",run(mut(lambda b:b.pop("visualStyle"))),1,"visu
 check("V2 visualStyle TODO: draft=warn",run(mut(lambda b:b["visualStyle"].update(name="TODO"))),0,"masih TODO")
 check("V2b visualStyle TODO: publish=error",run(mut(lambda b:b["visualStyle"].update(name="TODO")),"--publish"),1,"masih TODO")
 check("V3 palette bukan hex",run(mut(lambda b:b["visualStyle"].update(palette=["biru"]))),1,"palette")
+check("V4 tone tidak ada",run(mut(lambda b:b["visualStyle"].pop("tone"))),1,"tone")
+check("V5 captionColors kontras rendah",run(mut(lambda b:b["visualStyle"].update(captionColors={"text":"#FFFFFF","highlight":"#FFD23F","highlightText":"#FFFFFF"}))),1,"kontras sorotan")
+check("V6 teks gelap di tone dark",run(mut(lambda b:b["visualStyle"].update(captionColors={"text":"#222222","highlight":"#FFB000","highlightText":"#081736"}))),1,"teks caption kontras")
+check("V7 captionColors valid",run(mut(lambda b:b["visualStyle"].update(captionColors={"text":"#FFFFFF","highlight":"#FFB000","highlightText":"#081736"}))),0)
 check("T14 series salah",run(mut(lambda b:b.update(series="Gosip"))),1,"series")
 check("T15 'tiga detik' tak tercakup",run(mut(lambda b:b["scenes"][1].update(voiceoverText="Melayang tiga detik."))),1,"= 3")
 check("T15b 'satu fakta' tanpa unit diabaikan",run(BASE),0)

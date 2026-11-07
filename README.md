@@ -91,7 +91,7 @@ Template (`src/shared/episode/`) menghitung durasi dari audio, memutar VO per sc
 npm run validate:facts                # mode draft: fakta belum terverifikasi = peringatan
 npm run validate:facts -- --publish   # sebelum publikasi: peringatan itu menjadi error
 npm run validate:facts:online         # --publish + buka semua URL (butuh internet)
-npm run test:validator                # 50 pengujian validator
+npm run test:validator                # 54 pengujian validator
 ```
 
 Memeriksa `briefs/*.json`: `visualStyle` (gaya visual episode + alasannya) wajib ada, minimal dua sumber dengan `origin` berbeda, angka tertulis di `quote` sumber, setiap angka di narasi tercakup fakta yang dirujuk scene, fakta yang bertentangan dengan sumber tidak boleh dipakai, durasi 55–65 dtk, dan panjang caption pada mode `ringkasan`. Dengan `--check-urls` ia juga membuka setiap URL: link mati = error, dan `quote` harus tertulis verbatim di halamannya. Format brief ada di panduan produksi (§1).
@@ -103,7 +103,7 @@ Memeriksa `briefs/*.json`: `visualStyle` (gaya visual episode + alasannya) wajib
 - **Watermark**: `shared/brand/Watermark.tsx` (`tone="light"` / `"dark"`), kanan atas, 194 px (±18%), opacity 85%, memudar saat CTA masuk.
 
 ## Gaya visual
-Dipilih per episode sesuai isi fakta (mis. sejarah → peta/arsip, sains → diagram, antariksa → kosmik) dan dicatat di brief: `visualStyle: { name, reason, palette? }`. Satu gaya untuk semua scene. Watermark, klip CTA, logo, dan username tidak ikut berubah.
+Dipilih per episode sesuai isi fakta (mis. sejarah → peta/arsip, sains → diagram, antariksa → kosmik) dan dicatat di brief: `visualStyle: { name, reason, tone, palette?, captionColors? }`. `tone` (light/dark) memilih watermark dan warna caption default; kontras caption minimal 4,5:1 diperiksa validator. Satu gaya untuk semua scene. Watermark, klip CTA, logo, dan username tidak ikut berubah.
 
 ## Catatan
 - File VO asli dari pengisi suara bernama `VO v3 — narasi saja, 55,58 detik.wav` (isinya sama dengan `public/matrix-effect/vo_v3_narasi.wav`).

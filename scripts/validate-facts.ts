@@ -83,6 +83,13 @@ const toNumber = (tok: string) => (/^\d{1,3}(?:[.,]\d{3})+$/.test(tok) ? parseFl
 const numbersIn = (text: string): number[] => (text.match(NUM_TOKEN) ?? []).map(toNumber);
 const same = (a: number, b: number) => Math.abs(a - b) < 1e-9;
 
+// ---------------------------------------------------------------- kontras WCAG
+const lum = (hex: string) => {
+  const [r, g, b] = [1, 3, 5].map((i) => parseInt(hex.slice(i, i + 2), 16) / 255).map((c) => (c <= 0.03928 ? c / 12.92 : ((c + 0.055) / 1.055) ** 2.4));
+  return 0.2126 * r + 0.7152 * g + 0.0722 * b;
+};
+export const contrast = (a: string, b: string) => { const [x, y] = [lum(a), lum(b)].sort((p, q) => q - p); return (x + 0.05) / (y + 0.05); };
+
 // ---------------------------------------------------------------- validasi
 const isStr = (v: unknown): v is string => typeof v === 'string' && v.trim().length > 0;
 const today = new Date().toISOString().slice(0, 10);
@@ -102,6 +109,19 @@ export const validateBrief = (b: Json, file: string, forcePublish: boolean): Iss
   const vs = b.visualStyle;
   if (!vs || !isStr(vs.name) || !isStr(vs.reason)) add('error', 'visualStyle', 'wajib { name, reason }: gaya visual episode dan alasannya terhadap isi fakta');
   else if (/\bTODO\b/.test(`${vs.name} ${vs.reason}`)) add(publish ? 'error' : 'warn', 'visualStyle', 'masih TODO');
+  if (vs && !['light', 'dark'].includes(vs.tone)) add('error', 'visualStyle.tone', "wajib 'light' atau 'dark' (kecerahan latar dominan; menentukan watermark & warna caption)");
+  if (vs?.captionColors !== undefined) {
+    const cc = vs.captionColors;
+    const hex = (c: unknown) => typeof c === 'string' && /^#[0-9a-f]{6}$/i.test(c);
+    if (!hex(cc?.text) || !hex(cc?.highlight) || !hex(cc?.highlightText)) add('error', 'visualStyle.captionColors', 'butuh { text, highlight, highlightText } berupa hex 6 digit');
+    else {
+      const r = contrast(cc.highlight, cc.highlightText);
+      if (r < 4.5) add('error', 'visualStyle.captionColors', `kontras sorotan vs teksnya ${r.toFixed(2)}:1 (minimal 4,5:1)`);
+      const base = vs.tone === 'dark' ? '#081736' : '#FBF7EE';
+      const r2 = contrast(cc.text, base);
+      if (r2 < 4.5) add('error', 'visualStyle.captionColors', `teks caption kontras ${r2.toFixed(2)}:1 terhadap latar ${vs.tone} acuan ${base} (minimal 4,5:1)`);
+    }
+  }
   if (vs?.palette !== undefined && (!Array.isArray(vs.palette) || vs.palette.some((c: unknown) => typeof c !== 'string' || !/^#[0-9a-f]{6}$/i.test(c)))) add('error', 'visualStyle.palette', 'harus array warna hex 6 digit');
   if (!Array.isArray(b.scenes) || b.scenes.length === 0) { add('error', 'scenes', 'minimal 1 scene'); return issues; }
   if (!Array.isArray(b.facts)) { add('error', 'facts', 'wajib berupa array (boleh kosong bila tidak ada klaim)'); b.facts = []; }

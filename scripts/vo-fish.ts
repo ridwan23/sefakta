@@ -84,7 +84,12 @@ for (const scene of brief.scenes) {
     const tmp = `${file}.tmp.mp3`;
     await normalize(raw, tmp);
     const first = await loudness(tmp);
-    if (Math.abs(first.lufs - LUFS_TARGET) > 0.3) await normalizeWithLimiter(raw, tmp, LUFS_TARGET - first.lufs); // klip pendek berpuncak tinggi
+    if (Math.abs(first.lufs - LUFS_TARGET) > 0.3) {
+      // klip pendek berpuncak tinggi: kuatkan hasil tahap pertama sebesar selisihnya, tahan puncak dengan limiter
+      const second = `${file}.tmp2.mp3`;
+      await normalizeWithLimiter(tmp, second, LUFS_TARGET - first.lufs);
+      renameSync(second, tmp);
+    }
     rmSync(raw);
     renameSync(tmp, file);
     made++;

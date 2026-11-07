@@ -108,7 +108,7 @@ Gunakan struktur `Caption` Remotion dengan `startMs`, `endMs`, `timestampMs`, da
 - Untuk Tambora: lokasi → letusan → aerosol stratosfer → berkurangnya sinar Matahari → dampak regional. Jangan hanya mengulang layout teks di atas gambar berbeda.
 - Gunakan peta, diagram berlapis, garis waktu, angka dengan pembanding, atau transformasi sebelum/sesudah ketika membantu pemahaman.
 - Slow zoom pada satu gambar adalah gerak kamera; jangan menyebutnya parallax jika tidak ada lapisan dengan kedalaman dan gerak berbeda.
-- Pilih gaya visual berdasarkan isi fakta episode dan catat di brief (`visualStyle`: nama, alasan, palet opsional; diwajibkan validator). Contoh: sejarah → peta dan arsip, sains → diagram bersih, antariksa → latar gelap kosmik, tubuh → ilustrasi anatomi. Gunakan satu gaya untuk semua scene; aset ilustratif harus menyatu antarscene; hindari pergantian gaya yang tidak disengaja.
+- Pilih gaya visual berdasarkan isi fakta episode dan catat di brief (`visualStyle`: nama, alasan, `tone` light/dark, palet dan `captionColors` opsional; diwajibkan validator, kontras caption minimal 4,5:1). `tone` menentukan watermark (terang/gelap) dan warna caption default. Contoh: sejarah → peta dan arsip, sains → diagram bersih, antariksa → latar gelap kosmik, tubuh → ilustrasi anatomi. Gunakan satu gaya untuk semua scene; aset ilustratif harus menyatu antarscene; hindari pergantian gaya yang tidak disengaja.
 - Gunakan kuning untuk satu penekanan utama, bukan seluruh paragraf. Jangan menumpuk efek atau menambahkan whoosh pada setiap gerakan kecil.
 - Periksa video pada ukuran layar ponsel. Teks harus terbaca dalam waktu tampilnya.
 - Klip CTA resmi diputar setelah jawaban selesai, lewat transisi iris dari frame fakta terakhir; audionya dipertahankan.

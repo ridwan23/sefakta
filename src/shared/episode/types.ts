@@ -10,12 +10,18 @@ export type EpisodeScene = {
   factIds?: string[];
 };
 
+/** Warna caption. Bila tidak diisi, default mengikuti `tone`. */
+export type CaptionColors = { text: string; highlight: string; highlightText: string };
+/** Gaya visual episode, dipilih sesuai isi fakta. `tone` = kecerahan latar dominan (menentukan watermark & default caption). */
+export type VisualStyle = { name: string; reason: string; tone: 'light' | 'dark'; palette?: string[]; captionColors?: CaptionColors };
+
 export type EpisodeBrief = {
   projectId: string;
   title: string;
   series: string;
   status: string;
   captionMode: 'ringkasan' | 'subtitle' | 'headline';
+  visualStyle: VisualStyle;
   scenes: EpisodeScene[];
 };
 
@@ -30,10 +36,10 @@ export type EpisodeTimeline = { scenes: TimelineScene[]; storyFrames: number; ha
 /** Props yang bisa diserialisasi (aman untuk Studio dan render). */
 export type EpisodeProps = {
   brief: EpisodeBrief;
-  watermarkTone: 'light' | 'dark';
   timeline?: EpisodeTimeline;
 };
 
-/** Visual satu scene. Dirender di dalam <Sequence>: useCurrentFrame() mulai dari 0 di awal scene. */
-export type SceneVisualProps = { scene: TimelineScene; durationInFrames: number };
+/** Visual satu scene. Dirender di dalam <Sequence>: useCurrentFrame() mulai dari 0 di awal scene.
+ *  `style` = visualStyle episode (tone, palette) supaya semua scene memakai satu gaya. */
+export type SceneVisualProps = { scene: TimelineScene; durationInFrames: number; style: VisualStyle };
 export type SceneVisuals = Record<string, React.FC<SceneVisualProps>>;

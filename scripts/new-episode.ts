@@ -37,6 +37,7 @@ const brief = {
   visualStyle: {
     name: 'TODO nama gaya (mis. peta arsip sepia, diagram sains bersih, infografis neon)',
     reason: 'TODO kenapa gaya ini cocok dengan isi fakta episode',
+    tone: 'dark',
     palette: ['#0D2250', '#FFB000', '#FFFFFF'],
   },
   scenes: [
@@ -80,7 +81,7 @@ export const ${pascal}Compositions: React.FC = () => (
       id="${compId}"
       component={${pascal}}
       calculateMetadata={calculateEpisodeMetadata}
-      defaultProps={{ brief: brief as EpisodeBrief, watermarkTone: 'dark' as const }}
+      defaultProps={{ brief: brief as EpisodeBrief }}
       durationInFrames={1}
       fps={FPS}
       width={WIDTH}
