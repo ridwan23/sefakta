@@ -9,6 +9,7 @@
     "build:matrix2d": "remotion render MatrixEffect2D out/matrix-effect/matrix_effect_2d.mp4",
     "validate:facts": "node --no-warnings --experimental-strip-types scripts/validate-facts.ts",
     "validate:facts:online": "node --no-warnings --experimental-strip-types scripts/validate-facts.ts --publish --check-urls",
+    "test:validator": "python3 scripts/tests/test_validator.py && python3 scripts/tests/test_urls.py",
     "sync:cta": "node --no-warnings --experimental-strip-types scripts/sync-cta.ts",
     "quality": "npm run validate:facts && npm run sync:cta -- --check && tsc --noEmit",
     "build:pictogram": "remotion render FileDeletedPictogram out/file-deleted/file_deleted_pictogram.mp4"

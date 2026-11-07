@@ -4,6 +4,7 @@
   "series": "Sains",
   "status": "draft",
   "captionMode": "subtitle",
+  "captionSource": "src/topics/matrix-effect/2d/timeline.ts",
   "notes": "Naskah = VO v3 (public/matrix-effect/vo_v3_narasi.wav). Durasi scene = jarak antar awal kalimat VO.",
   "scenes": [
     {

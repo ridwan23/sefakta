@@ -19,7 +19,8 @@
 //  5. Durasi total 55–65 detik; mode caption "ringkasan" = 8–14 kata per scene.
 // Exit code 1 bila ada error.
 import { existsSync, readdirSync, readFileSync } from 'node:fs';
-import { join } from 'node:path';
+import { join, resolve } from 'node:path';
+import { pathToFileURL } from 'node:url';
 
 type Level = 'error' | 'warn';
 type Issue = { level: Level; where: string; msg: string };
@@ -180,6 +181,31 @@ export const validateBrief = (b: Json, file: string, forcePublish: boolean): Iss
   return issues;
 };
 
+// ---------------------------------------------------------------- caption di layar vs brief
+/** Bila brief punya `captionSource` (modul yang mengekspor `LINES`), setiap angka pada teks caption yang benar-benar
+ *  tampil harus tercakup fakta scene yang sama. Mencegah naskah di layar menyimpang dari brief tanpa terdeteksi. */
+export const checkCaptions = async (b: Json): Promise<Issue[]> => {
+  const issues: Issue[] = [];
+  const add = (level: Level, where: string, msg: string) => issues.push({ level, where, msg });
+  if (!isStr(b.captionSource)) return issues;
+  let lines: any;
+  try { lines = (await import(pathToFileURL(resolve(b.captionSource)).href)).LINES; } catch (e) { add('error', 'captionSource', `modul tidak bisa dimuat: ${(e as Error).message}`); return issues; }
+  if (!Array.isArray(lines)) { add('error', 'captionSource', 'modul harus mengekspor array LINES'); return issues; }
+  const scenes: Json[] = Array.isArray(b.scenes) ? b.scenes : [];
+  if (lines.length !== scenes.length) add('error', 'captionSource', `jumlah caption di layar (${lines.length}) ≠ jumlah scene di brief (${scenes.length})`);
+  const facts = new Map<string, Json>((b.facts ?? []).map((f: Json) => [f.id, f]));
+  const ignored = new Set<number>((Array.isArray(b.numbersIgnored) ? b.numbersIgnored : []).map((n: Json) => n?.value));
+  for (const [i, line] of lines.entries()) {
+    const sc = scenes[i]; if (!sc) continue;
+    const refFacts = (Array.isArray(sc.factIds) ? sc.factIds : []).map((id: string) => facts.get(id)).filter(Boolean) as Json[];
+    for (const q of quantitiesIn(String(line?.text ?? ''))) {
+      if (!ignored.has(q.value) && !refFacts.some((f) => (f.figures ?? []).some((fg: Json) => same(fg.value, q.value))))
+        add('error', `captionSource[${i}] (scene ${sc.id})`, `caption di layar memuat angka "${q.raw}${q.unit ? ' ' + q.unit : ''}" (= ${q.value}) yang tidak tercakup fakta scene ini`);
+    }
+  }
+  return issues;
+};
+
 // ---------------------------------------------------------------- pemeriksaan URL (opsional: --check-urls)
 type Page = { status: number | 'error'; finalUrl?: string; ctype?: string; text?: string; err?: string };
 const NAMED: Record<string, string> = {
@@ -273,6 +299,7 @@ const main = async () => {
     try {
       const brief = JSON.parse(readFileSync(join(dir, f), 'utf8'));
       issues = validateBrief(brief, f, publish);
+      issues.push(...(await checkCaptions(brief)));
       if (online) { const r = await checkUrls(brief, timeoutMs); issues.push(...r.issues); stats = r.stats; }
     } catch (e) { issues = [{ level: 'error', where: f, msg: `JSON tidak bisa dibaca: ${(e as Error).message}` }]; }
     const e = issues.filter((i) => i.level === 'error'), w = issues.filter((i) => i.level === 'warn');
