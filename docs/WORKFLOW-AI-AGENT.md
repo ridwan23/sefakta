@@ -23,7 +23,7 @@ Prinsip utama: **cegah kesalahan sebelum render, jangan menemukannya dengan coba
 | 2 | Riset sumber | kutipan verbatim + URL | setiap klaim punya ≥ 2 sumber berbeda asal |
 | 3 | Naskah | 5 scene, 135–150 kata | lolos aturan pelafalan (§3.3) |
 | 4 | Brief | `briefs/<id>.json` | `npm run validate:facts` 0 error, `validate:facts:online` 0 error |
-| 5 | Voice-over | `public/<id>/vo/*.mp3` (+ `cta.mp3`) | loudness -14 ±1 LUFS, durasi cerita 55–65 dtk |
+| 5 | Voice-over | `public/<id>/vo/*.mp3` (CTA memakai `public/brand/cta-vo.mp3` bersama) | loudness -14 ±1 LUFS, durasi cerita 55–65 dtk |
 | 6 | Alignment & cek ucapan | `captions.json` | cakupan ≥ 90%, transkrip dibaca kata demi kata |
 | 7 | Rencana visual | tabel storyboard + koordinat | semua elemen di area aman (§7.2) |
 | 8 | Implementasi | `src/topics/<id>/scenes.tsx` | `tsc` + `eslint` bersih |
@@ -140,7 +140,7 @@ Isi `briefs/<id>.json`:
   - isi `tone` sesuai kecerahan latar;
   - `captionColors` bila palet default tidak cocok (validator mengecek kontras ≥ 4,5:1).
 - **`captionMode`:** `subtitle` untuk cerita bernarasi padat, `ringkasan` untuk visual yang ramai, `headline` untuk visual yang sangat sederhana.
-- **`cta.voiceoverText`:** opsional. Default "[excited] Ikuti Sefakta! Fakta baru, tiap hari!" (tag `[excited]` tidak diucapkan); maksimal 3,5 dtk.
+- **CTA:** tidak diatur per episode. Semua episode memakai VO CTA bersama `public/brand/cta-vo.mp3`.
 
 Gerbang: `npm run validate:facts` 0 error.
 
@@ -148,11 +148,11 @@ Gerbang: `npm run validate:facts` 0 error.
 
 ```bash
 npm run vo -- --brief=briefs/<id>.json --dry-run   # baca ulang teks + kecepatan, tanpa kredit
-npm run vo -- --brief=briefs/<id>.json             # semua scene + VO CTA
+npm run vo -- --brief=briefs/<id>.json             # semua scene (VO CTA bersama tidak dibuat ulang)
 ```
 
 - **Jalankan VO dan align sebagai dua perintah terpisah.** Menggabungkannya dalam satu perintah pernah membuat proses mati kehabisan memori (exit 137).
-- Baca keluaran: loudness tiap scene -14 ±1 LUFS, true peak ≤ -1 dBTP, dan `cta` ≤ 3,5 dtk.
+- Baca keluaran: loudness tiap scene -14 ±1 LUFS, true peak ≤ -1 dBTP.
 - Hitung durasi cerita: Σ max(`durationSeconds`, audio + 0,5). Bila di luar 55–65 dtk, ubah naskah (tahap 3), bukan kecepatan.
 
 ## 6. Alignment dan cek ucapan
@@ -173,7 +173,6 @@ node -e "const c=require('./public/<id>/captions.json').scenes;for(const k in c)
 
 - Buat ulang **satu scene saja**: `npm run vo -- --brief=… --scene=<id> --force`, lalu `npm run align`.
 - Batas: dua kali buat ulang per scene. Setelah itu ubah kata-katanya, karena TTS tidak deterministik.
-- Cek VO CTA dengan cara yang sama: `.whisper/main -m .whisper/ggml-small.bin -l id -f <cta 16 kHz wav>`.
 
 Gerbang: semua scene ≥ 90% cocok dan tidak ada salah ucap yang mengubah makna.
 
@@ -308,7 +307,7 @@ npm run check:publish   # sebelum tayang: validate:facts:online (kutipan verbati
 
 `check:episodes` memeriksa:
 - VO sesuai naskah, loudness, dan true peak;
-- VO CTA ada, kalimatnya sesuai, kecepatannya sama dengan narasi, dan ≤ 3,5 dtk;
+- VO CTA bersama `public/brand/cta-vo.mp3` ada, ≤ 3,5 dtk, -14 ±1 LUFS (dicek sekali oleh `check:episodes`);
 - cakupan caption ≥ 90%;
 - durasi cerita 55–65 dtk;
 - tidak ada placeholder visual.
@@ -357,7 +356,7 @@ Periksa MP4-nya, karena preview bukan bukti hasil ekspor:
 | titik zoom keluar layar | interpolasi kamera linear | §7.3 pakai `mixView` |
 | awan menutup matahari, stempel menumpuk termometer | elemen tidak dipetakan ke ruang | §7.1 tabel posisi per cue |
 | sinar Matahari tak terbaca, hantu terlalu kecil | konsep belum diuji keterbacaannya | §7.4 bentuk pembeda, ikon ≥ 80 px |
-| suara CTA berbeda dari narator episode | audio aset brand tidak diperiksa | VO CTA dibuat per episode; dicek `check:episodes` |
+| suara CTA berbeda dari narator episode | audio aset brand tidak diperiksa | satu VO CTA bersama yang sudah diperiksa (`public/brand/cta-vo.mp3`); dicek `check:episodes` |
 | VO terlalu cepat (1,25×) | kecepatan dipakai untuk mengejar durasi | §3.2 anggaran kata; default 1,1× |
 | reference id diganti, VO lama tidak terdeteksi usang | hash VO hanya dari teks + kecepatan | `vo-fish` mencatat sidik suara per scene; `check:episodes` menolak campuran suara |
 | proses VO mati di tengah, progres hilang | manifest baru ditulis di akhir | manifest ditulis setelah setiap scene |

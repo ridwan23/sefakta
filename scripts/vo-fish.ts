@@ -3,15 +3,14 @@
 //   npm run vo -- --brief=briefs/<episode>.json --dry-run      # cek teks, tanpa API/kredit
 //   npm run vo -- --brief=briefs/<episode>.json                # buat scene yang belum ada / berubah
 //   npm run vo -- --brief=... --scene=s3 --force               # buat ulang satu scene
-//   npm run vo -- --brief=... --scene=cta --use-audio=take.mp3 # pasang take pilihan (hasil Fish dengan teks & suara yang sama)
+//   npm run vo -- --brief=... --scene=s3 --use-audio=take.mp3  # pasang take pilihan (hasil Fish dengan teks & suara yang sama)
 //
 // Kunci di .env: FISH_AUDIO_API_KEY (wajib), FISH_AUDIO_REFERENCE_ID (suara konsisten), FISH_AUDIO_MODEL, FISH_AUDIO_SPEED.
-// Juga membuat VO CTA (id 'cta', kalimat CTA_VO_TEXT atau cta.voiceoverText di brief) dengan suara & kecepatan sama.
+// VO CTA tidak dibuat per episode: semua episode memakai satu rekaman bersama (CTA_VO_FILE, public/brand/cta-vo.mp3).
 // Hasil: public/<projectId>/vo/<scene>.mp3 + public/<projectId>/manifest.json. API key tidak pernah ditulis ke file.
 // Scene dibuat ulang otomatis bila teks/kecepatannya berubah (dideteksi lewat hash di manifest).
 import { existsSync, mkdirSync, readFileSync, renameSync, writeFileSync, rmSync } from 'node:fs';
 import { basename } from 'node:path';
-import { CTA_VO_ID, CTA_VO_MAX_SECONDS, CTA_VO_TEXT } from '../src/shared/brand/ctaVoice.ts';
 import { arg, flag, loadBrief, paths, textHash, durationSeconds, loudness, run, LUFS_TARGET, TRUE_PEAK } from './lib/episode.ts';
 
 const API_URL = 'https://api.fish.audio/v1/tts';
@@ -30,7 +29,7 @@ if (!dryRun && !apiKey) throw new Error('FISH_AUDIO_API_KEY belum ada. Salin .en
 
 const { brief, path: briefPath } = loadBrief();
 const P = paths(brief.projectId);
-if (only && only !== CTA_VO_ID && !brief.scenes.some((s) => s.id === only)) throw new Error(`Scene '${only}' tidak ada di brief.`);
+if (only && !brief.scenes.some((s) => s.id === only)) throw new Error(`Scene '${only}' tidak ada di brief.`);
 
 /** `voice` = sidik suara (model + reference id, di-hash) yang menghasilkan file; beda suara = audio usang. */
 type Entry = { id: string; file: string; text: string; speed: number; hash: string; voice: string; audioSeconds: number; lufs: number; truePeak: number };
@@ -77,13 +76,12 @@ const normalizeWithLimiter = async (input: string, output: string, extraGainDb: 
 if (!dryRun) mkdirSync(P.voDir, { recursive: true });
 // Manifest ditulis setelah setiap scene: bila proses terhenti (mis. exit 137), scene yang sudah jadi tidak dibuat ulang.
 const entries = new Map<string, Entry>((old.scenes ?? []).map((e) => [e.id, { ...e, voice: prevVoice(e)! }]));
-let made = 0, madeScenes = 0; // madeScenes: scene bercaption (tanpa CTA)
+let made = 0;
 const save = () => {
   const manifest = { projectId: brief.projectId, sourceBrief: basename(briefPath), provider: 'fish-audio', model, voice, loudnessTarget: LUFS_TARGET, generatedAt: new Date().toISOString(), scenes: items.map((s) => entries.get(s.id)).filter(Boolean) };
   writeFileSync(P.manifest, JSON.stringify(manifest, null, 2) + '\n');
 };
-// CTA ikut dibuat seperti scene terakhir: narator & kecepatan default yang sama dengan narasi episode.
-const items: { id: string; voiceoverText: string; voiceoverSpeed?: number }[] = [...brief.scenes, { id: CTA_VO_ID, voiceoverText: brief.cta?.voiceoverText ?? CTA_VO_TEXT, voiceoverSpeed: undefined as number | undefined }];
+const items: { id: string; voiceoverText: string; voiceoverSpeed?: number }[] = brief.scenes;
 for (const scene of items) {
   const speed = scene.voiceoverSpeed ?? defaultSpeed;
   const hash = textHash(scene.voiceoverText, speed);
@@ -113,7 +111,6 @@ for (const scene of items) {
     rmSync(raw);
     renameSync(tmp, file);
     made++;
-    if (scene.id !== CTA_VO_ID) madeScenes++;
   } else if (!existsSync(file)) {
     console.log(`! ${scene.id}: audio belum ada (jalankan tanpa --scene)`);
     continue;
@@ -123,12 +120,10 @@ for (const scene of items) {
   const entry: Entry = done || !prev ? { id: scene.id, file: P.voStatic(scene.id), text: scene.voiceoverText, speed, hash, voice, audioSeconds: Number((await durationSeconds(file)).toFixed(3)), lufs: L.lufs, truePeak: L.truePeak } : { ...prev, voice: prevVoice(prev)!, lufs: L.lufs, truePeak: L.truePeak };
   entries.set(scene.id, entry);
   save();
-  console.log(`✓ ${scene.id}: ${entry.audioSeconds.toFixed(2)} dtk · ${L.lufs} LUFS · TP ${L.truePeak} dBTP${entry.voice !== voice ? ' · ! suara lama' : ''}`);
-  if (scene.id === CTA_VO_ID && entry.audioSeconds > CTA_VO_MAX_SECONDS) console.log(`! cta: ${entry.audioSeconds.toFixed(2)} dtk > ${CTA_VO_MAX_SECONDS} dtk, terpotong klip 4 dtk. Pendekkan cta.voiceoverText.`);
-}
+  console.log(`✓ ${scene.id}: ${entry.audioSeconds.toFixed(2)} dtk · ${L.lufs} LUFS · TP ${L.truePeak} dBTP${entry.voice !== voice ? ' · ! suara lama' : ''}`);}
 
 if (dryRun) console.log('\nDry-run selesai: tidak ada panggilan API.');
 else {
   console.log(`\n${made} scene dibuat. Manifest: public/${brief.projectId}/manifest.json`);
-  if (madeScenes) console.log('Caption lama kini usang → jalankan: npm run align -- --brief=' + process.argv.find((a) => a.startsWith('--brief='))?.slice(8));
+  if (made) console.log('Caption lama kini usang → jalankan: npm run align -- --brief=' + process.argv.find((a) => a.startsWith('--brief='))?.slice(8));
 }

@@ -1,5 +1,5 @@
 import { staticFile, type CalculateMetadataFunction } from 'remotion';
-import { CTA_VO_ID, CTA_VO_TEXT } from '../brand/ctaVoice';
+import { CTA_VO_FILE } from '../brand/ctaVoice';
 import type { EpisodeProps, EpisodeTimeline, ManifestEntry, SceneCaptions } from './types';
 
 export const FPS = 30;
@@ -38,8 +38,8 @@ export const calculateEpisodeMetadata: CalculateMetadataFunction<EpisodeProps> =
     cursor += frames;
     return entry;
   });
-  const cta = byId.get(CTA_VO_ID);
-  const ctaAudio = cta && cta.text === (brief.cta?.voiceoverText ?? CTA_VO_TEXT) ? cta.file : null;
+  // VO CTA bersama (satu rekaman untuk semua episode); bila filenya hilang, klip CTA memakai audio aslinya.
+  const ctaAudio = (await fetch(staticFile(CTA_VO_FILE), { method: 'HEAD' }).then((r) => r.ok).catch(() => false)) ? CTA_VO_FILE : null;
   const ctaFrom = cursor + Math.round(CTA_HOLD_SECONDS * FPS);
   const timeline: EpisodeTimeline = { scenes, storyFrames: cursor, ctaFrom, hasVo: scenes.every((s) => s.audio), ctaAudio };
   return { durationInFrames: ctaFrom + CTA_FRAMES, fps: FPS, width: WIDTH, height: HEIGHT, props: { ...props, timeline } };

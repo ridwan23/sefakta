@@ -2,14 +2,14 @@
 //   • VO ada untuk setiap scene dan sesuai naskah (hash), loudness -14 ±1 LUFS, true peak ≤ -1 dBTP
 //   • caption (mode subtitle) hasil penyelarasan ada, sesuai audio, dan cakupan kata ≥ 90%
 //   • durasi cerita (dihitung seperti template: max(durasi brief, audio + jeda)) 55–65 dtk
-//   • VO CTA ada, sesuai kalimat, kecepatan sama dengan narasi, ≤ 3,5 dtk
+//   • VO CTA bersama (public/brand/cta-vo.mp3) ada, ≤ 3,5 dtk, loudness sesuai target (sekali untuk semua episode)
 //   • komposisi terdaftar; visual per scene ada (placeholder = peringatan, error saat --publish)
 //
 //   npm run check:episodes               # draft: VO/caption/visual belum ada = peringatan
 //   npm run check:episodes -- --publish  # siap tayang: semuanya wajib
 import { existsSync, readdirSync, readFileSync } from 'node:fs';
-import { CTA_VO_ID, CTA_VO_MAX_SECONDS, CTA_VO_TEXT } from '../src/shared/brand/ctaVoice.ts';
-import { flag, paths, textHash, loudness, LUFS_TARGET, LUFS_TOLERANCE, SCENE_PAD_SECONDS } from './lib/episode.ts';
+import { CTA_VO_FILE, CTA_VO_MAX_SECONDS } from '../src/shared/brand/ctaVoice.ts';
+import { durationSeconds, flag, paths, textHash, loudness, LUFS_TARGET, LUFS_TOLERANCE, SCENE_PAD_SECONDS } from './lib/episode.ts';
 
 const publish = flag('publish');
 const MIN_COVERAGE = 0.9;
@@ -52,19 +52,6 @@ const checkBrief = async (file: string): Promise<Issue[] | null> => {
     if (Math.abs(L.lufs - LUFS_TARGET) > LUFS_TOLERANCE) soft(`${s.id}: loudness ${L.lufs} LUFS (target ${LUFS_TARGET} ±${LUFS_TOLERANCE})`);
     if (L.truePeak > MAX_TRUE_PEAK) soft(`${s.id}: true peak ${L.truePeak} dBTP (maks ${MAX_TRUE_PEAK})`);
   }
-  if (manifest) {
-    // VO CTA: suara & kecepatan sama dengan narasi; menggantikan audio asli klip CTA
-    const c = manifest.scenes.find((e: { id: string }) => e.id === CTA_VO_ID);
-    const text = (b.cta as { voiceoverText?: string } | undefined)?.voiceoverText ?? CTA_VO_TEXT;
-    if (!c || !existsSync(P.vo(CTA_VO_ID))) soft('VO CTA belum dibuat; klip CTA memakai audio aslinya (npm run vo)');
-    else if (c.text !== text) soft('VO CTA usang, kalimat CTA berubah (npm run vo)');
-    else {
-      if (c.speed !== vo.get(b.scenes[0].id)?.speed) soft(`VO CTA ${c.speed}x berbeda dengan narasi ${vo.get(b.scenes[0].id)?.speed}x (npm run vo -- --scene=cta --force)`);
-      if (c.audioSeconds > CTA_VO_MAX_SECONDS) soft(`VO CTA ${c.audioSeconds.toFixed(2)} dtk > ${CTA_VO_MAX_SECONDS} dtk, terpotong`);
-      const L = await loudness(P.vo(CTA_VO_ID));
-      if (Math.abs(L.lufs - LUFS_TARGET) > LUFS_TOLERANCE) soft(`cta: loudness ${L.lufs} LUFS (target ${LUFS_TARGET} ±${LUFS_TOLERANCE})`);
-    }
-  }
   if (story < 55 || story > 65) soft(`durasi cerita ${story.toFixed(1)} dtk di luar 55–65 dtk (tanpa CTA 4 dtk)`);
 
   // caption
@@ -92,6 +79,15 @@ for (const f of files) {
   errors += e.length; warns += w.length;
   console.log(`${e.length ? '✗' : '✓'} ${f}  ${publish ? '[publish]' : '[draft]'}  ${e.length} error, ${w.length} peringatan`);
   for (const i of [...e, ...w]) console.log(`   ${i.level === 'error' ? 'ERROR ' : 'warn  '} ${i.msg}`);
+}
+// VO CTA bersama: satu rekaman untuk semua episode; tanpa file ini klip CTA memakai audio aslinya.
+const ctaFile = `public/${CTA_VO_FILE}`;
+if (!existsSync(ctaFile)) { console.log(`✗ VO CTA bersama tidak ada: ${ctaFile}`); errors++; }
+else {
+  const [sec, L] = [await durationSeconds(ctaFile), await loudness(ctaFile)];
+  const bad = [sec > CTA_VO_MAX_SECONDS && `${sec.toFixed(2)} dtk > ${CTA_VO_MAX_SECONDS} dtk`, Math.abs(L.lufs - LUFS_TARGET) > LUFS_TOLERANCE && `loudness ${L.lufs} LUFS`].filter(Boolean);
+  console.log(`${bad.length ? '✗' : '✓'} VO CTA bersama ${ctaFile}: ${sec.toFixed(2)} dtk · ${L.lufs} LUFS${bad.length ? ' · ' + bad.join(', ') : ''}`);
+  errors += bad.length;
 }
 console.log(`\nEpisode diperiksa: ${checked}. Total: ${errors} error, ${warns} peringatan.`);
 process.exitCode = errors ? 1 : 0;

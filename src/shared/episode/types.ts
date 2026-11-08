@@ -22,8 +22,6 @@ export type EpisodeBrief = {
   status: string;
   captionMode: 'ringkasan' | 'subtitle' | 'headline';
   visualStyle: VisualStyle;
-  /** Opsional: ganti kalimat VO CTA (default CTA_VO_TEXT). */
-  cta?: { voiceoverText?: string };
   scenes: EpisodeScene[];
 };
 
@@ -33,7 +31,7 @@ export type SceneCaptions = { hash: string; coverage: number; captions: Caption[
 
 /** Hasil calculateMetadata: posisi setiap scene di timeline + aset yang ditemukan. */
 export type TimelineScene = EpisodeScene & { from: number; frames: number; audio: string | null; captions: Caption[] | null };
-/** `ctaAudio` = VO CTA episode bila sudah dibuat dan teksnya masih sesuai. */
+/** `ctaAudio` = VO CTA bersama (CTA_VO_FILE) bila filenya ada. */
 /** `storyFrames` = akhir narasi scene terakhir; `ctaFrom` = awal transisi CTA (setelah jeda CTA_HOLD_SECONDS). */
 export type EpisodeTimeline = { scenes: TimelineScene[]; storyFrames: number; ctaFrom: number; hasVo: boolean; ctaAudio: string | null };
 

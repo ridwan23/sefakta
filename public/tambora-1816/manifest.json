@@ -61,17 +61,6 @@
       "audioSeconds": 12.147,
       "lufs": -14.6,
       "truePeak": -2.3
-    },
-    {
-      "id": "cta",
-      "file": "tambora-1816/vo/cta.mp3",
-      "text": "[excited] Ikuti Sefakta! Fakta baru, tiap hari!",
-      "speed": 1.1,
-      "hash": "de5ef82b27c3",
-      "voice": "59c6df57a144",
-      "audioSeconds": 3.082,
-      "lufs": -14,
-      "truePeak": -1.7
     }
   ]
 }

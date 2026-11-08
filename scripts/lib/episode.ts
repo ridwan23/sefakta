@@ -23,7 +23,7 @@ export type Scene = {
   visual?: string;
   factIds?: string[];
 };
-export type Brief = { projectId: string; title: string; status: string; captionMode: string; scenes: Scene[]; cta?: { voiceoverText?: string }; [k: string]: unknown };
+export type Brief = { projectId: string; title: string; status: string; captionMode: string; scenes: Scene[]; [k: string]: unknown };
 
 export const arg = (name: string) => process.argv.slice(2).find((a) => a.startsWith(`--${name}=`))?.slice(name.length + 3);
 export const flag = (name: string) => process.argv.includes(`--${name}`);
