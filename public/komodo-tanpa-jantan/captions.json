@@ -1,0 +1,1111 @@
+{
+  "projectId": "komodo-tanpa-jantan",
+  "method": "whisper.cpp 1.5.5 (small) + forced alignment ke naskah",
+  "generatedAt": "2026-11-07T16:40:18.623Z",
+  "scenes": {
+    "hook": {
+      "hash": "49929d64ea8e",
+      "coverage": 1,
+      "missing": [],
+      "extra": [],
+      "heard": "Komodo betina ini tidak pernah bertemu pejantan, tapi telurnya menatas dan semua bayinya jantan, ternyata ini bukan kebetulan.",
+      "captions": [
+        {
+          "text": "Komodo",
+          "startMs": 200,
+          "endMs": 400,
+          "timestampMs": 300,
+          "confidence": 0.909802
+        },
+        {
+          "text": " betina",
+          "startMs": 400,
+          "endMs": 800,
+          "timestampMs": 600,
+          "confidence": 0.557658
+        },
+        {
+          "text": " ini",
+          "startMs": 800,
+          "endMs": 1000,
+          "timestampMs": 900,
+          "confidence": 0.996297
+        },
+        {
+          "text": " tidak",
+          "startMs": 1000,
+          "endMs": 1330,
+          "timestampMs": 1165,
+          "confidence": 0.978625
+        },
+        {
+          "text": " pernah",
+          "startMs": 1330,
+          "endMs": 1730,
+          "timestampMs": 1530,
+          "confidence": 0.998702
+        },
+        {
+          "text": " bertemu",
+          "startMs": 1730,
+          "endMs": 2210,
+          "timestampMs": 1970,
+          "confidence": 0.993402
+        },
+        {
+          "text": " pejantan.",
+          "startMs": 2210,
+          "endMs": 2870,
+          "timestampMs": 2540,
+          "confidence": 0.882327
+        },
+        {
+          "text": " Tapi",
+          "startMs": 2870,
+          "endMs": 3120,
+          "timestampMs": 2995,
+          "confidence": 0.722498
+        },
+        {
+          "text": " telurnya",
+          "startMs": 3120,
+          "endMs": 3550,
+          "timestampMs": 3335,
+          "confidence": 0.985671
+        },
+        {
+          "text": " menetas,",
+          "startMs": 3550,
+          "endMs": 4150,
+          "timestampMs": 3850,
+          "confidence": 0.98594
+        },
+        {
+          "text": " dan",
+          "startMs": 4150,
+          "endMs": 4220,
+          "timestampMs": 4185,
+          "confidence": 0.811832
+        },
+        {
+          "text": " semua",
+          "startMs": 4220,
+          "endMs": 4590,
+          "timestampMs": 4405,
+          "confidence": 0.947373
+        },
+        {
+          "text": " bayinya",
+          "startMs": 4590,
+          "endMs": 5100,
+          "timestampMs": 4845,
+          "confidence": 0.888733
+        },
+        {
+          "text": " jantan.",
+          "startMs": 5100,
+          "endMs": 5720,
+          "timestampMs": 5410,
+          "confidence": 0.989195
+        },
+        {
+          "text": " Ternyata,",
+          "startMs": 5720,
+          "endMs": 6420,
+          "timestampMs": 6070,
+          "confidence": 0.575383
+        },
+        {
+          "text": " ini",
+          "startMs": 6420,
+          "endMs": 6510,
+          "timestampMs": 6465,
+          "confidence": 0.893659
+        },
+        {
+          "text": " bukan",
+          "startMs": 6510,
+          "endMs": 6890,
+          "timestampMs": 6700,
+          "confidence": 0.995169
+        },
+        {
+          "text": " kebetulan.",
+          "startMs": 6890,
+          "endMs": 7640,
+          "timestampMs": 7265,
+          "confidence": 0.985464
+        }
+      ]
+    },
+    "konteks": {
+      "hash": "c2032d95795b",
+      "coverage": 0.962,
+      "missing": [
+        "Tes"
+      ],
+      "extra": [],
+      "heard": "Tahun 2006 dikebun binatang Inggris, dua komodo betina bertelur tanpa kawin, namanya Flora dan Sungai. Tis DNA memastikan, anak-anak mereka tidak punya ayah.",
+      "captions": [
+        {
+          "text": "Tahun",
+          "startMs": 170,
+          "endMs": 320,
+          "timestampMs": 245,
+          "confidence": 0.968199
+        },
+        {
+          "text": " dua",
+          "startMs": 320,
+          "endMs": 580,
+          "timestampMs": 450,
+          "confidence": 0.998717
+        },
+        {
+          "text": " ribu",
+          "startMs": 580,
+          "endMs": 840,
+          "timestampMs": 710,
+          "confidence": 0.998717
+        },
+        {
+          "text": " enam,",
+          "startMs": 840,
+          "endMs": 1100,
+          "timestampMs": 970,
+          "confidence": 0.998717
+        },
+        {
+          "text": " di",
+          "startMs": 1100,
+          "endMs": 1325,
+          "timestampMs": 1213,
+          "confidence": 0.532272
+        },
+        {
+          "text": " kebun",
+          "startMs": 1325,
+          "endMs": 1550,
+          "timestampMs": 1438,
+          "confidence": 0.532272
+        },
+        {
+          "text": " binatang",
+          "startMs": 1550,
+          "endMs": 2060,
+          "timestampMs": 1805,
+          "confidence": 0.688279
+        },
+        {
+          "text": " Inggris,",
+          "startMs": 2060,
+          "endMs": 2680,
+          "timestampMs": 2370,
+          "confidence": 0.927023
+        },
+        {
+          "text": " dua",
+          "startMs": 2680,
+          "endMs": 2920,
+          "timestampMs": 2800,
+          "confidence": 0.282
+        },
+        {
+          "text": " komodo",
+          "startMs": 2920,
+          "endMs": 3220,
+          "timestampMs": 3070,
+          "confidence": 0.90638
+        },
+        {
+          "text": " betina",
+          "startMs": 3220,
+          "endMs": 3580,
+          "timestampMs": 3400,
+          "confidence": 0.423059
+        },
+        {
+          "text": " bertelur",
+          "startMs": 3580,
+          "endMs": 4060,
+          "timestampMs": 3820,
+          "confidence": 0.990142
+        },
+        {
+          "text": " tanpa",
+          "startMs": 4060,
+          "endMs": 4360,
+          "timestampMs": 4210,
+          "confidence": 0.974613
+        },
+        {
+          "text": " kawin.",
+          "startMs": 4360,
+          "endMs": 4810,
+          "timestampMs": 4585,
+          "confidence": 0.655668
+        },
+        {
+          "text": " Namanya",
+          "startMs": 4810,
+          "endMs": 5280,
+          "timestampMs": 5045,
+          "confidence": 0.716684
+        },
+        {
+          "text": " Flora",
+          "startMs": 5280,
+          "endMs": 5610,
+          "timestampMs": 5445,
+          "confidence": 0.735164
+        },
+        {
+          "text": " dan",
+          "startMs": 5610,
+          "endMs": 5810,
+          "timestampMs": 5710,
+          "confidence": 0.94713
+        },
+        {
+          "text": " Sungai.",
+          "startMs": 5810,
+          "endMs": 6280,
+          "timestampMs": 6045,
+          "confidence": 0.816158
+        },
+        {
+          "text": " Tes",
+          "startMs": 6280,
+          "endMs": 6470,
+          "timestampMs": 6375,
+          "confidence": null
+        },
+        {
+          "text": " DNA",
+          "startMs": 6470,
+          "endMs": 6660,
+          "timestampMs": 6565,
+          "confidence": 0.994729
+        },
+        {
+          "text": " memastikan,",
+          "startMs": 6660,
+          "endMs": 7430,
+          "timestampMs": 7045,
+          "confidence": 0.770197
+        },
+        {
+          "text": " anak-anak",
+          "startMs": 7430,
+          "endMs": 8010,
+          "timestampMs": 7720,
+          "confidence": 0.884622
+        },
+        {
+          "text": " mereka",
+          "startMs": 8010,
+          "endMs": 8400,
+          "timestampMs": 8205,
+          "confidence": 0.995121
+        },
+        {
+          "text": " tidak",
+          "startMs": 8400,
+          "endMs": 8720,
+          "timestampMs": 8560,
+          "confidence": 0.995268
+        },
+        {
+          "text": " punya",
+          "startMs": 8720,
+          "endMs": 9040,
+          "timestampMs": 8880,
+          "confidence": 0.998881
+        },
+        {
+          "text": " ayah.",
+          "startMs": 9040,
+          "endMs": 9560,
+          "timestampMs": 9300,
+          "confidence": 0.802317
+        }
+      ]
+    },
+    "mekanisme": {
+      "hash": "9b516ccf9be6",
+      "coverage": 0.921,
+      "missing": [
+        "sperma.",
+        "gen",
+        "dari"
+      ],
+      "extra": [],
+      "heard": "Fenomena ini disebut partenogenesis, sel telurnya tidak dibuahis parma, sel itu di genapi salinan gandar induknya sendiri. Masalahnya, Komodo Bettina membawa dua kromosom seks berbeda, Z dan W. Jadi telurnya hanya bisa berisi Z ganda atau W ganda.",
+      "captions": [
+        {
+          "text": "Fenomena",
+          "startMs": 230,
+          "endMs": 610,
+          "timestampMs": 420,
+          "confidence": 0.631057
+        },
+        {
+          "text": " ini",
+          "startMs": 610,
+          "endMs": 840,
+          "timestampMs": 725,
+          "confidence": 0.995547
+        },
+        {
+          "text": " disebut",
+          "startMs": 840,
+          "endMs": 1370,
+          "timestampMs": 1105,
+          "confidence": 0.978396
+        },
+        {
+          "text": " partenogenesis.",
+          "startMs": 1370,
+          "endMs": 2570,
+          "timestampMs": 1970,
+          "confidence": 0.429475
+        },
+        {
+          "text": " Sel",
+          "startMs": 2570,
+          "endMs": 2770,
+          "timestampMs": 2670,
+          "confidence": 0.738271
+        },
+        {
+          "text": " telurnya",
+          "startMs": 2770,
+          "endMs": 3210,
+          "timestampMs": 2990,
+          "confidence": 0.952021
+        },
+        {
+          "text": " tidak",
+          "startMs": 3210,
+          "endMs": 3470,
+          "timestampMs": 3340,
+          "confidence": 0.996903
+        },
+        {
+          "text": " dibuahi",
+          "startMs": 3470,
+          "endMs": 3930,
+          "timestampMs": 3700,
+          "confidence": 0.917693
+        },
+        {
+          "text": " sperma.",
+          "startMs": 3930,
+          "endMs": 4500,
+          "timestampMs": 4215,
+          "confidence": null
+        },
+        {
+          "text": " Sel",
+          "startMs": 4500,
+          "endMs": 4540,
+          "timestampMs": 4520,
+          "confidence": 0.488608
+        },
+        {
+          "text": " itu",
+          "startMs": 4500,
+          "endMs": 4680,
+          "timestampMs": 4590,
+          "confidence": 0.989538
+        },
+        {
+          "text": " digenapi",
+          "startMs": 4680,
+          "endMs": 5160,
+          "timestampMs": 4920,
+          "confidence": 0.720022
+        },
+        {
+          "text": " salinan",
+          "startMs": 5160,
+          "endMs": 5580,
+          "timestampMs": 5370,
+          "confidence": 0.970667
+        },
+        {
+          "text": " gen",
+          "startMs": 5580,
+          "endMs": 5760,
+          "timestampMs": 5670,
+          "confidence": null
+        },
+        {
+          "text": " dari",
+          "startMs": 5760,
+          "endMs": 5940,
+          "timestampMs": 5850,
+          "confidence": null
+        },
+        {
+          "text": " induknya",
+          "startMs": 5940,
+          "endMs": 6420,
+          "timestampMs": 6180,
+          "confidence": 0.476957
+        },
+        {
+          "text": " sendiri.",
+          "startMs": 6420,
+          "endMs": 7080,
+          "timestampMs": 6750,
+          "confidence": 0.968273
+        },
+        {
+          "text": " Masalahnya,",
+          "startMs": 7080,
+          "endMs": 7830,
+          "timestampMs": 7455,
+          "confidence": 0.978073
+        },
+        {
+          "text": " komodo",
+          "startMs": 7830,
+          "endMs": 8210,
+          "timestampMs": 8020,
+          "confidence": 0.552159
+        },
+        {
+          "text": " betina",
+          "startMs": 8210,
+          "endMs": 8660,
+          "timestampMs": 8435,
+          "confidence": 0.508521
+        },
+        {
+          "text": " membawa",
+          "startMs": 8660,
+          "endMs": 9110,
+          "timestampMs": 8885,
+          "confidence": 0.986844
+        },
+        {
+          "text": " dua",
+          "startMs": 9110,
+          "endMs": 9300,
+          "timestampMs": 9205,
+          "confidence": 0.699365
+        },
+        {
+          "text": " kromosom",
+          "startMs": 9300,
+          "endMs": 9790,
+          "timestampMs": 9545,
+          "confidence": 0.365847
+        },
+        {
+          "text": " seks",
+          "startMs": 9790,
+          "endMs": 10130,
+          "timestampMs": 9960,
+          "confidence": 0.877092
+        },
+        {
+          "text": " berbeda,",
+          "startMs": 10130,
+          "endMs": 10840,
+          "timestampMs": 10485,
+          "confidence": 0.993256
+        },
+        {
+          "text": " Z",
+          "startMs": 10840,
+          "endMs": 10880,
+          "timestampMs": 10860,
+          "confidence": 0.52038
+        },
+        {
+          "text": " dan",
+          "startMs": 10860,
+          "endMs": 11270,
+          "timestampMs": 11065,
+          "confidence": 0.873278
+        },
+        {
+          "text": " W.",
+          "startMs": 11270,
+          "endMs": 11840,
+          "timestampMs": 11555,
+          "confidence": 0.993051
+        },
+        {
+          "text": " Jadi",
+          "startMs": 11840,
+          "endMs": 12180,
+          "timestampMs": 12010,
+          "confidence": 0.926708
+        },
+        {
+          "text": " telurnya",
+          "startMs": 12180,
+          "endMs": 12850,
+          "timestampMs": 12515,
+          "confidence": 0.884485
+        },
+        {
+          "text": " hanya",
+          "startMs": 12850,
+          "endMs": 13280,
+          "timestampMs": 13065,
+          "confidence": 0.986798
+        },
+        {
+          "text": " bisa",
+          "startMs": 13280,
+          "endMs": 13620,
+          "timestampMs": 13450,
+          "confidence": 0.995146
+        },
+        {
+          "text": " berisi",
+          "startMs": 13620,
+          "endMs": 14120,
+          "timestampMs": 13870,
+          "confidence": 0.977622
+        },
+        {
+          "text": " Z",
+          "startMs": 14120,
+          "endMs": 14280,
+          "timestampMs": 14200,
+          "confidence": 0.96611
+        },
+        {
+          "text": " ganda,",
+          "startMs": 14280,
+          "endMs": 14620,
+          "timestampMs": 14450,
+          "confidence": 0.832326
+        },
+        {
+          "text": " atau",
+          "startMs": 14620,
+          "endMs": 15010,
+          "timestampMs": 14815,
+          "confidence": 0.9174
+        },
+        {
+          "text": " W",
+          "startMs": 15010,
+          "endMs": 15050,
+          "timestampMs": 15030,
+          "confidence": 0.995433
+        },
+        {
+          "text": " ganda.",
+          "startMs": 15040,
+          "endMs": 15560,
+          "timestampMs": 15300,
+          "confidence": 0.996888
+        }
+      ]
+    },
+    "dampak": {
+      "hash": "dca485783346",
+      "coverage": 0.939,
+      "missing": [
+        "Z",
+        "gennya"
+      ],
+      "extra": [],
+      "heard": "Telur W ganda gagal berkembang, yang menatas hanya si ganda, yaitu jantan. Anaknya bukan cloning induknya, tapi keragaman ganya berkurang. Kerena komodo spesies terancam, peneliti menyerangkan kebun bina tang memelihara jantan dan betina bersama.",
+      "captions": [
+        {
+          "text": "Telur",
+          "startMs": 190,
+          "endMs": 380,
+          "timestampMs": 285,
+          "confidence": 0.888443
+        },
+        {
+          "text": " W",
+          "startMs": 380,
+          "endMs": 470,
+          "timestampMs": 425,
+          "confidence": 0.886825
+        },
+        {
+          "text": " ganda",
+          "startMs": 470,
+          "endMs": 820,
+          "timestampMs": 645,
+          "confidence": 0.339531
+        },
+        {
+          "text": " gagal",
+          "startMs": 820,
+          "endMs": 1200,
+          "timestampMs": 1010,
+          "confidence": 0.976309
+        },
+        {
+          "text": " berkembang.",
+          "startMs": 1200,
+          "endMs": 2160,
+          "timestampMs": 1680,
+          "confidence": 0.984389
+        },
+        {
+          "text": " Yang",
+          "startMs": 2160,
+          "endMs": 2390,
+          "timestampMs": 2275,
+          "confidence": 0.813806
+        },
+        {
+          "text": " menetas",
+          "startMs": 2390,
+          "endMs": 2840,
+          "timestampMs": 2615,
+          "confidence": 0.991335
+        },
+        {
+          "text": " hanya",
+          "startMs": 2840,
+          "endMs": 3160,
+          "timestampMs": 3000,
+          "confidence": 0.990641
+        },
+        {
+          "text": " Z",
+          "startMs": 3160,
+          "endMs": 3290,
+          "timestampMs": 3225,
+          "confidence": null
+        },
+        {
+          "text": " ganda,",
+          "startMs": 3290,
+          "endMs": 3840,
+          "timestampMs": 3565,
+          "confidence": 0.97243
+        },
+        {
+          "text": " yaitu",
+          "startMs": 3840,
+          "endMs": 4090,
+          "timestampMs": 3965,
+          "confidence": 0.874638
+        },
+        {
+          "text": " jantan.",
+          "startMs": 4090,
+          "endMs": 4680,
+          "timestampMs": 4385,
+          "confidence": 0.956466
+        },
+        {
+          "text": " Anaknya",
+          "startMs": 4680,
+          "endMs": 5160,
+          "timestampMs": 4920,
+          "confidence": 0.968624
+        },
+        {
+          "text": " bukan",
+          "startMs": 5160,
+          "endMs": 5450,
+          "timestampMs": 5305,
+          "confidence": 0.98218
+        },
+        {
+          "text": " kloning",
+          "startMs": 5450,
+          "endMs": 5870,
+          "timestampMs": 5660,
+          "confidence": 0.783664
+        },
+        {
+          "text": " induknya,",
+          "startMs": 5870,
+          "endMs": 6680,
+          "timestampMs": 6275,
+          "confidence": 0.605988
+        },
+        {
+          "text": " tapi",
+          "startMs": 6680,
+          "endMs": 6760,
+          "timestampMs": 6720,
+          "confidence": 0.964985
+        },
+        {
+          "text": " keragaman",
+          "startMs": 6760,
+          "endMs": 7260,
+          "timestampMs": 7010,
+          "confidence": 0.706327
+        },
+        {
+          "text": " gennya",
+          "startMs": 7260,
+          "endMs": 7530,
+          "timestampMs": 7395,
+          "confidence": null
+        },
+        {
+          "text": " berkurang.",
+          "startMs": 7530,
+          "endMs": 8260,
+          "timestampMs": 7895,
+          "confidence": 0.990399
+        },
+        {
+          "text": " Karena",
+          "startMs": 8260,
+          "endMs": 8680,
+          "timestampMs": 8470,
+          "confidence": 0.404681
+        },
+        {
+          "text": " komodo",
+          "startMs": 8680,
+          "endMs": 9100,
+          "timestampMs": 8890,
+          "confidence": 0.677918
+        },
+        {
+          "text": " spesies",
+          "startMs": 9100,
+          "endMs": 9610,
+          "timestampMs": 9355,
+          "confidence": 0.940456
+        },
+        {
+          "text": " terancam,",
+          "startMs": 9610,
+          "endMs": 10330,
+          "timestampMs": 9970,
+          "confidence": 0.977888
+        },
+        {
+          "text": " peneliti",
+          "startMs": 10330,
+          "endMs": 10700,
+          "timestampMs": 10515,
+          "confidence": 0.717314
+        },
+        {
+          "text": " menyarankan",
+          "startMs": 10700,
+          "endMs": 11320,
+          "timestampMs": 11010,
+          "confidence": 0.751631
+        },
+        {
+          "text": " kebun",
+          "startMs": 11320,
+          "endMs": 11550,
+          "timestampMs": 11435,
+          "confidence": 0.819295
+        },
+        {
+          "text": " binatang",
+          "startMs": 11550,
+          "endMs": 11940,
+          "timestampMs": 11745,
+          "confidence": 0.494316
+        },
+        {
+          "text": " memelihara",
+          "startMs": 11940,
+          "endMs": 12560,
+          "timestampMs": 12250,
+          "confidence": 0.45298
+        },
+        {
+          "text": " jantan",
+          "startMs": 12560,
+          "endMs": 12930,
+          "timestampMs": 12745,
+          "confidence": 0.995556
+        },
+        {
+          "text": " dan",
+          "startMs": 12930,
+          "endMs": 13120,
+          "timestampMs": 13025,
+          "confidence": 0.984249
+        },
+        {
+          "text": " betina",
+          "startMs": 13120,
+          "endMs": 13500,
+          "timestampMs": 13310,
+          "confidence": 0.688867
+        },
+        {
+          "text": " bersama.",
+          "startMs": 13500,
+          "endMs": 14180,
+          "timestampMs": 13840,
+          "confidence": 0.99685
+        }
+      ]
+    },
+    "jawaban": {
+      "hash": "6bfd59b00e57",
+      "coverage": 1,
+      "missing": [],
+      "extra": [],
+      "heard": "Lalu, untuk apa kemampuan ini? Di alam, komodo hanya hidup di beberapa pulau di nusa tenggara. Peneliti menduka, betina yang tepdampar sendirian, bisa menetaskan anak jantan. Lalu ia kawin dengan anaknya dan memulai populasi baru.",
+      "captions": [
+        {
+          "text": "Lalu,",
+          "startMs": 70,
+          "endMs": 440,
+          "timestampMs": 255,
+          "confidence": 0.913498
+        },
+        {
+          "text": " untuk",
+          "startMs": 440,
+          "endMs": 850,
+          "timestampMs": 645,
+          "confidence": 0.9847
+        },
+        {
+          "text": " apa",
+          "startMs": 850,
+          "endMs": 1050,
+          "timestampMs": 950,
+          "confidence": 0.940317
+        },
+        {
+          "text": " kemampuan",
+          "startMs": 1050,
+          "endMs": 1690,
+          "timestampMs": 1370,
+          "confidence": 0.996191
+        },
+        {
+          "text": " ini?",
+          "startMs": 1690,
+          "endMs": 2180,
+          "timestampMs": 1935,
+          "confidence": 0.994205
+        },
+        {
+          "text": " Di",
+          "startMs": 2180,
+          "endMs": 2350,
+          "timestampMs": 2265,
+          "confidence": 0.816664
+        },
+        {
+          "text": " alam,",
+          "startMs": 2350,
+          "endMs": 2660,
+          "timestampMs": 2505,
+          "confidence": 0.520177
+        },
+        {
+          "text": " komodo",
+          "startMs": 2660,
+          "endMs": 3090,
+          "timestampMs": 2875,
+          "confidence": 0.494527
+        },
+        {
+          "text": " hanya",
+          "startMs": 3090,
+          "endMs": 3330,
+          "timestampMs": 3210,
+          "confidence": 0.984168
+        },
+        {
+          "text": " hidup",
+          "startMs": 3330,
+          "endMs": 3630,
+          "timestampMs": 3480,
+          "confidence": 0.997697
+        },
+        {
+          "text": " di",
+          "startMs": 3630,
+          "endMs": 3750,
+          "timestampMs": 3690,
+          "confidence": 0.977518
+        },
+        {
+          "text": " beberapa",
+          "startMs": 3750,
+          "endMs": 4240,
+          "timestampMs": 3995,
+          "confidence": 0.993892
+        },
+        {
+          "text": " pulau",
+          "startMs": 4240,
+          "endMs": 4640,
+          "timestampMs": 4440,
+          "confidence": 0.903006
+        },
+        {
+          "text": " di",
+          "startMs": 4640,
+          "endMs": 4760,
+          "timestampMs": 4700,
+          "confidence": 0.815337
+        },
+        {
+          "text": " Nusa",
+          "startMs": 4760,
+          "endMs": 5000,
+          "timestampMs": 4880,
+          "confidence": 0.607479
+        },
+        {
+          "text": " Tenggara.",
+          "startMs": 5000,
+          "endMs": 5500,
+          "timestampMs": 5250,
+          "confidence": 0.715346
+        },
+        {
+          "text": " Peneliti",
+          "startMs": 5500,
+          "endMs": 6030,
+          "timestampMs": 5765,
+          "confidence": 0.949878
+        },
+        {
+          "text": " menduga,",
+          "startMs": 6030,
+          "endMs": 6730,
+          "timestampMs": 6380,
+          "confidence": 0.857081
+        },
+        {
+          "text": " betina",
+          "startMs": 6730,
+          "endMs": 6960,
+          "timestampMs": 6845,
+          "confidence": 0.731312
+        },
+        {
+          "text": " yang",
+          "startMs": 6960,
+          "endMs": 7210,
+          "timestampMs": 7085,
+          "confidence": 0.98941
+        },
+        {
+          "text": " terdampar",
+          "startMs": 7210,
+          "endMs": 7660,
+          "timestampMs": 7435,
+          "confidence": 0.459901
+        },
+        {
+          "text": " sendirian",
+          "startMs": 7660,
+          "endMs": 8310,
+          "timestampMs": 7985,
+          "confidence": 0.66822
+        },
+        {
+          "text": " bisa",
+          "startMs": 8310,
+          "endMs": 8550,
+          "timestampMs": 8430,
+          "confidence": 0.767582
+        },
+        {
+          "text": " menetaskan",
+          "startMs": 8550,
+          "endMs": 9180,
+          "timestampMs": 8865,
+          "confidence": 0.98903
+        },
+        {
+          "text": " anak",
+          "startMs": 9180,
+          "endMs": 9430,
+          "timestampMs": 9305,
+          "confidence": 0.997881
+        },
+        {
+          "text": " jantan.",
+          "startMs": 9430,
+          "endMs": 9840,
+          "timestampMs": 9635,
+          "confidence": 0.970078
+        },
+        {
+          "text": " Lalu",
+          "startMs": 9840,
+          "endMs": 10120,
+          "timestampMs": 9980,
+          "confidence": 0.989629
+        },
+        {
+          "text": " ia",
+          "startMs": 10120,
+          "endMs": 10260,
+          "timestampMs": 10190,
+          "confidence": 0.953808
+        },
+        {
+          "text": " kawin",
+          "startMs": 10260,
+          "endMs": 10610,
+          "timestampMs": 10435,
+          "confidence": 0.851148
+        },
+        {
+          "text": " dengan",
+          "startMs": 10610,
+          "endMs": 11030,
+          "timestampMs": 10820,
+          "confidence": 0.996875
+        },
+        {
+          "text": " anaknya,",
+          "startMs": 11030,
+          "endMs": 11650,
+          "timestampMs": 11340,
+          "confidence": 0.982913
+        },
+        {
+          "text": " dan",
+          "startMs": 11650,
+          "endMs": 11780,
+          "timestampMs": 11715,
+          "confidence": 0.617469
+        },
+        {
+          "text": " memulai",
+          "startMs": 11780,
+          "endMs": 12310,
+          "timestampMs": 12045,
+          "confidence": 0.978532
+        },
+        {
+          "text": " populasi",
+          "startMs": 12310,
+          "endMs": 12870,
+          "timestampMs": 12590,
+          "confidence": 0.985591
+        },
+        {
+          "text": " baru.",
+          "startMs": 12870,
+          "endMs": 13200,
+          "timestampMs": 13035,
+          "confidence": 0.983061
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "projectId": "komodo-tanpa-jantan",
+  "sourceBrief": "komodo-tanpa-jantan.json",
+  "provider": "fish-audio",
+  "model": "s2.1-pro-free",
+  "voice": "59c6df57a144",
+  "loudnessTarget": -14,
+  "generatedAt": "2026-11-07T16:39:22.085Z",
+  "scenes": [
+    {
+      "id": "hook",
+      "file": "komodo-tanpa-jantan/vo/hook.mp3",
+      "text": "Komodo betina ini tidak pernah bertemu pejantan. Tapi telurnya menetas, dan semua bayinya jantan. Ternyata, ini bukan kebetulan.",
+      "speed": 1.1,
+      "hash": "49929d64ea8e",
+      "voice": "59c6df57a144",
+      "audioSeconds": 7.602,
+      "lufs": -14.4,
+      "truePeak": -2
+    },
+    {
+      "id": "konteks",
+      "file": "komodo-tanpa-jantan/vo/konteks.mp3",
+      "text": "Tahun dua ribu enam, di kebun binatang Inggris, dua komodo betina bertelur tanpa kawin. Namanya Flora dan Sungai. Tes DNA memastikan, anak-anak mereka tidak punya ayah.",
+      "speed": 1.1,
+      "hash": "c2032d95795b",
+      "voice": "59c6df57a144",
+      "audioSeconds": 9.587,
+      "lufs": -14.5,
+      "truePeak": -2.3
+    },
+    {
+      "id": "mekanisme",
+      "file": "komodo-tanpa-jantan/vo/mekanisme.mp3",
+      "text": "Fenomena ini disebut partenogenesis. Sel telurnya tidak dibuahi sperma. Sel itu digenapi salinan gen dari induknya sendiri. Masalahnya, komodo betina membawa dua kromosom seks berbeda, Z dan W. Jadi telurnya hanya bisa berisi Z ganda, atau W ganda.",
+      "speed": 1.1,
+      "hash": "9b516ccf9be6",
+      "voice": "59c6df57a144",
+      "audioSeconds": 15.543,
+      "lufs": -14.2,
+      "truePeak": -2
+    },
+    {
+      "id": "dampak",
+      "file": "komodo-tanpa-jantan/vo/dampak.mp3",
+      "text": "Telur W ganda gagal berkembang. Yang menetas hanya Z ganda, yaitu jantan. Anaknya bukan kloning induknya, tapi keragaman gennya berkurang. Karena komodo spesies terancam, peneliti menyarankan kebun binatang memelihara jantan dan betina bersama.",
+      "speed": 1.1,
+      "hash": "dca485783346",
+      "voice": "59c6df57a144",
+      "audioSeconds": 14.185,
+      "lufs": -14.2,
+      "truePeak": -1.8
+    },
+    {
+      "id": "jawaban",
+      "file": "komodo-tanpa-jantan/vo/jawaban.mp3",
+      "text": "Lalu, untuk apa kemampuan ini? Di alam, komodo hanya hidup di beberapa pulau di Nusa Tenggara. Peneliti menduga, betina yang terdampar sendirian bisa menetaskan anak jantan. Lalu ia kawin dengan anaknya, dan memulai populasi baru.",
+      "speed": 1.1,
+      "hash": "6bfd59b00e57",
+      "voice": "59c6df57a144",
+      "audioSeconds": 13.166,
+      "lufs": -14.5,
+      "truePeak": -2.1
+    }
+  ]
+}

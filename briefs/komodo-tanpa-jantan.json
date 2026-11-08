@@ -1,0 +1,391 @@
+{
+  "projectId": "komodo-tanpa-jantan",
+  "title": "Komodo Betina Bisa Punya Anak Tanpa Pejantan",
+  "series": "Alam",
+  "status": "draft",
+  "captionMode": "subtitle",
+  "visualStyle": {
+    "name": "Jurnal naturalis lapangan",
+    "reason": "Fakta biologi tentang satwa endemik Nusa Tenggara: halaman buku catatan naturalis (kertas krem, sketsa tinta, label tulisan tangan) menyatukan sketsa komodo dan telur, peta pulau, dan diagram kromosom Z/W dalam satu bahasa visual. Hijau savana untuk komodo dan kromosom Z, terakota untuk W dan telur yang gagal.",
+    "tone": "light",
+    "palette": [
+      "#F1EBDD",
+      "#1F2A1E",
+      "#2F6B4F",
+      "#B4532A",
+      "#8A8F6A"
+    ],
+    "captionColors": {
+      "text": "#1F2A1E",
+      "highlight": "#2F6B4F",
+      "highlightText": "#FFFFFF"
+    }
+  },
+  "scenes": [
+    {
+      "id": "hook",
+      "durationSeconds": 8.1,
+      "voiceoverText": "Komodo betina ini tidak pernah bertemu pejantan. Tapi telurnya menetas, dan semua bayinya jantan. Ternyata, ini bukan kebetulan.",
+      "caption": "",
+      "headline": "Menetas tanpa ayah",
+      "visual": "Sketsa tinta komodo betina sendirian di halaman jurnal; sarang telur. Satu telur retak, bayi komodo keluar; label tulisan tangan '♂' muncul di setiap bayi. Kolom 'AYAH: —' dicoret.",
+      "factIds": [
+        "f-tanpa-jantan",
+        "f-hanya-jantan"
+      ]
+    },
+    {
+      "id": "konteks",
+      "durationSeconds": 10.1,
+      "voiceoverText": "Tahun dua ribu enam, di kebun binatang Inggris, dua komodo betina bertelur tanpa kawin. Namanya Flora dan Sungai. Tes DNA memastikan, anak-anak mereka tidak punya ayah.",
+      "caption": "",
+      "headline": "Flora & Sungai, 2006",
+      "visual": "Peta kecil Inggris dengan dua penanda: Chester Zoo (Flora) dan London Zoo (Sungai), stempel '2006'. Kartu identitas dua betina, lalu pita hasil tes DNA (sidik genetik) yang semua pitanya cocok dengan induk.",
+      "factIds": [
+        "f-2006",
+        "f-flora-sungai",
+        "f-tanpa-jantan"
+      ]
+    },
+    {
+      "id": "mekanisme",
+      "durationSeconds": 16.0,
+      "voiceoverText": "Fenomena ini disebut partenogenesis. Sel telurnya tidak dibuahi sperma. Sel itu digenapi salinan gen dari induknya sendiri. Masalahnya, komodo betina membawa dua kromosom seks berbeda, Z dan W. Jadi telurnya hanya bisa berisi Z ganda, atau W ganda.",
+      "caption": "",
+      "headline": "Partenogenesis",
+      "visual": "Diagram sel bergaya sketsa: sel telur tanpa sperma (sperma dicoret), salinan gen induk menggenapinya. Lalu kromosom induk Z (hijau) dan W (terakota) berpisah; masing-masing berlipat ganda menjadi pasangan ZZ dan WW.",
+      "factIds": [
+        "f-mekanisme",
+        "f-kromosom"
+      ]
+    },
+    {
+      "id": "dampak",
+      "durationSeconds": 14.7,
+      "voiceoverText": "Telur W ganda gagal berkembang. Yang menetas hanya Z ganda, yaitu jantan. Anaknya bukan kloning induknya, tapi keragaman gennya berkurang. Karena komodo spesies terancam, peneliti menyarankan kebun binatang memelihara jantan dan betina bersama.",
+      "caption": "",
+      "headline": "Hanya jantan yang menetas",
+      "visual": "Telur WW memudar dan diberi tanda silang terakota; telur ZZ menetas menjadi bayi jantan. Bar 'keragaman gen' induk vs anak menyusut. Label 'TERANCAM (IUCN)' dan ikon jantan + betina dalam satu kandang.",
+      "factIds": [
+        "f-hanya-jantan",
+        "f-bukan-klon",
+        "f-terancam",
+        "f-saran"
+      ]
+    },
+    {
+      "id": "jawaban",
+      "durationSeconds": 13.7,
+      "voiceoverText": "Lalu, untuk apa kemampuan ini? Di alam, komodo hanya hidup di beberapa pulau di Nusa Tenggara. Peneliti menduga, betina yang terdampar sendirian bisa menetaskan anak jantan. Lalu ia kawin dengan anaknya, dan memulai populasi baru.",
+      "caption": "",
+      "headline": "Satu betina, satu pulau baru",
+      "visual": "Peta Nusa Tenggara (WorldMap, sorot Komodo, Rinca, Flores). Satu komodo betina hanyut ke pulau kosong; muncul anak jantan; garis keturunan bercabang menjadi jantan dan betina; pulau terisi populasi. Label 'HIPOTESIS'.",
+      "factIds": [
+        "f-habitat",
+        "f-pulau"
+      ]
+    }
+  ],
+  "facts": [
+    {
+      "id": "f-tanpa-jantan",
+      "claim": "Komodo betina dapat menghasilkan anak tanpa pembuahan oleh pejantan (partenogenesis); hal ini dibuktikan dengan tes genetik pada dua betina di kebun binatang Inggris, dan terkonfirmasi lagi pada betina di Chattanooga Zoo, AS.",
+      "kind": "fakta",
+      "status": "terverifikasi",
+      "figures": [],
+      "sources": [
+        {
+          "title": "Parthenogenesis in Komodo dragons",
+          "url": "https://www.nature.com/articles/4441021a",
+          "publisher": "Nature 444, 1021–1022 (Watts dkk.)",
+          "origin": "Watts dkk. 2006 (Nature)",
+          "primary": true,
+          "accessed": "2026-11-07",
+          "quote": "But genetic fingerprinting has now identified parthenogenetic offspring from two female Komodo dragons, one in London Zoo and one in Chester Zoo in England."
+        },
+        {
+          "title": "Determining Paternity and Sex in Komodo Dragons",
+          "url": "https://piscesmolecular.com/portfolio-view/determining-paternity-and-sex-in-komodo-dragons/",
+          "publisher": "Pisces Molecular (laboratorium uji kasus Chattanooga Zoo)",
+          "origin": "Pisces Molecular / Chattanooga Zoo",
+          "primary": true,
+          "accessed": "2026-11-07",
+          "quote": "By comparing microsatellite markers in the hatchling Dragons with those of their mother, we determined that Charlie’s brood was, indeed, a case of parthenogenesis."
+        }
+      ],
+      "limits": "Hook 'tidak pernah bertemu pejantan' merujuk Flora (Chester Zoo). Sungai (London Zoo) sudah terpisah dari pejantan lebih dari dua tahun dan kemudian juga bereproduksi secara seksual. Kasus Chattanooga tidak bisa 100% menyingkirkan penyimpanan sperma jangka panjang, tetapi lab menilainya sangat kecil kemungkinannya."
+    },
+    {
+      "id": "f-2006",
+      "claim": "Kasus partenogenesis komodo di dua kebun binatang Inggris dilaporkan pada tahun 2006.",
+      "kind": "fakta",
+      "status": "terverifikasi",
+      "figures": [
+        {
+          "text": "2006",
+          "value": 2006
+        }
+      ],
+      "sources": [
+        {
+          "title": "Determining Paternity and Sex in Komodo Dragons",
+          "url": "https://piscesmolecular.com/portfolio-view/determining-paternity-and-sex-in-komodo-dragons/",
+          "publisher": "Pisces Molecular",
+          "origin": "Pisces Molecular / Chattanooga Zoo",
+          "primary": false,
+          "accessed": "2026-11-07",
+          "quote": "In 2006, two female Komodo Dragons at different zoos in England were reported to have had eight and four babies, respectively, without any contact with males."
+        },
+        {
+          "title": "Komodo dragon",
+          "url": "https://en.wikipedia.org/wiki/Komodo_dragon",
+          "publisher": "Wikipedia",
+          "origin": "Wikipedia",
+          "primary": false,
+          "accessed": "2026-11-07",
+          "quote": "On 20 December 2006, it was reported that Flora, a captive Komodo dragon living in the Chester Zoo in England, was the second known Komodo dragon to have laid unfertilised eggs"
+        }
+      ],
+      "limits": "Jumlah telur/anak berbeda antarsumber (8 dan 4; 11 telur, 7 menetas; 25 telur, 11 hidup), jadi naskah tidak menyebut jumlahnya."
+    },
+    {
+      "id": "f-flora-sungai",
+      "claim": "Dua komodo betina itu bernama Flora (Chester Zoo) dan Sungai (London Zoo).",
+      "kind": "fakta",
+      "status": "terverifikasi",
+      "figures": [],
+      "sources": [
+        {
+          "title": "Parthenogenesis in Komodo dragons",
+          "url": "https://www.nature.com/articles/4441021a",
+          "publisher": "Nature 444, 1021–1022 (Watts dkk.)",
+          "origin": "Watts dkk. 2006 (Nature)",
+          "primary": true,
+          "accessed": "2026-11-07",
+          "quote": "the two female Komodo dragons (Flora and Sungai) that produced parthenogenetic offspring"
+        },
+        {
+          "title": "Komodo dragon",
+          "url": "https://en.wikipedia.org/wiki/Komodo_dragon",
+          "publisher": "Wikipedia",
+          "origin": "Wikipedia",
+          "primary": false,
+          "accessed": "2026-11-07",
+          "quote": "A Komodo dragon at London Zoo named Sungai laid a clutch of eggs in late 2005 after being separated from male company for more than two years."
+        }
+      ]
+    },
+    {
+      "id": "f-mekanisme",
+      "claim": "Pada partenogenesis komodo, sel telur tidak dibuahi sperma; set kromosom induk digandakan (badan polar menggantikan peran sperma), sehingga anak homozigot.",
+      "kind": "fakta",
+      "status": "terverifikasi",
+      "figures": [],
+      "sources": [
+        {
+          "title": "Virgin births startle zookeepers",
+          "url": "https://www.nature.com/news/2006/061218/full/news061218-7.html",
+          "publisher": "Nature News (Kerri Smith)",
+          "origin": "Watts dkk. 2006 (Nature)",
+          "primary": false,
+          "accessed": "2026-11-07",
+          "quote": "Normally, the polar body would wither away and sperm would make up the full set of chromosomes required for the embryo; in parthenogenesis the polar body is reabsorbed into the egg."
+        },
+        {
+          "title": "Facultative parthenogenesis in Komodo dragons and hammerhead sharks (genetic consequences)",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2391206/",
+          "publisher": "PubMed Central (Hedrick)",
+          "origin": "Hedrick (analisis genetika populasi)",
+          "primary": false,
+          "accessed": "2026-11-07",
+          "quote": "In both cases, the parthenogenic events resulted in progeny homozygous for all loci, suggesting automictic parthenogenesis with terminal fusion and no recombination"
+        }
+      ],
+      "limits": "Naskah menyederhanakan mekanisme (badan polar / penggandaan kromosom) menjadi 'digenapi salinan gen dari induknya sendiri'."
+    },
+    {
+      "id": "f-kromosom",
+      "claim": "Komodo betina memiliki kromosom seks ZW dan jantan ZZ.",
+      "kind": "fakta",
+      "status": "terverifikasi",
+      "figures": [],
+      "sources": [
+        {
+          "title": "Virgin births startle zookeepers",
+          "url": "https://www.nature.com/news/2006/061218/full/news061218-7.html",
+          "publisher": "Nature News (Kerri Smith)",
+          "origin": "Watts dkk. 2006 (Nature)",
+          "primary": false,
+          "accessed": "2026-11-07",
+          "quote": "In dragons, the female carries two different sex chromosomes (ZW), while males are homozygous ZZ."
+        },
+        {
+          "title": "Determining Paternity and Sex in Komodo Dragons",
+          "url": "https://piscesmolecular.com/portfolio-view/determining-paternity-and-sex-in-komodo-dragons/",
+          "publisher": "Pisces Molecular",
+          "origin": "Pisces Molecular / Chattanooga Zoo",
+          "primary": true,
+          "accessed": "2026-11-07",
+          "quote": "Female Komodos are heterozygous ZW, and males are homozygous ZZ."
+        }
+      ]
+    },
+    {
+      "id": "f-hanya-jantan",
+      "claim": "Telur partenogenesis komodo hanya bisa ZZ atau WW; WW tidak berkembang sehingga semua anak yang menetas jantan.",
+      "kind": "fakta",
+      "status": "terverifikasi",
+      "figures": [],
+      "sources": [
+        {
+          "title": "Parthenogenesis in Komodo dragons (Editorial Summary)",
+          "url": "https://www.nature.com/articles/4441021a",
+          "publisher": "Nature",
+          "origin": "Watts dkk. 2006 (Nature)",
+          "primary": true,
+          "accessed": "2026-11-07",
+          "quote": "as viable offspring are always male and genetic diversity would suffer"
+        },
+        {
+          "title": "A komodo dragon with no male partner gave birth to three hatchlings",
+          "url": "https://www.cnn.com/2020/03/09/us/komodo-dragons-parthenogenesis-scn-trnd",
+          "publisher": "CNN (mengutip Chattanooga Zoo)",
+          "origin": "Pisces Molecular / Chattanooga Zoo",
+          "primary": false,
+          "accessed": "2026-11-07",
+          "quote": "When parthenogenesis occurs, the mother can only create WW or ZZ eggs and since WW eggs aren’t viable, only ZZ eggs are left to produce all male hatchlings, the zoo said."
+        }
+      ]
+    },
+    {
+      "id": "f-bukan-klon",
+      "claim": "Anak hasil partenogenesis bukan klon induknya; keragaman genetiknya lebih rendah.",
+      "kind": "fakta",
+      "status": "terverifikasi",
+      "figures": [],
+      "sources": [
+        {
+          "title": "Virgin births startle zookeepers",
+          "url": "https://www.nature.com/news/2006/061218/full/news061218-7.html",
+          "publisher": "Nature News (Kerri Smith)",
+          "origin": "Watts dkk. 2006 (Nature)",
+          "primary": false,
+          "accessed": "2026-11-07",
+          "quote": "the dragon sons are not direct clones of their mothers, but that the babies' DNA contains half as much variation as is present in the mother's genes"
+        },
+        {
+          "title": "Facultative parthenogenesis in Komodo dragons and hammerhead sharks (genetic consequences)",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2391206/",
+          "publisher": "PubMed Central (Hedrick)",
+          "origin": "Hedrick (analisis genetika populasi)",
+          "primary": false,
+          "accessed": "2026-11-07",
+          "quote": "it may also have negative consequences and lower genetic variation in populations of endangered species"
+        }
+      ]
+    },
+    {
+      "id": "f-terancam",
+      "claim": "Komodo adalah spesies terancam (Endangered, IUCN).",
+      "kind": "fakta",
+      "status": "terverifikasi",
+      "figures": [],
+      "sources": [
+        {
+          "title": "Komodo dragon",
+          "url": "https://animals.sandiegozoo.org/animals/komodo-dragon",
+          "publisher": "San Diego Zoo Wildlife Alliance",
+          "origin": "San Diego Zoo Wildlife Alliance",
+          "primary": false,
+          "accessed": "2026-11-07",
+          "quote": "the magnificent Komodo dragon is endangered"
+        },
+        {
+          "title": "Komodo dragon",
+          "url": "https://en.wikipedia.org/wiki/Komodo_dragon",
+          "publisher": "Wikipedia",
+          "origin": "Wikipedia (mengacu IUCN Red List)",
+          "primary": false,
+          "accessed": "2026-11-07",
+          "quote": "The Komodo dragon is classified by the IUCN as Endangered and is listed on the IUCN Red List."
+        }
+      ]
+    },
+    {
+      "id": "f-saran",
+      "claim": "Peneliti mengusulkan kebun binatang memelihara komodo jantan dan betina bersama agar tidak memicu partenogenesis yang menurunkan keragaman genetik.",
+      "kind": "interpretasi",
+      "status": "terverifikasi",
+      "figures": [],
+      "sources": [
+        {
+          "title": "Parthenogenesis in Komodo dragons",
+          "url": "https://www.nature.com/articles/4441021a",
+          "publisher": "Nature 444, 1021–1022 (Watts dkk.)",
+          "origin": "Watts dkk. 2006 (Nature)",
+          "primary": true,
+          "accessed": "2026-11-07",
+          "quote": "Most zoos keep only females, with males being moved between zoos for mating, but perhaps they should be kept together to avoid triggering parthenogenesis and thereby decreasing genetic diversity."
+        }
+      ],
+      "limits": "Penulis memakai kata 'perhaps'; ini usulan, bukan aturan kebun binatang."
+    },
+    {
+      "id": "f-habitat",
+      "claim": "Di alam liar, komodo hanya hidup di beberapa pulau di Nusa Tenggara (Kepulauan Sunda Kecil), Indonesia.",
+      "kind": "fakta",
+      "status": "terverifikasi",
+      "figures": [],
+      "sources": [
+        {
+          "title": "Komodo dragon",
+          "url": "https://nationalzoo.si.edu/animals/komodo-dragon",
+          "publisher": "Smithsonian's National Zoo & Conservation Biology Institute",
+          "origin": "Smithsonian's National Zoo",
+          "primary": false,
+          "accessed": "2026-11-07",
+          "quote": "Komodo dragons are limited to a few Indonesian islands of the Lesser Sunda group, including Rintja, Padar and Flores, and of course the island of Komodo"
+        },
+        {
+          "title": "Komodo dragon",
+          "url": "https://animals.sandiegozoo.org/animals/komodo-dragon",
+          "publisher": "San Diego Zoo Wildlife Alliance",
+          "origin": "San Diego Zoo Wildlife Alliance",
+          "primary": false,
+          "accessed": "2026-11-07",
+          "quote": "separated into eight subpopulations across just six islands: Flores, Gili Motang, Komodo, Nusa Kode, Padar, and Rinca."
+        }
+      ],
+      "limits": "Kepulauan Sunda Kecil = Nusa Tenggara. Menurut Smithsonian, komodo tidak lagi terlihat di Padar sejak 1970-an, sementara San Diego Zoo masih mendaftarkannya; peta sebaiknya menyorot Komodo, Rinca, dan Flores saja."
+    },
+    {
+      "id": "f-pulau",
+      "claim": "Hipotesis: partenogenesis memungkinkan satu betina yang terdampar sendirian di pulau menghasilkan anak jantan, lalu kawin dengan anaknya dan membentuk populasi baru.",
+      "kind": "interpretasi",
+      "status": "terverifikasi",
+      "figures": [],
+      "sources": [
+        {
+          "title": "Virgin births startle zookeepers",
+          "url": "https://www.nature.com/news/2006/061218/full/news061218-7.html",
+          "publisher": "Nature News (mengutip Richard Gibson, ZSL)",
+          "origin": "Watts dkk. 2006 (Nature)",
+          "primary": false,
+          "accessed": "2026-11-07",
+          "quote": "a female gets caught in a storm and swept out to sea, ending up on an island with no other dragons"
+        },
+        {
+          "title": "Komodo dragon",
+          "url": "https://en.wikipedia.org/wiki/Komodo_dragon",
+          "publisher": "Wikipedia",
+          "origin": "Wikipedia",
+          "primary": false,
+          "accessed": "2026-11-07",
+          "quote": "It has been hypothesised that this reproductive adaptation allows a single female to enter an isolated ecological niche"
+        }
+      ],
+      "limits": "Hipotesis, belum teramati di alam liar; naskah memakai 'Peneliti menduga'."
+    }
+  ],
+  "numbersIgnored": []
+}
