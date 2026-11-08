@@ -1,6 +1,6 @@
 // Pemeriksa kesiapan episode (semua brief yang bukan arsip):
 //   • VO ada untuk setiap scene dan sesuai naskah (hash), loudness -14 ±1 LUFS, true peak ≤ -1 dBTP
-//   • caption (mode subtitle) hasil penyelarasan ada, sesuai audio, dan cakupan kata ≥ 90%
+//   • caption (mode subtitle/keypoint) hasil penyelarasan ada, sesuai audio, cakupan kata ≥ 90%; kata pemicu keypoint terdengar
 //   • durasi cerita (dihitung seperti template: max(durasi brief, audio + jeda)) 55–65 dtk
 //   • VO CTA bersama (public/brand/cta-vo.mp3) ada, ≤ 3,5 dtk, loudness sesuai target (sekali untuk semua episode)
 //   • komposisi terdaftar; visual per scene ada (placeholder = peringatan, error saat --publish)
@@ -9,6 +9,7 @@
 //   npm run check:episodes -- --publish  # siap tayang: semuanya wajib
 import { existsSync, readdirSync, readFileSync } from 'node:fs';
 import { CTA_VO_FILE, CTA_VO_MAX_SECONDS } from '../src/shared/brand/ctaVoice.ts';
+import { KEYPOINT_MIN_SECONDS, timeKeypoints } from '../src/shared/episode/keypoints.ts';
 import { durationSeconds, flag, paths, textHash, loudness, LUFS_TARGET, LUFS_TOLERANCE, SCENE_PAD_SECONDS } from './lib/episode.ts';
 
 const publish = flag('publish');
@@ -55,7 +56,7 @@ const checkBrief = async (file: string): Promise<Issue[] | null> => {
   if (story < 55 || story > 65) soft(`durasi cerita ${story.toFixed(1)} dtk di luar 55–65 dtk (tanpa CTA 4 dtk)`);
 
   // caption
-  if (b.captionMode === 'subtitle' && manifest) {
+  if ((b.captionMode === 'subtitle' || b.captionMode === 'keypoint') && manifest) {
     const caps = existsSync(P.captions) ? JSON.parse(readFileSync(P.captions, 'utf8')).scenes : null;
     if (!caps) soft('caption belum diselaraskan (npm run align)');
     else
@@ -64,6 +65,21 @@ const checkBrief = async (file: string): Promise<Issue[] | null> => {
         if (!c) soft(`${s.id}: caption belum ada`);
         else if (e && c.hash !== e.hash) soft(`${s.id}: caption usang, audio sudah berubah (npm run align)`);
         else if (c.coverage < MIN_COVERAGE) soft(`${s.id}: hanya ${(c.coverage * 100).toFixed(0)}% kata naskah terdengar di audio (tidak terdengar: ${c.missing.join(', ')}). Dengarkan; buat ulang VO bila salah ucap.`);
+        else if (b.captionMode === 'keypoint') {
+          // poin kunci dipicu waktu kata: kata pemicunya harus benar-benar terdengar, bukan hasil interpolasi
+          const norm = (w: string) => w.toLowerCase().replace(/[^\p{L}\p{N}]/gu, '');
+          for (const k of s.keypoints ?? []) {
+            const hit = c.captions.filter((w: { text: string }) => norm(w.text) === norm(k.cue))[k.nth ?? 0];
+            if (!hit) soft(`${s.id}: kata pemicu keypoint "${k.cue}" tidak ada di caption`);
+            else if (hit.confidence === null) soft(`${s.id}: kata pemicu keypoint "${k.cue}" tidak terdengar (waktunya diinterpolasi); pilih kata lain atau buat ulang VO`);
+          }
+          // lama tampil tiap keypoint (dihitung seperti di video: frame scene = max(durasi brief, audio + jeda))
+          const frames = Math.ceil(Math.max(s.durationSeconds, (e?.audioSeconds ?? 0) + SCENE_PAD_SECONDS) * 30);
+          timeKeypoints({ ...s, frames, from: 0, audio: null, captions: c.captions }, 30).forEach((t, i) => {
+            const sec = (t.end - t.start) / 30;
+            if (sec < KEYPOINT_MIN_SECONDS) soft(`${s.id}: keypoint "${s.keypoints[i].text}" hanya tampil ${sec.toFixed(1)} dtk (min ${KEYPOINT_MIN_SECONDS}); gabungkan dengan keypoint di dekatnya`);
+          });
+        }
       }
   }
   return issues;

@@ -141,7 +141,7 @@ Isi `briefs/<id>.json`:
   - pilih sesuai isi fakta (sejarah → peta/arsip, sains → diagram, antariksa → gelap kosmik);
   - isi `tone` sesuai kecerahan latar;
   - `captionColors` bila palet default tidak cocok (validator mengecek kontras ≥ 4,5:1).
-- **`captionMode`:** `subtitle` untuk cerita bernarasi padat, `ringkasan` untuk visual yang ramai, `headline` untuk visual yang sangat sederhana.
+- **`captionMode`:** `subtitle` untuk cerita bernarasi padat, `ringkasan` untuk visual yang ramai, `headline` untuk visual yang sangat sederhana, `keypoint` bila hanya poin kunci yang perlu dibaca. Mode `keypoint` mengisi `scenes[].keypoints: [{ cue, nth?, text }]`: `text` ≤ 6 kata, sebaiknya kata yang memang diucapkan (`*kata*` = aksen), `cue` = kata naskah jangkarnya. Setiap kata disorot tepat saat diucapkan (waktu alignment, logika di `src/shared/episode/keypoints.ts`); keypoint muncul pada kata pertamanya yang diucapkan (≤ 2 dtk sebelum `cue`). Validator mengecek kata pemicu ada di naskah; `check:episodes` mengecek kata itu benar-benar terdengar dan setiap keypoint tampil ≥ 1,8 dtk. Cukup 2–5 keypoint per scene; urutkan sesuai urutan ucapan.
 - **CTA:** tidak diatur per episode. Semua episode memakai VO CTA bersama `public/brand/cta-vo.mp3`.
 
 Gerbang: `npm run validate:facts` 0 error.
@@ -207,6 +207,7 @@ Setiap scene minimal punya: entrance (≤ 0,5 dtk), satu perubahan visual tiap 2
 | Caption `subtitle` | y ±1490–1680 | tidak ada teks/objek penting di y > 1460 |
 | Caption `ringkasan` | y ±1440–1680 (hingga 3 baris) | tidak ada teks/objek penting di y > 1420 |
 | Caption `headline` | y ±300–520 | jangan taruh stempel/judul visual di sini |
+| Caption `keypoint` | y ±1520–1680 (satu baris berlatar) | tidak ada teks/objek penting di y > 1460 |
 | Isi utama | x 60–1020, y 180–1460 | label lebar ≤ 900 px |
 
 ### 7.3 Hitung posisi peta sebelum render
