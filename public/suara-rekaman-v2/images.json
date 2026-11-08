@@ -1,0 +1,16 @@
+{
+  "projectId": "suara-rekaman-v2",
+  "provider": "agnes-ai",
+  "images": [
+    {
+      "id": "mekanisme",
+      "file": "suara-rekaman-v2/img/mekanisme.jpg",
+      "prompt": "Side-view anatomical cutaway of a generic adult human head and neck in strict right-facing profile, the face pointing to the right edge, translucent outline of the face over a clearly visible skull, lower jaw bone, voice box in the throat, the ear canal and the small snail-shaped cochlea of the inner ear beside it. Glowing x-ray scientific illustration with fine luminous cyan and pale amber linework, translucent layered anatomy, medical atlas precision, no photorealism, no skin texture. Soft rim light from behind, the subject isolated on a perfectly flat, plain, very dark navy background with no texture, no vignette and no glow in the background. Vertical 9:16 composition, single clear focal subject in the center, calm uncluttered areas at the top and bottom for captions. Clean crisp details, coherent perspective, consistent style. No text, no letters, no numbers, no logos, no watermark, no real person likeness.",
+      "hash": "07d0776d648a",
+      "model": "agnes-image-2.5-flash",
+      "size": "1K 9:16",
+      "aiGenerated": true,
+      "generatedAt": "2026-11-08T04:42:48.951Z"
+    }
+  ]
+}

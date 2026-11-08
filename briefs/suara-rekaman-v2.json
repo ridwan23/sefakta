@@ -1,0 +1,312 @@
+{
+  "projectId": "suara-rekaman-v2",
+  "title": "Kenapa Suaramu Terdengar Asing di Rekaman?",
+  "series": "Tubuh",
+  "status": "draft",
+  "captionMode": "keypoint",
+  "visualStyle": {
+    "name": "Studio akustik malam: satu dunia, kamera menembus kepala",
+    "reason": "Fakta tubuh tentang dua jalur suara yang tidak terlihat. Latar gelap seperti studio rekaman membuat jalur suara bercahaya mudah diikuti. Jalur udara digambar garis cyan penuh, jalur tulang garis kuning putus-putus, jadi keduanya tetap bisa dibedakan tanpa warna. Satu panggung kontinu (kepala, ponsel, pendengar) dijelajahi camera rig: tracking mengikuti gelombang, push-in menembus tengkorak, pull-back sebagai jawaban.",
+    "tone": "dark",
+    "palette": [
+      "#0A1326",
+      "#16284A",
+      "#5CD6FF",
+      "#FFB000",
+      "#FF6B81",
+      "#F4F1EA"
+    ],
+    "captionColors": {
+      "text": "#FFFFFF",
+      "highlight": "#FFB000",
+      "highlightText": "#0A1326"
+    }
+  },
+  "imageStyle": "Glowing x-ray scientific illustration with fine luminous cyan and pale amber linework, translucent layered anatomy, medical atlas precision, no photorealism, no skin texture. Soft rim light from behind, the subject isolated on a perfectly flat, plain, very dark navy background with no texture, no vignette and no glow in the background.",
+  "scenes": [
+    {
+      "id": "hook",
+      "durationSeconds": 7.2,
+      "voiceoverText": "Kenapa suaramu di rekaman terdengar seperti orang lain? Bukan karena ponselmu rusak. Penyebabnya ada di dalam kepalamu sendiri.",
+      "caption": "",
+      "headline": "Suaramu di rekaman",
+      "keypoints": [
+        {
+          "cue": "orang",
+          "text": "Suaramu terdengar seperti *orang lain*?"
+        },
+        {
+          "cue": "ponselmu",
+          "text": "Bukan karena *ponselmu*"
+        },
+        {
+          "cue": "kepalamu",
+          "text": "Ada di dalam *kepalamu*"
+        }
+      ],
+      "visual": "Dibuka extreme close-up layar ponsel: gelombang rekaman diputar. Kata 'orang': kamera tarik mundur cepat memperlihatkan kepala (profil) yang kaget, tanda tanya. 'rusak': ponsel diberi tanda centang (bukan rusak). 'kepalamu': push-in ke kepala.",
+      "factIds": [
+        "f-rekaman-udara"
+      ]
+    },
+    {
+      "id": "konteks",
+      "durationSeconds": 10.9,
+      "voiceoverText": "Saat kamu bicara, suaramu sampai ke telingamu sendiri lewat dua jalan. Jalan pertama lewat udara. Suara keluar dari mulutmu, memutar di sekitar kepala, lalu masuk lagi ke lubang telinga.",
+      "caption": "",
+      "headline": "Dua jalan suara",
+      "keypoints": [
+        {
+          "cue": "bicara",
+          "text": "Saat kamu *bicara*"
+        },
+        {
+          "cue": "udara",
+          "text": "Dua jalan. Pertama: *udara*"
+        },
+        {
+          "cue": "telinga",
+          "text": "Masuk lagi ke *telinga*"
+        }
+      ],
+      "visual": "Kamera mundur sedikit: mulut bergetar. 'udara': tracking shot mengikuti denyut gelombang cyan dari mulut melengkung di udara lalu masuk ke lubang telinga; kamera berhenti dekat telinga.",
+      "factIds": [
+        "f-dua-jalur"
+      ]
+    },
+    {
+      "id": "mekanisme",
+      "durationSeconds": 11.1,
+      "voiceoverText": "Jalan kedua tidak pernah keluar dari tubuhmu. Getaran suaramu merambat lewat tulang tengkorak, langsung ke rumah siput di telinga bagian dalam. Jadi, yang kamu dengar adalah campuran kedua jalan itu.",
+      "caption": "",
+      "headline": "Lewat tulang",
+      "keypoints": [
+        {
+          "cue": "keluar",
+          "text": "Jalan kedua tidak *keluar*"
+        },
+        {
+          "cue": "siput",
+          "text": "Lewat tulang, ke *rumah siput*"
+        },
+        {
+          "cue": "campuran",
+          "text": "*Campuran* kedua jalan"
+        }
+      ],
+      "visual": "Pemindai x-ray menyapu kepala, siluet berganti ilustrasi penampang (ILUSTRASI). 'tulang': kamera turun ke leher lalu mengikuti getaran kuning putus-putus melewati rahang dan tulang pelipis. 'siput': push-in ke rumah siput. 'campuran': pull-back, dua jalur bertemu di telinga.",
+      "imagePrompt": "Side-view anatomical cutaway of a generic adult human head and neck in strict right-facing profile, the face pointing to the right edge, translucent outline of the face over a clearly visible skull, lower jaw bone, voice box in the throat, the ear canal and the small snail-shaped cochlea of the inner ear beside it.",
+      "factIds": [
+        "f-dua-jalur",
+        "f-tulang-temporal"
+      ]
+    },
+    {
+      "id": "dampak",
+      "durationSeconds": 16.1,
+      "voiceoverText": "Masalahnya, tulang lebih mudah meneruskan nada rendah. Karena itu, di dalam kepalamu, suaramu terdengar lebih berat dan penuh. Tapi mikrofon hanya menangkap jalur udara. Bagian berat itu tidak ikut terekam. Hasilnya, di rekaman, suaramu sering terdengar lebih tinggi dari dugaanmu.",
+      "caption": "",
+      "headline": "Nada rendah hilang",
+      "keypoints": [
+        {
+          "cue": "rendah",
+          "text": "Tulang meneruskan *nada rendah*"
+        },
+        {
+          "cue": "berat",
+          "text": "Terdengar lebih *berat*"
+        },
+        {
+          "cue": "udara",
+          "text": "Mikrofon hanya menangkap *udara*"
+        },
+        {
+          "cue": "terekam",
+          "text": "Bagian berat tidak *terekam*"
+        },
+        {
+          "cue": "tinggi",
+          "text": "Terdengar lebih *tinggi*"
+        }
+      ],
+      "visual": "Tilt ke atas: equalizer 'DI KEPALAMU' muncul di atas kepala, batang nada rendah (kiri) tinggi. 'mikrofon': pan ke ponsel, hanya garis cyan yang masuk mik. 'terekam': equalizer 'REKAMAN' dengan batang nada rendah kosong, ditandai merah.",
+      "factIds": [
+        "f-nada-rendah",
+        "f-rekaman-udara"
+      ]
+    },
+    {
+      "id": "jawaban",
+      "durationSeconds": 13.0,
+      "voiceoverText": "Coba sekarang. Tutup kedua telingamu dengan telapak tangan, lalu bicara. Suaramu langsung terdengar lebih berat. Itulah jalur tulang. Jadi, suara di rekaman itu memang suaramu. Begitulah orang lain mendengarmu setiap hari.",
+      "caption": "",
+      "headline": "Versi yang orang dengar",
+      "keypoints": [
+        {
+          "cue": "tutup",
+          "text": "*Tutup* telinga, lalu bicara"
+        },
+        {
+          "cue": "tulang",
+          "text": "Lebih berat = jalur *tulang*"
+        },
+        {
+          "cue": "memang",
+          "text": "Jadi, rekaman itu memang *suaramu*"
+        },
+        {
+          "cue": "orang",
+          "text": "Begitulah *orang lain* mendengarmu"
+        }
+      ],
+      "visual": "Kamera kembali ke kepala: tangan menutup telinga, getaran kuning membesar. 'memang': pan ke ponsel. 'orang': pull-back lebar memperlihatkan pendengar kedua yang menerima garis cyan yang sama dengan ponsel; hold pada komposisi lebar.",
+      "factIds": [
+        "f-oklusi",
+        "f-rekaman-udara"
+      ]
+    }
+  ],
+  "facts": [
+    {
+      "id": "f-dua-jalur",
+      "claim": "Suara sampai ke telinga lewat dua jalur: getaran udara ke gendang telinga dan getaran tulang tengkorak; suara sendiri biasanya didengar sebagai campuran keduanya.",
+      "kind": "fakta",
+      "status": "terverifikasi",
+      "figures": [],
+      "sources": [
+        {
+          "title": "Why do recordings of one’s own voice sound so strange?",
+          "url": "https://www.u-tokyo.ac.jp/focus/en/features/z1304_00237.html",
+          "publisher": "University of Tokyo",
+          "origin": "University of Tokyo, Institute of Industrial Science",
+          "primary": true,
+          "accessed": "2026-11-08",
+          "quote": "Usually you hear your own voice through a mixture of sounds received through both these routes."
+        },
+        {
+          "title": "Scientists explain in more detail how we hear via bones in the skull",
+          "url": "https://www.imperial.ac.uk/news/153374/scientists-explain-more-detail-hear-bones/",
+          "publisher": "Imperial College London",
+          "origin": "Imperial College London & Max Planck Institute for Brain Research",
+          "primary": true,
+          "accessed": "2026-11-08",
+          "quote": "Most people may not realise that our skull also transmits sound to our brain."
+        }
+      ],
+      "limits": "Diagram skematis. Jalur udara digambar sebagai satu lengkung dari mulut ke telinga; aslinya gelombang menyebar ke segala arah."
+    },
+    {
+      "id": "f-tulang-temporal",
+      "claim": "Pada hantaran tulang, getaran merambat lewat tulang tengkorak (tulang temporal/pelipis) menuju koklea (rumah siput) di telinga dalam.",
+      "kind": "fakta",
+      "status": "terverifikasi",
+      "figures": [],
+      "sources": [
+        {
+          "title": "Why do recordings of one’s own voice sound so strange?",
+          "url": "https://www.u-tokyo.ac.jp/focus/en/features/z1304_00237.html",
+          "publisher": "University of Tokyo",
+          "origin": "University of Tokyo, Institute of Industrial Science",
+          "primary": true,
+          "accessed": "2026-11-08",
+          "quote": "For bone-transmitted sound, the vibrations travel through the temporal bone (one of the bones in our skull) directly to the cochlea."
+        },
+        {
+          "title": "Scientists explain in more detail how we hear via bones in the skull",
+          "url": "https://www.imperial.ac.uk/news/153374/scientists-explain-more-detail-hear-bones/",
+          "publisher": "Imperial College London",
+          "origin": "Imperial College London & Max Planck Institute for Brain Research",
+          "primary": true,
+          "accessed": "2026-11-08",
+          "quote": "The temporal bone transmits the vibrations to the basilar membrane in the inner ear"
+        }
+      ],
+      "limits": "Naskah menyebut 'tulang tengkorak' tanpa merinci tulang temporal; garis getaran dari leher ke telinga adalah penyederhanaan visual."
+    },
+    {
+      "id": "f-nada-rendah",
+      "claim": "Hantaran tulang lebih efektif meneruskan frekuensi rendah, sehingga orang mendengar suaranya sendiri lebih rendah/berat dan lebih penuh daripada yang didengar orang lain. Akibatnya rekaman suara sendiri sering terdengar lebih tinggi daripada yang diduga.",
+      "kind": "fakta",
+      "status": "terverifikasi",
+      "figures": [],
+      "sources": [
+        {
+          "title": "Scientists explain in more detail how we hear via bones in the skull",
+          "url": "https://www.imperial.ac.uk/news/153374/scientists-explain-more-detail-hear-bones/",
+          "publisher": "Imperial College London",
+          "origin": "Imperial College London & Max Planck Institute for Brain Research",
+          "primary": true,
+          "accessed": "2026-11-08",
+          "quote": "the process is more effective at transmitting lower frequency sounds to the brain, which means that we perceive our voice as being deeper than what it is"
+        },
+        {
+          "title": "Bone conduction",
+          "url": "https://en.wikipedia.org/wiki/Bone_conduction",
+          "publisher": "Wikipedia",
+          "origin": "Wikipedia (ensiklopedia, rangkuman literatur audiologi)",
+          "primary": false,
+          "accessed": "2026-11-08",
+          "quote": "Because the skull conducts lower frequencies better than air, people perceive their own voices to be lower and fuller than others do, and a recording of one's own voice frequently sounds higher than one expects"
+        }
+      ],
+      "limits": "Equalizer di layar adalah ilustrasi kualitatif (tanpa angka dB). 'Tidak ikut terekam' = komponen hantaran tulang tidak sampai ke mikrofon; rekaman tetap memuat nada rendah dari jalur udara."
+    },
+    {
+      "id": "f-rekaman-udara",
+      "claim": "Rekaman hanya memuat suara yang merambat lewat udara; versi itu sama dengan yang didengar orang lain saat kita bicara.",
+      "kind": "fakta",
+      "status": "terverifikasi",
+      "figures": [],
+      "sources": [
+        {
+          "title": "Why do recordings of one’s own voice sound so strange?",
+          "url": "https://www.u-tokyo.ac.jp/focus/en/features/z1304_00237.html",
+          "publisher": "University of Tokyo",
+          "origin": "University of Tokyo, Institute of Industrial Science",
+          "primary": true,
+          "accessed": "2026-11-08",
+          "quote": "This air-transmitted version of your voice is the same as what other people hear when you speak."
+        },
+        {
+          "title": "Common Clinical Encounters; But Do We Really Know Them?",
+          "url": "https://www.audiologyonline.com/articles/common-clinical-encounters-59-but-909",
+          "publisher": "AudiologyOnline",
+          "origin": "AudiologyOnline (artikel edukasi audiolog)",
+          "primary": false,
+          "accessed": "2026-11-08",
+          "quote": "When listening to your own voice on a recording, you are hearing yourself as others hear you - through air conduction alone."
+        }
+      ],
+      "limits": "Rekaman mendekati, bukan identik dengan, pendengaran orang lain: mikrofon, speaker, dan ruangan ikut mengubah warna suara. 'Bukan karena ponselmu rusak' = penyebab utamanya jalur dengar, bukan kualitas perangkat."
+    },
+    {
+      "id": "f-oklusi",
+      "claim": "Bila telinga ditutup (telapak tangan atau jari) saat bicara, suara sendiri terdengar lebih berat dan lebih keras (efek oklusi), karena energi nada rendah hantaran tulang tertahan di liang telinga.",
+      "kind": "fakta",
+      "status": "terverifikasi",
+      "figures": [],
+      "sources": [
+        {
+          "title": "When Hearing our own Voice is Disturbing: the Occlusion Effect",
+          "url": "https://www.etsmtl.ca/en/news/when-hearing-our-own-voice-is-disturbing-the-occlusion-effect",
+          "publisher": "École de technologie supérieure (ÉTS) Montréal",
+          "origin": "ÉTS Montréal, GRAM (Acoustics Research Group of Montréal)",
+          "primary": true,
+          "accessed": "2026-11-08",
+          "quote": "Your voice will sound deeper, hollow, or even cavernous, as if you are speaking with your head in a barrel."
+        },
+        {
+          "title": "Common Clinical Encounters; But Do We Really Know Them?",
+          "url": "https://www.audiologyonline.com/articles/common-clinical-encounters-59-but-909",
+          "publisher": "AudiologyOnline",
+          "origin": "AudiologyOnline (artikel edukasi audiolog)",
+          "primary": false,
+          "accessed": "2026-11-08",
+          "quote": "A more explicit reason for the occlusion effect is that low-frequency bone conducted sounds are louder for the plugged ear."
+        }
+      ],
+      "limits": "Uji tutup telinga memperkuat bagian hantaran tulang, jadi menunjukkan keberadaan jalur itu, bukan meniru persis suara di kepala."
+    }
+  ],
+  "numbersIgnored": []
+}

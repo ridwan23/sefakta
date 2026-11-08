@@ -1,0 +1,1088 @@
+{
+  "projectId": "suara-rekaman-v2",
+  "method": "whisper.cpp 1.5.5 (small) + forced alignment ke naskah",
+  "generatedAt": "2026-11-08T04:41:50.714Z",
+  "scenes": {
+    "hook": {
+      "hash": "b15ac26805c0",
+      "coverage": 1,
+      "missing": [],
+      "extra": [],
+      "heard": "Kenapa suaramu direkaman terdengar seperti orang lain? Bukan karena ponselmu rusak, penyebabnya ada di dalam kepalamu sendiri.",
+      "captions": [
+        {
+          "text": "Kenapa",
+          "startMs": 170,
+          "endMs": 340,
+          "timestampMs": 255,
+          "confidence": 0.961834
+        },
+        {
+          "text": " suaramu",
+          "startMs": 340,
+          "endMs": 730,
+          "timestampMs": 535,
+          "confidence": 0.994802
+        },
+        {
+          "text": " di",
+          "startMs": 730,
+          "endMs": 985,
+          "timestampMs": 858,
+          "confidence": 0.858534
+        },
+        {
+          "text": " rekaman",
+          "startMs": 985,
+          "endMs": 1240,
+          "timestampMs": 1113,
+          "confidence": 0.858534
+        },
+        {
+          "text": " terdengar",
+          "startMs": 1240,
+          "endMs": 1730,
+          "timestampMs": 1485,
+          "confidence": 0.96954
+        },
+        {
+          "text": " seperti",
+          "startMs": 1730,
+          "endMs": 2150,
+          "timestampMs": 1940,
+          "confidence": 0.996046
+        },
+        {
+          "text": " orang",
+          "startMs": 2150,
+          "endMs": 2440,
+          "timestampMs": 2295,
+          "confidence": 0.99629
+        },
+        {
+          "text": " lain?",
+          "startMs": 2440,
+          "endMs": 2860,
+          "timestampMs": 2650,
+          "confidence": 0.999235
+        },
+        {
+          "text": " Bukan",
+          "startMs": 2860,
+          "endMs": 3130,
+          "timestampMs": 2995,
+          "confidence": 0.509995
+        },
+        {
+          "text": " karena",
+          "startMs": 3130,
+          "endMs": 3540,
+          "timestampMs": 3335,
+          "confidence": 0.983366
+        },
+        {
+          "text": " ponselmu",
+          "startMs": 3540,
+          "endMs": 4140,
+          "timestampMs": 3840,
+          "confidence": 0.96048
+        },
+        {
+          "text": " rusak.",
+          "startMs": 4140,
+          "endMs": 4570,
+          "timestampMs": 4355,
+          "confidence": 0.936442
+        },
+        {
+          "text": " Penyebabnya",
+          "startMs": 4570,
+          "endMs": 5220,
+          "timestampMs": 4895,
+          "confidence": 0.523224
+        },
+        {
+          "text": " ada",
+          "startMs": 5220,
+          "endMs": 5400,
+          "timestampMs": 5310,
+          "confidence": 0.977327
+        },
+        {
+          "text": " di",
+          "startMs": 5400,
+          "endMs": 5520,
+          "timestampMs": 5460,
+          "confidence": 0.850874
+        },
+        {
+          "text": " dalam",
+          "startMs": 5520,
+          "endMs": 5830,
+          "timestampMs": 5675,
+          "confidence": 0.948078
+        },
+        {
+          "text": " kepalamu",
+          "startMs": 5830,
+          "endMs": 6320,
+          "timestampMs": 6075,
+          "confidence": 0.942519
+        },
+        {
+          "text": " sendiri.",
+          "startMs": 6320,
+          "endMs": 6820,
+          "timestampMs": 6570,
+          "confidence": 0.99695
+        }
+      ]
+    },
+    "konteks": {
+      "hash": "0fbac158f141",
+      "coverage": 1,
+      "missing": [],
+      "extra": [],
+      "heard": "Saat kamu bicara, suara mu sampai ke telinga mu sendiri lewat dua jalan, jalan pertama lewat udara. Suara keluar dari mulutmu memutar di sekitar kepala, lalu masuk lagi ke lubang telinga.",
+      "captions": [
+        {
+          "text": "Saat",
+          "startMs": 150,
+          "endMs": 290,
+          "timestampMs": 220,
+          "confidence": 0.93599
+        },
+        {
+          "text": " kamu",
+          "startMs": 290,
+          "endMs": 590,
+          "timestampMs": 440,
+          "confidence": 0.988837
+        },
+        {
+          "text": " bicara,",
+          "startMs": 590,
+          "endMs": 1320,
+          "timestampMs": 955,
+          "confidence": 0.909441
+        },
+        {
+          "text": " suaramu",
+          "startMs": 1320,
+          "endMs": 1630,
+          "timestampMs": 1475,
+          "confidence": 0.94548
+        },
+        {
+          "text": " sampai",
+          "startMs": 1630,
+          "endMs": 2010,
+          "timestampMs": 1820,
+          "confidence": 0.976934
+        },
+        {
+          "text": " ke",
+          "startMs": 2010,
+          "endMs": 2150,
+          "timestampMs": 2080,
+          "confidence": 0.63129
+        },
+        {
+          "text": " telingamu",
+          "startMs": 2150,
+          "endMs": 2700,
+          "timestampMs": 2425,
+          "confidence": 0.530717
+        },
+        {
+          "text": " sendiri",
+          "startMs": 2700,
+          "endMs": 3120,
+          "timestampMs": 2910,
+          "confidence": 0.987911
+        },
+        {
+          "text": " lewat",
+          "startMs": 3120,
+          "endMs": 3430,
+          "timestampMs": 3275,
+          "confidence": 0.976491
+        },
+        {
+          "text": " dua",
+          "startMs": 3430,
+          "endMs": 3620,
+          "timestampMs": 3525,
+          "confidence": 0.750513
+        },
+        {
+          "text": " jalan.",
+          "startMs": 3620,
+          "endMs": 4130,
+          "timestampMs": 3875,
+          "confidence": 0.980714
+        },
+        {
+          "text": " Jalan",
+          "startMs": 4130,
+          "endMs": 4380,
+          "timestampMs": 4255,
+          "confidence": 0.508268
+        },
+        {
+          "text": " pertama",
+          "startMs": 4380,
+          "endMs": 4760,
+          "timestampMs": 4570,
+          "confidence": 0.995551
+        },
+        {
+          "text": " lewat",
+          "startMs": 4760,
+          "endMs": 5080,
+          "timestampMs": 4920,
+          "confidence": 0.997973
+        },
+        {
+          "text": " udara.",
+          "startMs": 5080,
+          "endMs": 5500,
+          "timestampMs": 5290,
+          "confidence": 0.997617
+        },
+        {
+          "text": " Suara",
+          "startMs": 5500,
+          "endMs": 5820,
+          "timestampMs": 5660,
+          "confidence": 0.96959
+        },
+        {
+          "text": " keluar",
+          "startMs": 5820,
+          "endMs": 6210,
+          "timestampMs": 6015,
+          "confidence": 0.975699
+        },
+        {
+          "text": " dari",
+          "startMs": 6210,
+          "endMs": 6470,
+          "timestampMs": 6340,
+          "confidence": 0.993256
+        },
+        {
+          "text": " mulutmu,",
+          "startMs": 6470,
+          "endMs": 6920,
+          "timestampMs": 6695,
+          "confidence": 0.985936
+        },
+        {
+          "text": " memutar",
+          "startMs": 6920,
+          "endMs": 7370,
+          "timestampMs": 7145,
+          "confidence": 0.343091
+        },
+        {
+          "text": " di",
+          "startMs": 7370,
+          "endMs": 7500,
+          "timestampMs": 7435,
+          "confidence": 0.920334
+        },
+        {
+          "text": " sekitar",
+          "startMs": 7500,
+          "endMs": 7950,
+          "timestampMs": 7725,
+          "confidence": 0.978485
+        },
+        {
+          "text": " kepala,",
+          "startMs": 7950,
+          "endMs": 8480,
+          "timestampMs": 8215,
+          "confidence": 0.971446
+        },
+        {
+          "text": " lalu",
+          "startMs": 8480,
+          "endMs": 8780,
+          "timestampMs": 8630,
+          "confidence": 0.946023
+        },
+        {
+          "text": " masuk",
+          "startMs": 8780,
+          "endMs": 9130,
+          "timestampMs": 8955,
+          "confidence": 0.998353
+        },
+        {
+          "text": " lagi",
+          "startMs": 9130,
+          "endMs": 9410,
+          "timestampMs": 9270,
+          "confidence": 0.986115
+        },
+        {
+          "text": " ke",
+          "startMs": 9410,
+          "endMs": 9550,
+          "timestampMs": 9480,
+          "confidence": 0.995042
+        },
+        {
+          "text": " lubang",
+          "startMs": 9550,
+          "endMs": 9970,
+          "timestampMs": 9760,
+          "confidence": 0.987148
+        },
+        {
+          "text": " telinga.",
+          "startMs": 9970,
+          "endMs": 10500,
+          "timestampMs": 10235,
+          "confidence": 0.993379
+        }
+      ]
+    },
+    "mekanisme": {
+      "hash": "337c1c8b4d2f",
+      "coverage": 1,
+      "missing": [],
+      "extra": [],
+      "heard": "Jalan kedua tidak pernah keluar dari tubuhmu. Getaran suaramu merambat lewat tulang tengkorak, langsung ke rumah siput di telinga bagian dalam. Jadi, yang kamu dengar adalah campuran kedua jalan itu.",
+      "captions": [
+        {
+          "text": "Jalan",
+          "startMs": 60,
+          "endMs": 320,
+          "timestampMs": 190,
+          "confidence": 0.950528
+        },
+        {
+          "text": " kedua",
+          "startMs": 320,
+          "endMs": 640,
+          "timestampMs": 480,
+          "confidence": 0.927665
+        },
+        {
+          "text": " tidak",
+          "startMs": 640,
+          "endMs": 980,
+          "timestampMs": 810,
+          "confidence": 0.992915
+        },
+        {
+          "text": " pernah",
+          "startMs": 980,
+          "endMs": 1450,
+          "timestampMs": 1215,
+          "confidence": 0.999043
+        },
+        {
+          "text": " keluar",
+          "startMs": 1450,
+          "endMs": 1780,
+          "timestampMs": 1615,
+          "confidence": 0.970319
+        },
+        {
+          "text": " dari",
+          "startMs": 1780,
+          "endMs": 2040,
+          "timestampMs": 1910,
+          "confidence": 0.993585
+        },
+        {
+          "text": " tubuhmu.",
+          "startMs": 2040,
+          "endMs": 2560,
+          "timestampMs": 2300,
+          "confidence": 0.997322
+        },
+        {
+          "text": " Getaran",
+          "startMs": 2560,
+          "endMs": 2950,
+          "timestampMs": 2755,
+          "confidence": 0.908714
+        },
+        {
+          "text": " suaramu",
+          "startMs": 2950,
+          "endMs": 3330,
+          "timestampMs": 3140,
+          "confidence": 0.995779
+        },
+        {
+          "text": " merambat",
+          "startMs": 3330,
+          "endMs": 3820,
+          "timestampMs": 3575,
+          "confidence": 0.978433
+        },
+        {
+          "text": " lewat",
+          "startMs": 3820,
+          "endMs": 4110,
+          "timestampMs": 3965,
+          "confidence": 0.793668
+        },
+        {
+          "text": " tulang",
+          "startMs": 4110,
+          "endMs": 4380,
+          "timestampMs": 4245,
+          "confidence": 0.959343
+        },
+        {
+          "text": " tengkorak,",
+          "startMs": 4380,
+          "endMs": 5050,
+          "timestampMs": 4715,
+          "confidence": 0.619073
+        },
+        {
+          "text": " langsung",
+          "startMs": 5050,
+          "endMs": 5430,
+          "timestampMs": 5240,
+          "confidence": 0.706923
+        },
+        {
+          "text": " ke",
+          "startMs": 5430,
+          "endMs": 5520,
+          "timestampMs": 5475,
+          "confidence": 0.963085
+        },
+        {
+          "text": " rumah",
+          "startMs": 5520,
+          "endMs": 5770,
+          "timestampMs": 5645,
+          "confidence": 0.994992
+        },
+        {
+          "text": " siput",
+          "startMs": 5770,
+          "endMs": 6110,
+          "timestampMs": 5940,
+          "confidence": 0.525606
+        },
+        {
+          "text": " di",
+          "startMs": 6110,
+          "endMs": 6170,
+          "timestampMs": 6140,
+          "confidence": 0.577528
+        },
+        {
+          "text": " telinga",
+          "startMs": 6170,
+          "endMs": 6610,
+          "timestampMs": 6390,
+          "confidence": 0.901309
+        },
+        {
+          "text": " bagian",
+          "startMs": 6610,
+          "endMs": 6990,
+          "timestampMs": 6800,
+          "confidence": 0.990954
+        },
+        {
+          "text": " dalam.",
+          "startMs": 6990,
+          "endMs": 7360,
+          "timestampMs": 7175,
+          "confidence": 0.943698
+        },
+        {
+          "text": " Jadi,",
+          "startMs": 7360,
+          "endMs": 7750,
+          "timestampMs": 7555,
+          "confidence": 0.972657
+        },
+        {
+          "text": " yang",
+          "startMs": 7750,
+          "endMs": 8040,
+          "timestampMs": 7895,
+          "confidence": 0.964098
+        },
+        {
+          "text": " kamu",
+          "startMs": 8040,
+          "endMs": 8270,
+          "timestampMs": 8155,
+          "confidence": 0.994596
+        },
+        {
+          "text": " dengar",
+          "startMs": 8270,
+          "endMs": 8670,
+          "timestampMs": 8470,
+          "confidence": 0.97281
+        },
+        {
+          "text": " adalah",
+          "startMs": 8670,
+          "endMs": 9070,
+          "timestampMs": 8870,
+          "confidence": 0.997946
+        },
+        {
+          "text": " campuran",
+          "startMs": 9070,
+          "endMs": 9590,
+          "timestampMs": 9330,
+          "confidence": 0.767358
+        },
+        {
+          "text": " kedua",
+          "startMs": 9590,
+          "endMs": 9920,
+          "timestampMs": 9755,
+          "confidence": 0.992343
+        },
+        {
+          "text": " jalan",
+          "startMs": 9920,
+          "endMs": 10240,
+          "timestampMs": 10080,
+          "confidence": 0.797113
+        },
+        {
+          "text": " itu.",
+          "startMs": 10240,
+          "endMs": 10720,
+          "timestampMs": 10480,
+          "confidence": 0.994545
+        }
+      ]
+    },
+    "dampak": {
+      "hash": "72be80b18302",
+      "coverage": 1,
+      "missing": [],
+      "extra": [],
+      "heard": "Masalahnya, tulang lebih mudah meneruskan nadar rendah. Karena itu, di dalam kepalamu, suaramu terdengar lebih berat dan penuh. Tapi mikrofon hanya menangkap jalur udara, bagian berat itu tidak ikut terkam. Hasilnya, dirikaman, suaramu sering terdengar lebih tinggi dari dukaanmu.",
+      "captions": [
+        {
+          "text": "Masalahnya,",
+          "startMs": 170,
+          "endMs": 670,
+          "timestampMs": 420,
+          "confidence": 0.941814
+        },
+        {
+          "text": " tulang",
+          "startMs": 670,
+          "endMs": 1120,
+          "timestampMs": 895,
+          "confidence": 0.872612
+        },
+        {
+          "text": " lebih",
+          "startMs": 1120,
+          "endMs": 1290,
+          "timestampMs": 1205,
+          "confidence": 0.996261
+        },
+        {
+          "text": " mudah",
+          "startMs": 1290,
+          "endMs": 1570,
+          "timestampMs": 1430,
+          "confidence": 0.999426
+        },
+        {
+          "text": " meneruskan",
+          "startMs": 1570,
+          "endMs": 2230,
+          "timestampMs": 1900,
+          "confidence": 0.98959
+        },
+        {
+          "text": " nada",
+          "startMs": 2230,
+          "endMs": 2410,
+          "timestampMs": 2320,
+          "confidence": 0.471534
+        },
+        {
+          "text": " rendah.",
+          "startMs": 2410,
+          "endMs": 2980,
+          "timestampMs": 2695,
+          "confidence": 0.612751
+        },
+        {
+          "text": " Karena",
+          "startMs": 2980,
+          "endMs": 3470,
+          "timestampMs": 3225,
+          "confidence": 0.352877
+        },
+        {
+          "text": " itu,",
+          "startMs": 3470,
+          "endMs": 3980,
+          "timestampMs": 3725,
+          "confidence": 0.917788
+        },
+        {
+          "text": " di",
+          "startMs": 3980,
+          "endMs": 4020,
+          "timestampMs": 4000,
+          "confidence": 0.592206
+        },
+        {
+          "text": " dalam",
+          "startMs": 4000,
+          "endMs": 4300,
+          "timestampMs": 4150,
+          "confidence": 0.986004
+        },
+        {
+          "text": " kepalamu,",
+          "startMs": 4300,
+          "endMs": 4900,
+          "timestampMs": 4600,
+          "confidence": 0.921459
+        },
+        {
+          "text": " suaramu",
+          "startMs": 4900,
+          "endMs": 5330,
+          "timestampMs": 5115,
+          "confidence": 0.946193
+        },
+        {
+          "text": " terdengar",
+          "startMs": 5330,
+          "endMs": 5880,
+          "timestampMs": 5605,
+          "confidence": 0.923334
+        },
+        {
+          "text": " lebih",
+          "startMs": 5880,
+          "endMs": 6170,
+          "timestampMs": 6025,
+          "confidence": 0.994951
+        },
+        {
+          "text": " berat",
+          "startMs": 6170,
+          "endMs": 6500,
+          "timestampMs": 6335,
+          "confidence": 0.977816
+        },
+        {
+          "text": " dan",
+          "startMs": 6500,
+          "endMs": 6660,
+          "timestampMs": 6580,
+          "confidence": 0.99386
+        },
+        {
+          "text": " penuh.",
+          "startMs": 6660,
+          "endMs": 7040,
+          "timestampMs": 6850,
+          "confidence": 0.984798
+        },
+        {
+          "text": " Tapi",
+          "startMs": 7040,
+          "endMs": 7270,
+          "timestampMs": 7155,
+          "confidence": 0.9908
+        },
+        {
+          "text": " mikrofon",
+          "startMs": 7270,
+          "endMs": 7720,
+          "timestampMs": 7495,
+          "confidence": 0.935835
+        },
+        {
+          "text": " hanya",
+          "startMs": 7720,
+          "endMs": 8010,
+          "timestampMs": 7865,
+          "confidence": 0.988787
+        },
+        {
+          "text": " menangkap",
+          "startMs": 8010,
+          "endMs": 8520,
+          "timestampMs": 8265,
+          "confidence": 0.986139
+        },
+        {
+          "text": " jalur",
+          "startMs": 8520,
+          "endMs": 8800,
+          "timestampMs": 8660,
+          "confidence": 0.959344
+        },
+        {
+          "text": " udara.",
+          "startMs": 8800,
+          "endMs": 9430,
+          "timestampMs": 9115,
+          "confidence": 0.998361
+        },
+        {
+          "text": " Bagian",
+          "startMs": 9430,
+          "endMs": 9660,
+          "timestampMs": 9545,
+          "confidence": 0.915194
+        },
+        {
+          "text": " berat",
+          "startMs": 9660,
+          "endMs": 10040,
+          "timestampMs": 9850,
+          "confidence": 0.989778
+        },
+        {
+          "text": " itu",
+          "startMs": 10040,
+          "endMs": 10200,
+          "timestampMs": 10120,
+          "confidence": 0.99253
+        },
+        {
+          "text": " tidak",
+          "startMs": 10200,
+          "endMs": 10470,
+          "timestampMs": 10335,
+          "confidence": 0.986124
+        },
+        {
+          "text": " ikut",
+          "startMs": 10470,
+          "endMs": 10730,
+          "timestampMs": 10600,
+          "confidence": 0.991462
+        },
+        {
+          "text": " terekam.",
+          "startMs": 10730,
+          "endMs": 11320,
+          "timestampMs": 11025,
+          "confidence": 0.858093
+        },
+        {
+          "text": " Hasilnya,",
+          "startMs": 11320,
+          "endMs": 12050,
+          "timestampMs": 11685,
+          "confidence": 0.942242
+        },
+        {
+          "text": " di",
+          "startMs": 12050,
+          "endMs": 12530,
+          "timestampMs": 12290,
+          "confidence": 0.463911
+        },
+        {
+          "text": " rekaman,",
+          "startMs": 12530,
+          "endMs": 13010,
+          "timestampMs": 12770,
+          "confidence": 0.463911
+        },
+        {
+          "text": " suaramu",
+          "startMs": 13010,
+          "endMs": 13280,
+          "timestampMs": 13145,
+          "confidence": 0.939293
+        },
+        {
+          "text": " sering",
+          "startMs": 13280,
+          "endMs": 13600,
+          "timestampMs": 13440,
+          "confidence": 0.992271
+        },
+        {
+          "text": " terdengar",
+          "startMs": 13600,
+          "endMs": 14080,
+          "timestampMs": 13840,
+          "confidence": 0.955452
+        },
+        {
+          "text": " lebih",
+          "startMs": 14080,
+          "endMs": 14360,
+          "timestampMs": 14220,
+          "confidence": 0.998706
+        },
+        {
+          "text": " tinggi",
+          "startMs": 14360,
+          "endMs": 14690,
+          "timestampMs": 14525,
+          "confidence": 0.996098
+        },
+        {
+          "text": " dari",
+          "startMs": 14690,
+          "endMs": 14910,
+          "timestampMs": 14800,
+          "confidence": 0.975052
+        },
+        {
+          "text": " dugaanmu.",
+          "startMs": 14910,
+          "endMs": 15600,
+          "timestampMs": 15255,
+          "confidence": 0.320709
+        }
+      ]
+    },
+    "jawaban": {
+      "hash": "d08afbb8b46d",
+      "coverage": 1,
+      "missing": [],
+      "extra": [],
+      "heard": "Coba sekarang. Tutup kedua telingamu dengan telapak tangan, lalu bicara, suaramu langsung terdengar lebih berat. Itulah jalur tulang. Jadi, suara direkaman itu membang suarammu. Begitulah orang lain mendengarmu setiap hari.",
+      "captions": [
+        {
+          "text": "Coba",
+          "startMs": 80,
+          "endMs": 320,
+          "timestampMs": 200,
+          "confidence": 0.614767
+        },
+        {
+          "text": " sekarang.",
+          "startMs": 320,
+          "endMs": 1270,
+          "timestampMs": 795,
+          "confidence": 0.996379
+        },
+        {
+          "text": " Tutup",
+          "startMs": 1270,
+          "endMs": 1430,
+          "timestampMs": 1350,
+          "confidence": 0.846124
+        },
+        {
+          "text": " kedua",
+          "startMs": 1430,
+          "endMs": 1680,
+          "timestampMs": 1555,
+          "confidence": 0.904532
+        },
+        {
+          "text": " telingamu",
+          "startMs": 1680,
+          "endMs": 2150,
+          "timestampMs": 1915,
+          "confidence": 0.800962
+        },
+        {
+          "text": " dengan",
+          "startMs": 2150,
+          "endMs": 2470,
+          "timestampMs": 2310,
+          "confidence": 0.975048
+        },
+        {
+          "text": " telapak",
+          "startMs": 2470,
+          "endMs": 2880,
+          "timestampMs": 2675,
+          "confidence": 0.516601
+        },
+        {
+          "text": " tangan,",
+          "startMs": 2880,
+          "endMs": 3410,
+          "timestampMs": 3145,
+          "confidence": 0.992265
+        },
+        {
+          "text": " lalu",
+          "startMs": 3410,
+          "endMs": 3730,
+          "timestampMs": 3570,
+          "confidence": 0.812495
+        },
+        {
+          "text": " bicara.",
+          "startMs": 3730,
+          "endMs": 4520,
+          "timestampMs": 4125,
+          "confidence": 0.826483
+        },
+        {
+          "text": " Suaramu",
+          "startMs": 4520,
+          "endMs": 4850,
+          "timestampMs": 4685,
+          "confidence": 0.651319
+        },
+        {
+          "text": " langsung",
+          "startMs": 4850,
+          "endMs": 5260,
+          "timestampMs": 5055,
+          "confidence": 0.997878
+        },
+        {
+          "text": " terdengar",
+          "startMs": 5260,
+          "endMs": 5700,
+          "timestampMs": 5480,
+          "confidence": 0.832749
+        },
+        {
+          "text": " lebih",
+          "startMs": 5700,
+          "endMs": 5950,
+          "timestampMs": 5825,
+          "confidence": 0.993082
+        },
+        {
+          "text": " berat.",
+          "startMs": 5950,
+          "endMs": 6390,
+          "timestampMs": 6170,
+          "confidence": 0.989814
+        },
+        {
+          "text": " Itulah",
+          "startMs": 6390,
+          "endMs": 6660,
+          "timestampMs": 6525,
+          "confidence": 0.465101
+        },
+        {
+          "text": " jalur",
+          "startMs": 6660,
+          "endMs": 6960,
+          "timestampMs": 6810,
+          "confidence": 0.934424
+        },
+        {
+          "text": " tulang.",
+          "startMs": 6960,
+          "endMs": 7520,
+          "timestampMs": 7240,
+          "confidence": 0.898848
+        },
+        {
+          "text": " Jadi,",
+          "startMs": 7520,
+          "endMs": 7910,
+          "timestampMs": 7715,
+          "confidence": 0.966331
+        },
+        {
+          "text": " suara",
+          "startMs": 7910,
+          "endMs": 8350,
+          "timestampMs": 8130,
+          "confidence": 0.991387
+        },
+        {
+          "text": " di",
+          "startMs": 8350,
+          "endMs": 8595,
+          "timestampMs": 8473,
+          "confidence": 0.56621
+        },
+        {
+          "text": " rekaman",
+          "startMs": 8595,
+          "endMs": 8840,
+          "timestampMs": 8718,
+          "confidence": 0.56621
+        },
+        {
+          "text": " itu",
+          "startMs": 8840,
+          "endMs": 9000,
+          "timestampMs": 8920,
+          "confidence": 0.996105
+        },
+        {
+          "text": " memang",
+          "startMs": 9000,
+          "endMs": 9450,
+          "timestampMs": 9225,
+          "confidence": 0.864862
+        },
+        {
+          "text": " suaramu.",
+          "startMs": 9450,
+          "endMs": 10360,
+          "timestampMs": 9905,
+          "confidence": 0.98545
+        },
+        {
+          "text": " Begitulah",
+          "startMs": 10360,
+          "endMs": 10780,
+          "timestampMs": 10570,
+          "confidence": 0.805329
+        },
+        {
+          "text": " orang",
+          "startMs": 10780,
+          "endMs": 11080,
+          "timestampMs": 10930,
+          "confidence": 0.99346
+        },
+        {
+          "text": " lain",
+          "startMs": 11080,
+          "endMs": 11320,
+          "timestampMs": 11200,
+          "confidence": 0.99898
+        },
+        {
+          "text": " mendengarmu",
+          "startMs": 11320,
+          "endMs": 11980,
+          "timestampMs": 11650,
+          "confidence": 0.98362
+        },
+        {
+          "text": " setiap",
+          "startMs": 11980,
+          "endMs": 12340,
+          "timestampMs": 12160,
+          "confidence": 0.999159
+        },
+        {
+          "text": " hari.",
+          "startMs": 12340,
+          "endMs": 12640,
+          "timestampMs": 12490,
+          "confidence": 0.997931
+        }
+      ]
+    }
+  }
+}

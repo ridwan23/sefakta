@@ -1,0 +1,66 @@
+{
+  "projectId": "suara-rekaman-v2",
+  "sourceBrief": "suara-rekaman-v2.json",
+  "provider": "fish-audio",
+  "model": "s2.1-pro-free",
+  "voice": "59c6df57a144",
+  "loudnessTarget": -14,
+  "generatedAt": "2026-11-08T04:41:05.965Z",
+  "scenes": [
+    {
+      "id": "hook",
+      "file": "suara-rekaman-v2/vo/hook.mp3",
+      "text": "Kenapa suaramu di rekaman terdengar seperti orang lain? Bukan karena ponselmu rusak. Penyebabnya ada di dalam kepalamu sendiri.",
+      "speed": 1.1,
+      "hash": "b15ac26805c0",
+      "voice": "59c6df57a144",
+      "audioSeconds": 6.766,
+      "lufs": -13.8,
+      "truePeak": -1.7
+    },
+    {
+      "id": "konteks",
+      "file": "suara-rekaman-v2/vo/konteks.mp3",
+      "text": "Saat kamu bicara, suaramu sampai ke telingamu sendiri lewat dua jalan. Jalan pertama lewat udara. Suara keluar dari mulutmu, memutar di sekitar kepala, lalu masuk lagi ke lubang telinga.",
+      "speed": 1.1,
+      "hash": "0fbac158f141",
+      "voice": "59c6df57a144",
+      "audioSeconds": 10.423,
+      "lufs": -14.4,
+      "truePeak": -2.1
+    },
+    {
+      "id": "mekanisme",
+      "file": "suara-rekaman-v2/vo/mekanisme.mp3",
+      "text": "Jalan kedua tidak pernah keluar dari tubuhmu. Getaran suaramu merambat lewat tulang tengkorak, langsung ke rumah siput di telinga bagian dalam. Jadi, yang kamu dengar adalah campuran kedua jalan itu.",
+      "speed": 1.1,
+      "hash": "337c1c8b4d2f",
+      "voice": "59c6df57a144",
+      "audioSeconds": 10.684,
+      "lufs": -14.2,
+      "truePeak": -2
+    },
+    {
+      "id": "dampak",
+      "file": "suara-rekaman-v2/vo/dampak.mp3",
+      "text": "Masalahnya, tulang lebih mudah meneruskan nada rendah. Karena itu, di dalam kepalamu, suaramu terdengar lebih berat dan penuh. Tapi mikrofon hanya menangkap jalur udara. Bagian berat itu tidak ikut terekam. Hasilnya, di rekaman, suaramu sering terdengar lebih tinggi dari dugaanmu.",
+      "speed": 1.1,
+      "hash": "72be80b18302",
+      "voice": "59c6df57a144",
+      "audioSeconds": 15.673,
+      "lufs": -14.2,
+      "truePeak": -2
+    },
+    {
+      "id": "jawaban",
+      "file": "suara-rekaman-v2/vo/jawaban.mp3",
+      "text": "Coba sekarang. Tutup kedua telingamu dengan telapak tangan, lalu bicara. Suaramu langsung terdengar lebih berat. Itulah jalur tulang. Jadi, suara di rekaman itu memang suaramu. Begitulah orang lain mendengarmu setiap hari.",
+      "speed": 1.1,
+      "hash": "d08afbb8b46d",
+      "voice": "59c6df57a144",
+      "audioSeconds": 12.539,
+      "lufs": -14.1,
+      "truePeak": -1.8
+    }
+  ]
+}

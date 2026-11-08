@@ -386,6 +386,9 @@ Periksa MP4-nya, karena preview bukan bukti hasil ekspor:
 | VO terlalu cepat (1,25×) | kecepatan dipakai untuk mengejar durasi | §3.2 anggaran kata; default 1,1× |
 | reference id diganti, VO lama tidak terdeteksi usang | hash VO hanya dari teks + kecepatan | `vo-fish` mencatat sidik suara per scene; `check:episodes` menolak campuran suara |
 | proses VO mati di tengah, progres hilang | manifest baru ditulis di akhir | manifest ditulis setelah setiap scene |
+| (suara-rekaman-v2) ilustrasi AI tampak sebagai kotak gelap | `mix-blend-mode` di dalam elemen ber-transform terisolasi dari latar | pakai `<CamLayer blend="screen">` (latar rig ada di grup yang sama); pudarkan tepi gambar dengan mask |
+| (suara-rekaman-v2) frame tracking kabur | motion blur kamera terlalu kuat saat kamera cepat | `motionBlur` ±0,12, `maxBlur` ≤ 6; masuk/keluar tracking ≥ 20 frame |
+| (suara-rekaman-v2) siluet prosedural tidak cocok dengan ilustrasi AI | kontur digambar manual | turunkan kontur dari gambar (ambang kecerahan per baris) dan pakai koordinat piksel gambar sebagai koordinat dunia |
 | suara baru melafalkan "Jenewa" seperti "Geneva" | nama asing + karakter suara | ganti kalimat ("sebuah danau di Swiss"), nama tetap di label layar |
 | `check:episodes` salah mendeteksi placeholder | regex membaca satu kunci per baris | sudah diperbaiki di skrip |
 | caption gelap tak terbaca di atas ilustrasi AI gelap | gambar dipasang tanpa lapisan latar caption | §7.5 butir 7: gradasi latar, cek frame pertama |
