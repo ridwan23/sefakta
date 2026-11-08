@@ -263,6 +263,7 @@ Pakai yang sudah ada sebelum membuat yang baru:
 | peta dunia / globe, sorot negara, zoom, busur | `src/shared/maps/WorldMap.tsx` (`WorldMap`, `mixView`, `screenArc`, `ISO`) |
 | hitung posisi di Node | `src/shared/maps/geo.ts` |
 | animasi tepat pada kata | `src/shared/episode/cues.ts` (`cueFrames(scene, fps, { kunci: ['kata', detikCadangan] })`) |
+| kamera menjelajah satu dunia (push, pull-back, whip, tracking, parallax) | `src/shared/camera/CameraRig.tsx` (`useCamera(keys)`, `CameraRig`, `CamLayer depth/blur/blend`, `mixPose` untuk tracking, `beatKick`). Pose akhir scene N = pose awal scene N+1 |
 | easing, noise deterministik | `src/shared/motion.ts` (`hash`, `smooth`, …) |
 | warna/tone episode | prop `style` (visualStyle) di setiap komponen scene |
 

@@ -24,7 +24,7 @@ Ikuti `docs/WORKFLOW-AI-AGENT.md` (urutan kerja langkah demi langkah, gerbang ti
 ## Batas arsitektur
 
 - `src/topics/<topik>/`: kode satu topik video. `compositions.tsx` mendaftarkan komposisinya; `src/Root.tsx` hanya memanggil per topik.
-- `src/shared/`: elemen reusable lintas topik: `episode/` (template episode: timeline dari audio, VO, caption, watermark, CTA; `cues.ts` = frame saat sebuah kata diucapkan, untuk memicu animasi dari caption hasil alignment), `maps/` (`WorldMap`: peta dunia Natural Earth 1:50m, Mercator/globe, sorot negara, zoom `mixView`, busur `screenArc`), `brand/` (watermark, klip CTA, font), `captions/`, `motion.ts`. Jangan menaruh logika satu topik di sini.
+- `src/shared/`: elemen reusable lintas topik: `episode/` (template episode: timeline dari audio, VO, caption, watermark, CTA; `cues.ts` = frame saat sebuah kata diucapkan, untuk memicu animasi dari caption hasil alignment), `maps/` (`WorldMap`: peta dunia Natural Earth 1:50m, Mercator/globe, sorot negara, zoom `mixView`, busur `screenArc`), `camera/` (`CameraRig`: kamera 2.5D dengan keyframe, tracking `mixPose`, lapisan parallax `CamLayer` ber-`depth`/`blur`/`blend`, guncangan genggam, `beatKick`, motion blur), `brand/` (watermark, klip CTA, font), `captions/`, `motion.ts`. Jangan menaruh logika satu topik di sini.
 - `briefs/`: brief dan fakta per episode (`<episode>.json`).
 - `scripts/`: `doctor.ts` (cek lingkungan), `new-episode.ts`, `vo-fish.ts` (Fish Audio + loudness), `align-captions.ts` (whisper), `image-agnes.ts` (ilustrasi AI opsional), `check-episodes.ts`, `validate-facts.ts`; pengujian di `scripts/tests/`.
 - `.env`: kunci Fish Audio (`FISH_AUDIO_API_KEY`, `FISH_AUDIO_REFERENCE_ID`); jangan dicetak, disalin ke manifest, atau di-commit.
