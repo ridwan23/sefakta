@@ -15,6 +15,7 @@
     "setup:whisper": "node --no-warnings --experimental-strip-types scripts/align-captions.ts --setup-only",
     "new:episode": "node --no-warnings --experimental-strip-types scripts/new-episode.ts",
     "vo": "node --env-file-if-exists=.env --no-warnings --experimental-strip-types scripts/vo-fish.ts",
+    "image": "node --env-file-if-exists=.env --no-warnings --experimental-strip-types scripts/image-agnes.ts",
     "align": "node --no-warnings --experimental-strip-types scripts/align-captions.ts",
     "check:episodes": "node --no-warnings --experimental-strip-types scripts/check-episodes.ts",
     "lint": "eslint src",

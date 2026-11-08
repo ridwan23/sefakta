@@ -32,7 +32,8 @@
       "factIds": [
         "f-1816",
         "f-frankenstein"
-      ]
+      ],
+      "imagePrompt": "A massive volcanic eruption on a tropical island, a towering dark ash column rising into the sky, glowing ember lava at the base, calm sea in the foreground, the sky fading from ember orange to cold grey-blue toward the horizon."
     },
     {
       "id": "konteks",
@@ -386,5 +387,6 @@
       "limits": "Sumber primernya adalah kata pengantar Mary Shelley untuk edisi 1831."
     }
   ],
-  "numbersIgnored": []
+  "numbersIgnored": [],
+  "imageStyle": "Warm sepia ink-and-wash illustration with engraved linework on aged 19th-century paper, muted palette of cream, dark brown, ember orange and cold blue, no photorealism. Soft low-contrast glow from the eruption, cool diffused daylight elsewhere."
 }

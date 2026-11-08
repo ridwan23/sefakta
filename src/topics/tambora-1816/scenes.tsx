@@ -3,6 +3,7 @@ import { AbsoluteFill, Easing, interpolate, useCurrentFrame, useVideoConfig } fr
 import type { SceneVisualProps, SceneVisuals } from '../../shared/episode/types';
 import { cueFrames } from '../../shared/episode/cues';
 import { ISO, mixView, screenArc, WorldMap, type LonLat, type MapView } from '../../shared/maps/WorldMap';
+import { IllustrationBackdrop } from '../../shared/episode/IllustrationBackdrop';
 import { hash } from '../../shared/motion';
 import { Book, C, SERIF, Cloud, interpolateHex, MapLabel, Paper, Plume, Pulse, pop, ramp, Rain, Snow, Stamp, Sun, Volcano, Wheat } from './parts';
 
@@ -45,6 +46,12 @@ const Hook: React.FC<SceneVisualProps> = ({ scene }) => {
         }}
       </WorldMap>
       <Book x={330} y={1260} w={240} title="FRANKENSTEIN" t={pop(f, q.frank, 14)} rotate={-7} />
+      {/* ilustrasi AI (npm run image) sebagai pembuka; memudar ke peta tepat sebelum "Eropa" */}
+      <AbsoluteFill style={{ opacity: 1 - ramp(f, q.eropa - 20, 16, Easing.inOut(Easing.cubic)), pointerEvents: 'none' }}>
+        <IllustrationBackdrop src="tambora-1816/img/hook.jpg" durationInFrames={q.eropa} veilOpacity={0.12} />
+        <AbsoluteFill style={{ background: `linear-gradient(to bottom, transparent 58%, ${C.paper}F2 80%)` }} />
+        <div style={{ position: 'absolute', left: 48, top: 64, fontFamily: SERIF, fontSize: 30, letterSpacing: 4, color: C.paper, textShadow: '0 2px 8px rgba(0,0,0,0.6)' }}>ILUSTRASI</div>
+      </AbsoluteFill>
     </Paper>
   );
 };

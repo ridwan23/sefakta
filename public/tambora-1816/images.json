@@ -1,0 +1,16 @@
+{
+  "projectId": "tambora-1816",
+  "provider": "agnes-ai",
+  "images": [
+    {
+      "id": "hook",
+      "file": "tambora-1816/img/hook.jpg",
+      "prompt": "A massive volcanic eruption on a tropical island, a towering dark ash column rising into the sky, glowing ember lava at the base, calm sea in the foreground, the sky fading from ember orange to cold grey-blue toward the horizon. Warm sepia ink-and-wash illustration with engraved linework on aged 19th-century paper, muted palette of cream, dark brown, ember orange and cold blue, no photorealism. Soft low-contrast glow from the eruption, cool diffused daylight elsewhere. Vertical 9:16 composition, single clear focal subject in the center, calm uncluttered areas at the top and bottom for captions. Clean crisp details, coherent perspective, consistent style. No text, no letters, no numbers, no logos, no watermark, no real person likeness.",
+      "hash": "cf5b2c5416f2",
+      "model": "agnes-image-2.5-flash",
+      "size": "2K 9:16",
+      "aiGenerated": true,
+      "generatedAt": "2026-11-07T15:53:32.801Z"
+    }
+  ]
+}

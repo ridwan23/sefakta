@@ -26,6 +26,7 @@ Prinsip utama: **cegah kesalahan sebelum render, jangan menemukannya dengan coba
 | 5 | Voice-over | `public/<id>/vo/*.mp3` (CTA memakai `public/brand/cta-vo.mp3` bersama) | loudness -14 ±1 LUFS, durasi cerita 55–65 dtk |
 | 6 | Alignment & cek ucapan | `captions.json` | cakupan ≥ 90%, transkrip dibaca kata demi kata |
 | 7 | Rencana visual | tabel storyboard + koordinat | semua elemen di area aman (§7.2) |
+| 7b | Ilustrasi AI (opsional) | `public/<id>/img/*.jpg` + `images.json` | dicek manusia, label "ILUSTRASI", maks. 1–2 scene (§7.5) |
 | 8 | Implementasi | `src/topics/<id>/scenes.tsx` | `tsc` + `eslint` bersih |
 | 9 | Verifikasi visual | still per cue + lembar kontak | daftar periksa §9.3 lolos |
 | 10 | Gerbang kualitas | — | `npm run quality` dan `npm run check:publish` 0 error |
@@ -41,6 +42,7 @@ npm run doctor          # semua ✓; ikuti perbaikan yang dicetak bila ada ✗
 ```
 
 - `.env` berisi kunci Fish Audio. **Jangan pernah mencetak isinya**; cukup cek nama variabelnya: `grep -o '^FISH_AUDIO_[A-Z_]*' .env`.
+- `AGNES_API_KEY` (Agnes AI, untuk ilustrasi) **opsional**; hanya perlu bila episode memakai image generation (§7.5). Episode tanpa gambar AI tidak membutuhkannya.
 - Kecepatan VO default `FISH_AUDIO_SPEED=1.1` (±150 kata/menit). Jangan dinaikkan untuk mengejar durasi.
 
 ## 1. Pilih fakta dan sudut
@@ -230,6 +232,28 @@ import('./src/shared/maps/geo.ts').then(({projector})=>{
 - Objek yang menjelaskan proses (sinar memantul, kabut menyebar) harus bisa dipahami tanpa suara. Bedakan arah atau jenis dengan bentuk garis (putus-putus vs penuh), bukan hanya warna.
 - Ikon kecil harus berukuran ≥ 80 px di frame 1080 agar terbaca di ponsel.
 
+### 7.5 Ilustrasi AI (opsional, sesuai kebutuhan)
+
+**Image generation tidak wajib.** Default-nya visual berbasis kode (peta, diagram, ikon). Pakai hanya bila ia memberi nilai yang tidak bisa diberikan kode; episode tanpa gambar AI sepenuhnya sah.
+
+| Cocok dipakai | Tetap pakai kode / aset asli |
+|---|---|
+| adegan sejarah atau peristiwa yang tidak ada fotonya (mis. letusan Tambora) | peta, diagram, grafik, angka, dan teks |
+| hook 1–2 dtk pertama yang perlu suasana | tokoh nyata dan wajah |
+| latar bergaya di balik elemen kode | bukti faktual: dokumen, kutipan, lokasi yang diklaim "begini aslinya" |
+| metafora visual (mis. rumah di tepi danau di bawah hujan) | episode sains/teknologi/data yang cukup dengan diagram |
+
+Aturan bila dipakai:
+
+1. **Maksimal 1–2 scene per episode.** Gambar AI melengkapi visual kode, tidak menggantikannya.
+2. **Satu gaya per episode.** Isi `imageStyle` di brief (kalimat Style + Lighting, bahasa Inggris, selaras `visualStyle`), dan `scenes[].imagePrompt` (Subject + Scene) hanya di scene yang memakai gambar.
+3. Struktur prompt resmi Agnes: `[Subject] + [Scene] + [Style] + [Lighting] + [Composition] + [Quality]`. Skrip menambahkan Composition (vertikal 9:16, area atas-bawah lega untuk caption) dan Quality (tanpa teks, huruf, logo, wajah tokoh nyata).
+4. Buat: `npm run image -- --brief=briefs/<id>.json --dry-run` (cek prompt), lalu tanpa `--dry-run`. Ulang satu scene: `--scene=<id> --force`. Hasil: `public/<id>/img/<scene>.jpg` (1242×2208, ±0,5 MB) dan `public/<id>/images.json` (prompt, model, penanda AI).
+5. Pasang lewat `IllustrationBackdrop` (`src/shared/episode/`) dan **hanya setelah file ada** (`staticFile()` ke file yang hilang membuat render gagal).
+6. Tampilkan label **"ILUSTRASI"** di layar. Gambar AI tidak boleh tampak seperti dokumentasi asli.
+7. Cek manusia sebelum dipakai: akurasi sejarah (busana, bangunan, geografi), tidak ada teks/tangan/objek ganjil, caption tetap terbaca (beri gradasi latar di belakang caption bila gambar gelap).
+8. Lisensi: catat model dan penyedia (otomatis di `images.json`); pastikan syarat penggunaan komersial Agnes sebelum tayang.
+
 ## 8. Implementasi
 
 Pakai yang sudah ada sebelum membuat yang baru:
@@ -362,5 +386,6 @@ Periksa MP4-nya, karena preview bukan bukti hasil ekspor:
 | proses VO mati di tengah, progres hilang | manifest baru ditulis di akhir | manifest ditulis setelah setiap scene |
 | suara baru melafalkan "Jenewa" seperti "Geneva" | nama asing + karakter suara | ganti kalimat ("sebuah danau di Swiss"), nama tetap di label layar |
 | `check:episodes` salah mendeteksi placeholder | regex membaca satu kunci per baris | sudah diperbaiki di skrip |
+| caption gelap tak terbaca di atas ilustrasi AI gelap | gambar dipasang tanpa lapisan latar caption | §7.5 butir 7: gradasi latar, cek frame pertama |
 
 Tambahkan baris baru ke tabel ini setiap kali sebuah episode menemukan kesalahan baru, beserta pencegahannya.
