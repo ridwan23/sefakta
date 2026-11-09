@@ -3,7 +3,7 @@
   "title": "Kenapa Suaramu Terdengar Asing di Rekaman?",
   "series": "Tubuh",
   "status": "draft",
-  "captionMode": "keypoint",
+  "captionMode": "subtitle",
   "visualStyle": {
     "name": "Studio akustik malam: satu dunia, kamera menembus kepala",
     "reason": "Fakta tubuh tentang dua jalur suara yang tidak terlihat. Latar gelap seperti studio rekaman membuat jalur suara bercahaya mudah diikuti. Jalur udara digambar garis cyan penuh, jalur tulang garis kuning putus-putus, jadi keduanya tetap bisa dibedakan tanpa warna. Satu panggung kontinu (kepala, ponsel, pendengar) dijelajahi camera rig: tracking mengikuti gelombang, push-in menembus tengkorak, pull-back sebagai jawaban.",
@@ -30,20 +30,6 @@
       "voiceoverText": "Kenapa suaramu di rekaman terdengar seperti orang lain? Bukan karena ponselmu rusak. Penyebabnya ada di dalam kepalamu sendiri.",
       "caption": "",
       "headline": "Suaramu di rekaman",
-      "keypoints": [
-        {
-          "cue": "orang",
-          "text": "Suaramu terdengar seperti *orang lain*?"
-        },
-        {
-          "cue": "ponselmu",
-          "text": "Bukan karena *ponselmu*"
-        },
-        {
-          "cue": "kepalamu",
-          "text": "Ada di dalam *kepalamu*"
-        }
-      ],
       "visual": "Dibuka extreme close-up layar ponsel: gelombang rekaman diputar. Kata 'orang': kamera tarik mundur cepat memperlihatkan kepala (profil) yang kaget, tanda tanya. 'rusak': ponsel diberi tanda centang (bukan rusak). 'kepalamu': push-in ke kepala.",
       "factIds": [
         "f-rekaman-udara"
@@ -55,20 +41,6 @@
       "voiceoverText": "Saat kamu bicara, suaramu sampai ke telingamu sendiri lewat dua jalan. Jalan pertama lewat udara. Suara keluar dari mulutmu, memutar di sekitar kepala, lalu masuk lagi ke lubang telinga.",
       "caption": "",
       "headline": "Dua jalan suara",
-      "keypoints": [
-        {
-          "cue": "bicara",
-          "text": "Saat kamu *bicara*"
-        },
-        {
-          "cue": "udara",
-          "text": "Dua jalan. Pertama: *udara*"
-        },
-        {
-          "cue": "telinga",
-          "text": "Masuk lagi ke *telinga*"
-        }
-      ],
       "visual": "Kamera mundur sedikit: mulut bergetar. 'udara': tracking shot mengikuti denyut gelombang cyan dari mulut melengkung di udara lalu masuk ke lubang telinga; kamera berhenti dekat telinga.",
       "factIds": [
         "f-dua-jalur"
@@ -80,20 +52,6 @@
       "voiceoverText": "Jalan kedua tidak pernah keluar dari tubuhmu. Getaran suaramu merambat lewat tulang tengkorak, langsung ke rumah siput di telinga bagian dalam. Jadi, yang kamu dengar adalah campuran kedua jalan itu.",
       "caption": "",
       "headline": "Lewat tulang",
-      "keypoints": [
-        {
-          "cue": "keluar",
-          "text": "Jalan kedua tidak *keluar*"
-        },
-        {
-          "cue": "siput",
-          "text": "Lewat tulang, ke *rumah siput*"
-        },
-        {
-          "cue": "campuran",
-          "text": "*Campuran* kedua jalan"
-        }
-      ],
       "visual": "Pemindai x-ray menyapu kepala, siluet berganti ilustrasi penampang (ILUSTRASI). 'tulang': kamera turun ke leher lalu mengikuti getaran kuning putus-putus melewati rahang dan tulang pelipis. 'siput': push-in ke rumah siput. 'campuran': pull-back, dua jalur bertemu di telinga.",
       "imagePrompt": "Side-view anatomical cutaway of a generic adult human head and neck in strict right-facing profile, the face pointing to the right edge, translucent outline of the face over a clearly visible skull, lower jaw bone, voice box in the throat, the ear canal and the small snail-shaped cochlea of the inner ear beside it.",
       "factIds": [
@@ -107,28 +65,6 @@
       "voiceoverText": "Masalahnya, tulang lebih mudah meneruskan nada rendah. Karena itu, di dalam kepalamu, suaramu terdengar lebih berat dan penuh. Tapi mikrofon hanya menangkap jalur udara. Bagian berat itu tidak ikut terekam. Hasilnya, di rekaman, suaramu sering terdengar lebih tinggi dari dugaanmu.",
       "caption": "",
       "headline": "Nada rendah hilang",
-      "keypoints": [
-        {
-          "cue": "rendah",
-          "text": "Tulang meneruskan *nada rendah*"
-        },
-        {
-          "cue": "berat",
-          "text": "Terdengar lebih *berat*"
-        },
-        {
-          "cue": "udara",
-          "text": "Mikrofon hanya menangkap *udara*"
-        },
-        {
-          "cue": "terekam",
-          "text": "Bagian berat tidak *terekam*"
-        },
-        {
-          "cue": "tinggi",
-          "text": "Terdengar lebih *tinggi*"
-        }
-      ],
       "visual": "Tilt ke atas: equalizer 'DI KEPALAMU' muncul di atas kepala, batang nada rendah (kiri) tinggi. 'mikrofon': pan ke ponsel, hanya garis cyan yang masuk mik. 'terekam': equalizer 'REKAMAN' dengan batang nada rendah kosong, ditandai merah.",
       "factIds": [
         "f-nada-rendah",
@@ -141,24 +77,6 @@
       "voiceoverText": "Coba sekarang. Tutup kedua telingamu dengan telapak tangan, lalu bicara. Suaramu langsung terdengar lebih berat. Itulah jalur tulang. Jadi, suara di rekaman itu memang suaramu. Begitulah orang lain mendengarmu setiap hari.",
       "caption": "",
       "headline": "Versi yang orang dengar",
-      "keypoints": [
-        {
-          "cue": "tutup",
-          "text": "*Tutup* telinga, lalu bicara"
-        },
-        {
-          "cue": "tulang",
-          "text": "Lebih berat = jalur *tulang*"
-        },
-        {
-          "cue": "memang",
-          "text": "Jadi, rekaman itu memang *suaramu*"
-        },
-        {
-          "cue": "orang",
-          "text": "Begitulah *orang lain* mendengarmu"
-        }
-      ],
       "visual": "Kamera kembali ke kepala: tangan menutup telinga, getaran kuning membesar. 'memang': pan ke ponsel. 'orang': pull-back lebar memperlihatkan pendengar kedua yang menerima garis cyan yang sama dengan ponsel; hold pada komposisi lebar.",
       "factIds": [
         "f-oklusi",

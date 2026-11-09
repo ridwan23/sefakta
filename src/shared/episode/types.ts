@@ -8,21 +8,15 @@ export type EpisodeScene = {
   headline?: string; // dipakai mode "headline" dan placeholder visual
   visual?: string; // arahan visual untuk agent (tampil di placeholder)
   factIds?: string[];
-  keypoints?: Keypoint[]; // dipakai mode "keypoint"
 };
-
-/** Satu poin kunci (mode caption "keypoint"): `text` ≤ 6 kata (sebaiknya kata yang diucapkan; *bintang* = aksen).
- *  `cue` = kata naskah jangkarnya (kemunculan ke-`nth`, 0 = pertama). Setiap kata disorot tepat saat diucapkan,
- *  memakai waktu dari caption hasil alignment (lihat keypoints.ts). */
-export type Keypoint = { cue: string; nth?: number; text: string };
 
 /** Warna caption. Bila tidak diisi, default mengikuti `tone`. */
 export type CaptionColors = { text: string; highlight: string; highlightText: string };
 /** Gaya visual episode, dipilih sesuai isi fakta. `tone` = kecerahan latar dominan (menentukan watermark & default caption). */
 export type VisualStyle = { name: string; reason: string; tone: 'light' | 'dark'; palette?: string[]; captionColors?: CaptionColors };
 
-/** ringkasan = satu kalimat per scene · subtitle = kata per kata · headline = judul visual · keypoint = poin kunci pada kata pemicu */
-export type CaptionMode = 'ringkasan' | 'subtitle' | 'headline' | 'keypoint';
+/** ringkasan = satu kalimat per scene · subtitle = kata per kata · headline = judul visual */
+export type CaptionMode = 'ringkasan' | 'subtitle' | 'headline';
 
 export type EpisodeBrief = {
   projectId: string;

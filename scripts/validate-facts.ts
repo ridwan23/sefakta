@@ -16,8 +16,7 @@
 //     (atau tercatat di `numbersIgnored` beserta alasannya).
 //  4. Fakta "bertentangan" dengan sumber yang masih dipakai scene = error selalu; "belum-terverifikasi" =
 //     peringatan (draft) / error (publish).
-//  5. Durasi total 55–65 detik; mode caption "ringkasan" = 8–14 kata per scene; mode "keypoint" = setiap scene
-//     punya `keypoints[]` ({ cue, nth?, text }) dengan kata pemicu yang ada di naskah dan teks ≤ 6 kata.
+//  5. Durasi total 55–65 detik; mode caption "ringkasan" = 8–14 kata per scene (mode "keypoint" sudah dihapus).
 // Exit code 1 bila ada error.
 import { existsSync, readdirSync, readFileSync } from 'node:fs';
 import { join, resolve } from 'node:path';
@@ -30,8 +29,7 @@ type Json = Record<string, any>;
 const SERIES = ['Alam', 'Sains', 'Sejarah', 'Antariksa', 'Teknologi', 'Tubuh'];
 const KINDS = ['fakta', 'perkiraan', 'interpretasi', 'ilustrasi'];
 const STATUSES = ['terverifikasi', 'belum-terverifikasi', 'bertentangan'];
-const CAPTION_MODES = ['ringkasan', 'subtitle', 'headline', 'keypoint'];
-const KEYPOINT_MAX_WORDS = 6;
+const CAPTION_MODES = ['ringkasan', 'subtitle', 'headline'];
 const BRIEF_STATUSES = ['draft', 'siap-publikasi', 'arsip']; // arsip = video lama, dilewati validator
 const MAX_QUOTE = 400;
 const STALE_DAYS = 120;
@@ -94,8 +92,6 @@ export const contrast = (a: string, b: string) => { const [x, y] = [lum(a), lum(
 
 // ---------------------------------------------------------------- validasi
 const isStr = (v: unknown): v is string => typeof v === 'string' && v.trim().length > 0;
-const normWord = (w: string) => w.toLowerCase().replace(/[^\p{L}\p{N}]/gu, '');
-const stripTagsText = (t: string) => t.replace(/\[[^\]]*\]\s*/g, ' ');
 const today = new Date().toISOString().slice(0, 10);
 const daysBetween = (a: string, b: string) => Math.round((Date.parse(b) - Date.parse(a)) / 86400000);
 
@@ -194,24 +190,11 @@ export const validateBrief = (b: Json, file: string, forcePublish: boolean): Iss
       else if (f.status === 'belum-terverifikasi' && f.kind !== 'ilustrasi') (pending.get(id) ?? pending.set(id, []).get(id)!).push(s.id);
     }
     const covered = (v: number) => ignored.has(v) || refFacts.some((f) => (f.figures ?? []).some((fg: Json) => same(fg.value, v)));
-    const keypoints: Json[] = Array.isArray(s.keypoints) ? s.keypoints : [];
-    const keypointText = keypoints.map((k) => (isStr(k?.text) ? k.text.replace(/\*/g, '') : '')).join(' . ');
-    for (const q of [...quantitiesIn(s.voiceoverText), ...quantitiesIn(s.caption ?? ''), ...quantitiesIn(keypointText)]) {
+    for (const q of [...quantitiesIn(s.voiceoverText), ...quantitiesIn(s.caption ?? '')]) {
       if (!covered(q.value)) add('error', w, `angka "${q.raw}${q.unit ? ' ' + q.unit : ''}" (= ${q.value}) tidak tercakup fakta yang dirujuk scene ini`);
     }
-    if (b.captionMode === 'keypoint') {
-      // keypoint: frasa pendek yang muncul tepat saat kata pemicunya diucapkan (waktu dari caption hasil alignment)
-      if (!keypoints.length) add('error', w, 'mode keypoint: scene wajib punya keypoints[] ({ cue, text })');
-      const spoken = stripTagsText(s.voiceoverText).split(/\s+/).map(normWord).filter(Boolean);
-      keypoints.forEach((k, i) => {
-        const at = `${w} keypoints[${i}]`;
-        if (!isStr(k?.cue) || !isStr(k?.text)) { add('error', at, 'butuh { cue, text } berupa teks'); return; }
-        const nth = typeof k.nth === 'number' ? k.nth : 0;
-        if (spoken.filter((x) => x === normWord(k.cue)).length <= nth) add('error', at, `kata pemicu "${k.cue}"${nth ? ` (kemunculan ke-${nth + 1})` : ''} tidak ada di voiceoverText`);
-        const n = k.text.replace(/\*/g, '').trim().split(/\s+/).filter((x: string) => /[\p{L}\p{N}]/u.test(x)).length;
-        if (n > KEYPOINT_MAX_WORDS) add('error', at, `teks keypoint ${n} kata (maks ${KEYPOINT_MAX_WORDS}): "${k.text}"`);
-      });
-    }
+    // mode caption "keypoint" sudah dihapus (2026-11-09): membingungkan di visual. Pakai subtitle/ringkasan/headline.
+    if ('keypoints' in s) add('error', w, 'keypoints[] tidak dipakai lagi (mode keypoint dihapus); hapus field ini dan pakai captionMode subtitle');
     if (b.captionMode === 'ringkasan') {
       const n = (s.caption ?? '').trim().split(/\s+/).filter(Boolean).length;
       if (n < 8 || n > 14) add('error', w, `mode ringkasan: caption harus 8–14 kata (sekarang ${n})`);
