@@ -1,0 +1,873 @@
+{
+  "projectId": "iklan-menguping",
+  "method": "whisper.cpp 1.5.5 (small) + forced alignment ke naskah",
+  "generatedAt": "2026-11-09T07:39:30.371Z",
+  "scenes": {
+    "hook": {
+      "hash": "edd22f76d258",
+      "coverage": 1,
+      "missing": [],
+      "extra": [],
+      "heard": "Baru ngobrol soal sepatu, iklannya sudah muncul. Ponselmu menguping?",
+      "captions": [
+        {
+          "text": "Baru",
+          "startMs": 180,
+          "endMs": 320,
+          "timestampMs": 250,
+          "confidence": 0.810923
+        },
+        {
+          "text": " ngobrol",
+          "startMs": 320,
+          "endMs": 880,
+          "timestampMs": 600,
+          "confidence": 0.805113
+        },
+        {
+          "text": " soal",
+          "startMs": 880,
+          "endMs": 1210,
+          "timestampMs": 1045,
+          "confidence": 0.92016
+        },
+        {
+          "text": " sepatu,",
+          "startMs": 1210,
+          "endMs": 1820,
+          "timestampMs": 1515,
+          "confidence": 0.98154
+        },
+        {
+          "text": " iklannya",
+          "startMs": 1820,
+          "endMs": 2300,
+          "timestampMs": 2060,
+          "confidence": 0.942515
+        },
+        {
+          "text": " sudah",
+          "startMs": 2300,
+          "endMs": 2600,
+          "timestampMs": 2450,
+          "confidence": 0.979619
+        },
+        {
+          "text": " muncul.",
+          "startMs": 2600,
+          "endMs": 3170,
+          "timestampMs": 2885,
+          "confidence": 0.985562
+        },
+        {
+          "text": " Ponselmu",
+          "startMs": 3170,
+          "endMs": 3630,
+          "timestampMs": 3400,
+          "confidence": 0.552009
+        },
+        {
+          "text": " menguping?",
+          "startMs": 3630,
+          "endMs": 4380,
+          "timestampMs": 4005,
+          "confidence": 0.934638
+        }
+      ]
+    },
+    "jawaban-awal": {
+      "hash": "38e6bd035f6f",
+      "coverage": 1,
+      "missing": [],
+      "extra": [],
+      "heard": "Belum tentu, sistem iklan bisa mendebak minatmu tanpa perlu mendengar obrolanmu.",
+      "captions": [
+        {
+          "text": "Belum",
+          "startMs": 190,
+          "endMs": 360,
+          "timestampMs": 275,
+          "confidence": 0.933611
+        },
+        {
+          "text": " tentu.",
+          "startMs": 360,
+          "endMs": 860,
+          "timestampMs": 610,
+          "confidence": 0.971816
+        },
+        {
+          "text": " Sistem",
+          "startMs": 860,
+          "endMs": 1300,
+          "timestampMs": 1080,
+          "confidence": 0.900058
+        },
+        {
+          "text": " iklan",
+          "startMs": 1300,
+          "endMs": 1660,
+          "timestampMs": 1480,
+          "confidence": 0.970641
+        },
+        {
+          "text": " bisa",
+          "startMs": 1660,
+          "endMs": 1950,
+          "timestampMs": 1805,
+          "confidence": 0.997994
+        },
+        {
+          "text": " menebak",
+          "startMs": 1950,
+          "endMs": 2530,
+          "timestampMs": 2240,
+          "confidence": 0.5085
+        },
+        {
+          "text": " minatmu,",
+          "startMs": 2530,
+          "endMs": 3250,
+          "timestampMs": 2890,
+          "confidence": 0.986306
+        },
+        {
+          "text": " tanpa",
+          "startMs": 3250,
+          "endMs": 3420,
+          "timestampMs": 3335,
+          "confidence": 0.520993
+        },
+        {
+          "text": " perlu",
+          "startMs": 3420,
+          "endMs": 3720,
+          "timestampMs": 3570,
+          "confidence": 0.997098
+        },
+        {
+          "text": " mendengar",
+          "startMs": 3720,
+          "endMs": 4260,
+          "timestampMs": 3990,
+          "confidence": 0.986686
+        },
+        {
+          "text": " obrolanmu.",
+          "startMs": 4260,
+          "endMs": 5000,
+          "timestampMs": 4630,
+          "confidence": 0.951977
+        }
+      ]
+    },
+    "mekanisme": {
+      "hash": "ee781a688b3d",
+      "coverage": 1,
+      "missing": [],
+      "extra": [],
+      "heard": "Petunjuknya ada di jejak digitalmu. Misalnya, hal yang kamu cari, video yang kamu tonton, dan area tempat kamu memakai layanan. Dari situ, sistem memperkirakan apa yang sedang kamu minati.",
+      "captions": [
+        {
+          "text": "Petunjuknya",
+          "startMs": 220,
+          "endMs": 820,
+          "timestampMs": 520,
+          "confidence": 0.620516
+        },
+        {
+          "text": " ada",
+          "startMs": 820,
+          "endMs": 1030,
+          "timestampMs": 925,
+          "confidence": 0.964987
+        },
+        {
+          "text": " di",
+          "startMs": 1030,
+          "endMs": 1180,
+          "timestampMs": 1105,
+          "confidence": 0.868843
+        },
+        {
+          "text": " jejak",
+          "startMs": 1180,
+          "endMs": 1620,
+          "timestampMs": 1400,
+          "confidence": 0.413712
+        },
+        {
+          "text": " digitalmu.",
+          "startMs": 1620,
+          "endMs": 2360,
+          "timestampMs": 1990,
+          "confidence": 0.994311
+        },
+        {
+          "text": " Misalnya,",
+          "startMs": 2360,
+          "endMs": 3170,
+          "timestampMs": 2765,
+          "confidence": 0.771835
+        },
+        {
+          "text": " hal",
+          "startMs": 3170,
+          "endMs": 3210,
+          "timestampMs": 3190,
+          "confidence": 0.974059
+        },
+        {
+          "text": " yang",
+          "startMs": 3200,
+          "endMs": 3440,
+          "timestampMs": 3320,
+          "confidence": 0.994418
+        },
+        {
+          "text": " kamu",
+          "startMs": 3440,
+          "endMs": 3740,
+          "timestampMs": 3590,
+          "confidence": 0.989228
+        },
+        {
+          "text": " cari,",
+          "startMs": 3740,
+          "endMs": 4290,
+          "timestampMs": 4015,
+          "confidence": 0.98446
+        },
+        {
+          "text": " video",
+          "startMs": 4290,
+          "endMs": 4470,
+          "timestampMs": 4380,
+          "confidence": 0.938808
+        },
+        {
+          "text": " yang",
+          "startMs": 4470,
+          "endMs": 4730,
+          "timestampMs": 4600,
+          "confidence": 0.957561
+        },
+        {
+          "text": " kamu",
+          "startMs": 4730,
+          "endMs": 4990,
+          "timestampMs": 4860,
+          "confidence": 0.997474
+        },
+        {
+          "text": " tonton,",
+          "startMs": 4990,
+          "endMs": 5540,
+          "timestampMs": 5265,
+          "confidence": 0.852424
+        },
+        {
+          "text": " dan",
+          "startMs": 5540,
+          "endMs": 5630,
+          "timestampMs": 5585,
+          "confidence": 0.828822
+        },
+        {
+          "text": " area",
+          "startMs": 5630,
+          "endMs": 5860,
+          "timestampMs": 5745,
+          "confidence": 0.938845
+        },
+        {
+          "text": " tempat",
+          "startMs": 5860,
+          "endMs": 6200,
+          "timestampMs": 6030,
+          "confidence": 0.996523
+        },
+        {
+          "text": " kamu",
+          "startMs": 6200,
+          "endMs": 6430,
+          "timestampMs": 6315,
+          "confidence": 0.990982
+        },
+        {
+          "text": " memakai",
+          "startMs": 6430,
+          "endMs": 6820,
+          "timestampMs": 6625,
+          "confidence": 0.926481
+        },
+        {
+          "text": " layanan.",
+          "startMs": 6820,
+          "endMs": 7480,
+          "timestampMs": 7150,
+          "confidence": 0.987125
+        },
+        {
+          "text": " Dari",
+          "startMs": 7480,
+          "endMs": 7730,
+          "timestampMs": 7605,
+          "confidence": 0.979199
+        },
+        {
+          "text": " situ,",
+          "startMs": 7730,
+          "endMs": 8120,
+          "timestampMs": 7925,
+          "confidence": 0.98924
+        },
+        {
+          "text": " sistem",
+          "startMs": 8120,
+          "endMs": 8510,
+          "timestampMs": 8315,
+          "confidence": 0.981283
+        },
+        {
+          "text": " memperkirakan",
+          "startMs": 8510,
+          "endMs": 9340,
+          "timestampMs": 8925,
+          "confidence": 0.820864
+        },
+        {
+          "text": " apa",
+          "startMs": 9340,
+          "endMs": 9530,
+          "timestampMs": 9435,
+          "confidence": 0.996698
+        },
+        {
+          "text": " yang",
+          "startMs": 9530,
+          "endMs": 9790,
+          "timestampMs": 9660,
+          "confidence": 0.995589
+        },
+        {
+          "text": " sedang",
+          "startMs": 9790,
+          "endMs": 10170,
+          "timestampMs": 9980,
+          "confidence": 0.992248
+        },
+        {
+          "text": " kamu",
+          "startMs": 10170,
+          "endMs": 10480,
+          "timestampMs": 10325,
+          "confidence": 0.980568
+        },
+        {
+          "text": " minati.",
+          "startMs": 10480,
+          "endMs": 10880,
+          "timestampMs": 10680,
+          "confidence": 0.980038
+        }
+      ]
+    },
+    "studi": {
+      "hash": "dfc616e877f7",
+      "coverage": 1,
+      "missing": [],
+      "extra": [],
+      "heard": "Apakah aplikasi diam-diam mereka suaramu, para peneliti di Amerika menganalisi selebih dari 17.000 aplikasi Android? Dalam pengujian pada sebagian aplikasi itu, mereka tidak mendeteksi kebocoran audio.",
+      "captions": [
+        {
+          "text": "Apakah",
+          "startMs": 120,
+          "endMs": 370,
+          "timestampMs": 245,
+          "confidence": 0.978741
+        },
+        {
+          "text": " aplikasi",
+          "startMs": 370,
+          "endMs": 930,
+          "timestampMs": 650,
+          "confidence": 0.946704
+        },
+        {
+          "text": " diam-diam",
+          "startMs": 930,
+          "endMs": 1430,
+          "timestampMs": 1180,
+          "confidence": 0.543159
+        },
+        {
+          "text": " merekam",
+          "startMs": 1430,
+          "endMs": 1850,
+          "timestampMs": 1640,
+          "confidence": 0.646649
+        },
+        {
+          "text": " suaramu?",
+          "startMs": 1850,
+          "endMs": 2550,
+          "timestampMs": 2200,
+          "confidence": 0.699523
+        },
+        {
+          "text": " Para",
+          "startMs": 2550,
+          "endMs": 2660,
+          "timestampMs": 2605,
+          "confidence": 0.852248
+        },
+        {
+          "text": " peneliti",
+          "startMs": 2660,
+          "endMs": 3110,
+          "timestampMs": 2885,
+          "confidence": 0.968123
+        },
+        {
+          "text": " di",
+          "startMs": 3110,
+          "endMs": 3170,
+          "timestampMs": 3140,
+          "confidence": 0.990144
+        },
+        {
+          "text": " Amerika",
+          "startMs": 3170,
+          "endMs": 3620,
+          "timestampMs": 3395,
+          "confidence": 0.975522
+        },
+        {
+          "text": " menganalisis",
+          "startMs": 3620,
+          "endMs": 4000,
+          "timestampMs": 3810,
+          "confidence": 0.806974
+        },
+        {
+          "text": " lebih",
+          "startMs": 4000,
+          "endMs": 4390,
+          "timestampMs": 4195,
+          "confidence": 0.262895
+        },
+        {
+          "text": " dari",
+          "startMs": 4390,
+          "endMs": 4610,
+          "timestampMs": 4500,
+          "confidence": 0.986472
+        },
+        {
+          "text": " tujuh",
+          "startMs": 4610,
+          "endMs": 4957,
+          "timestampMs": 4784,
+          "confidence": 0.796892
+        },
+        {
+          "text": " belas",
+          "startMs": 4957,
+          "endMs": 5303,
+          "timestampMs": 5130,
+          "confidence": 0.796892
+        },
+        {
+          "text": " ribu",
+          "startMs": 5303,
+          "endMs": 5650,
+          "timestampMs": 5477,
+          "confidence": 0.796892
+        },
+        {
+          "text": " aplikasi",
+          "startMs": 5650,
+          "endMs": 6080,
+          "timestampMs": 5865,
+          "confidence": 0.995758
+        },
+        {
+          "text": " Android.",
+          "startMs": 6080,
+          "endMs": 6560,
+          "timestampMs": 6320,
+          "confidence": 0.898297
+        },
+        {
+          "text": " Dalam",
+          "startMs": 6560,
+          "endMs": 6850,
+          "timestampMs": 6705,
+          "confidence": 0.987022
+        },
+        {
+          "text": " pengujian",
+          "startMs": 6850,
+          "endMs": 7370,
+          "timestampMs": 7110,
+          "confidence": 0.978131
+        },
+        {
+          "text": " pada",
+          "startMs": 7370,
+          "endMs": 7610,
+          "timestampMs": 7490,
+          "confidence": 0.992841
+        },
+        {
+          "text": " sebagian",
+          "startMs": 7610,
+          "endMs": 8110,
+          "timestampMs": 7860,
+          "confidence": 0.986954
+        },
+        {
+          "text": " aplikasi",
+          "startMs": 8110,
+          "endMs": 8530,
+          "timestampMs": 8320,
+          "confidence": 0.999333
+        },
+        {
+          "text": " itu,",
+          "startMs": 8530,
+          "endMs": 8850,
+          "timestampMs": 8690,
+          "confidence": 0.995944
+        },
+        {
+          "text": " mereka",
+          "startMs": 8850,
+          "endMs": 9180,
+          "timestampMs": 9015,
+          "confidence": 0.989837
+        },
+        {
+          "text": " tidak",
+          "startMs": 9180,
+          "endMs": 9480,
+          "timestampMs": 9330,
+          "confidence": 0.999373
+        },
+        {
+          "text": " mendeteksi",
+          "startMs": 9480,
+          "endMs": 10100,
+          "timestampMs": 9790,
+          "confidence": 0.983909
+        },
+        {
+          "text": " kebocoran",
+          "startMs": 10100,
+          "endMs": 10550,
+          "timestampMs": 10325,
+          "confidence": 0.929822
+        },
+        {
+          "text": " audio.",
+          "startMs": 10550,
+          "endMs": 11000,
+          "timestampMs": 10775,
+          "confidence": 0.974606
+        }
+      ]
+    },
+    "ilusi": {
+      "hash": "78400a016c7a",
+      "coverage": 1,
+      "missing": [],
+      "extra": [],
+      "heard": "Ada juga faktor otakmu sendiri. Namanya ilusi frekuensi. Setelah ngobrol soal sepatu, iklan sepatu jadi lebih gampang kamu sadari. Iklan lain lewat begitu saja.",
+      "captions": [
+        {
+          "text": "Ada",
+          "startMs": 170,
+          "endMs": 230,
+          "timestampMs": 200,
+          "confidence": 0.971779
+        },
+        {
+          "text": " juga",
+          "startMs": 230,
+          "endMs": 530,
+          "timestampMs": 380,
+          "confidence": 0.999138
+        },
+        {
+          "text": " faktor",
+          "startMs": 530,
+          "endMs": 980,
+          "timestampMs": 755,
+          "confidence": 0.979606
+        },
+        {
+          "text": " otakmu",
+          "startMs": 980,
+          "endMs": 1430,
+          "timestampMs": 1205,
+          "confidence": 0.985103
+        },
+        {
+          "text": " sendiri,",
+          "startMs": 1430,
+          "endMs": 2170,
+          "timestampMs": 1800,
+          "confidence": 0.998601
+        },
+        {
+          "text": " namanya",
+          "startMs": 2170,
+          "endMs": 2580,
+          "timestampMs": 2375,
+          "confidence": 0.915887
+        },
+        {
+          "text": " ilusi",
+          "startMs": 2580,
+          "endMs": 2920,
+          "timestampMs": 2750,
+          "confidence": 0.704245
+        },
+        {
+          "text": " frekuensi.",
+          "startMs": 2920,
+          "endMs": 3600,
+          "timestampMs": 3260,
+          "confidence": 0.875884
+        },
+        {
+          "text": " Setelah",
+          "startMs": 3600,
+          "endMs": 3980,
+          "timestampMs": 3790,
+          "confidence": 0.512636
+        },
+        {
+          "text": " ngobrol",
+          "startMs": 3980,
+          "endMs": 4360,
+          "timestampMs": 4170,
+          "confidence": 0.960998
+        },
+        {
+          "text": " soal",
+          "startMs": 4360,
+          "endMs": 4610,
+          "timestampMs": 4485,
+          "confidence": 0.936194
+        },
+        {
+          "text": " sepatu,",
+          "startMs": 4610,
+          "endMs": 5160,
+          "timestampMs": 4885,
+          "confidence": 0.98331
+        },
+        {
+          "text": " iklan",
+          "startMs": 5160,
+          "endMs": 5360,
+          "timestampMs": 5260,
+          "confidence": 0.856025
+        },
+        {
+          "text": " sepatu",
+          "startMs": 5360,
+          "endMs": 5740,
+          "timestampMs": 5550,
+          "confidence": 0.989621
+        },
+        {
+          "text": " jadi",
+          "startMs": 5740,
+          "endMs": 5990,
+          "timestampMs": 5865,
+          "confidence": 0.932437
+        },
+        {
+          "text": " lebih",
+          "startMs": 5990,
+          "endMs": 6350,
+          "timestampMs": 6170,
+          "confidence": 0.997707
+        },
+        {
+          "text": " gampang",
+          "startMs": 6350,
+          "endMs": 6750,
+          "timestampMs": 6550,
+          "confidence": 0.676442
+        },
+        {
+          "text": " kamu",
+          "startMs": 6750,
+          "endMs": 7000,
+          "timestampMs": 6875,
+          "confidence": 0.721614
+        },
+        {
+          "text": " sadari.",
+          "startMs": 7000,
+          "endMs": 7700,
+          "timestampMs": 7350,
+          "confidence": 0.967241
+        },
+        {
+          "text": " Iklan",
+          "startMs": 7700,
+          "endMs": 7950,
+          "timestampMs": 7825,
+          "confidence": 0.555016
+        },
+        {
+          "text": " lain",
+          "startMs": 7950,
+          "endMs": 8210,
+          "timestampMs": 8080,
+          "confidence": 0.989985
+        },
+        {
+          "text": " lewat",
+          "startMs": 8210,
+          "endMs": 8550,
+          "timestampMs": 8380,
+          "confidence": 0.976215
+        },
+        {
+          "text": " begitu",
+          "startMs": 8550,
+          "endMs": 8920,
+          "timestampMs": 8735,
+          "confidence": 0.994061
+        },
+        {
+          "text": " saja.",
+          "startMs": 8920,
+          "endMs": 9280,
+          "timestampMs": 9100,
+          "confidence": 0.995158
+        }
+      ]
+    },
+    "penutup": {
+      "hash": "41be6d537192",
+      "coverage": 1,
+      "missing": [],
+      "extra": [],
+      "heard": "Jadi, iklan yang pas belum tentu tanda ponselmu menguping, bisa jadi datamu sendiri yang bercerita.",
+      "captions": [
+        {
+          "text": "Jadi,",
+          "startMs": 210,
+          "endMs": 400,
+          "timestampMs": 305,
+          "confidence": 0.949968
+        },
+        {
+          "text": " iklan",
+          "startMs": 400,
+          "endMs": 860,
+          "timestampMs": 630,
+          "confidence": 0.959085
+        },
+        {
+          "text": " yang",
+          "startMs": 860,
+          "endMs": 1030,
+          "timestampMs": 945,
+          "confidence": 0.995765
+        },
+        {
+          "text": " pas",
+          "startMs": 1030,
+          "endMs": 1200,
+          "timestampMs": 1115,
+          "confidence": 0.967528
+        },
+        {
+          "text": " belum",
+          "startMs": 1200,
+          "endMs": 1570,
+          "timestampMs": 1385,
+          "confidence": 0.974936
+        },
+        {
+          "text": " tentu",
+          "startMs": 1570,
+          "endMs": 1870,
+          "timestampMs": 1720,
+          "confidence": 0.988729
+        },
+        {
+          "text": " tanda",
+          "startMs": 1870,
+          "endMs": 2200,
+          "timestampMs": 2035,
+          "confidence": 0.937287
+        },
+        {
+          "text": " ponselmu",
+          "startMs": 2200,
+          "endMs": 2730,
+          "timestampMs": 2465,
+          "confidence": 0.921737
+        },
+        {
+          "text": " menguping.",
+          "startMs": 2730,
+          "endMs": 3590,
+          "timestampMs": 3160,
+          "confidence": 0.969106
+        },
+        {
+          "text": " Bisa",
+          "startMs": 3590,
+          "endMs": 3850,
+          "timestampMs": 3720,
+          "confidence": 0.804004
+        },
+        {
+          "text": " jadi,",
+          "startMs": 3850,
+          "endMs": 4110,
+          "timestampMs": 3980,
+          "confidence": 0.99455
+        },
+        {
+          "text": " datamu",
+          "startMs": 4110,
+          "endMs": 4500,
+          "timestampMs": 4305,
+          "confidence": 0.721115
+        },
+        {
+          "text": " sendiri",
+          "startMs": 4500,
+          "endMs": 4960,
+          "timestampMs": 4730,
+          "confidence": 0.990221
+        },
+        {
+          "text": " yang",
+          "startMs": 4960,
+          "endMs": 5220,
+          "timestampMs": 5090,
+          "confidence": 0.99708
+        },
+        {
+          "text": " bercerita.",
+          "startMs": 5220,
+          "endMs": 6060,
+          "timestampMs": 5640,
+          "confidence": 0.977553
+        }
+      ]
+    }
+  }
+}

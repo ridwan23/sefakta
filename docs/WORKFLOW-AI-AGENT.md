@@ -425,5 +425,8 @@ Periksa MP4-nya, karena preview bukan bukti hasil ekspor:
 | suara baru melafalkan "Jenewa" seperti "Geneva" | nama asing + karakter suara | ganti kalimat ("sebuah danau di Swiss"), nama tetap di label layar |
 | `check:episodes` salah mendeteksi placeholder | regex membaca satu kunci per baris | sudah diperbaiki di skrip |
 | caption gelap tak terbaca di atas ilustrasi AI gelap | gambar dipasang tanpa lapisan latar caption | §7.5 butir 7: gradasi latar, cek frame pertama |
+| (iklan-menguping) laporan meminta pengguna mengurus error episode komodo | `check:publish` memeriksa semua brief; error episode lain dilaporkan sebagai tugas episode ini | `npm run check:publish:episode -- <id>`; error episode lain hanya di bagian "Di luar episode ini" (§10–11) |
+| (iklan-menguping) `npm run vo` gagal HTTP 402 | `FISH_AUDIO_MODEL` di `.env` menunjuk model berbayar yang kreditnya habis | cek `model` di manifest episode sebelumnya; jangan ubah `.env` diam-diam, laporkan ke pengguna |
+| (iklan-menguping) teks kuning tak terbaca di tone terang | Kuning Fakta di atas krem/putih kontrasnya rendah | tone `light`: kuning hanya untuk isian/latar (kartu, tag) dengan teks gelap; teks penekanan pakai amber gelap atau biru |
 
 Tambahkan baris baru ke tabel ini setiap kali sebuah episode menemukan kesalahan baru, beserta pencegahannya.

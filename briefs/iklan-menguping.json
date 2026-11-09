@@ -1,0 +1,210 @@
+{
+  "projectId": "iklan-menguping",
+  "title": "Ponselmu Menguping Obrolanmu?",
+  "series": "Teknologi",
+  "status": "draft",
+  "captionMode": "subtitle",
+  "visualStyle": {
+    "name": "UI ponsel terang: infografis bersih di atas krem",
+    "reason": "Fakta teknologi sehari-hari: iklan yang muncul di aplikasi yang kita pakai setiap hari. Latar krem terang dan ponsel dengan layar putih seperti aplikasi sungguhan membuat penonton langsung mengenali situasinya. Suara/obrolan digambar merah muda dengan garis putus-putus, data digambar biru dengan garis penuh, jadi 'mendengar' dan 'mendata' tetap dibedakan tanpa warna. Kuning Fakta hanya untuk satu penekanan per beat (iklan sepatu yang 'tepat sasaran').",
+    "tone": "light",
+    "palette": [
+      "#F6F2EA",
+      "#FFFFFF",
+      "#0F1B33",
+      "#1F6FEB",
+      "#FFB000",
+      "#E5396B"
+    ]
+  },
+  "scenes": [
+    {
+      "id": "hook",
+      "durationSeconds": 4,
+      "voiceoverText": "Baru ngobrol soal sepatu, iklannya sudah muncul. Ponselmu menguping?",
+      "caption": "",
+      "headline": "Ponselmu menguping?",
+      "visual": "Frame 0: gelembung obrolan sepatu (KAMU, TEMAN) di atas ponsel. 'iklannya': kartu iklan sepatu masuk ke layar. 'menguping': tanda tanya di dekat mikrofon ponsel. Kamera terkunci. SFX: notif-ting.wav saat kartu iklan masuk.",
+      "factIds": []
+    },
+    {
+      "id": "jawaban-awal",
+      "durationSeconds": 5,
+      "voiceoverText": "Belum tentu. Sistem iklan bisa menebak minatmu, tanpa perlu mendengar obrolanmu.",
+      "caption": "",
+      "headline": "Belum tentu",
+      "visual": "Kartu sepatu ditahan. 'Belum': tanda tanya memudar. 'menebak': label DARI AKTIVITASMU muncul di atas ponsel. 'mendengar': gelembung obrolan memudar. Kamera terkunci.",
+      "factIds": [
+        "f-data-profil"
+      ]
+    },
+    {
+      "id": "mekanisme",
+      "durationSeconds": 11,
+      "voiceoverText": "Petunjuknya ada di jejak digitalmu. Misalnya, hal yang kamu cari, video yang kamu tonton, dan area tempat kamu memakai layanan. Dari situ, sistem memperkirakan apa yang sedang kamu minati.",
+      "caption": "",
+      "headline": "Dari jejak digitalmu",
+      "visual": "Satu pull-back singkat di awal (objek diam). Setelah kamera berhenti: 'cari': ikon pencarian; 'video': ikon video; 'area': pin area; garis data biru menyala satu per satu ke panel PERKIRAAN MINAT. 'memperkirakan': tag SEPATU di panel. 'minati': kartu iklan sepatu dikirim ke ponsel. SFX: notif-ting.wav saat kartu mendarat.",
+      "factIds": [
+        "f-data-profil"
+      ]
+    },
+    {
+      "id": "studi",
+      "durationSeconds": 11.5,
+      "voiceoverText": "Apakah aplikasi diam-diam merekam suaramu? Para peneliti di Amerika menganalisis lebih dari tujuh belas ribu aplikasi Android. Dalam pengujian pada sebagian aplikasi itu, mereka tidak mendeteksi kebocoran audio.",
+      "caption": "",
+      "headline": "Kebocoran audio tak terdeteksi",
+      "visual": "Cut ke kisi aplikasi statis. 'ribu': kartu 17.260 DIANALISIS. 'sebagian': baris kedua 9.100 DIUJI DINAMIS, sebagian kisi menyala. 'mendeteksi': kartu hasil KEBOCORAN AUDIO TAK TERDETEKSI DALAM UJI (tanpa mikrofon dicoret, tanpa stempel aman). Kamera terkunci.",
+      "factIds": [
+        "f-tidak-menguping"
+      ]
+    },
+    {
+      "id": "ilusi",
+      "durationSeconds": 9,
+      "voiceoverText": "Ada juga faktor otakmu sendiri, namanya ilusi frekuensi. Setelah ngobrol soal sepatu, iklan sepatu jadi lebih gampang kamu sadari. Iklan lain lewat begitu saja.",
+      "caption": "",
+      "headline": "Ilusi frekuensi",
+      "visual": "Layar ponsel: feed iklan bergulir sebentar, berhenti. 'sadari': sorot kuning pada satu kartu sepatu, kartu diperbesar lokal. 'lewat': kartu lain meredup. Kamera terkunci. SFX: pop-soft.wav saat sorot menyala.",
+      "factIds": [
+        "f-ilusi-frekuensi"
+      ]
+    },
+    {
+      "id": "penutup",
+      "durationSeconds": 6,
+      "voiceoverText": "Jadi, iklan yang pas belum tentu tanda ponselmu menguping. Bisa jadi, datamu sendiri yang bercerita.",
+      "caption": "",
+      "headline": "Datamu yang bercerita",
+      "visual": "Kartu sepatu di ponsel ditahan; 'datamu': garis data biru dari ikon pencarian, video, dan pin mengalir ke ponsel. Menjelang akhir: cut ke komposisi pembuka (gelembung obrolan + ponsel) untuk loop. Lalu klip CTA resmi SeFakta. Kamera terkunci.",
+      "factIds": [
+        "f-data-profil"
+      ]
+    }
+  ],
+  "facts": [
+    {
+      "id": "f-tidak-menguping",
+      "claim": "Studi Pan dkk. (Northeastern University dan UC Santa Barbara, dipublikasikan di PETS 2018) menganalisis 17.260 aplikasi Android secara statis dan menguji 9.100 di antaranya secara dinamis dengan interaksi otomatis serta pemeriksaan lalu lintas jaringan. Dalam uji itu, peneliti tidak mendeteksi kebocoran audio.",
+      "kind": "fakta",
+      "status": "terverifikasi",
+      "figures": [
+        {
+          "text": "17.000",
+          "value": 17000
+        }
+      ],
+      "sources": [
+        {
+          "title": "Is your smartphone spying on you?",
+          "url": "https://news.northeastern.edu/2018/07/06/is-your-smartphone-spying-on-you/",
+          "publisher": "Northeastern Global News",
+          "origin": "Northeastern University (rilis berita)",
+          "primary": true,
+          "accessed": "2026-11-08",
+          "quote": "The researchers analyzed more than 17,000 of the most popular apps on the Android operating system, using an automated test program written by the students."
+        },
+        {
+          "title": "Is your smartphone spying on you? (kutipan Christo Wilson)",
+          "url": "https://news.northeastern.edu/2018/07/06/is-your-smartphone-spying-on-you/",
+          "publisher": "Northeastern Global News",
+          "origin": "Northeastern University (rilis berita)",
+          "primary": true,
+          "accessed": "2026-11-08",
+          "quote": "There were no audio leaks at all—not a single app activated the microphone"
+        },
+        {
+          "title": "Why phones that secretly listen to us are a myth",
+          "url": "https://www.bbc.com/news/technology-49585682",
+          "publisher": "BBC News (Joe Tidy)",
+          "origin": "BBC News (liputan)",
+          "primary": false,
+          "accessed": "2026-11-08",
+          "quote": "tested 17,000 mobile apps from various Android app stores around the world. They found no evidence of listening"
+        },
+        {
+          "title": "Panoptispy: Characterizing Audio and Video Exfiltration from Android Applications",
+          "url": "https://secpriv.tuwien.ac.at/fulltext/publik_278928.pdf",
+          "publisher": "Proceedings on Privacy Enhancing Technologies 2018",
+          "origin": "Pan dkk., PoPETs 2018 (makalah)",
+          "primary": true,
+          "accessed": "2026-11-09",
+          "quote": "Summary of the 9,100 apps we selected for dynamic analysis"
+        }
+      ],
+      "limits": "Narasi menyebut 'lebih dari tujuh belas ribu' (dianalisis statis) dan membatasi hasil pada 'pengujian pada sebagian aplikasi' (9.100 diuji dinamis, 53%). Makalah §8 mengakui metode dapat melewatkan perilaku yang tidak terpicu interaksi otomatis atau audio yang diubah formatnya (mis. transkrip teks), dan hanya Android. Grafis memakai 'tak terdeteksi dalam uji'; tidak ada mikrofon dicoret atau stempel 'aman'. Kutipan Wilson ('not a single app activated the microphone') lebih luas dari cakupan uji, jadi tidak dipakai di narasi. Makalah berupa PDF: kutipan dicek manual (validator online hanya memberi peringatan). Pada 2024 Cox Media Group pernah mempromosikan produk 'Active Listening' yang kemudian dihentikan; cara kerjanya tidak jelas. Uji Wandera 2019 (BBC) dikeluarkan dari versi ini."
+    },
+    {
+      "id": "f-data-profil",
+      "claim": "Sistem iklan dapat mempersonalisasi iklan dari aktivitas pengguna, misalnya hal yang dicari, video yang ditonton, dan area umum tempat layanan dipakai, sehingga tidak perlu mendengar percakapan untuk menebak minat.",
+      "kind": "fakta",
+      "status": "terverifikasi",
+      "figures": [],
+      "sources": [
+        {
+          "title": "How personalized ads work",
+          "url": "https://support.google.com/My-Ad-Center-Help/answer/12155656?hl=en",
+          "publisher": "Google My Ad Center Help",
+          "origin": "Google",
+          "primary": true,
+          "accessed": "2026-11-09",
+          "quote": "Activity saved to your Google Account, including things you’ve looked for on Google Search, videos you’ve watched on YouTube, apps you’ve installed on your Android device, ads or content you’ve interacted with, and your general area while using Google Services."
+        },
+        {
+          "title": "Why phones that secretly listen to us are a myth",
+          "url": "https://www.bbc.com/news/technology-49585682",
+          "publisher": "BBC News (Joe Tidy)",
+          "origin": "BBC News (analisis industri keamanan informasi)",
+          "primary": false,
+          "accessed": "2026-11-08",
+          "quote": "Location data, browsing history and tracking pixels, for example all provide enough information to predict what you might be thinking about buying."
+        },
+        {
+          "title": "Why phones that secretly listen to us are a myth (tidak perlu mendengar)",
+          "url": "https://www.bbc.com/news/technology-49585682",
+          "publisher": "BBC News (Joe Tidy)",
+          "origin": "BBC News (analisis industri keamanan informasi)",
+          "primary": false,
+          "accessed": "2026-11-09",
+          "quote": "tech giants know so much about us that they don't actually need to listen to our conversations to serve us targeted adverts"
+        }
+      ],
+      "limits": "Diagram sepatu adalah ilustrasi cara sinyal dapat dipakai; penyebab tayangan iklan tertentu tidak diketahui. Personalisasi bergantung pada pengaturan pengguna dan platform. Contoh 'teman mencari sepatu' dikeluarkan dari versi ini."
+    },
+    {
+      "id": "f-ilusi-frekuensi",
+      "claim": "Ilusi frekuensi (fenomena Baader-Meinhof) adalah bias kognitif: setelah baru menyadari sesuatu, seseorang lebih sering memperhatikannya; perhatian selektif dan bias konfirmasi membuat setiap kemunculan terasa sebagai bukti.",
+      "kind": "fakta",
+      "status": "terverifikasi",
+      "figures": [],
+      "sources": [
+        {
+          "title": "There's a Name for That: The Baader-Meinhof Phenomenon",
+          "url": "https://psmag.com/social-justice/theres-a-name-for-that-the-baader-meinhof-phenomenon-59670",
+          "publisher": "Pacific Standard",
+          "origin": "Pacific Standard",
+          "primary": false,
+          "accessed": "2026-11-08",
+          "quote": "The second process, confirmation bias, reassures you that each sighting is further proof of your impression that the thing has gained overnight omnipresence."
+        },
+        {
+          "title": "Frequency illusion",
+          "url": "https://en.wikipedia.org/wiki/Frequency_illusion",
+          "publisher": "Wikipedia",
+          "origin": "Wikipedia (mengacu Arnold Zwicky, Stanford)",
+          "primary": false,
+          "accessed": "2026-11-08",
+          "quote": "is a cognitive bias in which a person notices a specific concept, word, or product more frequently after recently becoming aware of it."
+        }
+      ],
+      "limits": "Contoh sepatu menggambarkan bagaimana suatu topik lebih mudah disadari setelah menarik perhatian; naskah tidak mengukur seberapa sering iklan itu benar-benar muncul."
+    }
+  ],
+  "numbersIgnored": [],
+  "storyDuration": {
+    "min": 45,
+    "max": 50,
+    "reason": "Eksperimen retensi khusus episode ini (persetujuan pemilik 2026-11-09): jawaban lebih awal dan durasi lebih pendek dibanding acuan episode sebelumnya (AVD 30 dtk dari 58 dtk). Bukan aturan umum; lihat briefs/rekomendasi-episode-iklan-menguping.md."
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "projectId": "iklan-menguping",
+  "sourceBrief": "iklan-menguping.json",
+  "provider": "fish-audio",
+  "model": "s2.1-pro-free",
+  "voice": "59c6df57a144",
+  "loudnessTarget": -14,
+  "generatedAt": "2026-11-09T07:38:19.972Z",
+  "scenes": [
+    {
+      "id": "hook",
+      "file": "iklan-menguping/vo/hook.mp3",
+      "text": "Baru ngobrol soal sepatu, iklannya sudah muncul. Ponselmu menguping?",
+      "speed": 1.1,
+      "hash": "edd22f76d258",
+      "voice": "59c6df57a144",
+      "audioSeconds": 4.31,
+      "lufs": -14.2,
+      "truePeak": -1.8
+    },
+    {
+      "id": "jawaban-awal",
+      "file": "iklan-menguping/vo/jawaban-awal.mp3",
+      "text": "Belum tentu. Sistem iklan bisa menebak minatmu, tanpa perlu mendengar obrolanmu.",
+      "speed": 1.1,
+      "hash": "38e6bd035f6f",
+      "voice": "59c6df57a144",
+      "audioSeconds": 5.016,
+      "lufs": -14.2,
+      "truePeak": -2.1
+    },
+    {
+      "id": "mekanisme",
+      "file": "iklan-menguping/vo/mekanisme.mp3",
+      "text": "Petunjuknya ada di jejak digitalmu. Misalnya, hal yang kamu cari, video yang kamu tonton, dan area tempat kamu memakai layanan. Dari situ, sistem memperkirakan apa yang sedang kamu minati.",
+      "speed": 1.1,
+      "hash": "ee781a688b3d",
+      "voice": "59c6df57a144",
+      "audioSeconds": 10.815,
+      "lufs": -14.3,
+      "truePeak": -2.2
+    },
+    {
+      "id": "studi",
+      "file": "iklan-menguping/vo/studi.mp3",
+      "text": "Apakah aplikasi diam-diam merekam suaramu? Para peneliti di Amerika menganalisis lebih dari tujuh belas ribu aplikasi Android. Dalam pengujian pada sebagian aplikasi itu, mereka tidak mendeteksi kebocoran audio.",
+      "speed": 1.1,
+      "hash": "dfc616e877f7",
+      "voice": "59c6df57a144",
+      "audioSeconds": 10.971,
+      "lufs": -14.4,
+      "truePeak": -2.1
+    },
+    {
+      "id": "ilusi",
+      "file": "iklan-menguping/vo/ilusi.mp3",
+      "text": "Ada juga faktor otakmu sendiri, namanya ilusi frekuensi. Setelah ngobrol soal sepatu, iklan sepatu jadi lebih gampang kamu sadari. Iklan lain lewat begitu saja.",
+      "speed": 1.1,
+      "hash": "78400a016c7a",
+      "voice": "59c6df57a144",
+      "audioSeconds": 9.195,
+      "lufs": -14.1,
+      "truePeak": -1.9
+    },
+    {
+      "id": "penutup",
+      "file": "iklan-menguping/vo/penutup.mp3",
+      "text": "Jadi, iklan yang pas belum tentu tanda ponselmu menguping. Bisa jadi, datamu sendiri yang bercerita.",
+      "speed": 1.1,
+      "hash": "41be6d537192",
+      "voice": "59c6df57a144",
+      "audioSeconds": 5.982,
+      "lufs": -14.3,
+      "truePeak": -2.3
+    }
+  ]
+}
