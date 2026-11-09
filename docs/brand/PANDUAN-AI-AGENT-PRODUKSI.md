@@ -1,6 +1,6 @@
 # Panduan produksi AI agent — SeFakta
 
-Versi 1.4 · 7 November 2026
+Versi 1.6 · 9 November 2026
 
 ## Tujuan dan prioritas
 
@@ -109,17 +109,50 @@ Gunakan struktur `Caption` Remotion dengan `startMs`, `endMs`, `timestampMs`, da
 - Gunakan peta, diagram berlapis, garis waktu, angka dengan pembanding, atau transformasi sebelum/sesudah ketika membantu pemahaman.
 - Slow zoom pada satu gambar adalah gerak kamera; jangan menyebutnya parallax jika tidak ada lapisan dengan kedalaman dan gerak berbeda.
 - Pilih gaya visual berdasarkan isi fakta episode dan catat di brief (`visualStyle`: nama, alasan, `tone` light/dark, palet dan `captionColors` opsional; diwajibkan validator, kontras caption minimal 4,5:1). `tone` menentukan watermark (terang/gelap) dan warna caption default. Contoh: sejarah → peta dan arsip, sains → diagram bersih, antariksa → latar gelap kosmik, tubuh → ilustrasi anatomi. Gunakan satu gaya untuk semua scene; aset ilustratif harus menyatu antarscene; hindari pergantian gaya yang tidak disengaja.
-- Gunakan kuning untuk satu penekanan utama, bukan seluruh paragraf. Jangan menumpuk efek atau menambahkan whoosh pada setiap gerakan kecil.
+- Gunakan kuning untuk satu penekanan utama, bukan seluruh paragraf. Jangan menumpuk efek visual. Aturan bunyi (SFX, musik) ada di §7.
 - Periksa video pada ukuran layar ponsel. Teks harus terbaca dalam waktu tampilnya.
 - Klip CTA resmi diputar setelah jawaban selesai, lewat transisi iris dari frame fakta terakhir, dengan VO CTA bersama (`public/brand/cta-vo.mp3`, sama untuk semua episode).
 
 ## 7. Musik dan sound design
 
-Narator adalah prioritas mix. Pilih ambience atau musik yang mendukung suasana dan tidak bersaing dengan artikulasi. Angka `volume=0.1` tidak membuktikan keseimbangan karena level sumber berbeda-beda.
+Narator adalah prioritas mix. SFX dan musik **opsional**; episode tanpa keduanya sah. Bila dipakai, keduanya harus membantu cerita, bukan mengisi kekosongan.
 
-Dengarkan mix penuh melalui headphone dan speaker ponsel. Periksa clipping, transisi yang mengejutkan, suara terlalu pelan, dan musik yang menutupi kata. Terapkan fade serta penurunan musik ketika narator berbicara bila diperlukan. Nada sintetis berulang adalah ambience, bukan otomatis sebuah komposisi musik yang kaya.
+### 7.1 Kapan SFX dipakai
 
-Simpan sumber dan izin penggunaan setiap aset. URL yang dapat diunduh tidak dengan sendirinya membuktikan lisensi untuk publikasi.
+- Hanya pada **beat cerita**: objek muncul atau berubah status (notifikasi, toggle, stempel, angka berhenti), atau kejutan yang dijanjikan hook. Setiap SFX harus bisa dijelaskan dengan "bunyi ini menandai …".
+- Bunyi sebaiknya **diegetik**, yaitu bunyi yang memang dimiliki objek di layar (notifikasi ponsel, klik toggle, ketukan stempel), bukan efek generik.
+- Batas: **3–8 SFX per episode**, jarak minimal ±2 dtk antar-SFX, maksimal satu SFX per beat. Tanpa whoosh pada setiap gerakan kamera atau elemen kecil.
+- **Satu palet bunyi per episode**, selaras dengan `visualStyle` (mis. UI ponsel → bunyi antarmuka yang bersih; sejarah → bunyi kertas/stempel). Jangan mencampur gaya kartun dan realistis.
+- Jangan menaruh SFX tepat di atas kata kunci, angka, atau nama. Geser ke celah antarkata (waktu dari alignment) atau ±0,1–0,3 dtk sebelum kata.
+- Tidak ada SFX di klip CTA. Klip CTA sudah memakai VO CTA bersama.
+
+### 7.2 Musik latar
+
+- Opsional. Pakai ambience atau musik instrumental tanpa vokal, yang tidak bersaing dengan artikulasi narator. Nada sintetis berulang adalah ambience, bukan otomatis sebuah komposisi.
+- **Dilarang** memakai lagu populer, trending, atau komersial, termasuk potongan pendek. Lagu seperti itu memicu klaim Content ID yang bisa memblokir atau membatasi video.
+- Fade in/out ±0,5 dtk. Musik berhenti atau memudar sebelum jeda CTA.
+
+### 7.3 Level (patokan, dibuktikan dengan mendengar)
+
+| Sumber | Normalisasi file | Saat dipakai |
+|---|---|---|
+| VO | -14 LUFS (otomatis `npm run vo`) | — |
+| SFX | -20 LUFS (pendek: puncak ≤ -6 dBFS) | `volume` 1 di celah narasi; ≤ 0,5 bila tumpang tindih ucapan |
+| Musik | -30 LUFS | tetap di bawah narator; turunkan lagi bila menutupi kata |
+
+Angka `volume` saja tidak membuktikan keseimbangan, karena level sumber berbeda-beda. Karena itu file dinormalisasi dulu, lalu hasil render diukur: keseluruhan -14 ±1 LUFS, true peak ≤ -1 dBTP. Dengarkan mix penuh melalui headphone dan speaker ponsel. Periksa clipping, transisi yang mengejutkan, dan bunyi yang menutupi kata.
+
+### 7.4 Lisensi dan penyimpanan
+
+- Sumber yang boleh: bunyi sintesis buatan sendiri (`npm run sfx:make`, `scripts/make-sfx.ts`; lisensi paling bersih, utamakan ini), CC0/domain publik, YouTube Audio Library (sesuai syarat atribusinya), atau aset berlisensi komersial yang izinnya dimiliki SeFakta. URL yang dapat diunduh tidak dengan sendirinya membuktikan lisensi.
+- File disimpan di `public/sfx/` (dipakai lintas episode) dan dicatat di `public/sfx/LICENSES.json`: `file`, `sumber` (URL), `pembuat`, `lisensi`, `atribusi` (teks bila wajib), `diakses`, `normalisasi`. File tanpa catatan dilarang dipakai; `check:episodes` menolaknya. Bunyi sintesis dicatat otomatis oleh `npm run sfx:make`.
+- Atribusi yang diwajibkan lisensi ditulis di deskripsi video.
+
+### 7.5 Implementasi
+
+- SFX dipasang di kode topik (`src/topics/<id>/scenes.tsx`) dengan komponen `Sfx` (`src/shared/audio/Sfx.tsx`), dipicu waktu kata lewat `cueFrames`: `<Sfx at={q.kata + n} file="notif-ting.wav" volume={0.6} />`. Bila bunyi menandai objek yang muncul, geser animasi objeknya ke frame yang sama. Jangan mengubah template `src/shared/episode/` untuk satu episode.
+- Musik latar yang melintasi scene dipasang sekali di komposisi topik, bukan per scene.
+- Catat daftar SFX (scene, kata pemicu, file) di arahan `visual` scene di brief, supaya bisa ditinjau tanpa membaca kode.
 
 ## 8. Implementasi dan pemeriksaan wajib
 
@@ -146,7 +179,7 @@ Nilai setiap aspek 0–2: 0 belum layak, 1 perlu revisi, 2 jelas dan teruji. Ini
 | Cerita | Setiap beat berkembang dan jawaban menuntaskan hook |
 | Visual | Gerakan membantu memahami, bukan sekadar dekorasi |
 | Pacing | Jeda bertujuan dan setiap informasi sempat dipahami |
-| Audio | Ucapan natural, utuh, serta mix jelas |
+| Audio | Ucapan natural, utuh, serta mix jelas; SFX/musik (bila ada) sesuai §7 dan berlisensi tercatat |
 | Caption | Timing diverifikasi dari audio dan mudah dibaca |
 | Brand dan penutup | Identitas konsisten; CTA tidak mengganggu payoff |
 
@@ -164,6 +197,7 @@ Bandingkan episode pada platform, panjang, dan audiens yang sebanding. Uji satu 
 
 ## Riwayat revisi
 
+- **1.6 (9 Nov 2026):** §7 ditulis ulang: SFX hanya pada beat cerita (3–8 per episode, jeda ≥ 2 dtk, satu palet bunyi), larangan lagu populer (Content ID), patokan level (SFX -20 LUFS, musik -30 LUFS, render -14 ±1 LUFS), lisensi di `public/sfx/LICENSES.json`, implementasi lewat `cueFrames` di kode topik.
 - **1.5 (7 Nov 2026):** VO CTA menjadi satu rekaman bersama untuk semua episode (`public/brand/cta-vo.mp3`, dari VO CTA Tambora); `npm run vo` tidak lagi membuat CTA per episode dan `cta.voiceoverText` di brief dihapus.
 - **1.4 (7 Nov 2026):** VO CTA dibuat per episode dengan narator & kecepatan narasi (menggantikan audio asli klip); kecepatan VO default 1,25× → 1,1×.
 - **1.3 (7 Nov 2026):** gaya visual dipilih per episode berdasarkan isi fakta (`visualStyle` di brief, diwajibkan validator); kode legacy (`legacy-v1`, versi 3D, `SeFaktaCta`) dihapus.

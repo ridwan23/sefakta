@@ -18,15 +18,15 @@ Ikuti `docs/WORKFLOW-AI-AGENT.md` (urutan kerja langkah demi langkah, gerbang ti
 4. Caption tersinkron: `npm run align -- --brief=briefs/<id>.json` (whisper.cpp + penyelarasan ke naskah). Kata yang dilaporkan "tidak terdengar" wajib didengarkan; buat ulang scene itu bila salah ucap (`--scene=<id> --force`).
 5. Buat visual per scene di `src/topics/<id>/scenes.tsx`. Gunakan scene dan komponen yang tersedia sebelum membuat yang baru. Durasi scene mengikuti audio; jangan mengubah template di `src/shared/episode/` untuk satu episode.
 6. Buka Remotion Studio dan periksa frame awal, tengah, perpindahan scene, serta akhir.
-7. Jalankan `npm run quality` sebelum menyerahkan preview; sebelum tayang `npm run check:publish`.
+7. Jalankan `npm run quality` sebelum menyerahkan preview; sebelum tayang `npm run check:publish:episode -- <id>` (hanya episode yang sedang dikerjakan). Masalah di episode lain **bukan** penghambat episode ini: jangan menjadikannya tugas atau syarat di laporan; cukup satu baris informasi di bagian "Di luar episode ini" (lihat `docs/WORKFLOW-AI-AGENT.md` §10–11).
 8. Render MP4 hanya ketika pengguna memintanya secara eksplisit.
 
 ## Batas arsitektur
 
 - `src/topics/<topik>/`: kode satu topik video. `compositions.tsx` mendaftarkan komposisinya; `src/Root.tsx` hanya memanggil per topik.
-- `src/shared/`: elemen reusable lintas topik: `episode/` (template episode: timeline dari audio, VO, caption, watermark, CTA; `cues.ts` = frame saat sebuah kata diucapkan, untuk memicu animasi dari caption hasil alignment), `maps/` (`WorldMap`: peta dunia Natural Earth 1:50m, Mercator/globe, sorot negara, zoom `mixView`, busur `screenArc`), `camera/` (`CameraRig`: kamera 2.5D dengan keyframe, tracking `mixPose`, lapisan parallax `CamLayer` ber-`depth`/`blur`/`blend`, guncangan genggam, `beatKick`, motion blur), `brand/` (watermark, klip CTA, font), `captions/`, `motion.ts`. Jangan menaruh logika satu topik di sini.
+- `src/shared/`: elemen reusable lintas topik: `episode/` (template episode: timeline dari audio, VO, caption, watermark, CTA; `cues.ts` = frame saat sebuah kata diucapkan, untuk memicu animasi dari caption hasil alignment), `maps/` (`WorldMap`: peta dunia Natural Earth 1:50m, Mercator/globe, sorot negara, zoom `mixView`, busur `screenArc`), `camera/` (`CameraRig`: kamera 2.5D dengan keyframe, tracking `mixPose`, lapisan parallax `CamLayer` ber-`depth`/`blur`/`blend`, guncangan genggam, `beatKick`, motion blur), `brand/` (watermark, klip CTA, font), `audio/` (`Sfx`: efek suara pada frame cue), `captions/`, `motion.ts`. Jangan menaruh logika satu topik di sini.
 - `briefs/`: brief dan fakta per episode (`<episode>.json`).
-- `scripts/`: `doctor.ts` (cek lingkungan), `new-episode.ts`, `vo-fish.ts` (Fish Audio + loudness), `align-captions.ts` (whisper), `image-agnes.ts` (ilustrasi AI opsional), `check-episodes.ts`, `validate-facts.ts`; pengujian di `scripts/tests/`.
+- `scripts/`: `doctor.ts` (cek lingkungan), `new-episode.ts`, `vo-fish.ts` (Fish Audio + loudness), `align-captions.ts` (whisper), `image-agnes.ts` (ilustrasi AI opsional), `check-episodes.ts`, `validate-facts.ts`, `make-sfx.ts` (SFX sintesis + `public/sfx/LICENSES.json`); pengujian di `scripts/tests/`.
 - `.env`: kunci Fish Audio (`FISH_AUDIO_API_KEY`, `FISH_AUDIO_REFERENCE_ID`); jangan dicetak, disalin ke manifest, atau di-commit.
 - `docs/`: `brand/` (identitas dan panduan) serta dokumen per topik.
 - `public/`: aset runtime, dibaca lewat `staticFile()`: `brand/` dan `<topik>/`.
@@ -47,6 +47,7 @@ Keputusan pemilik (2026-11-07): font Poppins, pembuka narasi "SeFakta hari ini: 
 - Watermark selebar sekitar 18% frame, opacity 85%, di kanan atas.
 - Caption: agent memilih satu mode sesuai konsep visual episode — `ringkasan` (satu kalimat utuh 8–14 kata per scene), `subtitle` (kata per kata), atau `headline` — dan mencatatnya di brief (`captionMode`). Satu fokus baca pada satu waktu.
 - Penutup: klip CTA resmi `public/brand/cta-opsi1.mp4` (4 detik) diputar setelah jeda 1 dtk tanpa narasi (`CTA_HOLD_SECONDS`) dan transisi iris ±0,7 dtk dari frame fakta terakhir (`src/shared/brand/CtaClip.tsx`). Suaranya adalah **satu VO CTA bersama untuk semua episode**, `public/brand/cta-vo.mp3` ("Ikuti Sefakta! Fakta baru, tiap hari!", 3,1 dtk, -14 LUFS; diambil dari VO CTA episode Tambora) (`CTA_VO_FILE` di `src/shared/brand/ctaVoice.ts`). `npm run vo` tidak membuat CTA per episode. Jangan mengganti file ini untuk satu episode; bila narator brand berganti, buat ulang sekali untuk semua. Audio asli klip hanya dipakai bila file itu hilang; CTA tidak boleh bisu.
+- Audio: narator prioritas mix. SFX dan musik opsional; bila dipakai, hanya pada beat cerita (3–8 SFX per episode), tanpa lagu populer/trending, dan setiap file tercatat lisensinya di `public/sfx/LICENSES.json`. Aturan lengkap: `docs/brand/PANDUAN-AI-AGENT-PRODUKSI.md` §7.
 - Kecepatan VO default 1,1× (±150 kata/menit; `FISH_AUDIO_SPEED`). Jangan mempercepat VO untuk mengejar durasi; pangkas naskah.
 - Logo dan watermark tidak boleh diubah warna, diputar, atau diberi efek baru.
 - `docs/brand/cta-sefakta.tsx` adalah desain asli CTA (referensi brand); video memakai klip `cta-opsi1.mp4`.
@@ -63,7 +64,7 @@ Keputusan pemilik (2026-11-07): font Poppins, pembuka narasi "SeFakta hari ini: 
 ## Quality gate
 
 - Tidak ada error TypeScript, ESLint, atau bundle (`npm run quality`).
-- Episode lolos `npm run check:episodes`: VO sesuai naskah, loudness -14 ±1 LUFS dan true peak ≤ -1 dBTP, caption tersinkron dengan cakupan kata ≥ 90%, durasi cerita 55–65 dtk; sebelum tayang tidak ada visual placeholder (`--publish`).
+- Episode lolos `npm run check:episodes` (per episode: `-- --episode=<id>`): VO sesuai naskah, loudness -14 ±1 LUFS dan true peak ≤ -1 dBTP, caption tersinkron dengan cakupan kata ≥ 90%, durasi cerita 55–65 dtk; sebelum tayang tidak ada visual placeholder (`--publish`).
 - Fakta episode lolos `npm run validate:facts`; sebelum publikasi jalankan dengan `-- --publish`.
 - Tidak ada frame kosong yang tidak disengaja.
 - Copy tidak overflow dan hierarchy tetap jelas.

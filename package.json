@@ -17,11 +17,13 @@
     "vo": "node --env-file-if-exists=.env --no-warnings --experimental-strip-types scripts/vo-fish.ts",
     "image": "node --env-file-if-exists=.env --no-warnings --experimental-strip-types scripts/image-agnes.ts",
     "align": "node --no-warnings --experimental-strip-types scripts/align-captions.ts",
+    "sfx:make": "node --no-warnings --experimental-strip-types scripts/make-sfx.ts",
     "check:episodes": "node --no-warnings --experimental-strip-types scripts/check-episodes.ts",
     "lint": "eslint src",
     "bundle": "remotion bundle --out-dir=build --log=error",
     "quality": "npm run validate:facts && npm run check:episodes && npm run lint && tsc --noEmit && npm run bundle",
     "check:publish": "npm run validate:facts:online && npm run check:episodes -- --publish",
+    "check:publish:episode": "sh -c '[ \"$0\" != sh ] || { echo \"Pakai: npm run check:publish:episode -- <id-episode>\"; exit 1; }; npm run validate:facts:online -- --episode=$0 && npm run check:episodes -- --publish --episode=$0'",
     "build:pictogram": "remotion render FileDeletedPictogram out/file-deleted/file_deleted_pictogram.mp4"
   },
   "dependencies": {

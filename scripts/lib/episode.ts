@@ -96,3 +96,13 @@ export const normWords = (text: string): string[] =>
     .replace(/-/g, ' ')
     .split(/\s+/)
     .filter(Boolean);
+
+/** Rentang durasi cerita: 55–65 dtk, kecuali brief punya `storyDuration` (eksperimen per episode atas persetujuan
+ *  pemilik; bukan aturan umum). Batas wajar 30–65 dtk dan alasan wajib. */
+export const storyRange = (b: { storyDuration?: { min?: number; max?: number; reason?: string } }): { min: number; max: number; exception: string | null; problem: string | null } => {
+  const d = b.storyDuration;
+  if (!d) return { min: 55, max: 65, exception: null, problem: null };
+  const ok = typeof d.min === 'number' && typeof d.max === 'number' && d.min >= 30 && d.max <= 65 && d.min < d.max && typeof d.reason === 'string' && d.reason.trim().length > 0;
+  if (!ok) return { min: 55, max: 65, exception: null, problem: 'storyDuration harus { min, max, reason } dengan 30 ≤ min < max ≤ 65 dan alasan terisi' };
+  return { min: d.min!, max: d.max!, exception: `pengecualian durasi ${d.min}–${d.max} dtk: ${d.reason}`, problem: null };
+};

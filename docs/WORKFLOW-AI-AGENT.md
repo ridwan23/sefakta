@@ -29,7 +29,7 @@ Prinsip utama: **cegah kesalahan sebelum render, jangan menemukannya dengan coba
 | 7b | Ilustrasi AI (opsional) | `public/<id>/img/*.jpg` + `images.json` | dicek manusia, label "ILUSTRASI", maks. 1–2 scene (§7.5) |
 | 8 | Implementasi | `src/topics/<id>/scenes.tsx` | `tsc` + `eslint` bersih |
 | 9 | Verifikasi visual | still per cue + lembar kontak | daftar periksa §9.3 lolos |
-| 10 | Gerbang kualitas | — | `npm run quality` dan `npm run check:publish` 0 error |
+| 10 | Gerbang kualitas | — | `npm run quality` dan `npm run check:publish:episode -- <id>` 0 error |
 | 11 | Skor & serah terima | laporan | rubrik ≥ 14/16, tanpa nilai 0 |
 | 12 | Render (hanya bila diminta) | `out/<id>/*.mp4` | MP4 diperiksa ulang (§12) |
 
@@ -142,6 +142,7 @@ Isi `briefs/<id>.json`:
   - isi `tone` sesuai kecerahan latar;
   - `captionColors` bila palet default tidak cocok (validator mengecek kontras ≥ 4,5:1).
 - **`captionMode`:** `subtitle` untuk cerita bernarasi padat, `ringkasan` untuk visual yang ramai, `headline` untuk visual yang sangat sederhana. Mode `keypoint` dihapus (9 Nov 2026) karena membingungkan di visual; validator menolak brief yang masih punya `keypoints[]`.
+- **`storyDuration` (opsional, pengecualian):** `{ min, max, reason }` mengganti rentang 55–65 dtk untuk **satu** episode, hanya atas persetujuan pemilik (mis. eksperimen retensi). Batas 30–65 dtk, alasan wajib; validator selalu menampilkannya sebagai peringatan. Bukan aturan umum: jangan menyalinnya ke episode lain.
 - **CTA:** tidak diatur per episode. Semua episode memakai VO CTA bersama `public/brand/cta-vo.mp3`.
 
 Gerbang: `npm run validate:facts` 0 error.
@@ -277,6 +278,29 @@ Aturan:
 
 Gerbang: `npx tsc --noEmit` dan `npx eslint src` bersih.
 
+## 8.5 Sound design (opsional)
+
+Aturan lengkap ada di `docs/brand/PANDUAN-AI-AGENT-PRODUKSI.md` §7. Urutan kerja:
+
+1. Dari storyboard (§7.1), pilih 3–8 beat yang layak diberi bunyi. Tulis "bunyi ini menandai …" untuk setiap beat; yang tidak bisa dijelaskan, dibuang.
+2. Ambil SFX dari `public/sfx/` yang sudah tercatat di `LICENSES.json`. Bila belum ada, utamakan membuatnya: tambah rumus di `SOUNDS` pada `scripts/make-sfx.ts`, lalu `npm run sfx:make` (file + catatan lisensi otomatis). Bila perlu sumber luar (CC0/berlisensi), normalisasi lalu catat manual:
+   ```bash
+   # bunyi ≥ 3 dtk (ambience, musik -30 LUFS): normalisasi loudness
+   ffmpeg -i asli.wav -af loudnorm=I=-20:TP=-6 -ar 48000 public/sfx/<nama>.wav
+   # bunyi pendek (< 3 dtk, kebanyakan SFX): LUFS tidak andal, normalisasi puncak ke -6 dBFS
+   ffmpeg -i asli.wav -af volumedetect -f null - 2>&1 | grep max_volume   # mis. -1.5 dB → geser -4.5 dB agar puncak -6 dB
+   ffmpeg -i asli.wav -af volume=-4.5dB -ar 48000 public/sfx/<nama>.wav
+   ```
+3. Pasang di `scenes.tsx` dengan `<Sfx at={q.kata + n} file="…" />` (`src/shared/audio/Sfx.tsx`). Narasi Fish Audio hampir tanpa jeda antarkata: ambil waktu **akhir** kata kunci dari `captions.json` (`endMs`) dan taruh bunyi di sana, lalu geser animasi objek ke frame yang sama.
+4. Dengarkan scene yang diberi bunyi di Studio. Tanpa render video, mix bisa diukur dari audio saja:
+   ```bash
+   npx remotion render src/index.ts <CompId> /tmp/mix.wav --codec=wav
+   ffmpeg -i /tmp/mix.wav -af ebur128=peak=true -f null - 2>&1 | grep -A12 Summary   # I -14 ±1 LUFS
+   ```
+   Mengukur bukan mendengar: laporkan keduanya terpisah.
+
+Gerbang: `check:episodes` lolos (file SFX ada dan tercatat lisensinya, ≤ 8 per episode); jarak dan posisi SFX sesuai §7.1.
+
 ## 9. Verifikasi visual
 
 ### 9.1 Tentukan frame yang diperiksa
@@ -326,9 +350,15 @@ Perbaiki semua temuan dalam **satu putaran**, lalu render ulang hanya frame yang
 ## 10. Gerbang kualitas
 
 ```bash
-npm run quality         # fakta, episode, lint, tsc, bundle
-npm run check:publish   # sebelum tayang: validate:facts:online (kutipan verbatim di halaman sumber) + check:episodes --publish
+npm run quality                               # fakta, episode, lint, tsc, bundle (semua episode)
+npm run check:publish:episode -- <id>         # sebelum tayang, HANYA episode ini: validate:facts:online + check:episodes --publish
 ```
+
+**Gerbang publikasi berlaku per episode.** `npm run check:publish` (tanpa `:episode`) memeriksa semua brief sekaligus, jadi bisa gagal karena episode lain (mis. halaman sumber episode lama berubah). Itu bukan penghambat episode yang sedang dikerjakan.
+
+- Nyatakan episode siap berdasarkan hasil `check:publish:episode -- <id>`.
+- Bila `npm run quality` atau `check:publish` menemukan error di episode **lain**: jangan menjadikannya langkah, syarat, atau "yang perlu dicek" untuk episode ini, dan jangan memperbaikinya tanpa diminta. Tulis satu baris di bagian **"Di luar episode ini"** pada laporan (episode mana, jenis masalah), lalu lanjutkan.
+- `npm run quality` tetap harus lolos karena memeriksa kode bersama (lint, tsc, bundle). Bila gagal karena episode lain, sebutkan di bagian yang sama.
 
 `check:episodes` memeriksa:
 - VO sesuai naskah, loudness, dan true peak;
@@ -351,11 +381,14 @@ Fakta: n fakta, n sumber; validate:facts:online 0 error (cek manual: …)
 VO: kecepatan 1,1×, loudness …; salah ucap diperbaiki: …; perlu didengar: …
 Caption: cakupan …%; kata diinterpolasi: …
 Visual: still yang diperiksa: …; perbaikan: …
-Gerbang: quality ✓ · check:publish ✓
+Gerbang: quality ✓ · check:publish:episode ✓
 Skor: n/16 — Akurasi 2 (…), Hook …, …
 Belum dilakukan: render MP4 (menunggu permintaan), commit, tonton utuh dengan suara
 Preview: npm start → <CompId>
+Di luar episode ini (informasi, bukan tugas): … (kosongkan bila tidak ada)
 ```
+
+Urutkan laporan dari yang penting bagi episode ini. Hal yang perlu tindakan pengguna hanya yang menyangkut episode ini (mis. dengarkan scene tertentu, pilihan render).
 
 ## 12. Render (hanya bila pengguna meminta)
 
@@ -369,6 +402,7 @@ Periksa MP4-nya, karena preview bukan bukti hasil ekspor:
 - Loudness keseluruhan ±-14 LUFS (`ffmpeg -i out.mp4 -af ebur128 -f null -`).
 - Ambil 3–4 frame dari MP4 (`ffmpeg -ss <dtk> -frames:v 1`), termasuk tengah kata dan CTA.
 - Audio CTA terdengar di detik terakhir (`volumedetect` pada 4 dtk terakhir, bukan senyap).
+- Bila ada SFX/musik: dengarkan ulang beat yang diberi bunyi dan pastikan tidak ada kata yang tertutup; loudness keseluruhan tetap -14 ±1 LUFS dan true peak ≤ -1 dBTP.
 
 ## Kesalahan yang pernah terjadi dan pencegahannya
 

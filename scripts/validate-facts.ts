@@ -3,6 +3,7 @@
 //   npm run validate:facts                 # semua brief di briefs/ (mode draft)
 //   npm run validate:facts -- --publish    # mode publikasi: fakta belum terverifikasi = error
 //   npm run validate:facts -- --dir=path   # periksa folder lain (mis. untuk uji)
+//   npm run validate:facts -- --episode=<id>  # satu episode saja (briefs/<id>.json)
 //   npm run validate:facts:online          # = --publish --check-urls (butuh internet)
 //   opsi: --check-urls  buka setiap URL sumber: link hidup, tidak dialihkan ke host lain, `quote` tertulis verbatim
 //         --url-timeout=15000  batas waktu per URL (ms)
@@ -18,6 +19,7 @@
 //     peringatan (draft) / error (publish).
 //  5. Durasi total 55–65 detik; mode caption "ringkasan" = 8–14 kata per scene (mode "keypoint" sudah dihapus).
 // Exit code 1 bila ada error.
+import { storyRange } from './lib/episode.ts';
 import { existsSync, readdirSync, readFileSync } from 'node:fs';
 import { join, resolve } from 'node:path';
 import { pathToFileURL } from 'node:url';
@@ -203,7 +205,10 @@ export const validateBrief = (b: Json, file: string, forcePublish: boolean): Iss
   for (const [id, scenes] of contradicted) add('error', `facts (${id})`, `BERTENTANGAN dengan sumber tetapi masih dipakai di ${scenes.join(', ')}: ${facts.get(id)!.claim} ${facts.get(id)!.limits ?? ''}`.trim());
   for (const [id, scenes] of pending) add(unverified, `facts (${id})`, `belum terverifikasi, dipakai di ${scenes.join(', ')}: ${facts.get(id)!.claim}`);
   for (const id of facts.keys()) if (!used.has(id)) add('warn', `facts (${id})`, 'tidak dipakai scene mana pun');
-  if (total < 55 || total > 65) add(publish ? 'error' : 'warn', 'scenes', `total durasi ${total.toFixed(2)} dtk di luar 55–65 dtk`);
+  const range = storyRange(b);
+  if (range.problem) add('error', 'storyDuration', range.problem);
+  if (range.exception) add('warn', 'storyDuration', range.exception);
+  if (total < range.min || total > range.max) add(publish ? 'error' : 'warn', 'scenes', `total durasi ${total.toFixed(2)} dtk di luar ${range.min}–${range.max} dtk`);
   void file;
   return issues;
 };
@@ -317,7 +322,10 @@ const main = async () => {
   const timeoutMs = Number(args.find((a) => a.startsWith('--url-timeout='))?.slice(14) ?? 15000);
   const dir = args.find((a) => a.startsWith('--dir='))?.slice(6) ?? 'briefs';
   if (!existsSync(dir)) { console.log(`Folder ${dir}/ tidak ada: tidak ada brief untuk diperiksa.`); return 0; }
-  const files = readdirSync(dir).filter((f) => f.endsWith('.json') && !f.startsWith('_') && !f.startsWith('example'));
+  // --episode=<id>: periksa satu episode saja (masalah di episode lain tidak ikut menggagalkan episode ini)
+  const episode = args.find((a) => a.startsWith('--episode='))?.slice(10);
+  const files = readdirSync(dir).filter((f) => f.endsWith('.json') && !f.startsWith('_') && !f.startsWith('example') && (!episode || f === `${episode}.json`));
+  if (episode && files.length === 0) { console.log(`Brief ${dir}/${episode}.json tidak ada.`); return 1; }
   if (files.length === 0) { console.log(`Tidak ada brief di ${dir}/.`); return 0; }
   let errors = 0, warns = 0;
   for (const f of files) {

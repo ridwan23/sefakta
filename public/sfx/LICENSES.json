@@ -1,0 +1,52 @@
+[
+  {
+    "file": "hum-low.wav",
+    "sumber": "dibuat sendiri: scripts/make-sfx.ts (sintesis, tanpa sampel pihak ketiga)",
+    "pembuat": "SeFakta",
+    "lisensi": "milik SeFakta",
+    "atribusi": null,
+    "diakses": "2026-11-09",
+    "normalisasi": "puncak -6 dBFS, 48 kHz 16-bit mono",
+    "keterangan": "Dengung rendah singkat yang naik lalu memudar (nuansa ganjil); parsial 220–330 Hz agar terdengar di speaker ponsel"
+  },
+  {
+    "file": "notif-ting.wav",
+    "sumber": "dibuat sendiri: scripts/make-sfx.ts (sintesis, tanpa sampel pihak ketiga)",
+    "pembuat": "SeFakta",
+    "lisensi": "milik SeFakta",
+    "atribusi": null,
+    "diakses": "2026-11-09",
+    "normalisasi": "puncak -6 dBFS, 48 kHz 16-bit mono",
+    "keterangan": "Notifikasi ponsel dua nada (E6 → A6) dengan peluruhan lembut"
+  },
+  {
+    "file": "pop-soft.wav",
+    "sumber": "dibuat sendiri: scripts/make-sfx.ts (sintesis, tanpa sampel pihak ketiga)",
+    "pembuat": "SeFakta",
+    "lisensi": "milik SeFakta",
+    "atribusi": null,
+    "diakses": "2026-11-09",
+    "normalisasi": "puncak -6 dBFS, 48 kHz 16-bit mono",
+    "keterangan": "Pop lembut naik (sorotan/perhatian): nada meluncur 620 → 1240 Hz dengan kilau oktaf"
+  },
+  {
+    "file": "stamp-thud.wav",
+    "sumber": "dibuat sendiri: scripts/make-sfx.ts (sintesis, tanpa sampel pihak ketiga)",
+    "pembuat": "SeFakta",
+    "lisensi": "milik SeFakta",
+    "atribusi": null,
+    "diakses": "2026-11-09",
+    "normalisasi": "puncak -6 dBFS, 48 kHz 16-bit mono",
+    "keterangan": "Ketukan stempel: dentum rendah dengan nada turun + derau ketukan singkat"
+  },
+  {
+    "file": "toggle-click.wav",
+    "sumber": "dibuat sendiri: scripts/make-sfx.ts (sintesis, tanpa sampel pihak ketiga)",
+    "pembuat": "SeFakta",
+    "lisensi": "milik SeFakta",
+    "atribusi": null,
+    "diakses": "2026-11-09",
+    "normalisasi": "puncak -6 dBFS, 48 kHz 16-bit mono",
+    "keterangan": "Klik sakelar UI: dua klik pendek bernada (tekan dan lepas)"
+  }
+]

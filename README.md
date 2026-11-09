@@ -83,7 +83,8 @@ npm run vo -- --brief=briefs/tambora-1815.json           # Fish Audio → public
 npm run align -- --brief=briefs/tambora-1815.json        # whisper → caption tersinkron
 # buat visual per scene di src/topics/tambora-1815/scenes.tsx, pratinjau: npm start
 npm run quality                                          # fakta, episode, ESLint, tsc, bundle
-npm run check:publish                                    # sebelum tayang: URL sumber + tanpa placeholder
+npm run check:publish:episode -- tambora-1815           # sebelum tayang, satu episode: URL sumber + tanpa placeholder
+npm run check:publish                                    # semua episode sekaligus
 ```
 
 Komponen reusable untuk visual: `src/shared/maps/WorldMap.tsx` (peta dunia/globe dengan sorotan negara, zoom, busur) dan `src/shared/episode/cues.ts` (`cueFrames`: picu animasi tepat saat kata diucapkan).
