@@ -1,0 +1,110 @@
+{
+  "lucide:arrow-right": {
+    "set": "lucide",
+    "name": "arrow-right",
+    "license": "ISC",
+    "source": "lucide-static@1.72.0",
+    "viewBox": "0 0 24 24",
+    "kind": "stroke",
+    "body": "<path pathLength=\"1\" d=\"M5 12h14\"/><path pathLength=\"1\" d=\"m12 5 7 7-7 7\"/>"
+  },
+  "lucide:atom": {
+    "set": "lucide",
+    "name": "atom",
+    "license": "ISC",
+    "source": "lucide-static@1.72.0",
+    "viewBox": "0 0 24 24",
+    "kind": "stroke",
+    "body": "<circle pathLength=\"1\" cx=\"12\" cy=\"12\" r=\"1\"/><path pathLength=\"1\" d=\"M20.2 20.2c2.04-2.03.02-7.36-4.5-11.9-4.54-4.52-9.87-6.54-11.9-4.5-2.04 2.03-.02 7.36 4.5 11.9 4.54 4.52 9.87 6.54 11.9 4.5Z\"/><path pathLength=\"1\" d=\"M15.7 15.7c4.52-4.54 6.54-9.87 4.5-11.9-2.03-2.04-7.36-.02-11.9 4.5-4.52 4.54-6.54 9.87-4.5 11.9 2.03 2.04 7.36.02 11.9-4.5Z\"/>"
+  },
+  "lucide:candy": {
+    "set": "lucide",
+    "name": "candy",
+    "license": "ISC",
+    "source": "lucide-static@1.72.0",
+    "viewBox": "0 0 24 24",
+    "kind": "stroke",
+    "body": "<path pathLength=\"1\" d=\"M10 7v10.9\"/><path pathLength=\"1\" d=\"M14 6.1V17\"/><path pathLength=\"1\" d=\"M16 7V3a1 1 0 0 1 1.707-.707 2.5 2.5 0 0 0 2.152.717 1 1 0 0 1 1.131 1.131 2.5 2.5 0 0 0 .717 2.152A1 1 0 0 1 21 8h-4\"/><path pathLength=\"1\" d=\"M16.536 7.465a5 5 0 0 0-7.072 0l-2 2a5 5 0 0 0 0 7.07 5 5 0 0 0 7.072 0l2-2a5 5 0 0 0 0-7.07\"/><path pathLength=\"1\" d=\"M8 17v4a1 1 0 0 1-1.707.707 2.5 2.5 0 0 0-2.152-.717 1 1 0 0 1-1.131-1.131 2.5 2.5 0 0 0-.717-2.152A1 1 0 0 1 3 16h4\"/>"
+  },
+  "lucide:check": {
+    "set": "lucide",
+    "name": "check",
+    "license": "ISC",
+    "source": "lucide-static@1.72.0",
+    "viewBox": "0 0 24 24",
+    "kind": "stroke",
+    "body": "<path pathLength=\"1\" d=\"M20 6 9 17l-5-5\"/>"
+  },
+  "lucide:cpu": {
+    "set": "lucide",
+    "name": "cpu",
+    "license": "ISC",
+    "source": "lucide-static@1.72.0",
+    "viewBox": "0 0 24 24",
+    "kind": "stroke",
+    "body": "<path pathLength=\"1\" d=\"M12 20v2\"/><path pathLength=\"1\" d=\"M12 2v2\"/><path pathLength=\"1\" d=\"M17 20v2\"/><path pathLength=\"1\" d=\"M17 2v2\"/><path pathLength=\"1\" d=\"M2 12h2\"/><path pathLength=\"1\" d=\"M2 17h2\"/><path pathLength=\"1\" d=\"M2 7h2\"/><path pathLength=\"1\" d=\"M20 12h2\"/><path pathLength=\"1\" d=\"M20 17h2\"/><path pathLength=\"1\" d=\"M20 7h2\"/><path pathLength=\"1\" d=\"M7 20v2\"/><path pathLength=\"1\" d=\"M7 2v2\"/><rect pathLength=\"1\" x=\"4\" y=\"4\" rx=\"2\"/><rect pathLength=\"1\" x=\"8\" y=\"8\" rx=\"1\"/>"
+  },
+  "lucide:flask-conical": {
+    "set": "lucide",
+    "name": "flask-conical",
+    "license": "ISC",
+    "source": "lucide-static@1.72.0",
+    "viewBox": "0 0 24 24",
+    "kind": "stroke",
+    "body": "<path pathLength=\"1\" d=\"M14 2v6a2 2 0 0 0 .245.96l5.51 10.08A2 2 0 0 1 18 22H6a2 2 0 0 1-1.755-2.96l5.51-10.08A2 2 0 0 0 10 8V2\"/><path pathLength=\"1\" d=\"M6.453 15h11.094\"/><path pathLength=\"1\" d=\"M8.5 2h7\"/>"
+  },
+  "lucide:globe": {
+    "set": "lucide",
+    "name": "globe",
+    "license": "ISC",
+    "source": "lucide-static@1.72.0",
+    "viewBox": "0 0 24 24",
+    "kind": "stroke",
+    "body": "<circle pathLength=\"1\" cx=\"12\" cy=\"12\" r=\"10\"/><path pathLength=\"1\" d=\"M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20\"/><path pathLength=\"1\" d=\"M2 12h20\"/>"
+  },
+  "lucide:leaf": {
+    "set": "lucide",
+    "name": "leaf",
+    "license": "ISC",
+    "source": "lucide-static@1.72.0",
+    "viewBox": "0 0 24 24",
+    "kind": "stroke",
+    "body": "<path pathLength=\"1\" d=\"M11 20a10 10 0 0010-10 25.9 25.9 0 00-1.04-7.281 1 1 0 00-1.755-.325C15.833 5.5 13 5.5 9.8 6.1A7 7 0 0011 20\"/><path pathLength=\"1\" d=\"M2 21a5 5 0 012.911-4.544C7.613 15.212 8.351 15.24 11 13\"/>"
+  },
+  "lucide:scale": {
+    "set": "lucide",
+    "name": "scale",
+    "license": "ISC",
+    "source": "lucide-static@1.72.0",
+    "viewBox": "0 0 24 24",
+    "kind": "stroke",
+    "body": "<path pathLength=\"1\" d=\"M12 3v18\"/><path pathLength=\"1\" d=\"m19 8 3 8a5 5 0 0 1-6 0zV7\"/><path pathLength=\"1\" d=\"M3 7h1a17 17 0 0 0 8-2 17 17 0 0 0 8 2h1\"/><path pathLength=\"1\" d=\"m5 8 3 8a5 5 0 0 1-6 0zV7\"/><path pathLength=\"1\" d=\"M7 21h10\"/>"
+  },
+  "lucide:x": {
+    "set": "lucide",
+    "name": "x",
+    "license": "ISC",
+    "source": "lucide-static@1.72.0",
+    "viewBox": "0 0 24 24",
+    "kind": "stroke",
+    "body": "<path pathLength=\"1\" d=\"M18 6 6 18\"/><path pathLength=\"1\" d=\"m6 6 12 12\"/>"
+  },
+  "phosphor:leaf": {
+    "set": "phosphor",
+    "name": "leaf",
+    "license": "MIT",
+    "source": "@phosphor-icons/core@2.1.1",
+    "viewBox": "0 0 256 256",
+    "kind": "fill",
+    "body": "<path d=\"M223.45,40.07a8,8,0,0,0-7.52-7.52C139.8,28.08,78.82,51,52.82,94a87.09,87.09,0,0,0-12.76,49c.57,15.92,5.21,32,13.79,47.85l-19.51,19.5a8,8,0,0,0,11.32,11.32l19.5-19.51C81,210.73,97.09,215.37,113,215.94q1.67.06,3.33.06A86.93,86.93,0,0,0,162,203.18C205,177.18,227.93,116.21,223.45,40.07ZM153.75,189.5c-22.75,13.78-49.68,14-76.71.77l88.63-88.62a8,8,0,0,0-11.32-11.32L65.73,179c-13.19-27-13-54,.77-76.71,22.09-36.47,74.6-56.44,141.31-54.06C210.2,114.89,190.22,167.41,153.75,189.5Z\"/>"
+  },
+  "phosphor:leaf-fill": {
+    "set": "phosphor",
+    "name": "leaf-fill",
+    "license": "MIT",
+    "source": "@phosphor-icons/core@2.1.1",
+    "viewBox": "0 0 256 256",
+    "kind": "fill",
+    "body": "<path d=\"M223.45,40.07a8,8,0,0,0-7.52-7.52C139.8,28.08,78.82,51,52.82,94a87.09,87.09,0,0,0-12.76,49A101.72,101.72,0,0,0,46.7,175.2a4,4,0,0,0,6.61,1.43l85-86.3a8,8,0,0,1,11.32,11.32L56.74,195.94,42.55,210.13a8.2,8.2,0,0,0-.6,11.1,8,8,0,0,0,11.71.43l16.79-16.79c14.14,6.84,28.41,10.57,42.56,11.07q1.67.06,3.33.06A86.93,86.93,0,0,0,162,203.18C205,177.18,227.93,116.21,223.45,40.07Z\"/>"
+  }
+}

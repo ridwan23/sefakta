@@ -21,6 +21,7 @@
     "check:episodes": "node --no-warnings --experimental-strip-types scripts/check-episodes.ts",
     "motion:check": "node --no-warnings --experimental-strip-types scripts/motion-check.ts",
     "font:add": "node --no-warnings --experimental-strip-types scripts/font-add.ts",
+    "icon:add": "node --no-warnings --experimental-strip-types scripts/icon-add.ts",
     "model:add": "node --no-warnings --experimental-strip-types scripts/model-add.ts",
     "lint": "eslint src",
     "bundle": "remotion bundle --out-dir=build --log=error",
