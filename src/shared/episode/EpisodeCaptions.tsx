@@ -34,7 +34,7 @@ const Subtitle: React.FC<{ scene: TimelineScene; style: VisualStyle }> = ({ scen
   const page = pages.find((p, i) => ms >= p.startMs && ms < (pages[i + 1]?.startMs ?? p.startMs + p.durationMs + 400));
   if (!page) return null;
   return (
-    <div style={box}>
+    <div data-layout-ignore style={box}>
       <div style={text}>
         {page.tokens.map((t, i) => {
           const active = ms >= t.fromMs && ms < t.toMs;
@@ -55,13 +55,13 @@ export const SceneCaption: React.FC<{ scene: TimelineScene; mode: CaptionMode; s
   if (mode === 'subtitle') return scene.captions ? <Subtitle scene={scene} style={style} /> : null; // belum diselaraskan: tidak menampilkan perkiraan
   if (mode === 'ringkasan') {
     return scene.caption ? (
-      <div style={box}>
+      <div data-layout-ignore style={box}>
         <div style={text}>{scene.caption}</div>
       </div>
     ) : null;
   }
   return scene.headline ? (
-    <AbsoluteFill style={{ alignItems: 'center', paddingTop: 300 }}>
+    <AbsoluteFill data-layout-ignore style={{ alignItems: 'center', paddingTop: 300 }}>
       <div style={{ ...text, fontSize: 84, maxWidth: 900 }}>{scene.headline}</div>
     </AbsoluteFill>
   ) : null;

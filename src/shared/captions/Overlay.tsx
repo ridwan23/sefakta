@@ -73,7 +73,7 @@ const Captions: React.FC<{ f: number; theme: Theme; lines: CaptionLine[] }> = ({
   const page = Math.floor(cur / 9);
   const shown = spans.slice(page * 9, page * 9 + 9);
   return (
-    <div style={{ position: 'absolute', left: 60, right: 60, bottom: 230, display: 'flex', justifyContent: 'center' }}>
+    <div data-layout-ignore style={{ position: 'absolute', left: 60, right: 60, bottom: 230, display: 'flex', justifyContent: 'center' }}>
       <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '6px 14px', fontFamily: FONT, fontWeight: 900, fontSize: 58, lineHeight: 1.2, textAlign: 'center' }}>
         {shown.map((s, i) => {
           const active = f >= s.a && f < s.b;
