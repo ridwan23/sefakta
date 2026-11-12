@@ -1,0 +1,260 @@
+{
+  "projectId": "stevia-isi-sachet",
+  "title": "Sebungkus Stevia, Isinya Stevia?",
+  "series": "Tubuh",
+  "status": "draft",
+  "captionMode": "subtitle",
+  "visualStyle": {
+    "name": "Label dapur terang: sachet, butiran, dan daftar komposisi di atas krem",
+    "reason": "Topik viral sehari-hari: pemanis stevia yang kita tuang ke kopi dan teh. Latar krem terang dengan sachet, sendok, dan butiran membuat penonton langsung mengenali bendanya. Stevia selalu hijau daun dengan garis penuh; bahan pengisi digambar sebagai butiran putih/abu dengan garis putus-putus, jadi 'stevia' dan 'pengisi' tetap dibedakan tanpa warna. Kuning Fakta hanya untuk satu penanda per beat (urutan pertama di daftar komposisi), selalu sebagai isian dengan teks gelap.",
+    "tone": "light",
+    "palette": [
+      "#F6F1E7",
+      "#FFFFFF",
+      "#14213D",
+      "#2E8B57",
+      "#8A94A6",
+      "#FFB000",
+      "#C2410C"
+    ]
+  },
+  "scenes": [
+    {
+      "id": "hook",
+      "durationSeconds": 7,
+      "voiceoverText": "Stevia lagi ramai dibahas. Tapi sebungkus pemanis stevia, isinya bisa jadi kebanyakan bukan stevia. Lalu, apa isinya?",
+      "caption": "",
+      "headline": "Isinya stevia?",
+      "visual": "Frame 0: sachet hijau bertuliskan STEVIA di tengah, sedikit miring. 'sebungkus': sachet terbuka dan tampak penampang isinya. 'kebanyakan': isi terbagi: lapisan putih besar (garis putus-putus) dan lapisan hijau tipis. 'apa': tanda tanya di atas lapisan putih. Kamera terkunci. SFX: pop-soft.wav saat penampang terbuka.",
+      "factIds": [
+        "f-pengisi",
+        "f-label"
+      ]
+    },
+    {
+      "id": "konteks",
+      "durationSeconds": 13,
+      "voiceoverText": "Stevia berasal dari daun tanaman asli Amerika Selatan. Penduduk di sana sudah berabad-abad memakai daunnya sebagai pemanis. Manisnya datang dari senyawa bernama steviol glikosida. Senyawa ini ratusan kali lebih manis daripada gula pasir.",
+      "caption": "",
+      "headline": "Ratusan kali lebih manis",
+      "visual": "Tangkai stevia besar tumbuh di tengah. 'Amerika': label kecil AMERIKA SELATAN + siluet benua. 'steviol': daun dibelah, muncul ikon molekul hijau berlabel STEVIOL GLIKOSIDA. 'ratusan': timbangan rasa: satu butir hijau vs tumpukan gula; label 200–400× LEBIH MANIS. Kamera terkunci.",
+      "factIds": [
+        "f-manis"
+      ]
+    },
+    {
+      "id": "mekanisme",
+      "durationSeconds": 13,
+      "voiceoverText": "Karena sangat manis, stevia yang dibutuhkan cuma sedikit sekali. Sejumput kecil saja sudah bisa semanis sesendok gula. Supaya bentuk dan takarannya mirip gula, banyak produsen menambahkan bahan pengisi. Misalnya eritritol, dekstrosa, atau maltodekstrin.",
+      "caption": "",
+      "headline": "Ditambah bahan pengisi",
+      "visual": "Sendok gula di kiri, sejumput hijau di kanan (timbangan seimbang). 'pengisi': sachet kosong di tengah, sejumput hijau masuk lebih dulu (lapisan tipis), lalu tiga lapisan pengisi mengalir masuk satu per satu dengan label ERITRITOL, DEKSTROSA, MALTODEKSTRIN pada kata masing-masing. Kamera terkunci. SFX: toggle-click.wav saat sachet penuh.",
+      "factIds": [
+        "f-manis",
+        "f-pengisi"
+      ]
+    },
+    {
+      "id": "kalori",
+      "durationSeconds": 12,
+      "voiceoverText": "Bahan pengisi inilah yang bisa menambah kalori. Enzim pencernaan kita tidak bisa mengurai steviol glikosida, sehingga praktis tanpa kalori. Tapi dekstrosa dan maltodekstrin adalah karbohidrat. Keduanya tetap menyumbang kalori.",
+      "caption": "",
+      "headline": "Pengisi bisa berkalori",
+      "visual": "Dua jalur dari sachet ke ikon tubuh/usus sederhana. 'Enzim'/'steviol': jalur hijau putus-putus melewati usus tanpa diurai, berakhir di label ≈ 0 KKAL. 'dekstrosa': jalur abu penuh masuk ke usus, berubah jadi butir GLUKOSA. 'menyumbang': label KALORI menyala (isian oranye, teks gelap). Kamera terkunci. SFX: stamp-thud.wav saat label KALORI.",
+      "factIds": [
+        "f-kalori",
+        "f-pengisi"
+      ]
+    },
+    {
+      "id": "jawaban",
+      "durationSeconds": 15.2,
+      "voiceoverText": "Cara mengeceknya, baca daftar komposisi di kemasan. Di Indonesia, bahan wajib ditulis berurutan dari yang terbanyak. Kalau bahan pengisi ada di urutan pertama, itulah isi terbanyaknya. Jadi, tulisan stevia di depan kemasan belum tentu isi utamanya.",
+      "caption": "",
+      "headline": "Baca urutan komposisi",
+      "visual": "Sachet berputar ke sisi belakang: panel KOMPOSISI dengan daftar bernomor (1. Dekstrosa, 2. Maltodekstrin, 3. Ekstrak daun stevia) dan panah TERBANYAK → TERSEDIKIT. 'pertama': tag kuning (teks gelap) di baris 1. 'depan': sachet berbalik ke depan, tulisan STEVIA besar vs lapisan isi (komposisi pembuka) untuk loop. Kamera terkunci. Daftar komposisi adalah contoh ilustrasi, bukan produk nyata. LOOP tanpa CTA (keputusan pemilik 2026-11-11): setelah narasi selesai, jendela sachet menutup, penanda STEVIA/?/cincin hilang, tag ISINYA STEVIA? muncul; frame terakhir identik dengan frame 0 hook.",
+      "factIds": [
+        "f-label",
+        "f-pengisi"
+      ]
+    }
+  ],
+  "facts": [
+    {
+      "id": "f-manis",
+      "claim": "Stevia diekstrak dari daun Stevia rebaudiana, tanaman asli Amerika Selatan yang daunnya dipakai sebagai pemanis sejak berabad-abad. Rasa manisnya berasal dari steviol glikosida yang dilaporkan 200–400 kali lebih manis daripada gula pasir, sehingga hanya dibutuhkan sedikit sekali untuk menyamai rasa manis gula.",
+      "kind": "fakta",
+      "status": "terverifikasi",
+      "figures": [
+        {
+          "text": "200",
+          "value": 200
+        },
+        {
+          "text": "400",
+          "value": 400
+        }
+      ],
+      "sources": [
+        {
+          "title": "Aspartame and Other Sweeteners in Food",
+          "url": "https://www.fda.gov/food/food-additives-petitions/aspartame-and-other-sweeteners-food",
+          "publisher": "U.S. Food and Drug Administration",
+          "origin": "FDA (regulator AS)",
+          "primary": true,
+          "accessed": "2026-11-11",
+          "quote": "a plant native to parts of South America and commonly known as Stevia. They are reported to be 200 to 400 times sweeter than table sugar."
+        },
+        {
+          "title": "Low-Calorie Sweeteners",
+          "url": "https://nutritionsource.hsph.harvard.edu/healthy-drinks/artificial-sweeteners/",
+          "publisher": "The Nutrition Source, Harvard T.H. Chan School of Public Health",
+          "origin": "Harvard T.H. Chan School of Public Health",
+          "primary": false,
+          "accessed": "2026-11-11",
+          "quote": "At 200-400 times sweeter than sugar, the Acceptable Daily Intake is 9 packets daily."
+        },
+        {
+          "title": "Is It OK To Use Stevia in My Morning Coffee, Smoothie and More?",
+          "url": "https://health.clevelandclinic.org/what-is-stevia",
+          "publisher": "Cleveland Clinic",
+          "origin": "Cleveland Clinic",
+          "primary": false,
+          "accessed": "2026-11-11",
+          "quote": "People in South America have used this bushy, shrub-like herb’s leaves for centuries."
+        },
+        {
+          "title": "Stevia Bisa Berkalori Jika Dicampur Bahan Ini, Kata Dokter Gizi (hal. 1)",
+          "url": "https://lifestyle.kompas.com/read/2026/11/05/120200220/stevia-bisa-berkalori-jika-dicampur-bahan-ini-kata-dokter-gizi",
+          "publisher": "Kompas.com (wawancara dr. Christopher Andrian, Sp.GK)",
+          "origin": "Kompas.com / dokter spesialis gizi klinik",
+          "primary": false,
+          "accessed": "2026-11-11",
+          "quote": "Senyawa ini memiliki tingkat kemanisan sekitar 200–300 kali lebih tinggi dibandingkan gula pasir atau sukrosa. Artinya, kita hanya membutuhkan sedikit sekali stevia untuk mendapatkan rasa manis yang setara dengan gula biasa"
+        }
+      ],
+      "limits": "Narasi memakai 'ratusan kali' karena angka antarsumber berbeda (FDA/Harvard 200–400×, dokter gizi Kompas 200–300×, Wikipedia 50–300× tergantung jenis glikosida); layar menulis 200–400× sesuai FDA. 'Sejumput semanis sesendok gula' adalah penyederhanaan ilustratif dari 'sedikit sekali stevia ... setara dengan gula biasa', bukan takaran terukur. 'Amerika Selatan' mengikuti FDA; Wikipedia menyebut Paraguay dan Brasil."
+    },
+    {
+      "id": "f-pengisi",
+      "claim": "Sebagian produk pemanis stevia di pasaran dicampur bahan pengisi/pembentuk volume, misalnya eritritol, maltodekstrin, atau dekstrosa, selain ekstrak stevia.",
+      "kind": "fakta",
+      "status": "terverifikasi",
+      "figures": [],
+      "sources": [
+        {
+          "title": "Stevia Bisa Berkalori Jika Dicampur Bahan Ini, Kata Dokter Gizi (hal. 2)",
+          "url": "https://lifestyle.kompas.com/read/2026/11/05/120200220/stevia-bisa-berkalori-jika-dicampur-bahan-ini-kata-dokter-gizi?page=2",
+          "publisher": "Kompas.com (wawancara dr. Christopher Andrian, Sp.GK)",
+          "origin": "Kompas.com / dokter spesialis gizi klinik",
+          "primary": false,
+          "accessed": "2026-11-11",
+          "quote": "Ada produk pemanis stevia yang dicampur dengan bahan tambahan atau bahan pengisi, seperti maltodekstrin dan dekstrosa."
+        },
+        {
+          "title": "Stevia Bisa Berkalori Jika Dicampur Bahan Ini, Kata Dokter Gizi (hal. 2, pembentuk volume)",
+          "url": "https://lifestyle.kompas.com/read/2026/11/05/120200220/stevia-bisa-berkalori-jika-dicampur-bahan-ini-kata-dokter-gizi?page=2",
+          "publisher": "Kompas.com (wawancara dr. Christopher Andrian, Sp.GK)",
+          "origin": "Kompas.com / dokter spesialis gizi klinik",
+          "primary": false,
+          "accessed": "2026-11-11",
+          "quote": "banyak produsen yang mencampurkan bahan pengikat atau pembentuk volume tambahan untuk menyiasati tekstur pemanis buatan mereka"
+        },
+        {
+          "title": "Truvia",
+          "url": "https://en.wikipedia.org/wiki/Truvia",
+          "publisher": "Wikipedia",
+          "origin": "Wikipedia (mengacu situs produk Truvia/Cargill)",
+          "primary": false,
+          "accessed": "2026-11-11",
+          "quote": "Truvia ingredients include erythritol (a sugar alcohol), stevia leaf extract, and natural flavorings."
+        }
+      ],
+      "limits": "Tidak semua produk stevia memakai pengisi (ada ekstrak cair/murni); narasi memakai 'banyak produsen' dan 'bisa jadi kebanyakan bukan stevia'. Hook 'kebanyakan bukan stevia' bersandar pada gabungan f-pengisi dan f-label (bahan pertama = terbanyak), bukan pada pengukuran produk tertentu. Episode tidak menyebut merek mana pun; kasus Beeru Stevia (Okt 2026) masih diuji BPOM saat episode dibuat, jadi tidak dibahas. Truvia hanya sumber pendukung contoh campuran eritritol."
+    },
+    {
+      "id": "f-kalori",
+      "claim": "Enzim pencernaan manusia tidak mengurai steviol glikosida, sehingga stevia murni praktis tanpa kalori. Bahan pengisi karbohidrat seperti maltodekstrin dan dekstrosa tetap menyumbang karbohidrat dan kalori.",
+      "kind": "fakta",
+      "status": "terverifikasi",
+      "figures": [],
+      "sources": [
+        {
+          "title": "Stevia",
+          "url": "https://en.wikipedia.org/wiki/Stevia",
+          "publisher": "Wikipedia",
+          "origin": "Wikipedia (artikel Stevia, mengacu tinjauan metabolisme)",
+          "primary": false,
+          "accessed": "2026-11-11",
+          "quote": "Humans cannot metabolize the glycosides in stevia, and it therefore has zero calories."
+        },
+        {
+          "title": "Stevia Bisa Berkalori Jika Dicampur Bahan Ini, Kata Dokter Gizi (hal. 2, stevia murni)",
+          "url": "https://lifestyle.kompas.com/read/2026/11/05/120200220/stevia-bisa-berkalori-jika-dicampur-bahan-ini-kata-dokter-gizi?page=2",
+          "publisher": "Kompas.com (wawancara dr. Christopher Andrian, Sp.GK)",
+          "origin": "Kompas.com / dokter spesialis gizi klinik",
+          "primary": false,
+          "accessed": "2026-11-11",
+          "quote": "praktis tidak mengandung kalori maupun karbohidrat seperti gula pasir"
+        },
+        {
+          "title": "Stevia Bisa Berkalori Jika Dicampur Bahan Ini, Kata Dokter Gizi (hal. 2, bahan pengisi)",
+          "url": "https://lifestyle.kompas.com/read/2026/11/05/120200220/stevia-bisa-berkalori-jika-dicampur-bahan-ini-kata-dokter-gizi?page=2",
+          "publisher": "Kompas.com (wawancara dr. Christopher Andrian, Sp.GK)",
+          "origin": "Kompas.com / dokter spesialis gizi klinik",
+          "primary": false,
+          "accessed": "2026-11-11",
+          "quote": "Bahan-bahan tersebut tetap bisa menyumbang karbohidrat dan kalori"
+        },
+        {
+          "title": "Maltodextrin",
+          "url": "https://en.wikipedia.org/wiki/Maltodextrin",
+          "publisher": "Wikipedia",
+          "origin": "Wikipedia (artikel Maltodextrin)",
+          "primary": false,
+          "accessed": "2026-11-11",
+          "quote": "Maltodextrins are digested into glucose units, contributing a food energy value of 4 calories per gram"
+        }
+      ],
+      "limits": "Penyederhanaan: enzim manusia tidak mengurai steviol glikosida di saluran cerna atas; bakteri usus besar kemudian mengurainya menjadi steviol yang diserap, diolah hati, dan dibuang lewat urin (tinjauan PMC13305536, dicek manual 2026-11-11 karena PMC tidak terjangkau validator: 'enzymes and acid present in the upper gastrointestinal tract do not hydrolyze steviol glycosides'). Karena itu narasi memakai 'enzim pencernaan kita', bukan 'tubuh tidak menyerap sama sekali'. Eritritol hampir tanpa kalori, jadi narasi kalori hanya menyebut dekstrosa dan maltodekstrin. Jumlah kalori per sachet tidak disebut karena bergantung produk."
+    },
+    {
+      "id": "f-label",
+      "claim": "Di Indonesia, bahan pada daftar komposisi label pangan olahan dicantumkan berurutan dari jumlah terbesar ke terkecil (prinsip yang sama berlaku di aturan label FDA AS), sehingga bahan di urutan pertama adalah bahan terbanyak.",
+      "kind": "fakta",
+      "status": "terverifikasi",
+      "figures": [],
+      "sources": [
+        {
+          "title": "Komposisi kandungan produk pangan di label diurutkan dari terbesar",
+          "url": "https://www.antaranews.com/berita/2562781/komposisi-kandungan-produk-pangan-di-label-diurutkan-dari-terbesar",
+          "publisher": "ANTARA News (pernyataan BPOM)",
+          "origin": "BPOM (pernyataan pejabat via ANTARA)",
+          "primary": true,
+          "accessed": "2026-11-11",
+          "quote": "Untuk penulisan pada komposisi diurutkan dari komposisi terbesar baru diikuti sampai yang terkecil."
+        },
+        {
+          "title": "Contoh Label Pangan Olahan: Ketentuan",
+          "url": "https://rumahsiripo.pom.go.id/peraturan/label/contoh-label-pangan-olahan/ketentuan",
+          "publisher": "BPOM (Siripo)",
+          "origin": "BPOM (Siripo)",
+          "primary": true,
+          "accessed": "2026-11-11",
+          "quote": "Nama bahan tidak urut dari jumlah terbesar"
+        },
+        {
+          "title": "21 CFR 101.4 Food; designation of ingredients",
+          "url": "https://www.ecfr.gov/current/title-21/chapter-I/subchapter-B/part-101/subpart-A/section-101.4",
+          "publisher": "Electronic Code of Federal Regulations (FDA)",
+          "origin": "FDA (regulasi label AS)",
+          "primary": true,
+          "accessed": "2026-11-11",
+          "quote": "shall be listed by common or usual name in descending order of predominance by weight"
+        }
+      ],
+      "limits": "Dasar hukum Indonesia: PP 69/1999 Pasal 19 dan Peraturan BPOM 31/2018 (dikecualikan vitamin, mineral, zat gizi tambahan); PDF tidak dapat dicek otomatis. Siripo BPOM mencantumkan urutan yang salah sebagai pelanggaran label (sumber kedua dari lembaga yang sama). eCFR menjadi konfirmasi independen prinsip urutan berat, tetapi untuk aturan AS. Daftar komposisi di layar adalah contoh ilustrasi, bukan produk nyata."
+    }
+  ],
+  "numbersIgnored": []
+}

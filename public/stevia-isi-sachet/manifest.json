@@ -1,0 +1,66 @@
+{
+  "projectId": "stevia-isi-sachet",
+  "sourceBrief": "stevia-isi-sachet.json",
+  "provider": "fish-audio",
+  "model": "s2.1-pro-free",
+  "voice": "e4194d6e3a95",
+  "loudnessTarget": -14,
+  "generatedAt": "2026-11-11T15:47:18.629Z",
+  "scenes": [
+    {
+      "id": "hook",
+      "file": "stevia-isi-sachet/vo/hook.mp3",
+      "text": "Stevia lagi ramai dibahas. Tapi sebungkus pemanis stevia, isinya bisa jadi kebanyakan bukan stevia. Lalu, apa isinya?",
+      "speed": 1,
+      "hash": "fa5a0f72fdd8",
+      "voice": "e4194d6e3a95",
+      "audioSeconds": 7.549,
+      "lufs": -14.5,
+      "truePeak": -2.1
+    },
+    {
+      "id": "konteks",
+      "file": "stevia-isi-sachet/vo/konteks.mp3",
+      "text": "Stevia berasal dari daun tanaman asli Amerika Selatan. Penduduk di sana sudah berabad-abad memakai daunnya sebagai pemanis. Manisnya datang dari senyawa bernama steviol glikosida. Senyawa ini ratusan kali lebih manis daripada gula pasir.",
+      "speed": 1,
+      "hash": "4f4df6fdd97d",
+      "voice": "e4194d6e3a95",
+      "audioSeconds": 13.166,
+      "lufs": -14.2,
+      "truePeak": -1.7
+    },
+    {
+      "id": "mekanisme",
+      "file": "stevia-isi-sachet/vo/mekanisme.mp3",
+      "text": "Karena sangat manis, stevia yang dibutuhkan cuma sedikit sekali. Sejumput kecil saja sudah bisa semanis sesendok gula. Supaya bentuk dan takarannya mirip gula, banyak produsen menambahkan bahan pengisi. Misalnya eritritol, dekstrosa, atau maltodekstrin.",
+      "speed": 1,
+      "hash": "0f3b650b3aa1",
+      "voice": "e4194d6e3a95",
+      "audioSeconds": 13.949,
+      "lufs": -14.4,
+      "truePeak": -2
+    },
+    {
+      "id": "kalori",
+      "file": "stevia-isi-sachet/vo/kalori.mp3",
+      "text": "Bahan pengisi inilah yang bisa menambah kalori. Enzim pencernaan kita tidak bisa mengurai steviol glikosida, sehingga praktis tanpa kalori. Tapi dekstrosa dan maltodekstrin adalah karbohidrat. Keduanya tetap menyumbang kalori.",
+      "speed": 1,
+      "hash": "b095eabf9dd7",
+      "voice": "e4194d6e3a95",
+      "audioSeconds": 11.99,
+      "lufs": -14.2,
+      "truePeak": -1.7
+    },
+    {
+      "id": "jawaban",
+      "file": "stevia-isi-sachet/vo/jawaban.mp3",
+      "text": "Cara mengeceknya, baca daftar komposisi di kemasan. Di Indonesia, bahan wajib ditulis berurutan dari yang terbanyak. Kalau bahan pengisi ada di urutan pertama, itulah isi terbanyaknya. Jadi, tulisan stevia di depan kemasan belum tentu isi utamanya.",
+      "speed": 1,
+      "hash": "0eedf8f88ebf",
+      "voice": "e4194d6e3a95",
+      "audioSeconds": 13.949,
+      "lufs": -14.2,
+      "truePeak": -1.7
+    }
+  ]
+}

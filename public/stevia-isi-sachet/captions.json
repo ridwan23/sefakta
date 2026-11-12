@@ -1,0 +1,1088 @@
+{
+  "projectId": "stevia-isi-sachet",
+  "method": "whisper.cpp 1.5.5 (small) + forced alignment ke naskah",
+  "generatedAt": "2026-11-11T15:50:22.080Z",
+  "scenes": {
+    "hook": {
+      "hash": "fa5a0f72fdd8",
+      "coverage": 1,
+      "missing": [],
+      "extra": [],
+      "heard": "Stevia lagi ramai dibahas, tapi sebungkus pemanis Stevia, isinya bisa jadi kebanyakan bukan Stevia, lalu apa isinya?",
+      "captions": [
+        {
+          "text": "Stevia",
+          "startMs": 180,
+          "endMs": 540,
+          "timestampMs": 360,
+          "confidence": 0.85191
+        },
+        {
+          "text": " lagi",
+          "startMs": 540,
+          "endMs": 900,
+          "timestampMs": 720,
+          "confidence": 0.968344
+        },
+        {
+          "text": " ramai",
+          "startMs": 900,
+          "endMs": 1350,
+          "timestampMs": 1125,
+          "confidence": 0.946311
+        },
+        {
+          "text": " dibahas.",
+          "startMs": 1350,
+          "endMs": 2100,
+          "timestampMs": 1725,
+          "confidence": 0.937823
+        },
+        {
+          "text": " Tapi",
+          "startMs": 2100,
+          "endMs": 2310,
+          "timestampMs": 2205,
+          "confidence": 0.904421
+        },
+        {
+          "text": " sebungkus",
+          "startMs": 2310,
+          "endMs": 2780,
+          "timestampMs": 2545,
+          "confidence": 0.774755
+        },
+        {
+          "text": " pemanis",
+          "startMs": 2780,
+          "endMs": 3140,
+          "timestampMs": 2960,
+          "confidence": 0.389748
+        },
+        {
+          "text": " stevia,",
+          "startMs": 3140,
+          "endMs": 3710,
+          "timestampMs": 3425,
+          "confidence": 0.907781
+        },
+        {
+          "text": " isinya",
+          "startMs": 3710,
+          "endMs": 3970,
+          "timestampMs": 3840,
+          "confidence": 0.840635
+        },
+        {
+          "text": " bisa",
+          "startMs": 3970,
+          "endMs": 4220,
+          "timestampMs": 4095,
+          "confidence": 0.989524
+        },
+        {
+          "text": " jadi",
+          "startMs": 4220,
+          "endMs": 4500,
+          "timestampMs": 4360,
+          "confidence": 0.975508
+        },
+        {
+          "text": " kebanyakan",
+          "startMs": 4500,
+          "endMs": 5040,
+          "timestampMs": 4770,
+          "confidence": 0.946044
+        },
+        {
+          "text": " bukan",
+          "startMs": 5040,
+          "endMs": 5470,
+          "timestampMs": 5255,
+          "confidence": 0.938432
+        },
+        {
+          "text": " stevia.",
+          "startMs": 5470,
+          "endMs": 6160,
+          "timestampMs": 5815,
+          "confidence": 0.977518
+        },
+        {
+          "text": " Lalu,",
+          "startMs": 6160,
+          "endMs": 6480,
+          "timestampMs": 6320,
+          "confidence": 0.938344
+        },
+        {
+          "text": " apa",
+          "startMs": 6480,
+          "endMs": 6730,
+          "timestampMs": 6605,
+          "confidence": 0.946395
+        },
+        {
+          "text": " isinya?",
+          "startMs": 6730,
+          "endMs": 7480,
+          "timestampMs": 7105,
+          "confidence": 0.993754
+        }
+      ]
+    },
+    "konteks": {
+      "hash": "4f4df6fdd97d",
+      "coverage": 1,
+      "missing": [],
+      "extra": [],
+      "heard": "Stevia berasal dari daun tanaman asli Amerika Selatan. Penduduk di sana sudah berabad-abad memakai daunnya sebagai pemanis. Manisnya datang dari senyawa bernama Steviol Glicosida. Senyawa ini ratusan kali lebih manis daripada gula pasir.",
+      "captions": [
+        {
+          "text": "Stevia",
+          "startMs": 90,
+          "endMs": 390,
+          "timestampMs": 240,
+          "confidence": 0.856508
+        },
+        {
+          "text": " berasal",
+          "startMs": 390,
+          "endMs": 870,
+          "timestampMs": 630,
+          "confidence": 0.981324
+        },
+        {
+          "text": " dari",
+          "startMs": 870,
+          "endMs": 1090,
+          "timestampMs": 980,
+          "confidence": 0.997855
+        },
+        {
+          "text": " daun",
+          "startMs": 1090,
+          "endMs": 1350,
+          "timestampMs": 1220,
+          "confidence": 0.954107
+        },
+        {
+          "text": " tanaman",
+          "startMs": 1350,
+          "endMs": 1800,
+          "timestampMs": 1575,
+          "confidence": 0.867941
+        },
+        {
+          "text": " asli",
+          "startMs": 1800,
+          "endMs": 2060,
+          "timestampMs": 1930,
+          "confidence": 0.962098
+        },
+        {
+          "text": " Amerika",
+          "startMs": 2060,
+          "endMs": 2510,
+          "timestampMs": 2285,
+          "confidence": 0.977914
+        },
+        {
+          "text": " Selatan.",
+          "startMs": 2510,
+          "endMs": 3000,
+          "timestampMs": 2755,
+          "confidence": 0.948882
+        },
+        {
+          "text": " Penduduk",
+          "startMs": 3000,
+          "endMs": 3480,
+          "timestampMs": 3240,
+          "confidence": 0.942746
+        },
+        {
+          "text": " di",
+          "startMs": 3480,
+          "endMs": 3600,
+          "timestampMs": 3540,
+          "confidence": 0.507974
+        },
+        {
+          "text": " sana",
+          "startMs": 3600,
+          "endMs": 3840,
+          "timestampMs": 3720,
+          "confidence": 0.998872
+        },
+        {
+          "text": " sudah",
+          "startMs": 3840,
+          "endMs": 4140,
+          "timestampMs": 3990,
+          "confidence": 0.802311
+        },
+        {
+          "text": " berabad-abad",
+          "startMs": 4140,
+          "endMs": 4860,
+          "timestampMs": 4500,
+          "confidence": 0.997874
+        },
+        {
+          "text": " memakai",
+          "startMs": 4860,
+          "endMs": 5280,
+          "timestampMs": 5070,
+          "confidence": 0.971788
+        },
+        {
+          "text": " daunnya",
+          "startMs": 5280,
+          "endMs": 5700,
+          "timestampMs": 5490,
+          "confidence": 0.99519
+        },
+        {
+          "text": " sebagai",
+          "startMs": 5700,
+          "endMs": 6120,
+          "timestampMs": 5910,
+          "confidence": 0.996578
+        },
+        {
+          "text": " pemanis.",
+          "startMs": 6120,
+          "endMs": 6740,
+          "timestampMs": 6430,
+          "confidence": 0.333427
+        },
+        {
+          "text": " Manisnya",
+          "startMs": 6740,
+          "endMs": 7270,
+          "timestampMs": 7005,
+          "confidence": 0.952688
+        },
+        {
+          "text": " datang",
+          "startMs": 7270,
+          "endMs": 7670,
+          "timestampMs": 7470,
+          "confidence": 0.994901
+        },
+        {
+          "text": " dari",
+          "startMs": 7670,
+          "endMs": 7940,
+          "timestampMs": 7805,
+          "confidence": 0.99879
+        },
+        {
+          "text": " senyawa",
+          "startMs": 7940,
+          "endMs": 8400,
+          "timestampMs": 8170,
+          "confidence": 0.67243
+        },
+        {
+          "text": " bernama",
+          "startMs": 8400,
+          "endMs": 8860,
+          "timestampMs": 8630,
+          "confidence": 0.993057
+        },
+        {
+          "text": " steviol",
+          "startMs": 8860,
+          "endMs": 9320,
+          "timestampMs": 9090,
+          "confidence": 0.907718
+        },
+        {
+          "text": " glikosida.",
+          "startMs": 9320,
+          "endMs": 10000,
+          "timestampMs": 9660,
+          "confidence": 0.615878
+        },
+        {
+          "text": " Senyawa",
+          "startMs": 10000,
+          "endMs": 10440,
+          "timestampMs": 10220,
+          "confidence": 0.98954
+        },
+        {
+          "text": " ini",
+          "startMs": 10440,
+          "endMs": 10630,
+          "timestampMs": 10535,
+          "confidence": 0.993292
+        },
+        {
+          "text": " ratusan",
+          "startMs": 10630,
+          "endMs": 11070,
+          "timestampMs": 10850,
+          "confidence": 0.960943
+        },
+        {
+          "text": " kali",
+          "startMs": 11070,
+          "endMs": 11320,
+          "timestampMs": 11195,
+          "confidence": 0.997177
+        },
+        {
+          "text": " lebih",
+          "startMs": 11320,
+          "endMs": 11630,
+          "timestampMs": 11475,
+          "confidence": 0.998171
+        },
+        {
+          "text": " manis",
+          "startMs": 11630,
+          "endMs": 11970,
+          "timestampMs": 11800,
+          "confidence": 0.990308
+        },
+        {
+          "text": " daripada",
+          "startMs": 11970,
+          "endMs": 12440,
+          "timestampMs": 12205,
+          "confidence": 0.949318
+        },
+        {
+          "text": " gula",
+          "startMs": 12440,
+          "endMs": 12690,
+          "timestampMs": 12565,
+          "confidence": 0.957873
+        },
+        {
+          "text": " pasir.",
+          "startMs": 12690,
+          "endMs": 13240,
+          "timestampMs": 12965,
+          "confidence": 0.958261
+        }
+      ]
+    },
+    "mekanisme": {
+      "hash": "0f3b650b3aa1",
+      "coverage": 1,
+      "missing": [],
+      "extra": [],
+      "heard": "Karena sangat manis, stevia yang dibutuhkan cuma sedikit sekali. Sejumput kecil saja sudah bisa semanis sesendap gula. Supaya bentuk dan takarannya mirip gula, banyak produsen menambahkan bahan pengisi. Misalnya eritritol, dextrosa, atau maltodextrin.",
+      "captions": [
+        {
+          "text": "Karena",
+          "startMs": 70,
+          "endMs": 350,
+          "timestampMs": 210,
+          "confidence": 0.763129
+        },
+        {
+          "text": " sangat",
+          "startMs": 350,
+          "endMs": 700,
+          "timestampMs": 525,
+          "confidence": 0.996537
+        },
+        {
+          "text": " manis,",
+          "startMs": 700,
+          "endMs": 1170,
+          "timestampMs": 935,
+          "confidence": 0.979912
+        },
+        {
+          "text": " stevia",
+          "startMs": 1170,
+          "endMs": 1430,
+          "timestampMs": 1300,
+          "confidence": 0.538878
+        },
+        {
+          "text": " yang",
+          "startMs": 1430,
+          "endMs": 1660,
+          "timestampMs": 1545,
+          "confidence": 0.99463
+        },
+        {
+          "text": " dibutuhkan",
+          "startMs": 1660,
+          "endMs": 2220,
+          "timestampMs": 1940,
+          "confidence": 0.971312
+        },
+        {
+          "text": " cuma",
+          "startMs": 2220,
+          "endMs": 2450,
+          "timestampMs": 2335,
+          "confidence": 0.943576
+        },
+        {
+          "text": " sedikit",
+          "startMs": 2450,
+          "endMs": 2880,
+          "timestampMs": 2665,
+          "confidence": 0.966565
+        },
+        {
+          "text": " sekali.",
+          "startMs": 2880,
+          "endMs": 3440,
+          "timestampMs": 3160,
+          "confidence": 0.975041
+        },
+        {
+          "text": " Sejumput",
+          "startMs": 3440,
+          "endMs": 3980,
+          "timestampMs": 3710,
+          "confidence": 0.974138
+        },
+        {
+          "text": " kecil",
+          "startMs": 3980,
+          "endMs": 4240,
+          "timestampMs": 4110,
+          "confidence": 0.996947
+        },
+        {
+          "text": " saja",
+          "startMs": 4240,
+          "endMs": 4470,
+          "timestampMs": 4355,
+          "confidence": 0.957905
+        },
+        {
+          "text": " sudah",
+          "startMs": 4470,
+          "endMs": 4780,
+          "timestampMs": 4625,
+          "confidence": 0.946377
+        },
+        {
+          "text": " bisa",
+          "startMs": 4780,
+          "endMs": 5030,
+          "timestampMs": 4905,
+          "confidence": 0.993578
+        },
+        {
+          "text": " semanis",
+          "startMs": 5030,
+          "endMs": 5450,
+          "timestampMs": 5240,
+          "confidence": 0.441982
+        },
+        {
+          "text": " sesendok",
+          "startMs": 5450,
+          "endMs": 5930,
+          "timestampMs": 5690,
+          "confidence": 0.91408
+        },
+        {
+          "text": " gula.",
+          "startMs": 5930,
+          "endMs": 6280,
+          "timestampMs": 6105,
+          "confidence": 0.985264
+        },
+        {
+          "text": " Supaya",
+          "startMs": 6280,
+          "endMs": 6660,
+          "timestampMs": 6470,
+          "confidence": 0.976936
+        },
+        {
+          "text": " bentuk",
+          "startMs": 6660,
+          "endMs": 7030,
+          "timestampMs": 6845,
+          "confidence": 0.995862
+        },
+        {
+          "text": " dan",
+          "startMs": 7030,
+          "endMs": 7220,
+          "timestampMs": 7125,
+          "confidence": 0.986131
+        },
+        {
+          "text": " takarannya",
+          "startMs": 7220,
+          "endMs": 7850,
+          "timestampMs": 7535,
+          "confidence": 0.802676
+        },
+        {
+          "text": " mirip",
+          "startMs": 7850,
+          "endMs": 8160,
+          "timestampMs": 8005,
+          "confidence": 0.984691
+        },
+        {
+          "text": " gula,",
+          "startMs": 8160,
+          "endMs": 8590,
+          "timestampMs": 8375,
+          "confidence": 0.998344
+        },
+        {
+          "text": " banyak",
+          "startMs": 8590,
+          "endMs": 8960,
+          "timestampMs": 8775,
+          "confidence": 0.660339
+        },
+        {
+          "text": " produsen",
+          "startMs": 8960,
+          "endMs": 9390,
+          "timestampMs": 9175,
+          "confidence": 0.429027
+        },
+        {
+          "text": " menambahkan",
+          "startMs": 9390,
+          "endMs": 10010,
+          "timestampMs": 9700,
+          "confidence": 0.978121
+        },
+        {
+          "text": " bahan",
+          "startMs": 10010,
+          "endMs": 10290,
+          "timestampMs": 10150,
+          "confidence": 0.98883
+        },
+        {
+          "text": " pengisi.",
+          "startMs": 10290,
+          "endMs": 10800,
+          "timestampMs": 10545,
+          "confidence": 0.974788
+        },
+        {
+          "text": " Misalnya",
+          "startMs": 10800,
+          "endMs": 11340,
+          "timestampMs": 11070,
+          "confidence": 0.984556
+        },
+        {
+          "text": " eritritol,",
+          "startMs": 11340,
+          "endMs": 12050,
+          "timestampMs": 11695,
+          "confidence": 0.400343
+        },
+        {
+          "text": " dekstrosa,",
+          "startMs": 12050,
+          "endMs": 12850,
+          "timestampMs": 12450,
+          "confidence": 0.979486
+        },
+        {
+          "text": " atau",
+          "startMs": 12850,
+          "endMs": 13050,
+          "timestampMs": 12950,
+          "confidence": 0.942917
+        },
+        {
+          "text": " maltodekstrin.",
+          "startMs": 13050,
+          "endMs": 14000,
+          "timestampMs": 13525,
+          "confidence": 0.913274
+        }
+      ]
+    },
+    "kalori": {
+      "hash": "b095eabf9dd7",
+      "coverage": 1,
+      "missing": [],
+      "extra": [],
+      "heard": "Bahan pengisi inilah yang bisa menambah kalori. Enzim pencernaan kita tidak bisa mengurai staviol glikosida, sehingga praktis tanpa kalori. Tapi dextrosa dan maltodextrin adalah karbohidrat. Keduannya tetap menyumbang kalori.",
+      "captions": [
+        {
+          "text": "Bahan",
+          "startMs": 60,
+          "endMs": 300,
+          "timestampMs": 180,
+          "confidence": 0.822942
+        },
+        {
+          "text": " pengisi",
+          "startMs": 300,
+          "endMs": 720,
+          "timestampMs": 510,
+          "confidence": 0.985372
+        },
+        {
+          "text": " inilah",
+          "startMs": 720,
+          "endMs": 1080,
+          "timestampMs": 900,
+          "confidence": 0.988191
+        },
+        {
+          "text": " yang",
+          "startMs": 1080,
+          "endMs": 1320,
+          "timestampMs": 1200,
+          "confidence": 0.995279
+        },
+        {
+          "text": " bisa",
+          "startMs": 1320,
+          "endMs": 1560,
+          "timestampMs": 1440,
+          "confidence": 0.998251
+        },
+        {
+          "text": " menambah",
+          "startMs": 1560,
+          "endMs": 2040,
+          "timestampMs": 1800,
+          "confidence": 0.996529
+        },
+        {
+          "text": " kalori.",
+          "startMs": 2040,
+          "endMs": 2420,
+          "timestampMs": 2230,
+          "confidence": 0.94966
+        },
+        {
+          "text": " Enzim",
+          "startMs": 2420,
+          "endMs": 2720,
+          "timestampMs": 2570,
+          "confidence": 0.553955
+        },
+        {
+          "text": " pencernaan",
+          "startMs": 2720,
+          "endMs": 3320,
+          "timestampMs": 3020,
+          "confidence": 0.91476
+        },
+        {
+          "text": " kita",
+          "startMs": 3320,
+          "endMs": 3560,
+          "timestampMs": 3440,
+          "confidence": 0.984559
+        },
+        {
+          "text": " tidak",
+          "startMs": 3560,
+          "endMs": 3870,
+          "timestampMs": 3715,
+          "confidence": 0.989073
+        },
+        {
+          "text": " bisa",
+          "startMs": 3870,
+          "endMs": 4110,
+          "timestampMs": 3990,
+          "confidence": 0.998439
+        },
+        {
+          "text": " mengurai",
+          "startMs": 4110,
+          "endMs": 4590,
+          "timestampMs": 4350,
+          "confidence": 0.987706
+        },
+        {
+          "text": " steviol",
+          "startMs": 4590,
+          "endMs": 5010,
+          "timestampMs": 4800,
+          "confidence": 0.0963573
+        },
+        {
+          "text": " glikosida,",
+          "startMs": 5010,
+          "endMs": 5780,
+          "timestampMs": 5395,
+          "confidence": 0.600774
+        },
+        {
+          "text": " sehingga",
+          "startMs": 5780,
+          "endMs": 6230,
+          "timestampMs": 6005,
+          "confidence": 0.702728
+        },
+        {
+          "text": " praktis",
+          "startMs": 6230,
+          "endMs": 6640,
+          "timestampMs": 6435,
+          "confidence": 0.989646
+        },
+        {
+          "text": " tanpa",
+          "startMs": 6640,
+          "endMs": 6930,
+          "timestampMs": 6785,
+          "confidence": 0.99099
+        },
+        {
+          "text": " kalori.",
+          "startMs": 6930,
+          "endMs": 7380,
+          "timestampMs": 7155,
+          "confidence": 0.989612
+        },
+        {
+          "text": " Tapi",
+          "startMs": 7380,
+          "endMs": 7620,
+          "timestampMs": 7500,
+          "confidence": 0.984889
+        },
+        {
+          "text": " dekstrosa",
+          "startMs": 7620,
+          "endMs": 8100,
+          "timestampMs": 7860,
+          "confidence": 0.933365
+        },
+        {
+          "text": " dan",
+          "startMs": 8100,
+          "endMs": 8280,
+          "timestampMs": 8190,
+          "confidence": 0.995103
+        },
+        {
+          "text": " maltodekstrin",
+          "startMs": 8280,
+          "endMs": 9000,
+          "timestampMs": 8640,
+          "confidence": 0.962944
+        },
+        {
+          "text": " adalah",
+          "startMs": 9000,
+          "endMs": 9370,
+          "timestampMs": 9185,
+          "confidence": 0.998702
+        },
+        {
+          "text": " karbohidrat.",
+          "startMs": 9370,
+          "endMs": 10300,
+          "timestampMs": 9835,
+          "confidence": 0.925
+        },
+        {
+          "text": " Keduanya",
+          "startMs": 10300,
+          "endMs": 10790,
+          "timestampMs": 10545,
+          "confidence": 0.97432
+        },
+        {
+          "text": " tetap",
+          "startMs": 10790,
+          "endMs": 11070,
+          "timestampMs": 10930,
+          "confidence": 0.988549
+        },
+        {
+          "text": " menyumbang",
+          "startMs": 11070,
+          "endMs": 11610,
+          "timestampMs": 11340,
+          "confidence": 0.895319
+        },
+        {
+          "text": " kalori.",
+          "startMs": 11610,
+          "endMs": 12040,
+          "timestampMs": 11825,
+          "confidence": 0.989232
+        }
+      ]
+    },
+    "jawaban": {
+      "hash": "0eedf8f88ebf",
+      "coverage": 1,
+      "missing": [],
+      "extra": [],
+      "heard": "Cara mengeceknya, baca daftar komposisi di kemasan. Di Indonesia, bahan wajib ditulis berurutan dari yang terbanyak. Kalau bahan pengisi ada di urutan pertama, itulah isi terbanyaknya. Jadi, tulisan Stevia di depan kemasan belum tentu isi utamanya.",
+      "captions": [
+        {
+          "text": "Cara",
+          "startMs": 70,
+          "endMs": 260,
+          "timestampMs": 165,
+          "confidence": 0.638222
+        },
+        {
+          "text": " mengeceknya,",
+          "startMs": 260,
+          "endMs": 1160,
+          "timestampMs": 710,
+          "confidence": 0.85174
+        },
+        {
+          "text": " baca",
+          "startMs": 1160,
+          "endMs": 1350,
+          "timestampMs": 1255,
+          "confidence": 0.724648
+        },
+        {
+          "text": " daftar",
+          "startMs": 1350,
+          "endMs": 1740,
+          "timestampMs": 1545,
+          "confidence": 0.909519
+        },
+        {
+          "text": " komposisi",
+          "startMs": 1740,
+          "endMs": 2320,
+          "timestampMs": 2030,
+          "confidence": 0.967276
+        },
+        {
+          "text": " di",
+          "startMs": 2320,
+          "endMs": 2450,
+          "timestampMs": 2385,
+          "confidence": 0.998043
+        },
+        {
+          "text": " kemasan.",
+          "startMs": 2450,
+          "endMs": 3000,
+          "timestampMs": 2725,
+          "confidence": 0.85022
+        },
+        {
+          "text": " Di",
+          "startMs": 3000,
+          "endMs": 3130,
+          "timestampMs": 3065,
+          "confidence": 0.936006
+        },
+        {
+          "text": " Indonesia,",
+          "startMs": 3130,
+          "endMs": 3750,
+          "timestampMs": 3440,
+          "confidence": 0.983808
+        },
+        {
+          "text": " bahan",
+          "startMs": 3750,
+          "endMs": 4030,
+          "timestampMs": 3890,
+          "confidence": 0.988865
+        },
+        {
+          "text": " wajib",
+          "startMs": 4030,
+          "endMs": 4300,
+          "timestampMs": 4165,
+          "confidence": 0.966352
+        },
+        {
+          "text": " ditulis",
+          "startMs": 4300,
+          "endMs": 4690,
+          "timestampMs": 4495,
+          "confidence": 0.964485
+        },
+        {
+          "text": " berurutan",
+          "startMs": 4690,
+          "endMs": 5200,
+          "timestampMs": 4945,
+          "confidence": 0.993043
+        },
+        {
+          "text": " dari",
+          "startMs": 5200,
+          "endMs": 5430,
+          "timestampMs": 5315,
+          "confidence": 0.99541
+        },
+        {
+          "text": " yang",
+          "startMs": 5430,
+          "endMs": 5660,
+          "timestampMs": 5545,
+          "confidence": 0.997094
+        },
+        {
+          "text": " terbanyak.",
+          "startMs": 5660,
+          "endMs": 6500,
+          "timestampMs": 6080,
+          "confidence": 0.998929
+        },
+        {
+          "text": " Kalau",
+          "startMs": 6500,
+          "endMs": 6790,
+          "timestampMs": 6645,
+          "confidence": 0.919905
+        },
+        {
+          "text": " bahan",
+          "startMs": 6790,
+          "endMs": 7070,
+          "timestampMs": 6930,
+          "confidence": 0.994704
+        },
+        {
+          "text": " pengisi",
+          "startMs": 7070,
+          "endMs": 7470,
+          "timestampMs": 7270,
+          "confidence": 0.979613
+        },
+        {
+          "text": " ada",
+          "startMs": 7470,
+          "endMs": 7640,
+          "timestampMs": 7555,
+          "confidence": 0.989374
+        },
+        {
+          "text": " di",
+          "startMs": 7640,
+          "endMs": 7750,
+          "timestampMs": 7695,
+          "confidence": 0.997539
+        },
+        {
+          "text": " urutan",
+          "startMs": 7750,
+          "endMs": 8090,
+          "timestampMs": 7920,
+          "confidence": 0.571998
+        },
+        {
+          "text": " pertama,",
+          "startMs": 8090,
+          "endMs": 8720,
+          "timestampMs": 8405,
+          "confidence": 0.986049
+        },
+        {
+          "text": " itulah",
+          "startMs": 8720,
+          "endMs": 8940,
+          "timestampMs": 8830,
+          "confidence": 0.971835
+        },
+        {
+          "text": " isi",
+          "startMs": 8940,
+          "endMs": 9100,
+          "timestampMs": 9020,
+          "confidence": 0.987532
+        },
+        {
+          "text": " terbanyaknya.",
+          "startMs": 9100,
+          "endMs": 10140,
+          "timestampMs": 9620,
+          "confidence": 0.99866
+        },
+        {
+          "text": " Jadi,",
+          "startMs": 10140,
+          "endMs": 10530,
+          "timestampMs": 10335,
+          "confidence": 0.972641
+        },
+        {
+          "text": " tulisan",
+          "startMs": 10530,
+          "endMs": 11010,
+          "timestampMs": 10770,
+          "confidence": 0.975069
+        },
+        {
+          "text": " stevia",
+          "startMs": 11010,
+          "endMs": 11410,
+          "timestampMs": 11210,
+          "confidence": 0.625197
+        },
+        {
+          "text": " di",
+          "startMs": 11410,
+          "endMs": 11540,
+          "timestampMs": 11475,
+          "confidence": 0.9139
+        },
+        {
+          "text": " depan",
+          "startMs": 11540,
+          "endMs": 11870,
+          "timestampMs": 11705,
+          "confidence": 0.998085
+        },
+        {
+          "text": " kemasan",
+          "startMs": 11870,
+          "endMs": 12350,
+          "timestampMs": 12110,
+          "confidence": 0.998277
+        },
+        {
+          "text": " belum",
+          "startMs": 12350,
+          "endMs": 12660,
+          "timestampMs": 12505,
+          "confidence": 0.96405
+        },
+        {
+          "text": " tentu",
+          "startMs": 12660,
+          "endMs": 12990,
+          "timestampMs": 12825,
+          "confidence": 0.995579
+        },
+        {
+          "text": " isi",
+          "startMs": 12990,
+          "endMs": 13180,
+          "timestampMs": 13085,
+          "confidence": 0.982066
+        },
+        {
+          "text": " utamanya.",
+          "startMs": 13180,
+          "endMs": 14000,
+          "timestampMs": 13590,
+          "confidence": 0.990059
+        }
+      ]
+    }
+  }
+}
