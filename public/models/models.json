@@ -1,0 +1,13 @@
+{
+  "food_apple_01": {
+    "name": "Food Apple 01",
+    "license": "CC0",
+    "source": "https://polyhaven.com/a/food_apple_01",
+    "resolution": "1k",
+    "entry": "food_apple_01_1k.gltf",
+    "bytes": 473812,
+    "authors": [
+      "Oliver Harries"
+    ]
+  }
+}
