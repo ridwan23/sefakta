@@ -19,6 +19,7 @@
     "align": "node --no-warnings --experimental-strip-types scripts/align-captions.ts",
     "sfx:make": "node --no-warnings --experimental-strip-types scripts/make-sfx.ts",
     "check:episodes": "node --no-warnings --experimental-strip-types scripts/check-episodes.ts",
+    "motion:check": "node --no-warnings --experimental-strip-types scripts/motion-check.ts",
     "font:add": "node --no-warnings --experimental-strip-types scripts/font-add.ts",
     "lint": "eslint src",
     "bundle": "remotion bundle --out-dir=build --log=error",
