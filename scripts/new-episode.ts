@@ -39,6 +39,11 @@ const brief = {
     reason: 'TODO kenapa gaya ini cocok dengan isi fakta episode',
     tone: 'dark',
     palette: ['#0D2250', '#FFB000', '#FFFFFF'],
+    fonts: {
+      display: 'TODO id Fontsource sesuai konsep (WORKFLOW §7.6), lalu npm run font:add -- <id>',
+      text: 'plus-jakarta-sans',
+      reason: 'TODO kenapa font ini cocok dengan konsep visual',
+    },
   },
   scenes: [
     scene('hook', 5, 'hook: pertanyaan spesifik + objek/akibat utama'),

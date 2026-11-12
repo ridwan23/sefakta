@@ -1,7 +1,6 @@
 import React from 'react';
 import { AbsoluteFill, Easing, interpolate } from 'remotion';
-import { loadFont as loadCaveat } from '@remotion/google-fonts/Caveat';
-import { FONT_JAKARTA } from '../../shared/brand/fonts';
+import { FONT_JAKARTA, font } from '../../shared/brand/fonts';
 import { hash } from '../../shared/motion';
 
 // Gaya "jurnal naturalis lapangan" (lihat visualStyle di briefs/komodo-tanpa-jantan.json).
@@ -19,7 +18,7 @@ export const C = {
   sea: '#D7E2DC',
   land: '#E4DCC4',
 };
-export const HAND = loadCaveat('normal', { weights: ['700'], subsets: ['latin'] }).fontFamily;
+export const HAND = font('caveat');
 export const SANS = FONT_JAKARTA;
 
 /** 0→1 dengan easing, mulai `at` selama `len` frame. */

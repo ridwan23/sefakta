@@ -1,6 +1,6 @@
 import React from 'react';
 import { AbsoluteFill, Easing, interpolate } from 'remotion';
-import { loadFont as loadPlayfair } from '@remotion/google-fonts/PlayfairDisplay';
+import { font } from '../../shared/brand/fonts';
 import { hash } from '../../shared/motion';
 
 // Gaya "peta arsip kertas tua abad ke-19" (lihat visualStyle di briefs/tambora-1816.json).
@@ -17,7 +17,7 @@ export const C = {
   sepia: '#8C7B62',
   sun: '#C8901A',
 };
-export const SERIF = loadPlayfair('normal', { weights: ['700', '900'], subsets: ['latin'] }).fontFamily;
+export const SERIF = font('playfair-display');
 
 /** 0→1 dengan easing, mulai `at` selama `len` frame. */
 export const ramp = (f: number, at: number, len: number, ease: (t: number) => number = Easing.out(Easing.cubic)) =>

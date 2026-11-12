@@ -22,7 +22,7 @@ npm run quality             # gerbang kualitas harus lolos
 | git | mengunduh whisper.cpp | bawaan sistem / pengelola paket |
 | Ruang disk ≥ 2 GB | Whisper (±540 MB), bundle, render | — |
 | python3 + openssl *(opsional)* | `npm run test:validator` (server HTTPS uji lokal) | bawaan macOS / pengelola paket |
-| Internet | Fish Audio, unduhan Whisper, font Google, `validate:facts:online` | — |
+| Internet | Fish Audio, unduhan Whisper, `npm run font:add` (Fontsource lewat npm), `validate:facts:online` | — |
 
 ## 2. Kunci Fish Audio (`.env`)
 
@@ -52,5 +52,5 @@ Cek naskah tanpa memakai kredit: `npm run vo -- --brief=briefs/<id>.json --dry-r
 | `align` gagal saat memasang whisper | `make`/compiler/git tidak ada, atau offline | langkah 1, lalu `npm run setup:whisper` |
 | Loudness di luar -14 ±1 LUFS | klip sangat pendek/berpuncak tinggi | `npm run vo -- --brief=… --scene=<id> --force` |
 | `Audio <scene> usang` / `caption usang` | naskah atau audio berubah | `npm run vo` lalu `npm run align` |
-| Font berbeda di hasil render | font Google gagal dimuat (offline) | render dengan koneksi internet |
+| Font berbeda di hasil render / `Font "<id>" belum diunduh` | font episode belum ada di `public/fonts/` | `npm run font:add -- <id>` (render sendiri tidak butuh internet) |
 | `remotion still` lambat pertama kali | Chrome headless diunduh Remotion | tunggu sekali; berikutnya memakai cache |

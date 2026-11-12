@@ -12,8 +12,11 @@ export type EpisodeScene = {
 
 /** Warna caption. Bila tidak diisi, default mengikuti `tone`. */
 export type CaptionColors = { text: string; highlight: string; highlightText: string };
+/** Font episode (id Fontsource yang sudah diunduh ke public/fonts/ dengan `npm run font:add -- <id>`).
+ *  `display` = judul/label/angka di visual; `text` = teks kecil di visual (default plus-jakarta-sans). Caption tidak ikut. */
+export type EpisodeFonts = { display: string; text?: string; reason: string };
 /** Gaya visual episode, dipilih sesuai isi fakta. `tone` = kecerahan latar dominan (menentukan watermark & default caption). */
-export type VisualStyle = { name: string; reason: string; tone: 'light' | 'dark'; palette?: string[]; captionColors?: CaptionColors };
+export type VisualStyle = { name: string; reason: string; tone: 'light' | 'dark'; palette?: string[]; captionColors?: CaptionColors; fonts?: EpisodeFonts };
 
 /** ringkasan = satu kalimat per scene · subtitle = kata per kata · headline = judul visual */
 export type CaptionMode = 'ringkasan' | 'subtitle' | 'headline';

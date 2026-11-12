@@ -37,6 +37,21 @@ const checkBrief = async (file: string): Promise<Issue[] | null> => {
   if (placeholders.length) soft(`scene masih memakai placeholder visual: ${placeholders.join(', ')}`);
   if (b.scenes.some((s: { voiceoverText: string }) => /\bTODO\b/.test(s.voiceoverText))) soft('naskah masih berisi TODO');
 
+  // font episode (WORKFLOW §7.6): dipilih sesuai konsep, sudah diunduh dari Fontsource ke public/fonts/
+  const fonts = b.visualStyle?.fonts as { display?: string; text?: string; reason?: string } | undefined;
+  const registry: Record<string, { files: { file: string }[] }> = existsSync('public/fonts/fonts.json') ? JSON.parse(readFileSync('public/fonts/fonts.json', 'utf8')) : {};
+  if (!fonts) issues.push({ level: 'warn', msg: 'visualStyle.fonts belum dipilih; visual memakai Plus Jakarta Sans ({ display, text?, reason }; lihat WORKFLOW §7.6)' });
+  else {
+    if (!fonts.reason || /\bTODO\b/.test(fonts.reason)) soft('visualStyle.fonts.reason belum diisi');
+    for (const key of ['display', 'text'] as const) {
+      const fid = fonts[key];
+      if (!fid) continue;
+      if (/\bTODO\b/.test(fid)) soft(`visualStyle.fonts.${key} masih TODO`);
+      else if (!registry[fid]) err(`font "${fid}" belum diunduh. Jalankan: npm run font:add -- ${fid}`);
+      else for (const f of registry[fid].files) if (!existsSync(`public/fonts/${fid}/${f.file}`)) err(`file font hilang: public/fonts/${fid}/${f.file} (jalankan ulang npm run font:add -- ${fid})`);
+    }
+  }
+
   // SFX (PANDUAN-AI-AGENT-PRODUKSI §7): file ada, tercatat lisensinya, jumlah 3–8 bila dipakai
   const topicCode = existsSync(topic) ? readdirSync(topic).filter((f) => /\.tsx?$/.test(f)).map((f) => readFileSync(`${topic}/${f}`, 'utf8')).join('\n') : '';
   const sfxUses = [...topicCode.matchAll(/<Sfx\b[^>]*\bfile=["'`]([^"'`]+)["'`]/g), ...topicCode.matchAll(/staticFile\(\s*["'`]sfx\/([^"'`]+)["'`]/g)].map((m) => m[1]);
