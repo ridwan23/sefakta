@@ -25,10 +25,10 @@ Prinsip utama: **cegah kesalahan sebelum render, jangan menemukannya dengan coba
 | 4 | Brief | `briefs/<id>.json` | `npm run validate:facts` 0 error, `validate:facts:online` 0 error |
 | 5 | Voice-over | `public/<id>/vo/*.mp3` (CTA memakai `public/brand/cta-vo.mp3` bersama) | loudness -14 ±1 LUFS, durasi cerita 55–65 dtk |
 | 6 | Alignment & cek ucapan | `captions.json` | cakupan ≥ 90%, transkrip dibaca kata demi kata |
-| 7 | Rencana visual | tabel storyboard + koordinat | semua elemen di area aman (§7.2) |
+| 7 | Rencana visual | tabel storyboard (pola, gerak, objek) + koordinat + font | semua elemen di area aman (§7.2); font/ikon/model sudah diunduh (§7.6–7.7) |
 | 7b | Ilustrasi AI (opsional) | `public/<id>/img/*.jpg` + `images.json` | dicek manusia, label "ILUSTRASI", maks. 1–2 scene (§7.5) |
-| 8 | Implementasi | `src/topics/<id>/scenes.tsx` | `tsc` + `eslint` bersih |
-| 9 | Verifikasi visual | still per cue + lembar kontak | daftar periksa §9.3 lolos |
+| 8 | Implementasi | `src/topics/<id>/scenes.tsx`, satu scene per putaran (§8.1) | `tsc` + `eslint` bersih; `motion:check --scene` per scene |
+| 9 | Verifikasi visual | still + filmstrip + laporan tata letak + review independen | §9.3 lolos; `motion:check` dan `layout:check` 0 error (§9.4–9.5); review ≥ 14/18 setelah ≥ 1 putaran revisi (§9.6) |
 | 10 | Gerbang kualitas | — | `npm run quality` dan `npm run check:publish:episode -- <id>` 0 error |
 | 11 | Skor & serah terima | laporan | rubrik ≥ 14/16, tanpa nilai 0 |
 | 12 | Render (hanya bila diminta) | `out/<id>/*.mp4` | MP4 diperiksa ulang (§12) |
@@ -140,7 +140,8 @@ Isi `briefs/<id>.json`:
 - **`visualStyle`:**
   - pilih sesuai isi fakta (sejarah → peta/arsip, sains → diagram, antariksa → gelap kosmik);
   - isi `tone` sesuai kecerahan latar;
-  - `captionColors` bila palet default tidak cocok (validator mengecek kontras ≥ 4,5:1).
+  - `captionColors` bila palet default tidak cocok (validator mengecek kontras ≥ 4,5:1);
+  - `fonts: { display, text?, reason }`: font dipilih sesuai konsep (§7.6) dan diunduh dulu dengan `npm run font:add -- <id>`.
 - **`captionMode`:** `subtitle` untuk cerita bernarasi padat, `ringkasan` untuk visual yang ramai, `headline` untuk visual yang sangat sederhana. Mode `keypoint` dihapus (9 Nov 2026) karena membingungkan di visual; validator menolak brief yang masih punya `keypoints[]`.
 - **`storyDuration` (opsional, pengecualian):** `{ min, max, reason }` mengganti rentang 55–65 dtk untuk **satu** episode, hanya atas persetujuan pemilik (mis. eksperimen retensi). Batas 30–65 dtk, alasan wajib; validator selalu menampilkannya sebagai peringatan. Bukan aturan umum: jangan menyalinnya ke episode lain.
 - **CTA:** tidak diatur per episode. Semua episode memakai VO CTA bersama `public/brand/cta-vo.mp3`.
@@ -185,20 +186,22 @@ Kesalahan visual paling mahal terjadi karena kode langsung ditulis tanpa rencana
 
 ### 7.1 Storyboard per scene
 
-Buat tabel untuk setiap scene: **kata pemicu → elemen yang muncul → posisi (x, y) → ukuran**. Kata pemicu diambil dari transkrip tahap 6 dan dipakai di kode lewat `cueFrames`, sehingga animasi muncul tepat saat kata diucapkan.
+Tentukan dulu **pola** tiap scene dari `src/shared/patterns` (`BigNumber`, `MythFact`, `Compare`, `ProcessFlow`, `RankList`, `ZoomDetail`, atau `bebas` bila tidak ada yang cocok), **sudut cahaya** episode (default 135°), dan **massa** objek utama (0 ringan – 1 berat). Lalu buat tabel untuk setiap scene: **kata pemicu → elemen yang muncul → posisi (x, y) → gerak**. Kata pemicu diambil dari transkrip tahap 6 dan dipakai di kode lewat `cueFrames`, sehingga animasi muncul tepat saat kata diucapkan. Kolom **Gerak** wajib diisi dengan istilah `docs/TATA-GERAK.md`: gerak primer (masuk/pindah), gerak sekunder (aksen), idle saat hold, dan kapan keluar.
 
 Contoh (scene `dampak`, Tambora):
 
-| Kata pemicu | Elemen | Posisi | Catatan |
-|---|---|---|---|
-| `seribu` | stempel "1816" | (540, 250) | di bawah zona watermark |
-| `Eropa` / `Amerika` | negara diwarnai biru dingin | peta | label di dalam frame (cek §7.3) |
-| `dingin` | termometer turun | (540, 700–1150) | di atas Atlantik, tidak menutup daratan |
-| `salju` | salju menggantikan hujan | area y 420–1420 | |
-| `gagal` | gandum layu | y 1220–1450 | berhenti sebelum zona caption |
-| `dijuluki` | stempel "TAHUN TANPA MUSIM PANAS" | (540, 980) | termometer memudar dulu agar tidak bertumpuk |
+| Kata pemicu | Elemen | Posisi | Gerak (primer · sekunder · hold · keluar) | Catatan |
+|---|---|---|---|---|
+| `seribu` | stempel "1816" | (540, 250) | `stamp` · `Burst` + `Shake` · diam di tempat, kamera drift · keluar `shrink` saat `dijuluki` | di bawah zona watermark |
+| `Eropa` / `Amerika` | negara diwarnai biru dingin | peta | warna menyebar 20 frame inOut · `Pulse` di tiap negara · peta drift · tetap | label di dalam frame (cek §7.3) |
+| `dingin` | termometer turun | (540, 700–1150) | `rise` lalu air raksa turun `track` anticipate · garis skala `Stagger` · `Idle` 3 px · `sink` | di atas Atlantik |
+| `salju` | salju menggantikan hujan | area y 420–1420 | `Swap` hujan → `Particles` turun · — · partikel terus jatuh · tetap | |
+| `gagal` | gandum layu | y 1220–1450 | batang melengkung `track` 24 frame · daun gugur · goyang angin `Idle` · tetap | berhenti sebelum zona caption |
+| `dijuluki` | stempel "TAHUN TANPA MUSIM PANAS" | (540, 980) | `SplitText mask` · `Highlight` · kamera `beatKick` · bertahan sampai akhir | termometer keluar dulu agar tidak bertumpuk |
 
-Setiap scene minimal punya: entrance (≤ 0,5 dtk), satu perubahan visual tiap 2–4 dtk yang mengikuti narasi, dan hold yang cukup untuk dibaca.
+Untuk objek, tulis juga material dan perilaku fisiknya di kolom Catatan (mis. "sachet `plastic`, massa 0,2, jatuh `fall` + squash, label `swing`"); aturan di `docs/TATA-OBJEK.md`.
+
+Setiap scene minimal punya: entrance (gerak di 15 frame pertama), satu beat baru tiap 2–4 dtk yang mengikuti narasi (primer + sekunder), hold yang tetap hidup (tidak beku ≥ 1,5 dtk), dan waktu baca yang cukup. Angka durasi dan kurva: `docs/TATA-GERAK.md` §2.
 
 ### 7.2 Area aman (1080×1920)
 
@@ -255,6 +258,61 @@ Aturan bila dipakai:
 7. Cek manusia sebelum dipakai: akurasi sejarah (busana, bangunan, geografi), tidak ada teks/tangan/objek ganjil, caption tetap terbaca (beri gradasi latar di belakang caption bila gambar gelap).
 8. Lisensi: catat model dan penyedia (otomatis di `images.json`); pastikan syarat penggunaan komersial Agnes sebelum tayang.
 
+### 7.6 Font
+
+Font dipilih per episode bersama `visualStyle`, karena huruf ikut membawa suasana konsep. Isi di brief:
+
+```json
+"fonts": { "display": "playfair-display", "text": "plus-jakarta-sans", "reason": "serif kontras tinggi seperti cetakan surat kabar 1816" }
+```
+
+- **`display`**: judul visual, label, stempel, angka besar. **`text`** (opsional, default `plus-jakarta-sans`): teks kecil di visual (keterangan, nama sumbu).
+- **Caption tidak ikut berganti.** Template caption tetap Plus Jakarta Sans agar keterbacaan dan kontras yang sudah divalidasi tidak berubah. Watermark dan CTA juga tidak.
+
+**Pilih dari konsep, bukan dari selera.** Tulis satu kalimat di `reason` yang menghubungkan bentuk huruf dengan isi fakta. Titik awal (semua tersedia di Fontsource, lisensi terbuka):
+
+| Konsep visual | Karakter huruf | Contoh id Fontsource |
+|---|---|---|
+| sejarah, arsip, koran lama | serif kontras tinggi | `playfair-display`, `libre-baskerville`, `dm-serif-display` |
+| sains bersih, diagram, kesehatan | sans geometris/humanis | `plus-jakarta-sans`, `manrope`, `space-grotesk`, `inter` |
+| teknologi, data, kode, digital | monospace / teknis | `jetbrains-mono`, `space-mono`, `ibm-plex-mono` |
+| berita mendesak, mitos vs fakta, angka besar | condensed tebal | `oswald`, `anton`, `bebas-neue`, `barlow-condensed` |
+| antariksa, masa depan | lebar/futuristik | `exo-2`, `orbitron` (judul saja), `space-grotesk` |
+| alam, anak, makanan, keseharian | rounded ramah | `nunito`, `fredoka`, `baloo-2` |
+| catatan tangan, anotasi di atas foto/peta | tulisan tangan | `caveat`, `kalam`, `patrick-hand` (label pendek saja) |
+
+Aturan:
+
+1. **Maksimal 2 keluarga per episode** (display + text). Satu episode, satu pasangan font untuk semua scene.
+2. **Keterbacaan di ponsel:** display ≥ 56 px dan bobot ≥ 600 untuk label penting; font tulisan tangan/dekoratif hanya untuk label ≤ 4 kata, tidak untuk angka utama.
+3. **Glyph lengkap:** pastikan font punya digit, `%`, dan tanda baca yang dipakai di layar. Simbol di luar latin (mis. `≈`, `→`) jatuh ke font cadangan; gambar dengan SVG atau ganti kata.
+4. **Unduh sebelum dipakai.** Bila id belum ada di `public/fonts/fonts.json`, jalankan:
+   ```bash
+   npm run font:add -- <id>                       # bobot 400 + 700
+   npm run font:add -- <id> --weights=600,800     # bobot tertentu (lihat bobot di fontsource.org/fonts/<id>)
+   npm run font:add -- <id> --italic=700          # tambah italic
+   ```
+   Skrip mengunduh paket `@fontsource/<id>` (subset latin + latin-ext), menyalin woff2 dan `LICENSE.txt` ke `public/fonts/<id>/`, dan mencatatnya di registri. Hanya lisensi terbuka (OFL/Apache/MIT/UFL) yang diterima. Jangan memakai Google Fonts API, CDN, atau font sistem.
+5. **Pakai di kode** lewat registri, bukan nama keluarga yang ditulis tangan:
+   ```tsx
+   import { episodeFonts } from '../../shared/brand/fonts';
+   const F = episodeFonts(brief.visualStyle); // F.display, F.text = nilai CSS fontFamily
+   ```
+6. Cek di still §9: huruf benar-benar font terpilih (bukan cadangan serif/sans bawaan browser), tidak ada kotak/huruf hilang, label tidak overflow (lebar font berbeda dari Jakarta; hitung ulang lebar label §7.3).
+
+Gerbang: `check:episodes` tidak melaporkan font yang belum diunduh.
+
+### 7.7 Objek, latar, ikon, dan 3D
+
+Ikuti `docs/TATA-OBJEK.md`. Ringkasnya:
+
+- Latar: `Backdrop` (bukan warna rata); warna dari `tokens(style)`.
+- Objek: `Shaded` bermaterial di bawah satu `LightProvider`, `ContactShadow` di titik tapak, gerak dari `src/shared/physics`.
+- Ikon dari registri: `npm run icon:add -- lucide:<nama>` bila belum ada (lisensi tercatat di `public/icons/`).
+- 3D opsional untuk 1–2 objek kunci: `npm run model:add -- <id>` (Poly Haven, CC0), lalu `Stage3D` + `Model` dengan `lightAngle` sama.
+
+Gerbang: `check:episodes` dan Studio tidak melaporkan font/ikon/model yang belum diunduh.
+
 ## 8. Implementasi
 
 Pakai yang sudah ada sebelum membuat yang baru:
@@ -264,6 +322,15 @@ Pakai yang sudah ada sebelum membuat yang baru:
 | peta dunia / globe, sorot negara, zoom, busur | `src/shared/maps/WorldMap.tsx` (`WorldMap`, `mixView`, `screenArc`, `ISO`) |
 | hitung posisi di Node | `src/shared/maps/geo.ts` |
 | animasi tepat pada kata | `src/shared/episode/cues.ts` (`cueFrames(scene, fps, { kunci: ['kata', detikCadangan] })`) |
+| masuk/keluar elemen, teks kata per kata, daftar berurutan | `src/shared/anim` (`Reveal`, `SplitText`, `Stagger`; lihat `docs/TATA-GERAK.md`) |
+| aksen beat dan hold yang hidup | `src/shared/anim` (`Idle`, `Shake`, `Pulse`, `Burst`, `Highlight`, `Swap`, `Particles`) |
+| garis/panah tergambar, angka berhitung | `src/shared/anim` (`DrawPath`, `CountUp`) |
+| gerak khusus berkurva | `src/shared/anim` (`track`, `prog`, `springAt`, `EASE`, `noise1`) |
+| susunan scene utuh (angka besar, mitos/fakta, perbandingan, proses, peringkat, zoom detail) | `src/shared/patterns` (lihat **katalog → KatalogPola**) |
+| latar, warna berperan, ikon | `src/shared/look` (`Backdrop`, `Grain`, `tokens`, `Icon`) |
+| objek bermaterial, cahaya, bayangan, kedalaman | `src/shared/render` (`LightProvider`, `Shaded`, `ContactShadow`, `depthStyle`, `rectPath`/`pouchPath`/`cupPath`/`blobPath`) |
+| gerak fisik dan bahan bergerak | `src/shared/physics` (`fall`, `squashStretch`, `follow`, `swing`, `settle`, `Joint`, `Pour`, `Liquid`, `Smoke`) |
+| objek 3D | `src/shared/three` (`Stage3D`, `Model`) |
 | kamera menjelajah satu dunia (push, pull-back, whip, tracking, parallax) | `src/shared/camera/CameraRig.tsx` (`useCamera(keys)`, `CameraRig`, `CamLayer depth/blur/blend`, `mixPose` untuk tracking, `beatKick`). Pose akhir scene N = pose awal scene N+1 |
 | easing, noise deterministik | `src/shared/motion.ts` (`hash`, `smooth`, …) |
 | warna/tone episode | prop `style` (visualStyle) di setiap komponen scene |
@@ -273,10 +340,21 @@ Struktur topik: `src/topics/<id>/parts.tsx` berisi palet dan elemen ilustrasi ga
 Aturan:
 
 - Animasi diturunkan dari `useCurrentFrame()` + `interpolate()`/`Easing` (aturan Remotion di `AGENTS.md`). Variasi "acak" memakai `hash()` agar setiap render identik.
+- Tonton **katalog → KatalogGerak, KatalogPola, KatalogObjek** di Studio sebelum menulis scene pertama, lalu ikuti `docs/TATA-GERAK.md` dan `docs/TATA-OBJEK.md`. Pakai kit `src/shared/anim` dulu; `interpolate` linear mentah untuk gerak objek adalah tanda gerak akan terasa kaku.
 - Jangan mengubah `src/shared/episode/` untuk kebutuhan satu episode. Bila sebuah elemen berguna lintas episode, buat komponen baru di `src/shared/`.
 - Detik cadangan di `cueFrames` adalah perkiraan sebelum alignment. Setelah alignment, waktu diambil otomatis dari caption.
 
 Gerbang: `npx tsc --noEmit` dan `npx eslint src` bersih.
+
+### 8.1 Cara kerja: satu scene per putaran
+
+Jangan menulis semua scene sekaligus lalu memeriksa di akhir. Untuk setiap scene:
+
+1. Tulis scene memakai pola/kit.
+2. `npx tsc --noEmit`, lalu `npm run motion:check -- <id> --scene=<sceneId>` dan lihat filmstrip-nya.
+3. Perbaiki sampai tidak ada beku/entrance hilang dan filmstrip menunjukkan beat yang jelas, baru lanjut ke scene berikutnya.
+
+Tahap rencana visual (§7) dan implementasi (§8) adalah tahap yang paling menentukan mutu: jalankan dengan model terkuat yang tersedia dan effort tinggi. Tahap lain (VO, alignment, validasi) boleh memakai model yang lebih ringan.
 
 ## 8.5 Sound design (opsional)
 
@@ -347,6 +425,41 @@ Render still satu per satu dalam loop, bukan paralel, untuk menghindari exit 137
 
 Perbaiki semua temuan dalam **satu putaran**, lalu render ulang hanya frame yang terdampak.
 
+### 9.4 Periksa gerak (still tidak menunjukkan gerak)
+
+```bash
+npm run motion:check -- <id>                     # seluruh cerita (±40 dtk)
+npm run motion:check -- <id> --scene=<sceneId>   # satu scene saat iterasi
+```
+
+Skrip merender cerita beresolusi kecil dan mengukur selisih piksel antar-frame di area isi (tanpa watermark dan caption). Hasilnya:
+
+- laporan per scene: % frame bergerak, segmen beku terlama, entrance ada/tidak, lompatan kasar, dan grafik energi per detik (`·` beku, `▁▂▃` halus, `▄▅` aktif, `▆▇█` sangat cepat/potong);
+- filmstrip `out/<id>/motion/<scene>.png`: baris atas = frame 0, 2, … 14 (kurva entrance), baris bawah = 8 frame merata (perubahan per beat). **Lihat setiap filmstrip dengan alat baca gambar.**
+
+Gerbang: 0 error (beku ≥ 3 dtk). Peringatan (beku ≥ 1,5 dtk, tanpa entrance, < 40% frame bergerak) diperbaiki kecuali disengaja dan disebut di laporan. Di filmstrip, periksa juga: entrance tidak muncul utuh di frame 0 (harus terlihat bergerak di baris atas), objek tidak bertumpuk saat berganti, dan setiap beat terlihat berbeda dari beat sebelumnya.
+
+### 9.5 Periksa tata letak (otomatis)
+
+```bash
+npm run layout:check -- <id> [--scene=<id>] [--every=10]
+```
+
+Probe (terpasang di Watermark, aktif hanya saat pemeriksaan) mengukur semua teks yang terlihat setiap 10 frame; caption dan watermark diabaikan lewat `data-layout-ignore`.
+
+- **Error** bila menetap (≥ 2 sampel berturut-turut): teks keluar x 40–1040 atau keluar frame, di zona watermark (x > 800, y < 175), di zona caption sesuai `captionMode`, teks saling bertumpuk (> 20% kotak tinta), atau font cadangan (font belum `font:add`).
+- **Peringatan**: pelanggaran sesaat (1 sampel, biasanya animasi), teks terpotong overflow, bobot/italic palsu.
+- Laporan: `out/<id>/layout/report.json`. Elemen yang sengaja melanggar (dekorasi di tepi) diberi atribut `data-layout-ignore`.
+- Hanya teks DOM/SVG yang diukur; objek non-teks dan teks di canvas/3D tetap dicek dari still.
+
+Gerbang: 0 error. Waktu jalan ±20 dtk per episode.
+
+### 9.6 Review independen (wajib)
+
+Ikuti `docs/REVIEW-VISUAL.md`: reviewer dengan konteks segar menilai filmstrip, still, dan laporan dengan rubrik 9 aspek (0–2), tanpa membaca kode scene. Di Claude Code pakai subagent `visual-reviewer`. Perbaiki temuan "wajib" minimal satu putaran, lalu jalankan ulang `motion:check` dan `layout:check`.
+
+Gerbang: skor ≥ 14/18, tanpa nilai 0; Fokus, Gerak masuk, dan Hidup saat hold bernilai 2.
+
 ## 10. Gerbang kualitas
 
 ```bash
@@ -381,6 +494,9 @@ Fakta: n fakta, n sumber; validate:facts:online 0 error (cek manual: …)
 VO: kecepatan 1,1×, loudness …; salah ucap diperbaiki: …; perlu didengar: …
 Caption: cakupan …%; kata diinterpolasi: …
 Visual: still yang diperiksa: …; perbaikan: …
+Gerak: motion:check … error/… peringatan; beku terlama … dtk; filmstrip dilihat: …
+Tata letak: layout:check … error/… peringatan
+Review: skor awal …/18 → setelah revisi …/18; temuan wajib yang diperbaiki: …
 Gerbang: quality ✓ · check:publish:episode ✓
 Skor: n/16 — Akurasi 2 (…), Hook …, …
 Belum dilakukan: render MP4 (menunggu permintaan), commit, tonton utuh dengan suara
@@ -428,5 +544,7 @@ Periksa MP4-nya, karena preview bukan bukti hasil ekspor:
 | (iklan-menguping) laporan meminta pengguna mengurus error episode komodo | `check:publish` memeriksa semua brief; error episode lain dilaporkan sebagai tugas episode ini | `npm run check:publish:episode -- <id>`; error episode lain hanya di bagian "Di luar episode ini" (§10–11) |
 | (iklan-menguping) `npm run vo` gagal HTTP 402 | `FISH_AUDIO_MODEL` di `.env` menunjuk model berbayar yang kreditnya habis | cek `model` di manifest episode sebelumnya; jangan ubah `.env` diam-diam, laporkan ke pengguna |
 | (iklan-menguping) teks kuning tak terbaca di tone terang | Kuning Fakta di atas krem/putih kontrasnya rendah | tone `light`: kuning hanya untuk isian/latar (kartu, tag) dengan teks gelap; teks penekanan pakai amber gelap atau biru |
+| objek tampak datar dan bergerak seperti kotak; teks menabrak zona caption tanpa terdeteksi | isi warna rata tanpa cahaya; gerak tanpa fisika; tata letak hanya dicek dengan mata; agent menilai karyanya sendiri | `docs/TATA-OBJEK.md` + kit render/physics/patterns; `layout:check` (§9.5); review independen (§9.6) |
+| gerak terasa kaku/datar, objek beku lama saat hold | agent hanya melihat still; animasi ditulis dari `interpolate` linear | kit `src/shared/anim` + `docs/TATA-GERAK.md`; kolom Gerak di §7.1; `motion:check` + filmstrip (§9.4) |
 
 Tambahkan baris baru ke tabel ini setiap kali sebuah episode menemukan kesalahan baru, beserta pencegahannya.
