@@ -1,0 +1,66 @@
+{
+  "projectId": "nasi-dingin-v2",
+  "sourceBrief": "nasi-dingin-v2.json",
+  "provider": "fish-audio",
+  "model": "s2.1-pro-free",
+  "voice": "59c6df57a144",
+  "loudnessTarget": -14,
+  "generatedAt": "2026-11-10T11:24:49.954Z",
+  "scenes": [
+    {
+      "id": "hook",
+      "file": "nasi-dingin-v2/vo/hook.mp3",
+      "text": "Nasi putih yang sama bisa menaikkan gula darah lebih pelan. Kuncinya bukan ganti beras, tapi semalam di kulkas.",
+      "speed": 1.1,
+      "hash": "0cf44e1de813",
+      "voice": "59c6df57a144",
+      "audioSeconds": 5.982,
+      "lufs": -14.4,
+      "truePeak": -2.2
+    },
+    {
+      "id": "konteks",
+      "file": "nasi-dingin-v2/vo/konteks.mp3",
+      "text": "Peneliti Universitas Indonesia menguji ini pada belasan relawan sehat. Mereka makan nasi baru matang, dan di hari lain, nasi yang disimpan sehari semalam di kulkas, lalu dipanaskan lagi.",
+      "speed": 1.1,
+      "hash": "d44957cc1545",
+      "voice": "59c6df57a144",
+      "audioSeconds": 10.423,
+      "lufs": -14.7,
+      "truePeak": -2.3
+    },
+    {
+      "id": "mekanisme",
+      "file": "nasi-dingin-v2/vo/mekanisme.mp3",
+      "text": "Rahasianya di pati. Saat dimasak, butir pati menyerap air dan mengembang, mudah dipotong enzim menjadi gula. Saat didinginkan, rantai patinya merapat dan tersusun seperti kristal. Enzim sulit memotongnya. Sebagian lolos tanpa jadi gula. Namanya pati resisten.",
+      "speed": 1.1,
+      "hash": "7c080a247afe",
+      "voice": "59c6df57a144",
+      "audioSeconds": 15.229,
+      "lufs": -14.2,
+      "truePeak": -1.9
+    },
+    {
+      "id": "dampak",
+      "file": "nasi-dingin-v2/vo/dampak.mp3",
+      "text": "Hasilnya, nasi dingin itu punya pati resisten lebih banyak, dan lonjakan gula darah setelah makan lebih rendah. Uniknya, efek ini tetap ada meski nasinya sudah dipanaskan lagi. Studi di Polandia pada penderita diabetes tipe satu menemukan pola serupa.",
+      "speed": 1.1,
+      "hash": "a9395944bdbb",
+      "voice": "59c6df57a144",
+      "audioSeconds": 13.584,
+      "lufs": -14.4,
+      "truePeak": -2.1
+    },
+    {
+      "id": "jawaban",
+      "file": "nasi-dingin-v2/vo/jawaban.mp3",
+      "text": "Jadi, nasi kemarin memang bisa lebih ramah gula darah. Tapi studinya kecil, dan penderita diabetes tetap perlu saran dokter. Simpan nasi cepat di kulkas, jangan semalaman di meja. Racun bakterinya tidak hilang walaupun dipanaskan.",
+      "speed": 1.1,
+      "hash": "f151e6b83a01",
+      "voice": "59c6df57a144",
+      "audioSeconds": 12.8,
+      "lufs": -14.3,
+      "truePeak": -2
+    }
+  ]
+}

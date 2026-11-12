@@ -1,0 +1,16 @@
+{
+  "projectId": "nasi-dingin-v2",
+  "provider": "agnes-ai",
+  "images": [
+    {
+      "id": "hook",
+      "file": "nasi-dingin-v2/img/hook.jpg",
+      "prompt": "A bowl of cooked white rice covered with a clear lid sitting on the middle shelf of an open refrigerator in a simple Indonesian home kitchen at night, a rice cooker on the counter in the shadows nearby, no people. Cinematic soft painterly digital illustration, deep navy night palette with warm cream and soft golden accents, gentle film grain, quiet calm mood. Dim kitchen at night lit mainly by the warm light spilling from an open refrigerator, soft shadows. Vertical 9:16 composition, single clear focal subject in the center, calm uncluttered areas at the top and bottom for captions. Clean crisp details, coherent perspective, consistent style. No text, no letters, no numbers, no logos, no watermark, no real person likeness.",
+      "hash": "5da9d7a3ce9d",
+      "model": "agnes-image-2.5-flash",
+      "size": "1K 9:16",
+      "aiGenerated": true,
+      "generatedAt": "2026-11-10T11:28:39.105Z"
+    }
+  ]
+}

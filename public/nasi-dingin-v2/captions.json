@@ -1,0 +1,1133 @@
+{
+  "projectId": "nasi-dingin-v2",
+  "method": "whisper.cpp 1.5.5 (small) + forced alignment ke naskah",
+  "generatedAt": "2026-11-10T11:26:08.694Z",
+  "scenes": {
+    "hook": {
+      "hash": "0cf44e1de813",
+      "coverage": 1,
+      "missing": [],
+      "extra": [],
+      "heard": "Nasi putih yang sama bisa menaikkan gula darah lebih pelan, kuncinya bukan ganti beras tapi semalam di kulkas.",
+      "captions": [
+        {
+          "text": "Nasi",
+          "startMs": 60,
+          "endMs": 250,
+          "timestampMs": 155,
+          "confidence": 0.476023
+        },
+        {
+          "text": " putih",
+          "startMs": 250,
+          "endMs": 560,
+          "timestampMs": 405,
+          "confidence": 0.951081
+        },
+        {
+          "text": " yang",
+          "startMs": 560,
+          "endMs": 810,
+          "timestampMs": 685,
+          "confidence": 0.993856
+        },
+        {
+          "text": " sama",
+          "startMs": 810,
+          "endMs": 1060,
+          "timestampMs": 935,
+          "confidence": 0.99983
+        },
+        {
+          "text": " bisa",
+          "startMs": 1060,
+          "endMs": 1310,
+          "timestampMs": 1185,
+          "confidence": 0.984511
+        },
+        {
+          "text": " menaikkan",
+          "startMs": 1310,
+          "endMs": 1870,
+          "timestampMs": 1590,
+          "confidence": 0.674221
+        },
+        {
+          "text": " gula",
+          "startMs": 1870,
+          "endMs": 2120,
+          "timestampMs": 1995,
+          "confidence": 0.995125
+        },
+        {
+          "text": " darah",
+          "startMs": 2120,
+          "endMs": 2430,
+          "timestampMs": 2275,
+          "confidence": 0.965216
+        },
+        {
+          "text": " lebih",
+          "startMs": 2430,
+          "endMs": 2740,
+          "timestampMs": 2585,
+          "confidence": 0.994516
+        },
+        {
+          "text": " pelan.",
+          "startMs": 2740,
+          "endMs": 3260,
+          "timestampMs": 3000,
+          "confidence": 0.976853
+        },
+        {
+          "text": " Kuncinya",
+          "startMs": 3260,
+          "endMs": 3770,
+          "timestampMs": 3515,
+          "confidence": 0.495417
+        },
+        {
+          "text": " bukan",
+          "startMs": 3770,
+          "endMs": 4080,
+          "timestampMs": 3925,
+          "confidence": 0.985519
+        },
+        {
+          "text": " ganti",
+          "startMs": 4080,
+          "endMs": 4400,
+          "timestampMs": 4240,
+          "confidence": 0.99524
+        },
+        {
+          "text": " beras,",
+          "startMs": 4400,
+          "endMs": 4790,
+          "timestampMs": 4595,
+          "confidence": 0.979974
+        },
+        {
+          "text": " tapi",
+          "startMs": 4790,
+          "endMs": 5050,
+          "timestampMs": 4920,
+          "confidence": 0.644025
+        },
+        {
+          "text": " semalam",
+          "startMs": 5050,
+          "endMs": 5440,
+          "timestampMs": 5245,
+          "confidence": 0.885518
+        },
+        {
+          "text": " di",
+          "startMs": 5440,
+          "endMs": 5560,
+          "timestampMs": 5500,
+          "confidence": 0.996744
+        },
+        {
+          "text": " kulkas.",
+          "startMs": 5560,
+          "endMs": 6040,
+          "timestampMs": 5800,
+          "confidence": 0.236434
+        }
+      ]
+    },
+    "konteks": {
+      "hash": "d44957cc1545",
+      "coverage": 1,
+      "missing": [],
+      "extra": [],
+      "heard": "Penaliti Universitas Indonesia mengguji ini pada belasan relawan sehat, mereka makan nasi baru matang dan di hari lain nasi yang disimpan sehari semalam di kulkas, lalu dipanaskan lagi.",
+      "captions": [
+        {
+          "text": "Peneliti",
+          "startMs": 190,
+          "endMs": 570,
+          "timestampMs": 380,
+          "confidence": 0.971955
+        },
+        {
+          "text": " Universitas",
+          "startMs": 570,
+          "endMs": 1260,
+          "timestampMs": 915,
+          "confidence": 0.83976
+        },
+        {
+          "text": " Indonesia",
+          "startMs": 1260,
+          "endMs": 1820,
+          "timestampMs": 1540,
+          "confidence": 0.948328
+        },
+        {
+          "text": " menguji",
+          "startMs": 1820,
+          "endMs": 2340,
+          "timestampMs": 2080,
+          "confidence": 0.977535
+        },
+        {
+          "text": " ini",
+          "startMs": 2340,
+          "endMs": 2680,
+          "timestampMs": 2510,
+          "confidence": 0.978532
+        },
+        {
+          "text": " pada",
+          "startMs": 2680,
+          "endMs": 2830,
+          "timestampMs": 2755,
+          "confidence": 0.789724
+        },
+        {
+          "text": " belasan",
+          "startMs": 2830,
+          "endMs": 3270,
+          "timestampMs": 3050,
+          "confidence": 0.887739
+        },
+        {
+          "text": " relawan",
+          "startMs": 3270,
+          "endMs": 3710,
+          "timestampMs": 3490,
+          "confidence": 0.551158
+        },
+        {
+          "text": " sehat.",
+          "startMs": 3710,
+          "endMs": 4160,
+          "timestampMs": 3935,
+          "confidence": 0.913891
+        },
+        {
+          "text": " Mereka",
+          "startMs": 4160,
+          "endMs": 4520,
+          "timestampMs": 4340,
+          "confidence": 0.501253
+        },
+        {
+          "text": " makan",
+          "startMs": 4520,
+          "endMs": 4820,
+          "timestampMs": 4670,
+          "confidence": 0.983573
+        },
+        {
+          "text": " nasi",
+          "startMs": 4820,
+          "endMs": 5060,
+          "timestampMs": 4940,
+          "confidence": 0.970276
+        },
+        {
+          "text": " baru",
+          "startMs": 5060,
+          "endMs": 5300,
+          "timestampMs": 5180,
+          "confidence": 0.941485
+        },
+        {
+          "text": " matang,",
+          "startMs": 5300,
+          "endMs": 5810,
+          "timestampMs": 5555,
+          "confidence": 0.988952
+        },
+        {
+          "text": " dan",
+          "startMs": 5810,
+          "endMs": 5880,
+          "timestampMs": 5845,
+          "confidence": 0.486702
+        },
+        {
+          "text": " di",
+          "startMs": 5880,
+          "endMs": 6040,
+          "timestampMs": 5960,
+          "confidence": 0.971877
+        },
+        {
+          "text": " hari",
+          "startMs": 6040,
+          "endMs": 6370,
+          "timestampMs": 6205,
+          "confidence": 0.973255
+        },
+        {
+          "text": " lain,",
+          "startMs": 6370,
+          "endMs": 6770,
+          "timestampMs": 6570,
+          "confidence": 0.98816
+        },
+        {
+          "text": " nasi",
+          "startMs": 6770,
+          "endMs": 7000,
+          "timestampMs": 6885,
+          "confidence": 0.54868
+        },
+        {
+          "text": " yang",
+          "startMs": 7000,
+          "endMs": 7200,
+          "timestampMs": 7100,
+          "confidence": 0.979031
+        },
+        {
+          "text": " disimpan",
+          "startMs": 7200,
+          "endMs": 7660,
+          "timestampMs": 7430,
+          "confidence": 0.961167
+        },
+        {
+          "text": " sehari",
+          "startMs": 7660,
+          "endMs": 8000,
+          "timestampMs": 7830,
+          "confidence": 0.940508
+        },
+        {
+          "text": " semalam",
+          "startMs": 8000,
+          "endMs": 8460,
+          "timestampMs": 8230,
+          "confidence": 0.866931
+        },
+        {
+          "text": " di",
+          "startMs": 8460,
+          "endMs": 8590,
+          "timestampMs": 8525,
+          "confidence": 0.998295
+        },
+        {
+          "text": " kulkas,",
+          "startMs": 8590,
+          "endMs": 9140,
+          "timestampMs": 8865,
+          "confidence": 0.359701
+        },
+        {
+          "text": " lalu",
+          "startMs": 9140,
+          "endMs": 9420,
+          "timestampMs": 9280,
+          "confidence": 0.889253
+        },
+        {
+          "text": " dipanaskan",
+          "startMs": 9420,
+          "endMs": 10120,
+          "timestampMs": 9770,
+          "confidence": 0.663835
+        },
+        {
+          "text": " lagi.",
+          "startMs": 10120,
+          "endMs": 10500,
+          "timestampMs": 10310,
+          "confidence": 0.99826
+        }
+      ]
+    },
+    "mekanisme": {
+      "hash": "7c080a247afe",
+      "coverage": 1,
+      "missing": [],
+      "extra": [],
+      "heard": "Rahasianya di pati. Saat dimasak, butir pati menyerap air dan mengembang, mudah dipotong enzim menjadi gula. Saat didiningkan, rantai patinya merapat dan tersusun seperti kristal. Enzim sulit memotongnya, sebagian lolos tanpa jadi gula. Namanya pati resisten.",
+      "captions": [
+        {
+          "text": "Rahasianya",
+          "startMs": 180,
+          "endMs": 850,
+          "timestampMs": 515,
+          "confidence": 0.971436
+        },
+        {
+          "text": " di",
+          "startMs": 850,
+          "endMs": 1030,
+          "timestampMs": 940,
+          "confidence": 0.331517
+        },
+        {
+          "text": " pati.",
+          "startMs": 1030,
+          "endMs": 1560,
+          "timestampMs": 1295,
+          "confidence": 0.884409
+        },
+        {
+          "text": " Saat",
+          "startMs": 1560,
+          "endMs": 1680,
+          "timestampMs": 1620,
+          "confidence": 0.742881
+        },
+        {
+          "text": " dimasak,",
+          "startMs": 1680,
+          "endMs": 2230,
+          "timestampMs": 1955,
+          "confidence": 0.910823
+        },
+        {
+          "text": " butir",
+          "startMs": 2230,
+          "endMs": 2540,
+          "timestampMs": 2385,
+          "confidence": 0.869668
+        },
+        {
+          "text": " pati",
+          "startMs": 2540,
+          "endMs": 2790,
+          "timestampMs": 2665,
+          "confidence": 0.973491
+        },
+        {
+          "text": " menyerap",
+          "startMs": 2790,
+          "endMs": 3290,
+          "timestampMs": 3040,
+          "confidence": 0.70272
+        },
+        {
+          "text": " air",
+          "startMs": 3290,
+          "endMs": 3480,
+          "timestampMs": 3385,
+          "confidence": 0.998845
+        },
+        {
+          "text": " dan",
+          "startMs": 3480,
+          "endMs": 3670,
+          "timestampMs": 3575,
+          "confidence": 0.997818
+        },
+        {
+          "text": " mengembang,",
+          "startMs": 3670,
+          "endMs": 4600,
+          "timestampMs": 4135,
+          "confidence": 0.642705
+        },
+        {
+          "text": " mudah",
+          "startMs": 4600,
+          "endMs": 4840,
+          "timestampMs": 4720,
+          "confidence": 0.950274
+        },
+        {
+          "text": " dipotong",
+          "startMs": 4840,
+          "endMs": 5350,
+          "timestampMs": 5095,
+          "confidence": 0.916404
+        },
+        {
+          "text": " enzim",
+          "startMs": 5350,
+          "endMs": 5650,
+          "timestampMs": 5500,
+          "confidence": 0.417459
+        },
+        {
+          "text": " menjadi",
+          "startMs": 5650,
+          "endMs": 6090,
+          "timestampMs": 5870,
+          "confidence": 0.997798
+        },
+        {
+          "text": " gula.",
+          "startMs": 6090,
+          "endMs": 6400,
+          "timestampMs": 6245,
+          "confidence": 0.997479
+        },
+        {
+          "text": " Saat",
+          "startMs": 6400,
+          "endMs": 6620,
+          "timestampMs": 6510,
+          "confidence": 0.997584
+        },
+        {
+          "text": " didinginkan,",
+          "startMs": 6620,
+          "endMs": 7360,
+          "timestampMs": 6990,
+          "confidence": 0.540663
+        },
+        {
+          "text": " rantai",
+          "startMs": 7360,
+          "endMs": 7700,
+          "timestampMs": 7530,
+          "confidence": 0.835974
+        },
+        {
+          "text": " patinya",
+          "startMs": 7700,
+          "endMs": 8130,
+          "timestampMs": 7915,
+          "confidence": 0.988135
+        },
+        {
+          "text": " merapat",
+          "startMs": 8130,
+          "endMs": 8560,
+          "timestampMs": 8345,
+          "confidence": 0.964525
+        },
+        {
+          "text": " dan",
+          "startMs": 8560,
+          "endMs": 8720,
+          "timestampMs": 8640,
+          "confidence": 0.993883
+        },
+        {
+          "text": " tersusun",
+          "startMs": 8720,
+          "endMs": 9110,
+          "timestampMs": 8915,
+          "confidence": 0.965129
+        },
+        {
+          "text": " seperti",
+          "startMs": 9110,
+          "endMs": 9550,
+          "timestampMs": 9330,
+          "confidence": 0.991304
+        },
+        {
+          "text": " kristal.",
+          "startMs": 9550,
+          "endMs": 10320,
+          "timestampMs": 9935,
+          "confidence": 0.886678
+        },
+        {
+          "text": " Enzim",
+          "startMs": 10320,
+          "endMs": 10570,
+          "timestampMs": 10445,
+          "confidence": 0.86461
+        },
+        {
+          "text": " sulit",
+          "startMs": 10570,
+          "endMs": 10940,
+          "timestampMs": 10755,
+          "confidence": 0.986204
+        },
+        {
+          "text": " memotongnya.",
+          "startMs": 10940,
+          "endMs": 12000,
+          "timestampMs": 11470,
+          "confidence": 0.974068
+        },
+        {
+          "text": " Sebagian",
+          "startMs": 12000,
+          "endMs": 12400,
+          "timestampMs": 12200,
+          "confidence": 0.550134
+        },
+        {
+          "text": " lolos",
+          "startMs": 12400,
+          "endMs": 12700,
+          "timestampMs": 12550,
+          "confidence": 0.278346
+        },
+        {
+          "text": " tanpa",
+          "startMs": 12700,
+          "endMs": 13000,
+          "timestampMs": 12850,
+          "confidence": 0.99232
+        },
+        {
+          "text": " jadi",
+          "startMs": 13000,
+          "endMs": 13300,
+          "timestampMs": 13150,
+          "confidence": 0.987131
+        },
+        {
+          "text": " gula.",
+          "startMs": 13300,
+          "endMs": 13810,
+          "timestampMs": 13555,
+          "confidence": 0.999426
+        },
+        {
+          "text": " Namanya",
+          "startMs": 13810,
+          "endMs": 14150,
+          "timestampMs": 13980,
+          "confidence": 0.703511
+        },
+        {
+          "text": " pati",
+          "startMs": 14150,
+          "endMs": 14410,
+          "timestampMs": 14280,
+          "confidence": 0.964049
+        },
+        {
+          "text": " resisten.",
+          "startMs": 14410,
+          "endMs": 15200,
+          "timestampMs": 14805,
+          "confidence": 0.374021
+        }
+      ]
+    },
+    "dampak": {
+      "hash": "a9395944bdbb",
+      "coverage": 0.947,
+      "missing": [
+        "di",
+        "Polandia"
+      ],
+      "extra": [],
+      "heard": "Hasilnya, nasi dingin itu punya pati rezisten lebih banyak dan lonyakan gula darah setelah makan lebih rendah. Uniknya, efek ini tetap ada meskinasinya sudah dipanaskan lagi. Studi dipolan dia pada penderita diabetes tipi 1 menemukan pola serupa.",
+      "captions": [
+        {
+          "text": "Hasilnya,",
+          "startMs": 190,
+          "endMs": 640,
+          "timestampMs": 415,
+          "confidence": 0.802693
+        },
+        {
+          "text": " nasi",
+          "startMs": 640,
+          "endMs": 1030,
+          "timestampMs": 835,
+          "confidence": 0.967459
+        },
+        {
+          "text": " dingin",
+          "startMs": 1030,
+          "endMs": 1280,
+          "timestampMs": 1155,
+          "confidence": 0.979322
+        },
+        {
+          "text": " itu",
+          "startMs": 1280,
+          "endMs": 1470,
+          "timestampMs": 1375,
+          "confidence": 0.976131
+        },
+        {
+          "text": " punya",
+          "startMs": 1470,
+          "endMs": 1810,
+          "timestampMs": 1640,
+          "confidence": 0.994865
+        },
+        {
+          "text": " pati",
+          "startMs": 1810,
+          "endMs": 2040,
+          "timestampMs": 1925,
+          "confidence": 0.784678
+        },
+        {
+          "text": " resisten",
+          "startMs": 2040,
+          "endMs": 2560,
+          "timestampMs": 2300,
+          "confidence": 0.322319
+        },
+        {
+          "text": " lebih",
+          "startMs": 2560,
+          "endMs": 2870,
+          "timestampMs": 2715,
+          "confidence": 0.956969
+        },
+        {
+          "text": " banyak,",
+          "startMs": 2870,
+          "endMs": 3410,
+          "timestampMs": 3140,
+          "confidence": 0.998076
+        },
+        {
+          "text": " dan",
+          "startMs": 3410,
+          "endMs": 3510,
+          "timestampMs": 3460,
+          "confidence": 0.679549
+        },
+        {
+          "text": " lonjakan",
+          "startMs": 3510,
+          "endMs": 3950,
+          "timestampMs": 3730,
+          "confidence": 0.923112
+        },
+        {
+          "text": " gula",
+          "startMs": 3950,
+          "endMs": 4160,
+          "timestampMs": 4055,
+          "confidence": 0.983348
+        },
+        {
+          "text": " darah",
+          "startMs": 4160,
+          "endMs": 4440,
+          "timestampMs": 4300,
+          "confidence": 0.576252
+        },
+        {
+          "text": " setelah",
+          "startMs": 4440,
+          "endMs": 4830,
+          "timestampMs": 4635,
+          "confidence": 0.984581
+        },
+        {
+          "text": " makan",
+          "startMs": 4830,
+          "endMs": 5110,
+          "timestampMs": 4970,
+          "confidence": 0.961925
+        },
+        {
+          "text": " lebih",
+          "startMs": 5110,
+          "endMs": 5390,
+          "timestampMs": 5250,
+          "confidence": 0.996453
+        },
+        {
+          "text": " rendah.",
+          "startMs": 5390,
+          "endMs": 5800,
+          "timestampMs": 5595,
+          "confidence": 0.986303
+        },
+        {
+          "text": " Uniknya,",
+          "startMs": 5800,
+          "endMs": 6430,
+          "timestampMs": 6115,
+          "confidence": 0.987604
+        },
+        {
+          "text": " efek",
+          "startMs": 6430,
+          "endMs": 6770,
+          "timestampMs": 6600,
+          "confidence": 0.972919
+        },
+        {
+          "text": " ini",
+          "startMs": 6770,
+          "endMs": 6940,
+          "timestampMs": 6855,
+          "confidence": 0.995494
+        },
+        {
+          "text": " tetap",
+          "startMs": 6940,
+          "endMs": 7270,
+          "timestampMs": 7105,
+          "confidence": 0.975299
+        },
+        {
+          "text": " ada",
+          "startMs": 7270,
+          "endMs": 7480,
+          "timestampMs": 7375,
+          "confidence": 0.970105
+        },
+        {
+          "text": " meski",
+          "startMs": 7480,
+          "endMs": 7900,
+          "timestampMs": 7690,
+          "confidence": 0.92401
+        },
+        {
+          "text": " nasinya",
+          "startMs": 7900,
+          "endMs": 8320,
+          "timestampMs": 8110,
+          "confidence": 0.92401
+        },
+        {
+          "text": " sudah",
+          "startMs": 8320,
+          "endMs": 8680,
+          "timestampMs": 8500,
+          "confidence": 0.974594
+        },
+        {
+          "text": " dipanaskan",
+          "startMs": 8680,
+          "endMs": 9380,
+          "timestampMs": 9030,
+          "confidence": 0.85755
+        },
+        {
+          "text": " lagi.",
+          "startMs": 9380,
+          "endMs": 9760,
+          "timestampMs": 9570,
+          "confidence": 0.998519
+        },
+        {
+          "text": " Studi",
+          "startMs": 9760,
+          "endMs": 10040,
+          "timestampMs": 9900,
+          "confidence": 0.890995
+        },
+        {
+          "text": " di",
+          "startMs": 10040,
+          "endMs": 10320,
+          "timestampMs": 10180,
+          "confidence": null
+        },
+        {
+          "text": " Polandia",
+          "startMs": 10320,
+          "endMs": 10600,
+          "timestampMs": 10460,
+          "confidence": null
+        },
+        {
+          "text": " pada",
+          "startMs": 10600,
+          "endMs": 10850,
+          "timestampMs": 10725,
+          "confidence": 0.994124
+        },
+        {
+          "text": " penderita",
+          "startMs": 10850,
+          "endMs": 11350,
+          "timestampMs": 11100,
+          "confidence": 0.91722
+        },
+        {
+          "text": " diabetes",
+          "startMs": 11350,
+          "endMs": 11840,
+          "timestampMs": 11595,
+          "confidence": 0.831596
+        },
+        {
+          "text": " tipe",
+          "startMs": 11840,
+          "endMs": 12040,
+          "timestampMs": 11940,
+          "confidence": 0.664193
+        },
+        {
+          "text": " satu",
+          "startMs": 12040,
+          "endMs": 12260,
+          "timestampMs": 12150,
+          "confidence": 0.788706
+        },
+        {
+          "text": " menemukan",
+          "startMs": 12260,
+          "endMs": 12720,
+          "timestampMs": 12490,
+          "confidence": 0.986666
+        },
+        {
+          "text": " pola",
+          "startMs": 12720,
+          "endMs": 12940,
+          "timestampMs": 12830,
+          "confidence": 0.94183
+        },
+        {
+          "text": " serupa.",
+          "startMs": 12940,
+          "endMs": 13640,
+          "timestampMs": 13290,
+          "confidence": 0.929484
+        }
+      ]
+    },
+    "jawaban": {
+      "hash": "f151e6b83a01",
+      "coverage": 1,
+      "missing": [],
+      "extra": [],
+      "heard": "Jadi, nasi kemarin membang bisa lebih ramah gula darah, tapi studinya kecil dan penderita diabetes tetap perlu saran dokter. Simpan nasi cepat di kulkas, jangan semalaman dimeja. Racun bakterinya tidak hilang walaupun dipanaskan.",
+      "captions": [
+        {
+          "text": "Jadi,",
+          "startMs": 210,
+          "endMs": 370,
+          "timestampMs": 290,
+          "confidence": 0.922335
+        },
+        {
+          "text": " nasi",
+          "startMs": 370,
+          "endMs": 620,
+          "timestampMs": 495,
+          "confidence": 0.976375
+        },
+        {
+          "text": " kemarin",
+          "startMs": 620,
+          "endMs": 1110,
+          "timestampMs": 865,
+          "confidence": 0.99093
+        },
+        {
+          "text": " memang",
+          "startMs": 1110,
+          "endMs": 1490,
+          "timestampMs": 1300,
+          "confidence": 0.643583
+        },
+        {
+          "text": " bisa",
+          "startMs": 1490,
+          "endMs": 1740,
+          "timestampMs": 1615,
+          "confidence": 0.901596
+        },
+        {
+          "text": " lebih",
+          "startMs": 1740,
+          "endMs": 2050,
+          "timestampMs": 1895,
+          "confidence": 0.996972
+        },
+        {
+          "text": " ramah",
+          "startMs": 2050,
+          "endMs": 2360,
+          "timestampMs": 2205,
+          "confidence": 0.98213
+        },
+        {
+          "text": " gula",
+          "startMs": 2360,
+          "endMs": 2610,
+          "timestampMs": 2485,
+          "confidence": 0.993383
+        },
+        {
+          "text": " darah.",
+          "startMs": 2610,
+          "endMs": 3190,
+          "timestampMs": 2900,
+          "confidence": 0.953203
+        },
+        {
+          "text": " Tapi",
+          "startMs": 3190,
+          "endMs": 3500,
+          "timestampMs": 3345,
+          "confidence": 0.688747
+        },
+        {
+          "text": " studinya",
+          "startMs": 3500,
+          "endMs": 3980,
+          "timestampMs": 3740,
+          "confidence": 0.659594
+        },
+        {
+          "text": " kecil,",
+          "startMs": 3980,
+          "endMs": 4400,
+          "timestampMs": 4190,
+          "confidence": 0.999018
+        },
+        {
+          "text": " dan",
+          "startMs": 4400,
+          "endMs": 4500,
+          "timestampMs": 4450,
+          "confidence": 0.458962
+        },
+        {
+          "text": " penderita",
+          "startMs": 4500,
+          "endMs": 5040,
+          "timestampMs": 4770,
+          "confidence": 0.898013
+        },
+        {
+          "text": " diabetes",
+          "startMs": 5040,
+          "endMs": 5700,
+          "timestampMs": 5370,
+          "confidence": 0.553044
+        },
+        {
+          "text": " tetap",
+          "startMs": 5700,
+          "endMs": 5880,
+          "timestampMs": 5790,
+          "confidence": 0.76708
+        },
+        {
+          "text": " perlu",
+          "startMs": 5880,
+          "endMs": 6260,
+          "timestampMs": 6070,
+          "confidence": 0.755987
+        },
+        {
+          "text": " saran",
+          "startMs": 6260,
+          "endMs": 6520,
+          "timestampMs": 6390,
+          "confidence": 0.962262
+        },
+        {
+          "text": " dokter.",
+          "startMs": 6520,
+          "endMs": 6980,
+          "timestampMs": 6750,
+          "confidence": 0.550844
+        },
+        {
+          "text": " Simpan",
+          "startMs": 6980,
+          "endMs": 7340,
+          "timestampMs": 7160,
+          "confidence": 0.709411
+        },
+        {
+          "text": " nasi",
+          "startMs": 7340,
+          "endMs": 7610,
+          "timestampMs": 7475,
+          "confidence": 0.981069
+        },
+        {
+          "text": " cepat",
+          "startMs": 7610,
+          "endMs": 7880,
+          "timestampMs": 7745,
+          "confidence": 0.992373
+        },
+        {
+          "text": " di",
+          "startMs": 7880,
+          "endMs": 8000,
+          "timestampMs": 7940,
+          "confidence": 0.994908
+        },
+        {
+          "text": " kulkas,",
+          "startMs": 8000,
+          "endMs": 8710,
+          "timestampMs": 8355,
+          "confidence": 0.383317
+        },
+        {
+          "text": " jangan",
+          "startMs": 8710,
+          "endMs": 8840,
+          "timestampMs": 8775,
+          "confidence": 0.980367
+        },
+        {
+          "text": " semalaman",
+          "startMs": 8840,
+          "endMs": 9380,
+          "timestampMs": 9110,
+          "confidence": 0.918842
+        },
+        {
+          "text": " di",
+          "startMs": 9380,
+          "endMs": 9710,
+          "timestampMs": 9545,
+          "confidence": 0.676
+        },
+        {
+          "text": " meja.",
+          "startMs": 9710,
+          "endMs": 10040,
+          "timestampMs": 9875,
+          "confidence": 0.676
+        },
+        {
+          "text": " Racun",
+          "startMs": 10040,
+          "endMs": 10340,
+          "timestampMs": 10190,
+          "confidence": 0.489329
+        },
+        {
+          "text": " bakterinya",
+          "startMs": 10340,
+          "endMs": 10920,
+          "timestampMs": 10630,
+          "confidence": 0.985304
+        },
+        {
+          "text": " tidak",
+          "startMs": 10920,
+          "endMs": 11240,
+          "timestampMs": 11080,
+          "confidence": 0.998369
+        },
+        {
+          "text": " hilang",
+          "startMs": 11240,
+          "endMs": 11620,
+          "timestampMs": 11430,
+          "confidence": 0.99878
+        },
+        {
+          "text": " walaupun",
+          "startMs": 11620,
+          "endMs": 12120,
+          "timestampMs": 11870,
+          "confidence": 0.898861
+        },
+        {
+          "text": " dipanaskan.",
+          "startMs": 12120,
+          "endMs": 12820,
+          "timestampMs": 12470,
+          "confidence": 0.805623
+        }
+      ]
+    }
+  }
+}
