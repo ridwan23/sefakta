@@ -1,0 +1,16 @@
+{
+  "projectId": "nasi-dingin",
+  "provider": "agnes-ai",
+  "images": [
+    {
+      "id": "hook",
+      "file": "nasi-dingin/img/hook.jpg",
+      "prompt": "A bowl of leftover cooked white rice covered with a clear lid, sitting on a shelf inside an open refrigerator in a simple Indonesian home kitchen, a rice cooker on the counter nearby, morning atmosphere, no people. Soft flat editorial illustration with gentle watercolor texture, warm cream and muted navy palette with small warm yellow accents, clean simple shapes, calm homey mood. Soft warm morning light from a window, gentle shadows. Vertical 9:16 composition, single clear focal subject in the center, calm uncluttered areas at the top and bottom for captions. Clean crisp details, coherent perspective, consistent style. No text, no letters, no numbers, no logos, no watermark, no real person likeness.",
+      "hash": "bba35d2b059b",
+      "model": "agnes-image-2.5-flash",
+      "size": "1K 9:16",
+      "aiGenerated": true,
+      "generatedAt": "2026-11-10T10:51:52.687Z"
+    }
+  ]
+}

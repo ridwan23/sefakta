@@ -1,0 +1,156 @@
+{
+  "projectId": "nasi-dingin",
+  "title": "Nasi Kemarin Lebih Ramah Gula Darah?",
+  "series": "Tubuh",
+  "status": "draft",
+  "captionMode": "subtitle",
+  "visualStyle": {
+    "name": "Diagram dapur terang: butir pati jadi kristal di atas krem",
+    "reason": "Fakta sains makanan sehari-hari orang Indonesia: perubahan pati saat nasi didinginkan tidak terlihat mata, jadi perlu diagram. Latar krem terang, garis biru tua, dan aksen kuning membuat mangkuk nasi, kulkas, butir pati, dan grafik gula darah mudah dibaca di ponsel. Pati lembek digambar garis bergelombang longgar, pati kristal digambar kisi rapat bergaris tegas, jadi bedanya terbaca tanpa warna. Merah hanya untuk peringatan keamanan, hijau untuk tanda aman.",
+    "tone": "light",
+    "palette": ["#F6F1E7", "#FFFFFF", "#0D2250", "#FFB000", "#B5651D", "#D64533", "#2E8B6E"],
+    "captionColors": {
+      "text": "#0D2250",
+      "highlight": "#FFB000",
+      "highlightText": "#0D2250"
+    }
+  },
+  "imageStyle": "Soft flat editorial illustration with gentle watercolor texture, warm cream and muted navy palette with small warm yellow accents, clean simple shapes, calm homey mood. Soft warm morning light from a window, gentle shadows.",
+  "scenes": [
+    {
+      "id": "hook",
+      "durationSeconds": 7,
+      "voiceoverText": "Nasi sisa semalam di kulkas sering dianggap nasi kelas dua. Padahal, buat gula darahmu, nasi kemarin bisa lebih bersahabat.",
+      "caption": "",
+      "headline": "Nasi kemarin, lebih ramah gula darah?",
+      "visual": "Ilustrasi AI (label ILUSTRASI): dapur rumah Indonesia pagi hari, kulkas terbuka dengan mangkuk nasi sisa. Kamera dorong pelan ke mangkuk. Stempel 'KELAS DUA?' muncul pada 'kelas dua' lalu dicoret saat 'bersahabat'. SFX: pop-soft saat stempel (kelas dua).",
+      "imagePrompt": "A bowl of leftover cooked white rice covered with a clear lid, sitting on a shelf inside an open refrigerator in a simple Indonesian home kitchen, a rice cooker on the counter nearby, morning atmosphere, no people.",
+      "factIds": ["f-respons"]
+    },
+    {
+      "id": "konteks",
+      "durationSeconds": 10,
+      "voiceoverText": "Ini bukan mitos dapur. Peneliti Universitas Indonesia membandingkan nasi putih baru matang dengan nasi yang didinginkan sehari semalam di kulkas, lalu dipanaskan lagi.",
+      "caption": "",
+      "headline": "Diuji peneliti UI",
+      "visual": "Kartu label 'Universitas Indonesia'. Dua mangkuk berdampingan: kiri 'BARU MATANG' (uap), kanan melewati garis waktu kulkas 24 jam (ikon kulkas, jam berputar) lalu dipanaskan (uap kembali). SFX: hum-low singkat saat pintu kulkas (kulkas).",
+      "factIds": ["f-respons"]
+    },
+    {
+      "id": "mekanisme",
+      "durationSeconds": 14,
+      "voiceoverText": "Rahasianya ada di pati. Saat nasi panas, patinya mengembang dan lembek, gampang dipecah jadi gula. Begitu dingin, pati itu merapat dan menyusun diri seperti kristal. Enzim di usus jadi susah memotongnya. Inilah pati resisten.",
+      "caption": "",
+      "headline": "Dingin: pati jadi kristal",
+      "visual": "Zoom ke satu butir nasi. Rantai pati panas = garis bergelombang longgar, enzim (gunting bulat) memotongnya menjadi titik-titik gula. Saat 'dingin' garis merapat jadi kisi heksagon kristal; gunting membentur dan memantul. Label 'PATI RESISTEN'. SFX: notif-ting saat kristal terbentuk (kristal), toggle-click saat gunting memantul (susah).",
+      "factIds": ["f-pati"]
+    },
+    {
+      "id": "dampak",
+      "durationSeconds": 14,
+      "voiceoverText": "Hasilnya, pati resisten di nasi dingin naik lebih dari dua kali lipat. Sekelompok orang dewasa sehat mencobanya, dan lonjakan gula darah mereka lebih rendah. Tapi ini studi kecil, dan hasil penelitian lain belum seragam.",
+      "caption": "",
+      "headline": "Lonjakan gula lebih rendah",
+      "visual": "Dua batang pati resisten (baru matang pendek, nasi dingin lebih dari dua kali tinggi; tanpa angka). Lalu grafik kurva gula darah: kurva nasi baru tinggi, kurva nasi dingin lebih landai. Catatan kecil 'studi kecil · hasil belum seragam'. SFX: stamp-thud saat kurva kedua selesai (rendah).",
+      "factIds": ["f-pati", "f-respons"]
+    },
+    {
+      "id": "jawaban",
+      "durationSeconds": 12,
+      "voiceoverText": "Jadi, nasi kemarin bukan nasi kelas dua. Asal setelah matang, cepat masuk kulkas, jangan dibiarkan semalaman di meja. Racun bakterinya tahan panas, dipanaskan ulang pun tidak hilang.",
+      "caption": "",
+      "headline": "Cepat ke kulkas, jangan semalaman di meja",
+      "visual": "Layar terbagi: kulkas dengan centang hijau vs mangkuk di meja semalaman (bulan) dengan silang merah dan titik bakteri tumbuh. Api kompor di bawah bakteri, bakteri tetap ada. Frame akhir: mangkuk di kulkas + centang, layak beku untuk CTA.",
+      "factIds": ["f-aman"]
+    }
+  ],
+  "facts": [
+    {
+      "id": "f-pati",
+      "claim": "Nasi yang dimasak lalu didinginkan mengalami retrogradasi: pati membentuk struktur kristal yang sulit dipecah enzim di usus halus sehingga kadar pati resisten naik; pada studi UI, nasi putih yang didinginkan 24 jam di 4 °C lalu dipanaskan ulang punya pati resisten lebih dari dua kali lipat nasi baru matang.",
+      "kind": "fakta",
+      "status": "terverifikasi",
+      "figures": [],
+      "sources": [
+        {
+          "title": "Effect of cooling of cooked white rice on resistant starch content and glycemic response",
+          "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID:26693746%20AND%20SRC:MED&resultType=core&format=json",
+          "publisher": "Asia Pacific Journal of Clinical Nutrition (abstrak via Europe PMC)",
+          "origin": "Sonia, Witjaksono, Ridwan, Universitas Indonesia (2015)",
+          "primary": true,
+          "accessed": "2026-11-10",
+          "quote": "In conclusion, cooling of cooked white rice increased resistant starch content."
+        },
+        {
+          "title": "Influence of resistant starch resulting from the cooling of rice on postprandial glycemia in type 1 diabetes",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9013350/",
+          "publisher": "Nutrition & Diabetes (PMC)",
+          "origin": "Nutrition & Diabetes 2022, uji pada diabetes tipe 1",
+          "primary": true,
+          "accessed": "2026-11-10",
+          "quote": "The crystallized starch form can resist enzymatic degradation in the small intestine, thus lowering the concentration of digestible starch in cooked starch products"
+        }
+      ],
+      "limits": "'Lebih dari dua kali lipat' (0,64 → 1,65 g/100 g) hanya dari studi UI, satu jenis nasi putih; kadar berbeda antarvarietas dan cara masak. Angka absolut tidak ditampilkan. Diagram skematis: butir pati dan enzim digambar jauh lebih besar, enzim digambar sebagai gunting."
+    },
+    {
+      "id": "f-respons",
+      "claim": "Pada sekelompok kecil orang dewasa sehat, nasi putih yang didinginkan 24 jam di 4 °C lalu dipanaskan ulang menghasilkan respons gula darah lebih rendah daripada nasi baru matang; studi pada diabetes tipe 1 searah, tetapi hasil antarstudi tidak selalu konsisten.",
+      "kind": "fakta",
+      "status": "terverifikasi",
+      "figures": [],
+      "sources": [
+        {
+          "title": "Effect of cooling of cooked white rice on resistant starch content and glycemic response",
+          "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID:26693746%20AND%20SRC:MED&resultType=core&format=json",
+          "publisher": "Asia Pacific Journal of Clinical Nutrition (abstrak via Europe PMC)",
+          "origin": "Sonia, Witjaksono, Ridwan, Universitas Indonesia (2015)",
+          "primary": true,
+          "accessed": "2026-11-10",
+          "quote": "Cooked white rice cooled for 24 hours at 4°C then reheated lowered glycemic response compared with freshly cooked white rice."
+        },
+        {
+          "title": "Influence of resistant starch resulting from the cooling of rice on postprandial glycemia in type 1 diabetes",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9013350/",
+          "publisher": "Nutrition & Diabetes (PMC)",
+          "origin": "Nutrition & Diabetes 2022, uji pada diabetes tipe 1",
+          "primary": true,
+          "accessed": "2026-11-10",
+          "quote": "Subjecting rice to a cooling process reduced the increase in postprandial blood glucose in people with type 1 diabetes."
+        }
+      ],
+      "limits": "Studi UI: 15 orang, p = 0,047. Studi diabetes tipe 1 mencatat lebih banyak episode hipoglikemia setelah nasi dingin, jadi episode tidak menyebut nasi dingin sebagai obat atau aman bagi penderita diabetes. 'Nasi kelas dua' adalah anggapan sosial, bukan klaim fakta."
+    },
+    {
+      "id": "f-aman",
+      "claim": "Spora Bacillus cereus bertahan saat nasi dimasak; bila nasi dibiarkan pada suhu ruang, spora dapat tumbuh dan menghasilkan toksin yang tidak hilang dengan dipanaskan ulang.",
+      "kind": "fakta",
+      "status": "terverifikasi",
+      "figures": [],
+      "sources": [
+        {
+          "title": "Safety of Leftover Rice",
+          "url": "https://brunswick.ces.ncsu.edu/2024/02/safety-of-leftover-rice/",
+          "publisher": "NC State Extension",
+          "origin": "NC State Extension",
+          "primary": true,
+          "accessed": "2026-11-10",
+          "quote": "If not cooled properly or left at room temperature the spores can grow into a toxin."
+        },
+        {
+          "title": "Safe cooling of cooked rice",
+          "url": "https://www.healthywa.wa.gov.au/Articles/S_T/Safe-cooling-of-cooked-rice",
+          "publisher": "Department of Health, Western Australia",
+          "origin": "Healthy WA, Pemerintah Australia Barat",
+          "primary": true,
+          "accessed": "2026-11-10",
+          "quote": "reheating cooked rice before eating does not kill the spores or and any toxins that have already been produced and can still make you ill."
+        }
+      ],
+      "limits": "Naskah tidak menyebut batas jam karena pedoman berbeda (USDA: dua jam); ditulis 'cepat masuk kulkas'. 'Racun tahan panas' merujuk toksin emetik B. cereus."
+    }
+  ],
+  "numbersIgnored": [
+    { "value": 2, "reason": "'Lebih dari dua kali lipat' = rasio 1,65/0,64 g/100 g (2,6×) dari abstrak studi UI (sumber utama f-pati); hanya satu origin memuat angka absolut, dicatat di limits f-pati." }
+  ]
+}

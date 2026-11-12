@@ -1,0 +1,66 @@
+{
+  "projectId": "nasi-dingin",
+  "sourceBrief": "nasi-dingin.json",
+  "provider": "fish-audio",
+  "model": "s2.1-pro-free",
+  "voice": "59c6df57a144",
+  "loudnessTarget": -14,
+  "generatedAt": "2026-11-10T10:50:59.184Z",
+  "scenes": [
+    {
+      "id": "hook",
+      "file": "nasi-dingin/vo/hook.mp3",
+      "text": "Nasi sisa semalam di kulkas sering dianggap nasi kelas dua. Padahal, buat gula darahmu, nasi kemarin bisa lebih bersahabat.",
+      "speed": 1.1,
+      "hash": "49f40cdc7a8b",
+      "voice": "59c6df57a144",
+      "audioSeconds": 6.87,
+      "lufs": -14.3,
+      "truePeak": -2.1
+    },
+    {
+      "id": "konteks",
+      "file": "nasi-dingin/vo/konteks.mp3",
+      "text": "Ini bukan mitos dapur. Peneliti Universitas Indonesia membandingkan nasi putih baru matang dengan nasi yang didinginkan sehari semalam di kulkas, lalu dipanaskan lagi.",
+      "speed": 1.1,
+      "hash": "2bc68a806086",
+      "voice": "59c6df57a144",
+      "audioSeconds": 9.378,
+      "lufs": -14.7,
+      "truePeak": -2.4
+    },
+    {
+      "id": "mekanisme",
+      "file": "nasi-dingin/vo/mekanisme.mp3",
+      "text": "Rahasianya ada di pati. Saat nasi panas, patinya mengembang dan lembek, gampang dipecah jadi gula. Begitu dingin, pati itu merapat dan menyusun diri seperti kristal. Enzim di usus jadi susah memotongnya. Inilah pati resisten.",
+      "speed": 1.1,
+      "hash": "e1978a58bac1",
+      "voice": "59c6df57a144",
+      "audioSeconds": 12.878,
+      "lufs": -14.1,
+      "truePeak": -1.8
+    },
+    {
+      "id": "dampak",
+      "file": "nasi-dingin/vo/dampak.mp3",
+      "text": "Hasilnya, pati resisten di nasi dingin naik lebih dari dua kali lipat. Sekelompok orang dewasa sehat mencobanya, dan lonjakan gula darah mereka lebih rendah. Tapi ini studi kecil, dan hasil penelitian lain belum seragam.",
+      "speed": 1.1,
+      "hash": "588dc5087408",
+      "voice": "59c6df57a144",
+      "audioSeconds": 11.807,
+      "lufs": -14.4,
+      "truePeak": -2.1
+    },
+    {
+      "id": "jawaban",
+      "file": "nasi-dingin/vo/jawaban.mp3",
+      "text": "Jadi, nasi kemarin bukan nasi kelas dua. Asal setelah matang, cepat masuk kulkas, jangan dibiarkan semalaman di meja. Racun bakterinya tahan panas, dipanaskan ulang pun tidak hilang.",
+      "speed": 1.1,
+      "hash": "77bbbab584ab",
+      "voice": "59c6df57a144",
+      "audioSeconds": 10.423,
+      "lufs": -14.3,
+      "truePeak": -1.9
+    }
+  ]
+}
