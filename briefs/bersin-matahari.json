@@ -1,0 +1,311 @@
+{
+  "captionMode": "subtitle",
+  "facts": [
+    {
+      "claim": "Sindrom ACHOO (refleks bersin fotik) adalah refleks di mana seseorang bersin satu kali atau beberapa kali saat tiba-tiba terpapar cahaya terang, terutama sinar matahari.",
+      "figures": [],
+      "id": "f-definisi",
+      "kind": "fakta",
+      "limits": "Narasi memakai 'tiba-tiba bersin' sesuai sumber; jumlah bersin per episode 'satu atau beberapa kali' tidak dirinci angkanya di narasi.",
+      "sources": [
+        {
+          "accessed": "2026-11-12",
+          "origin": "Cleveland Clinic",
+          "primary": false,
+          "publisher": "Cleveland Clinic",
+          "quote": "ACHOO syndrome is a reflex in which a person sneezes once or a few times when suddenly exposed to bright light, especially sunlight.",
+          "title": "Achoo Syndrome: Why the Sun Makes You Sneeze",
+          "url": "https://health.clevelandclinic.org/why-does-the-sun-cause-me-to-sneeze"
+        },
+        {
+          "accessed": "2026-11-12",
+          "origin": "PLOS ONE / Langer dkk. 2010",
+          "primary": true,
+          "publisher": "PLOS ONE (Langer dkk., 2010)",
+          "quote": "Exposure to bright light such as sunlight elicits a sneeze or prickling sensation in about one of every four individuals. This study presents the first scientific examination of this phenomenon, called 'the photic sneeze reflex'.",
+          "title": "When the sun prickles your nose: an EEG study identifying neural bases of photic sneezing",
+          "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0009208"
+        }
+      ],
+      "status": "terverifikasi"
+    },
+    {
+      "claim": "Diperkirakan 18% sampai 35% orang di dunia mengalami sindrom ACHOO; perkiraan lain menyebut sekitar satu dari empat orang. Angka pastinya masih diperdebatkan karena belum banyak studi yang kuat.",
+      "figures": [
+        {
+          "text": "18",
+          "value": 18
+        },
+        {
+          "text": "35",
+          "value": 35
+        }
+      ],
+      "id": "f-prevalensi",
+      "kind": "perkiraan",
+      "limits": "Narasi memakai rentang 18–35% sebagai jangkar, bukan satu angka; 'satu dari empat' (Langer) hanya perkiraan lain di dalam rentang itu dan tidak disebut sebagai angka pasti di narasi. Cleveland Clinic menegaskan ada perdebatan soal angka karena studi yang kuat masih sedikit.",
+      "sources": [
+        {
+          "accessed": "2026-11-12",
+          "origin": "Cleveland Clinic",
+          "primary": false,
+          "publisher": "Cleveland Clinic",
+          "quote": "It's estimated that 18% to 35% of us have ACHOO syndrome.",
+          "title": "Achoo Syndrome: Why the Sun Makes You Sneeze",
+          "url": "https://health.clevelandclinic.org/why-does-the-sun-cause-me-to-sneeze"
+        },
+        {
+          "accessed": "2026-11-12",
+          "origin": "Wikipedia",
+          "primary": false,
+          "publisher": "Wikipedia",
+          "quote": "The condition affects 18 to 35% of the world's population",
+          "title": "Photic sneeze reflex",
+          "url": "https://en.wikipedia.org/wiki/Photic_sneeze_reflex"
+        },
+        {
+          "accessed": "2026-11-12",
+          "origin": "PLOS ONE / Langer dkk. 2010",
+          "primary": true,
+          "publisher": "PLOS ONE (Langer dkk., 2010)",
+          "quote": "Exposure to bright light such as sunlight elicits a sneeze or prickling sensation in about one of every four individuals.",
+          "title": "When the sun prickles your nose: an EEG study identifying neural bases of photic sneezing",
+          "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0009208"
+        }
+      ],
+      "status": "terverifikasi"
+    },
+    {
+      "claim": "Mekanisme yang diduga: cahaya terang mengaktifkan jalur saraf di sekitar mata, lalu sinyalnya 'bocor' (cross-talk) ke sirkuit saraf hidung sehingga otak mengira hidung teriritasi; Langer dkk. mengusulkan keterlibatan korteks visual yang lebih peka dan ko-aktivasi area somatosensori. Mekanisme pastinya belum terkonfirmasi.",
+      "figures": [],
+      "id": "f-mekanisme",
+      "kind": "interpretasi",
+      "limits": "Narasi memakai kata 'diduga'/'diduga bocor' karena kedua sumber memakai bahasa dugaan ('seems to', 'might be', 'we propose'). Tidak ada klaim mekanisme terkonfirmasi. 'Kabel saraf yang bersilangan' di jawaban adalah metafora visual untuk cross-talk, bukan istilah anatomi.",
+      "sources": [
+        {
+          "accessed": "2026-11-12",
+          "origin": "Cleveland Clinic",
+          "primary": false,
+          "publisher": "Cleveland Clinic",
+          "quote": "These circuits 'cross-talk' with each other and convince your brain a sneeze is needed, even though it's not",
+          "title": "Achoo Syndrome: Why the Sun Makes You Sneeze",
+          "url": "https://health.clevelandclinic.org/why-does-the-sun-cause-me-to-sneeze"
+        },
+        {
+          "accessed": "2026-11-12",
+          "origin": "PLOS ONE / Langer dkk. 2010",
+          "primary": true,
+          "publisher": "PLOS ONE (Langer dkk., 2010)",
+          "quote": "We propose that the photic sneeze phenomenon might be the consequence of higher sensitivity to visual stimuli in the visual cortex and of co-activation of somatosensory areas.",
+          "title": "When the sun prickles your nose: an EEG study identifying neural bases of photic sneezing",
+          "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0009208"
+        }
+      ],
+      "status": "terverifikasi"
+    },
+    {
+      "claim": "Sindrom ACHOO adalah sifat genetik dominan (autosomal dominant): bila satu orang tua biologis mengalaminya, peluang anak mewarisinya 50%.",
+      "figures": [
+        {
+          "text": "50",
+          "value": 50
+        }
+      ],
+      "id": "f-genetik",
+      "kind": "fakta",
+      "limits": "Narasi menyederhanakan 'satu orang tua biologis' menjadi 'satu orang tuamu'; peluang 50% berlaku per anak.",
+      "sources": [
+        {
+          "accessed": "2026-11-12",
+          "origin": "Cleveland Clinic",
+          "primary": false,
+          "publisher": "Cleveland Clinic",
+          "quote": "ACHOO syndrome is a dominant genetic trait, which means you have a 50% chance of inheriting the condition if one of your biological parents has it.",
+          "title": "Achoo Syndrome: Why the Sun Makes You Sneeze",
+          "url": "https://health.clevelandclinic.org/why-does-the-sun-cause-me-to-sneeze"
+        },
+        {
+          "accessed": "2026-11-12",
+          "origin": "All About Vision",
+          "primary": false,
+          "publisher": "All About Vision",
+          "quote": "ACHOO syndrome is autosomal dominant. This means you only have to inherit the gene from one parent to get ACHOO syndrome. If a parent does have it, you have a 50% chance of inheriting it.",
+          "title": "Photic Sneeze Reflex: ACHOO Syndrome & Sneezing at the Sun",
+          "url": "https://www.allaboutvision.com/conditions/related/photic-sneeze-reflex/"
+        }
+      ],
+      "status": "terverifikasi"
+    },
+    {
+      "claim": "Bersin karena cahaya itu sendiri tidak berbahaya, tetapi bisa berbahaya dalam situasi yang butuh fokus, terutama saat mengemudi; satu studi kasus mendokumentasikan seorang berusia 26 tahun yang terlibat dalam tiga kecelakaan terkait serangan bersin akibat sinar matahari.",
+      "figures": [],
+      "id": "f-bahaya",
+      "kind": "fakta",
+      "limits": "Narasi tidak menyebut angka 'tiga kecelakaan' atau usia 26 tahun — hanya 'bisa berbahaya saat mengemudi, misalnya keluar terowongan'; studi kasus dipakai sebagai bukti bahaya, bukan sebagai klaim frekuensi.",
+      "sources": [
+        {
+          "accessed": "2026-11-12",
+          "origin": "Cleveland Clinic",
+          "primary": false,
+          "publisher": "Cleveland Clinic",
+          "quote": "One case study documented a 26-year-old involved in THREE crashes linked to sunlight-induced sneezing fits.",
+          "title": "Achoo Syndrome: Why the Sun Makes You Sneeze",
+          "url": "https://health.clevelandclinic.org/why-does-the-sun-cause-me-to-sneeze"
+        },
+        {
+          "accessed": "2026-11-12",
+          "origin": "All About Vision",
+          "primary": false,
+          "publisher": "All About Vision",
+          "quote": "Sneezing isn't dangerous on its own, but it can be if it happens under certain circumstances. This is especially true for people who work in professions where they may be suddenly exposed to a bright light (like pilots or miners). Other situations could include: Driving (especially going from dark to light, like when leaving a tunnel)",
+          "title": "Photic Sneeze Reflex: ACHOO Syndrome & Sneezing at the Sun",
+          "url": "https://www.allaboutvision.com/conditions/related/photic-sneeze-reflex/"
+        }
+      ],
+      "status": "terverifikasi"
+    },
+    {
+      "claim": "Sindrom ACHOO biasanya menyerang pada paparan awal ke matahari atau cahaya yang sangat terang, paling umum saat berpindah dari lingkungan yang lebih gelap ke yang lebih terang, misalnya berjalan keluar ruangan atau mengemudi keluar dari terowongan.",
+      "figures": [],
+      "id": "f-pemicu",
+      "kind": "fakta",
+      "limits": "Narasi tidak mengklaim soal panjang gelombang/warna cahaya atau panas matahari — sumber tidak membahasnya.",
+      "sources": [
+        {
+          "accessed": "2026-11-12",
+          "origin": "Cleveland Clinic",
+          "primary": false,
+          "publisher": "Cleveland Clinic",
+          "quote": "ACHOO syndrome usually strikes on initial exposure to the sun or very bright light. It's most common when moving from a darker to a lighter environment, like walking outside or driving out of a tunnel.",
+          "title": "Achoo Syndrome: Why the Sun Makes You Sneeze",
+          "url": "https://health.clevelandclinic.org/why-does-the-sun-cause-me-to-sneeze"
+        },
+        {
+          "accessed": "2026-11-12",
+          "origin": "All About Vision",
+          "primary": false,
+          "publisher": "All About Vision",
+          "quote": "Driving (especially going from dark to light, like when leaving a tunnel)",
+          "title": "Photic Sneeze Reflex: ACHOO Syndrome & Sneezing at the Sun",
+          "url": "https://www.allaboutvision.com/conditions/related/photic-sneeze-reflex/"
+        }
+      ],
+      "status": "terverifikasi"
+    },
+    {
+      "claim": "Tidak ada pengobatan khusus untuk sindrom ACHOO, tetapi memakai kacamata hitam gelap dapat membuat paparan sinar matahari yang mendadak menjadi kurang dramatis sehingga dapat mencegah reaksi.",
+      "figures": [],
+      "id": "f-penanganan",
+      "kind": "fakta",
+      "limits": "Narasi memakai 'tidak ada obatnya' sebagai penyederhanaan dari 'tidak ada pengobatan khusus'; 'dapat mencegah reaksi' disederhanakan menjadi 'bisa meredam pemicunya' (bukan jaminan).",
+      "sources": [
+        {
+          "accessed": "2026-11-12",
+          "origin": "Cleveland Clinic",
+          "primary": false,
+          "publisher": "Cleveland Clinic",
+          "quote": "Wear dark sunglasses. A good pair of shades can make sudden exposure to sunlight less dramatic, which may prevent a reaction.",
+          "title": "Achoo Syndrome: Why the Sun Makes You Sneeze",
+          "url": "https://health.clevelandclinic.org/why-does-the-sun-cause-me-to-sneeze"
+        },
+        {
+          "accessed": "2026-11-12",
+          "origin": "All About Vision",
+          "primary": false,
+          "publisher": "All About Vision",
+          "quote": "Sunglasses and hats are an easy way to do this.",
+          "title": "Photic Sneeze Reflex: ACHOO Syndrome & Sneezing at the Sun",
+          "url": "https://www.allaboutvision.com/conditions/related/photic-sneeze-reflex/"
+        }
+      ],
+      "status": "terverifikasi"
+    }
+  ],
+  "numbersIgnored": [],
+  "projectId": "bersin-matahari",
+  "scenes": [
+    {
+      "caption": "",
+      "durationSeconds": 8.7,
+      "factIds": [
+        "f-definisi",
+        "f-pemicu"
+      ],
+      "headline": "Matahari membuatmu bersin?",
+      "id": "hook",
+      "visual": "Frame 0: ruangan gelap biru malam, satu sosok siluet di pintu. 'Keluar': pintu terbuka, cahaya kuning membanjir masuk (iris terang). 'tiba-tiba bersin': sosok bersin — kepala menunduk, garis gerak 'HAPTSI!' kecil lalu hilang; matahari muncul di atas sebagai bola kuning menyala. 'Bukan flu, bukan debu': dua kartu kecil (virus, debu) muncul lalu dicoret silang. Kamera diam (tidak ada alasan cerita untuk bergerak).",
+      "voiceoverText": "Keluar dari ruangan gelap ke terik siang, lalu tiba-tiba bersin. Bukan flu, bukan debu. Matahari yang membuatmu bersin."
+    },
+    {
+      "caption": "",
+      "durationSeconds": 11.3,
+      "factIds": [
+        "f-prevalensi",
+        "f-definisi"
+      ],
+      "headline": "Sindrom Achoo",
+      "id": "konteks",
+      "visual": "Nama ACHOO besar muncul satu per satu (SplitText) di tengah — nama sindromnya tampil di layar, sementara VO menyebut 'sindrom bersin cahaya' (Aria melafalkan 'Achoo' sebagai 'acu', jadi nama hanya ditulis, tidak diucapkan). Di bawahnya kepanjangan kecil 'Autosomal dominant Compelling Helio-Ophthalmic Outburst'. 'delapan belas sampai tiga puluh lima persen': CountUp 18% → 35% di atas deretan 10 ikon orang, 2–3 di antaranya menyala kuning. Kamera diam.",
+      "voiceoverText": "Ini namanya sindrom bersin cahaya, refleks bersin karena cahaya. Diperkirakan delapan belas sampai tiga puluh lima persen orang di dunia mengalaminya."
+    },
+    {
+      "caption": "",
+      "durationSeconds": 14.5,
+      "factIds": [
+        "f-mekanisme",
+        "f-definisi"
+      ],
+      "headline": "Sinyal yang bocor",
+      "id": "mekanisme",
+      "visual": "Diagram kepala profil: mata kiri, hidung kanan. 'Biasanya': jalur hidung → otak menyala (garis penuh). 'cahaya terang': sinar matahari masuk ke mata, jalur mata → otak menyala kuning. 'diduga bocor': percikan sinyal melompat (garis putus-putus, Burst) dari jalur mata ke jalur hidung. 'Otak salah sangka': otak berkedip + label 'IRITASI?' lalu tanda silang 'padahal tidak'. Kamera diam; gerakan mengikuti sinyal, bukan kamera.",
+      "voiceoverText": "Biasanya bersin dipicu iritasi di hidung. Tapi di sini, cahaya terang menyalakan saraf mata, lalu sinyalnya diduga bocor ke saraf hidung. Otak salah sangka, hidung sedang teriritasi, padahal tidak."
+    },
+    {
+      "caption": "",
+      "durationSeconds": 12.7,
+      "factIds": [
+        "f-genetik",
+        "f-bahaya",
+        "f-pemicu"
+      ],
+      "headline": "Menurun — dan berbahaya di jalan",
+      "id": "dampak",
+      "visual": "Pohon keluarga mini: satu orang tua menyala kuning, anak di bawahnya mendapat label 50% (CountUp). 'tidak berbahaya': centang hijau di atas sosok bersin. 'tapi bisa berbahaya saat mengemudi': adegan berubah — mobil keluar dari terowongan gelap ke siang terang, pengemudi bersin (mata tertutup sesaat), mobil oleng sedikit (Shake) lalu stabil. Kamera diam; mobil yang bergerak, bukan kamera.",
+      "voiceoverText": "Sifat ini menurun. Bila satu orang tuamu mengalaminya, peluangmu lima puluh persen. Bersinnya tidak berbahaya, tapi bisa berbahaya saat mengemudi, misalnya keluar terowongan ke siang yang terang."
+    },
+    {
+      "caption": "",
+      "durationSeconds": 10.9,
+      "factIds": [
+        "f-penanganan",
+        "f-mekanisme"
+      ],
+      "headline": "Kabel saraf yang bersilangan",
+      "id": "jawaban",
+      "visual": "Kacamata hitam turun dari atas menutupi mata sosok (Reveal drop); sinar matahari yang tadinya tajam menjadi redup di balik lensa (opacity turun). 'bukan kebetulan': dua kabel saraf (kuning mata, biru hidung) bersilangan membentuk X lalu menyala bersama — payoff visual yang mengikat kembali ke hook. Frame akhir: sosok berkacamata di bawah matahari, tenang. Kamera diam.",
+      "voiceoverText": "Tidak ada obatnya, tapi kacamata hitam bisa meredam pemicunya. Jadi kalau matahari membuatmu bersin, itu bukan kebetulan, itu kabel saraf yang bersilangan."
+    }
+  ],
+  "series": "Tubuh",
+  "status": "draft",
+  "title": "Kenapa Matahari Bikin Sebagian Orang Bersin?",
+  "visualStyle": {
+    "fonts": {
+      "display": "space-grotesk",
+      "reason": "Space Grotesk: sans geometris yang terasa sains dan modern, cocok untuk diagram saraf dan angka besar; Plus Jakarta Sans untuk teks kecil agar tetap terbaca.",
+      "text": "plus-jakarta-sans"
+    },
+    "name": "Gelap ke terang: ruangan gelap biru malam, lalu matahari menyala kuning sebagai sumber cahaya",
+    "palette": [
+      "#081736",
+      "#0D2250",
+      "#FFB000",
+      "#FFD34D",
+      "#FFF3D6",
+      "#FFFFFF",
+      "#7FB3D5"
+    ],
+    "reason": "Pemicu faktanya adalah perubahan mendadak gelap ke terang, jadi kontras gelap-terang itu sendiri adalah bahasa visual episode: latar dominan biru malam gelap, matahari kuning menyala sebagai satu-satunya sumber cahaya yang 'menyalakan' saraf. Sinar digambar garis penuh, sinyal saraf garis putus-putus, supaya dua jalur itu bisa dibedakan tanpa suara.",
+    "tone": "dark"
+  }
+}

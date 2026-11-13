@@ -1,0 +1,66 @@
+{
+  "projectId": "bersin-matahari",
+  "sourceBrief": "bersin-matahari.json",
+  "provider": "aria",
+  "model": "avocado_v2",
+  "voice": "avocado_v2:MAI_01",
+  "loudnessTarget": -14,
+  "generatedAt": "2026-11-12T22:49:58.563Z",
+  "scenes": [
+    {
+      "id": "hook",
+      "file": "bersin-matahari/vo/hook.mp3",
+      "text": "Keluar dari ruangan gelap ke terik siang, lalu tiba-tiba bersin. Bukan flu, bukan debu. Matahari yang membuatmu bersin.",
+      "speed": 100,
+      "hash": "8b99e05aba46",
+      "voice": "avocado_v2:MAI_01",
+      "audioSeconds": 8.16,
+      "lufs": -14.3,
+      "truePeak": -1.8
+    },
+    {
+      "id": "konteks",
+      "file": "bersin-matahari/vo/konteks.mp3",
+      "text": "Ini namanya sindrom bersin cahaya, refleks bersin karena cahaya. Diperkirakan delapan belas sampai tiga puluh lima persen orang di dunia mengalaminya.",
+      "speed": 100,
+      "hash": "21d0aa535796",
+      "voice": "avocado_v2:MAI_01",
+      "audioSeconds": 10.8,
+      "lufs": -14.4,
+      "truePeak": -1.8
+    },
+    {
+      "id": "mekanisme",
+      "file": "bersin-matahari/vo/mekanisme.mp3",
+      "text": "Biasanya bersin dipicu iritasi di hidung. Tapi di sini, cahaya terang menyalakan saraf mata, lalu sinyalnya diduga bocor ke saraf hidung. Otak salah sangka, hidung sedang teriritasi, padahal tidak.",
+      "speed": 100,
+      "hash": "aef8e4e09754",
+      "voice": "avocado_v2:MAI_01",
+      "audioSeconds": 13.992,
+      "lufs": -14.5,
+      "truePeak": -1.8
+    },
+    {
+      "id": "dampak",
+      "file": "bersin-matahari/vo/dampak.mp3",
+      "text": "Sifat ini menurun. Bila satu orang tuamu mengalaminya, peluangmu lima puluh persen. Bersinnya tidak berbahaya, tapi bisa berbahaya saat mengemudi, misalnya keluar terowongan ke siang yang terang.",
+      "speed": 100,
+      "hash": "a110255af7a4",
+      "voice": "avocado_v2:MAI_01",
+      "audioSeconds": 12.24,
+      "lufs": -14.3,
+      "truePeak": -1.8
+    },
+    {
+      "id": "jawaban",
+      "file": "bersin-matahari/vo/jawaban.mp3",
+      "text": "Tidak ada obatnya, tapi kacamata hitam bisa meredam pemicunya. Jadi kalau matahari membuatmu bersin, itu bukan kebetulan, itu kabel saraf yang bersilangan.",
+      "speed": 100,
+      "hash": "753dcd7883bd",
+      "voice": "avocado_v2:MAI_01",
+      "audioSeconds": 10.44,
+      "lufs": -14.4,
+      "truePeak": -1.7
+    }
+  ]
+}

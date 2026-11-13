@@ -1,0 +1,875 @@
+{
+  "projectId": "bersin-matahari",
+  "method": "whisper.cpp 1.5.5 (small) + forced alignment ke naskah",
+  "generatedAt": "2026-11-12T22:52:22.806Z",
+  "scenes": {
+    "hook": {
+      "hash": "8b99e05aba46",
+      "coverage": 1,
+      "missing": [],
+      "extra": [],
+      "heard": "Keluar dari ruangan gelap ke terik siang, lalu tiba-tiba bersin. Bukan flu, bukan debu, mata hari yang membuatmu bersin.",
+      "captions": [
+        {
+          "text": "Keluar",
+          "startMs": 50,
+          "endMs": 470,
+          "timestampMs": 260,
+          "confidence": 0.901941
+        },
+        {
+          "text": " dari",
+          "startMs": 470,
+          "endMs": 770,
+          "timestampMs": 620,
+          "confidence": 0.99891
+        },
+        {
+          "text": " ruangan",
+          "startMs": 770,
+          "endMs": 1300,
+          "timestampMs": 1035,
+          "confidence": 0.996261
+        },
+        {
+          "text": " gelap",
+          "startMs": 1300,
+          "endMs": 1680,
+          "timestampMs": 1490,
+          "confidence": 0.876779
+        },
+        {
+          "text": " ke",
+          "startMs": 1680,
+          "endMs": 1840,
+          "timestampMs": 1760,
+          "confidence": 0.856287
+        },
+        {
+          "text": " terik",
+          "startMs": 1840,
+          "endMs": 2240,
+          "timestampMs": 2040,
+          "confidence": 0.564758
+        },
+        {
+          "text": " siang,",
+          "startMs": 2240,
+          "endMs": 2780,
+          "timestampMs": 2510,
+          "confidence": 0.854669
+        },
+        {
+          "text": " lalu",
+          "startMs": 2780,
+          "endMs": 3010,
+          "timestampMs": 2895,
+          "confidence": 0.892683
+        },
+        {
+          "text": " tiba-tiba",
+          "startMs": 3010,
+          "endMs": 3570,
+          "timestampMs": 3290,
+          "confidence": 0.996023
+        },
+        {
+          "text": " bersin.",
+          "startMs": 3570,
+          "endMs": 4300,
+          "timestampMs": 3935,
+          "confidence": 0.822866
+        },
+        {
+          "text": " Bukan",
+          "startMs": 4300,
+          "endMs": 4610,
+          "timestampMs": 4455,
+          "confidence": 0.66257
+        },
+        {
+          "text": " flu,",
+          "startMs": 4610,
+          "endMs": 5110,
+          "timestampMs": 4860,
+          "confidence": 0.944507
+        },
+        {
+          "text": " bukan",
+          "startMs": 5110,
+          "endMs": 5380,
+          "timestampMs": 5245,
+          "confidence": 0.962193
+        },
+        {
+          "text": " debu.",
+          "startMs": 5380,
+          "endMs": 6100,
+          "timestampMs": 5740,
+          "confidence": 0.939503
+        },
+        {
+          "text": " Matahari",
+          "startMs": 6100,
+          "endMs": 6450,
+          "timestampMs": 6275,
+          "confidence": 0.683777
+        },
+        {
+          "text": " yang",
+          "startMs": 6450,
+          "endMs": 6760,
+          "timestampMs": 6605,
+          "confidence": 0.99698
+        },
+        {
+          "text": " membuatmu",
+          "startMs": 6760,
+          "endMs": 7540,
+          "timestampMs": 7150,
+          "confidence": 0.990603
+        },
+        {
+          "text": " bersin.",
+          "startMs": 7540,
+          "endMs": 8000,
+          "timestampMs": 7770,
+          "confidence": 0.97366
+        }
+      ]
+    },
+    "konteks": {
+      "hash": "21d0aa535796",
+      "coverage": 0.952,
+      "missing": [
+        "sampai"
+      ],
+      "extra": [],
+      "heard": "Ini namanya Sindrom Bersin Cahaya, Reflex Bersin Karena Cahaya, diperkirakan 18-35 persen orang di dunia mengalaminya.",
+      "captions": [
+        {
+          "text": "Ini",
+          "startMs": 60,
+          "endMs": 420,
+          "timestampMs": 240,
+          "confidence": 0.803603
+        },
+        {
+          "text": " namanya",
+          "startMs": 420,
+          "endMs": 960,
+          "timestampMs": 690,
+          "confidence": 0.991566
+        },
+        {
+          "text": " sindrom",
+          "startMs": 960,
+          "endMs": 1620,
+          "timestampMs": 1290,
+          "confidence": 0.264659
+        },
+        {
+          "text": " bersin",
+          "startMs": 1620,
+          "endMs": 2180,
+          "timestampMs": 1900,
+          "confidence": 0.611647
+        },
+        {
+          "text": " cahaya,",
+          "startMs": 2180,
+          "endMs": 3030,
+          "timestampMs": 2605,
+          "confidence": 0.668082
+        },
+        {
+          "text": " refleks",
+          "startMs": 3030,
+          "endMs": 3540,
+          "timestampMs": 3285,
+          "confidence": 0.678629
+        },
+        {
+          "text": " bersin",
+          "startMs": 3540,
+          "endMs": 3950,
+          "timestampMs": 3745,
+          "confidence": 0.981751
+        },
+        {
+          "text": " karena",
+          "startMs": 3950,
+          "endMs": 4450,
+          "timestampMs": 4200,
+          "confidence": 0.433441
+        },
+        {
+          "text": " cahaya.",
+          "startMs": 4450,
+          "endMs": 5230,
+          "timestampMs": 4840,
+          "confidence": 0.97429
+        },
+        {
+          "text": " Diperkirakan",
+          "startMs": 5230,
+          "endMs": 6300,
+          "timestampMs": 5765,
+          "confidence": 0.587325
+        },
+        {
+          "text": " delapan",
+          "startMs": 6300,
+          "endMs": 7005,
+          "timestampMs": 6653,
+          "confidence": 0.630541
+        },
+        {
+          "text": " belas",
+          "startMs": 7005,
+          "endMs": 7710,
+          "timestampMs": 7358,
+          "confidence": 0.630541
+        },
+        {
+          "text": " sampai",
+          "startMs": 7710,
+          "endMs": 7750,
+          "timestampMs": 7730,
+          "confidence": null
+        },
+        {
+          "text": " tiga",
+          "startMs": 6300,
+          "endMs": 6770,
+          "timestampMs": 6535,
+          "confidence": 0.630541
+        },
+        {
+          "text": " puluh",
+          "startMs": 6770,
+          "endMs": 7240,
+          "timestampMs": 7005,
+          "confidence": 0.630541
+        },
+        {
+          "text": " lima",
+          "startMs": 7240,
+          "endMs": 7710,
+          "timestampMs": 7475,
+          "confidence": 0.630541
+        },
+        {
+          "text": " persen",
+          "startMs": 7710,
+          "endMs": 8400,
+          "timestampMs": 8055,
+          "confidence": 0.384017
+        },
+        {
+          "text": " orang",
+          "startMs": 8400,
+          "endMs": 8780,
+          "timestampMs": 8590,
+          "confidence": 0.880507
+        },
+        {
+          "text": " di",
+          "startMs": 8780,
+          "endMs": 8930,
+          "timestampMs": 8855,
+          "confidence": 0.974555
+        },
+        {
+          "text": " dunia",
+          "startMs": 8930,
+          "endMs": 9310,
+          "timestampMs": 9120,
+          "confidence": 0.955536
+        },
+        {
+          "text": " mengalaminya.",
+          "startMs": 9310,
+          "endMs": 10500,
+          "timestampMs": 9905,
+          "confidence": 0.932531
+        }
+      ]
+    },
+    "mekanisme": {
+      "hash": "aef8e4e09754",
+      "coverage": 1,
+      "missing": [],
+      "extra": [],
+      "heard": "Biasanya bersin dipicu irritasi dihidung, tapi di sini cahaya terang menyalakan sarap mata, lalu sinyalnya diduga bocor kesaraf hidung. Otak salah sangka, hidung sedang teriritasi, padahal tidak.",
+      "captions": [
+        {
+          "text": "Biasanya",
+          "startMs": 60,
+          "endMs": 730,
+          "timestampMs": 395,
+          "confidence": 0.887544
+        },
+        {
+          "text": " bersin",
+          "startMs": 730,
+          "endMs": 1140,
+          "timestampMs": 935,
+          "confidence": 0.808592
+        },
+        {
+          "text": " dipicu",
+          "startMs": 1140,
+          "endMs": 1660,
+          "timestampMs": 1400,
+          "confidence": 0.517224
+        },
+        {
+          "text": " iritasi",
+          "startMs": 1660,
+          "endMs": 2280,
+          "timestampMs": 1970,
+          "confidence": 0.86279
+        },
+        {
+          "text": " di",
+          "startMs": 2280,
+          "endMs": 2840,
+          "timestampMs": 2560,
+          "confidence": 0.99458
+        },
+        {
+          "text": " hidung.",
+          "startMs": 2840,
+          "endMs": 3400,
+          "timestampMs": 3120,
+          "confidence": 0.99458
+        },
+        {
+          "text": " Tapi",
+          "startMs": 3400,
+          "endMs": 3570,
+          "timestampMs": 3485,
+          "confidence": 0.756281
+        },
+        {
+          "text": " di",
+          "startMs": 3570,
+          "endMs": 3800,
+          "timestampMs": 3685,
+          "confidence": 0.519693
+        },
+        {
+          "text": " sini,",
+          "startMs": 3800,
+          "endMs": 4160,
+          "timestampMs": 3980,
+          "confidence": 0.995562
+        },
+        {
+          "text": " cahaya",
+          "startMs": 4160,
+          "endMs": 4560,
+          "timestampMs": 4360,
+          "confidence": 0.538317
+        },
+        {
+          "text": " terang",
+          "startMs": 4560,
+          "endMs": 4970,
+          "timestampMs": 4765,
+          "confidence": 0.987137
+        },
+        {
+          "text": " menyalakan",
+          "startMs": 4970,
+          "endMs": 5700,
+          "timestampMs": 5335,
+          "confidence": 0.621945
+        },
+        {
+          "text": " saraf",
+          "startMs": 5700,
+          "endMs": 6130,
+          "timestampMs": 5915,
+          "confidence": 0.458798
+        },
+        {
+          "text": " mata,",
+          "startMs": 6130,
+          "endMs": 6600,
+          "timestampMs": 6365,
+          "confidence": 0.979994
+        },
+        {
+          "text": " lalu",
+          "startMs": 6600,
+          "endMs": 6810,
+          "timestampMs": 6705,
+          "confidence": 0.503598
+        },
+        {
+          "text": " sinyalnya",
+          "startMs": 6810,
+          "endMs": 7320,
+          "timestampMs": 7065,
+          "confidence": 0.866221
+        },
+        {
+          "text": " diduga",
+          "startMs": 7320,
+          "endMs": 7680,
+          "timestampMs": 7500,
+          "confidence": 0.642157
+        },
+        {
+          "text": " bocor",
+          "startMs": 7680,
+          "endMs": 7980,
+          "timestampMs": 7830,
+          "confidence": 0.921168
+        },
+        {
+          "text": " ke",
+          "startMs": 7980,
+          "endMs": 8190,
+          "timestampMs": 8085,
+          "confidence": 0.582705
+        },
+        {
+          "text": " saraf",
+          "startMs": 8190,
+          "endMs": 8400,
+          "timestampMs": 8295,
+          "confidence": 0.582705
+        },
+        {
+          "text": " hidung.",
+          "startMs": 8400,
+          "endMs": 9000,
+          "timestampMs": 8700,
+          "confidence": 0.774343
+        },
+        {
+          "text": " Otak",
+          "startMs": 9000,
+          "endMs": 9670,
+          "timestampMs": 9335,
+          "confidence": 0.906567
+        },
+        {
+          "text": " salah",
+          "startMs": 9670,
+          "endMs": 9830,
+          "timestampMs": 9750,
+          "confidence": 0.964053
+        },
+        {
+          "text": " sangka,",
+          "startMs": 9830,
+          "endMs": 10550,
+          "timestampMs": 10190,
+          "confidence": 0.717672
+        },
+        {
+          "text": " hidung",
+          "startMs": 10550,
+          "endMs": 11120,
+          "timestampMs": 10835,
+          "confidence": 0.926242
+        },
+        {
+          "text": " sedang",
+          "startMs": 11120,
+          "endMs": 11680,
+          "timestampMs": 11400,
+          "confidence": 0.9985
+        },
+        {
+          "text": " teriritasi,",
+          "startMs": 11680,
+          "endMs": 12820,
+          "timestampMs": 12250,
+          "confidence": 0.938634
+        },
+        {
+          "text": " padahal",
+          "startMs": 12820,
+          "endMs": 13420,
+          "timestampMs": 13120,
+          "confidence": 0.793327
+        },
+        {
+          "text": " tidak.",
+          "startMs": 13420,
+          "endMs": 14000,
+          "timestampMs": 13710,
+          "confidence": 0.997052
+        }
+      ]
+    },
+    "dampak": {
+      "hash": "a110255af7a4",
+      "coverage": 1,
+      "missing": [],
+      "extra": [
+        "nguli"
+      ],
+      "heard": "Sifat ini menurun bila satu orang tuamu mengalaminya peluang nguli 50 persen. Bersinya tidak berbahaya tapi bisa berbahaya saat mengemudi, misalnya keluar terawongan kesiang yang terang.",
+      "captions": [
+        {
+          "text": "Sifat",
+          "startMs": 60,
+          "endMs": 510,
+          "timestampMs": 285,
+          "confidence": 0.923862
+        },
+        {
+          "text": " ini",
+          "startMs": 510,
+          "endMs": 590,
+          "timestampMs": 550,
+          "confidence": 0.997678
+        },
+        {
+          "text": " menurun.",
+          "startMs": 590,
+          "endMs": 1110,
+          "timestampMs": 850,
+          "confidence": 0.992901
+        },
+        {
+          "text": " Bila",
+          "startMs": 1110,
+          "endMs": 1400,
+          "timestampMs": 1255,
+          "confidence": 0.818261
+        },
+        {
+          "text": " satu",
+          "startMs": 1400,
+          "endMs": 1700,
+          "timestampMs": 1550,
+          "confidence": 0.906032
+        },
+        {
+          "text": " orang",
+          "startMs": 1700,
+          "endMs": 2080,
+          "timestampMs": 1890,
+          "confidence": 0.997453
+        },
+        {
+          "text": " tuamu",
+          "startMs": 2080,
+          "endMs": 2450,
+          "timestampMs": 2265,
+          "confidence": 0.861044
+        },
+        {
+          "text": " mengalaminya,",
+          "startMs": 2450,
+          "endMs": 3630,
+          "timestampMs": 3040,
+          "confidence": 0.98832
+        },
+        {
+          "text": " peluangmu",
+          "startMs": 3630,
+          "endMs": 3880,
+          "timestampMs": 3755,
+          "confidence": 0.762294
+        },
+        {
+          "text": " lima",
+          "startMs": 4190,
+          "endMs": 4400,
+          "timestampMs": 4295,
+          "confidence": 0.891377
+        },
+        {
+          "text": " puluh",
+          "startMs": 4400,
+          "endMs": 4610,
+          "timestampMs": 4505,
+          "confidence": 0.891377
+        },
+        {
+          "text": " persen.",
+          "startMs": 4610,
+          "endMs": 5000,
+          "timestampMs": 4805,
+          "confidence": 0.680374
+        },
+        {
+          "text": " Bersinnya",
+          "startMs": 5000,
+          "endMs": 5660,
+          "timestampMs": 5330,
+          "confidence": 0.913584
+        },
+        {
+          "text": " tidak",
+          "startMs": 5660,
+          "endMs": 6040,
+          "timestampMs": 5850,
+          "confidence": 0.995849
+        },
+        {
+          "text": " berbahaya,",
+          "startMs": 6040,
+          "endMs": 6670,
+          "timestampMs": 6355,
+          "confidence": 0.99087
+        },
+        {
+          "text": " tapi",
+          "startMs": 6670,
+          "endMs": 7170,
+          "timestampMs": 6920,
+          "confidence": 0.702246
+        },
+        {
+          "text": " bisa",
+          "startMs": 7170,
+          "endMs": 7310,
+          "timestampMs": 7240,
+          "confidence": 0.995845
+        },
+        {
+          "text": " berbahaya",
+          "startMs": 7310,
+          "endMs": 7960,
+          "timestampMs": 7635,
+          "confidence": 0.992466
+        },
+        {
+          "text": " saat",
+          "startMs": 7960,
+          "endMs": 8310,
+          "timestampMs": 8135,
+          "confidence": 0.997012
+        },
+        {
+          "text": " mengemudi,",
+          "startMs": 8310,
+          "endMs": 9330,
+          "timestampMs": 8820,
+          "confidence": 0.768239
+        },
+        {
+          "text": " misalnya",
+          "startMs": 9330,
+          "endMs": 9670,
+          "timestampMs": 9500,
+          "confidence": 0.784711
+        },
+        {
+          "text": " keluar",
+          "startMs": 9670,
+          "endMs": 10080,
+          "timestampMs": 9875,
+          "confidence": 0.86956
+        },
+        {
+          "text": " terowongan",
+          "startMs": 10080,
+          "endMs": 10740,
+          "timestampMs": 10410,
+          "confidence": 0.93503
+        },
+        {
+          "text": " ke",
+          "startMs": 10740,
+          "endMs": 10970,
+          "timestampMs": 10855,
+          "confidence": 0.89388
+        },
+        {
+          "text": " siang",
+          "startMs": 10970,
+          "endMs": 11200,
+          "timestampMs": 11085,
+          "confidence": 0.89388
+        },
+        {
+          "text": " yang",
+          "startMs": 11200,
+          "endMs": 11470,
+          "timestampMs": 11335,
+          "confidence": 0.992373
+        },
+        {
+          "text": " terang.",
+          "startMs": 11470,
+          "endMs": 12000,
+          "timestampMs": 11735,
+          "confidence": 0.988076
+        }
+      ]
+    },
+    "jawaban": {
+      "hash": "753dcd7883bd",
+      "coverage": 1,
+      "missing": [],
+      "extra": [],
+      "heard": "Tidak ada obatnya, tapi kaca mata hitam bisa meredam pemicunya. Jadi kalau mata hari membuatmu bersin, itu bukan kebetulan, itu kabel sarap yang bersilangan.",
+      "captions": [
+        {
+          "text": "Tidak",
+          "startMs": 60,
+          "endMs": 470,
+          "timestampMs": 265,
+          "confidence": 0.923462
+        },
+        {
+          "text": " ada",
+          "startMs": 470,
+          "endMs": 570,
+          "timestampMs": 520,
+          "confidence": 0.996025
+        },
+        {
+          "text": " obatnya,",
+          "startMs": 570,
+          "endMs": 1210,
+          "timestampMs": 890,
+          "confidence": 0.8955
+        },
+        {
+          "text": " tapi",
+          "startMs": 1210,
+          "endMs": 1530,
+          "timestampMs": 1370,
+          "confidence": 0.976606
+        },
+        {
+          "text": " kacamata",
+          "startMs": 1530,
+          "endMs": 2070,
+          "timestampMs": 1800,
+          "confidence": 0.983747
+        },
+        {
+          "text": " hitam",
+          "startMs": 2070,
+          "endMs": 2440,
+          "timestampMs": 2255,
+          "confidence": 0.987174
+        },
+        {
+          "text": " bisa",
+          "startMs": 2440,
+          "endMs": 2730,
+          "timestampMs": 2585,
+          "confidence": 0.984308
+        },
+        {
+          "text": " meredam",
+          "startMs": 2730,
+          "endMs": 3230,
+          "timestampMs": 2980,
+          "confidence": 0.758615
+        },
+        {
+          "text": " pemicunya.",
+          "startMs": 3230,
+          "endMs": 4000,
+          "timestampMs": 3615,
+          "confidence": 0.526223
+        },
+        {
+          "text": " Jadi",
+          "startMs": 4000,
+          "endMs": 4400,
+          "timestampMs": 4200,
+          "confidence": 0.941154
+        },
+        {
+          "text": " kalau",
+          "startMs": 4400,
+          "endMs": 4560,
+          "timestampMs": 4480,
+          "confidence": 0.556238
+        },
+        {
+          "text": " matahari",
+          "startMs": 4560,
+          "endMs": 5060,
+          "timestampMs": 4810,
+          "confidence": 0.780854
+        },
+        {
+          "text": " membuatmu",
+          "startMs": 5060,
+          "endMs": 5600,
+          "timestampMs": 5330,
+          "confidence": 0.973559
+        },
+        {
+          "text": " bersin,",
+          "startMs": 5600,
+          "endMs": 6190,
+          "timestampMs": 5895,
+          "confidence": 0.960527
+        },
+        {
+          "text": " itu",
+          "startMs": 6190,
+          "endMs": 6470,
+          "timestampMs": 6330,
+          "confidence": 0.733883
+        },
+        {
+          "text": " bukan",
+          "startMs": 6470,
+          "endMs": 6970,
+          "timestampMs": 6720,
+          "confidence": 0.997295
+        },
+        {
+          "text": " kebetulan,",
+          "startMs": 6970,
+          "endMs": 8210,
+          "timestampMs": 7590,
+          "confidence": 0.977096
+        },
+        {
+          "text": " itu",
+          "startMs": 8210,
+          "endMs": 8250,
+          "timestampMs": 8230,
+          "confidence": 0.756428
+        },
+        {
+          "text": " kabel",
+          "startMs": 8230,
+          "endMs": 8560,
+          "timestampMs": 8395,
+          "confidence": 0.912438
+        },
+        {
+          "text": " saraf",
+          "startMs": 8560,
+          "endMs": 8910,
+          "timestampMs": 8735,
+          "confidence": 0.801488
+        },
+        {
+          "text": " yang",
+          "startMs": 8910,
+          "endMs": 9190,
+          "timestampMs": 9050,
+          "confidence": 0.995082
+        },
+        {
+          "text": " bersilangan.",
+          "startMs": 9190,
+          "endMs": 10000,
+          "timestampMs": 9595,
+          "confidence": 0.968232
+        }
+      ]
+    }
+  }
+}
