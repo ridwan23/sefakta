@@ -52,10 +52,11 @@ npm run doctor          # semua ✓; ikuti perbaikan yang dicetak bila ada ✗
    - dekat dengan keseharian atau dengan Indonesia;
    - bisa dijawab tuntas dalam 60 detik;
    - punya bukti visual (peta, objek, angka pembanding).
-2. Tulis empat kalimat: *Penonton mengira …* / *Fakta sebenarnya …* / *Ini terjadi karena …* / *Akibatnya …*.
-3. **Tolak** fakta yang masih diperdebatkan (efek Mpemba, "wood wide web", asal QWERTY, mitos 10% otak). Bila angka utama berbeda jauh antarsumber (mis. pendinginan global Tambora 0,4–3 °C), jangan sebut angkanya.
-4. Buat tiga kandidat hook. Pilih yang paling spesifik dan bisa dijawab di dalam episode. Pakai kata pembatas bila perlu ("seolah", "di beberapa tempat") agar hook tidak menjadi klaim harfiah yang salah.
-5. Rencanakan *open loop*: hook menjanjikan sesuatu (mis. "… ikut melahirkan Frankenstein"), dan scene terakhir membayarnya.
+2. Lolos filter topik `PANDUAN-AI-AGENT-PRODUKSI.md` §2.1 (keseharian, kejutan, teks terbaca tanpa suara). Topik tersegmentasi (bahan/label) wajib diberi sudut personal. Hook 0–5 dtk aktif dan personal, bukan "lagi ramai dibahas".
+3. Tulis empat kalimat: *Penonton mengira …* / *Fakta sebenarnya …* / *Ini terjadi karena …* / *Akibatnya …*.
+4. **Tolak** fakta yang masih diperdebatkan (efek Mpemba, "wood wide web", asal QWERTY, mitos 10% otak). Bila angka utama berbeda jauh antarsumber (mis. pendinginan global Tambora 0,4–3 °C), jangan sebut angkanya.
+5. Buat tiga kandidat hook. Pilih yang paling spesifik dan bisa dijawab di dalam episode. Pakai kata pembatas bila perlu ("seolah", "di beberapa tempat") agar hook tidak menjadi klaim harfiah yang salah.
+6. Rencanakan *open loop*: hook menjanjikan sesuatu (mis. "… ikut melahirkan Frankenstein"), dan scene terakhir membayarnya.
 
 ## 2. Riset sumber
 
@@ -183,6 +184,8 @@ Gerbang: semua scene ≥ 90% cocok dan tidak ada salah ucap yang mengubah makna.
 ## 7. Rencana visual (sebelum menulis kode)
 
 Kesalahan visual paling mahal terjadi karena kode langsung ditulis tanpa rencana. Lengkapi tahap ini dulu.
+
+Untuk memilih `visualStyle` (palet, elemen, gerak khas per gaya, dan status kit), pakai `docs/REFERENSI-GAYA-VISUAL.md`.
 
 ### 7.1 Storyboard per scene
 

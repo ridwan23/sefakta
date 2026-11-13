@@ -61,6 +61,20 @@ Contoh sudut Tambora: “SeFakta hari ini: apa hubungan Tambora dengan musim pan
 
 Janji hook harus terbayar. Berikan sebagian jawaban lebih awal lalu bangun penjelasan; jangan menahan seluruh informasi sampai detik terakhir atau meminta penonton “tonton sampai habis”.
 
+### 2.1 Filter topik dan hook untuk Shorts (dari analytics YouTube, Nov 2026)
+
+Bukti channel: topik fenomena sehari-hari/kejadian heboh (durian = gas bocor, komodo bertelur tanpa kawin) bertahan >60% penonton; topik bahan/komposisi yang tersegmentasi (stevia) jangkauannya lebih lambat. Ini petunjuk, bukan hukum.
+
+Sebelum memilih topik, jawab tiga pertanyaan:
+
+1. Dialami atau dilihat banyak orang setiap hari (makanan harian, fitur gadget, respons tubuh)?
+2. Ada efek kejutan/kontradiksi ("dikira A ternyata B", "kok bisa?!")?
+3. Teks di layar terbaca tanpa suara pada detik pertama?
+
+Bila topiknya tersegmentasi (bahan, label, istilah teknis), jangan buang; ubah sudutnya ke efek yang dirasakan semua orang ("Pernah beli gula nol kalori tapi berat badan nggak turun?").
+
+Hook (0–5 dtk): personal dan aktif, bukan berita pasif ("X lagi ramai dibahas…" dihindari). Pakai ajakan/pertanyaan langsung ke penonton ("Coba cek …"), tampilkan objek yang dikenal sejak frame pertama, teks besar kontras di tengah layar, dan beri alasan inti di detik 3–10 tanpa pengantar. Judul: rasa penasaran + objek sehari-hari, hindari klaim yang tidak bisa dibuktikan episode.
+
 ## 3. Struktur cerita dan ritme
 
 Tabel berikut adalah titik awal editorial, bukan jadwal wajib untuk semua topik.
@@ -196,6 +210,8 @@ Bandingkan episode pada platform, panjang, dan audiens yang sebanding. Uji satu 
 > Buat episode SeFakta tentang [topik] untuk [audiens], dengan satu fakta utama [fakta]. Baca panduan produksi dan identitas brand. Isi `facts[]` pada brief dan loloskan `npm run validate:facts` (minimal dua sumber independen per fakta), buat tiga kandidat hook, pilih satu dan jelaskan alasannya. Susun storyboard dengan narasi, visual, durasi, dan payoff setiap beat. Implementasikan memakai komponen reusable, ukur dan dengarkan audio, buat subtitle dengan alignment nyata, lalu periksa preview utuh dan quality gate. Serahkan hasil, sumber, skor editorial, keterbatasan yang belum selesai, dan lokasi preview. Ikuti otorisasi pengguna untuk render serta publikasi.
 
 ## Riwayat revisi
+
+- **1.7 (13 Nov 2026):** §2.1 filter topik 3 pertanyaan, aturan hook personal/teks terbaca tanpa suara, dan sudut personal untuk topik tersegmentasi (dari analytics YouTube).
 
 - **1.6 (9 Nov 2026):** §7 ditulis ulang: SFX hanya pada beat cerita (3–8 per episode, jeda ≥ 2 dtk, satu palet bunyi), larangan lagu populer (Content ID), patokan level (SFX -20 LUFS, musik -30 LUFS, render -14 ±1 LUFS), lisensi di `public/sfx/LICENSES.json`, implementasi lewat `cueFrames` di kode topik.
 - **1.5 (7 Nov 2026):** VO CTA menjadi satu rekaman bersama untuk semua episode (`public/brand/cta-vo.mp3`, dari VO CTA Tambora); `npm run vo` tidak lagi membuat CTA per episode dan `cta.voiceoverText` di brief dihapus.

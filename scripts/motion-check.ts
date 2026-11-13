@@ -12,6 +12,7 @@
 //         --gl=angle|swangle (bila scene 3D hitam di Linux/CI)
 //
 // Ambang (docs/TATA-GERAK.md): beku ≥ 1,5 dtk = peringatan, ≥ 3 dtk = error; scene tanpa gerak di 0,5 dtk pertama = peringatan.
+// Beat per 60 dtk (lonjakan energi gerak) < 10 = peringatan, hanya untuk seluruh cerita; ambang masih perkiraan.
 import { existsSync, mkdirSync, readdirSync, readFileSync, renameSync, rmSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { arg, flag, FPS, paths, run, SCENE_PAD_SECONDS, type Brief } from './lib/episode.ts';
@@ -22,6 +23,14 @@ const JUMP = 20; // selisih di atas ini dalam satu scene = lompatan/potong keras
 const WARN_FROZEN = 1.5;
 const ERR_FROZEN = 3;
 const CROP = { top: 180, bottom: 1460 };
+// beat = lonjakan energi gerak di atas dasar scene (perkiraan; docs/REFERENSI-GAYA-VISUAL.md § Prinsip lintas gaya)
+const BEAT_SMOOTH = 5; // frame rata-rata bergerak
+const BEAT_MIN = 0.4; // energi minimum sebuah beat
+const BEAT_RATIO = 2; // × median energi scene (idle terus-menerus tidak dihitung)
+const BEAT_GAP = 0.75; // dtk minimum antar-beat
+// kalibrasi 2026-11-13: tambora-1816 11,3 · bersin-matahari 19,6 per 60 dtk. Scene dengan kamera/peta yang terus
+// bergerak menaikkan median sehingga beat terhitung lebih sedikit; karena itu ambang bawah peringatan 10, bukan 12.
+const BEATS_PER_MIN = { low: 10, high: 18 };
 
 const id = arg('episode') ?? process.argv.slice(2).find((a) => !a.startsWith('--'));
 if (!id) {
@@ -85,6 +94,8 @@ const s1 = (x: number) => x.toFixed(1).replace('.', ',');
 type Issue = { level: 'error' | 'warn' | 'info'; scene: string; msg: string };
 const issues: Issue[] = [];
 const report: Record<string, unknown>[] = [];
+let totalBeats = 0;
+let totalSec = 0;
 
 for (const sc of targets) {
   const end = sc.from + sc.frames - 1; // diff di dalam scene: from … end-1
@@ -107,6 +118,20 @@ for (const sc of targets) {
     return seg.reduce((a, b) => a + b, 0) / Math.max(1, seg.length);
   });
   const boundary = sc.from > 0 && sc.from > first ? d(sc.from - 1) : null;
+  // beat: awal lonjakan energi (rata-rata BEAT_SMOOTH frame) di atas max(BEAT_MIN, BEAT_RATIO × median)
+  const smooth = inner.map((_, i) => {
+    const seg = inner.slice(Math.max(0, i - (BEAT_SMOOTH >> 1)), i + (BEAT_SMOOTH >> 1) + 1);
+    return seg.reduce((a, b) => a + b, 0) / seg.length;
+  });
+  const median = [...inner].sort((a, b) => a - b)[inner.length >> 1] ?? 0;
+  const beatTh = Math.max(BEAT_MIN, BEAT_RATIO * median);
+  const beats: number[] = [];
+  smooth.forEach((v, i) => {
+    const prev = i === 0 ? 0 : smooth[i - 1];
+    if (v >= beatTh && prev < beatTh && (!beats.length || i - beats[beats.length - 1] >= BEAT_GAP * FPS)) beats.push(i);
+  });
+  totalBeats += beats.length;
+  totalSec += sc.frames / FPS;
 
   if (best > 0 && frozenSec >= ERR_FROZEN) issues.push({ level: 'error', scene: sc.id, msg: `beku ${s1(frozenSec)} dtk (dtk ${s1(bestAt / FPS)}–${s1((bestAt + best) / FPS)} scene). Tambah Idle/Particles/kamera drift atau beat baru` });
   else if (best > 0 && frozenSec >= WARN_FROZEN) issues.push({ level: 'warn', scene: sc.id, msg: `beku ${s1(frozenSec)} dtk (dtk ${s1(bestAt / FPS)}–${s1((bestAt + best) / FPS)} scene)` });
@@ -116,7 +141,7 @@ for (const sc of targets) {
   if (boundary !== null && boundary > JUMP) issues.push({ level: 'info', scene: sc.id, msg: `potong keras dari scene sebelumnya (selisih ${boundary.toFixed(0)}); pertimbangkan kontinuitas kamera/exit` });
 
   console.log(
-    `\n${sc.id.padEnd(14)} ${s1(sc.from / FPS)}–${s1((end + 1) / FPS)} dtk  gerak ${String(Math.round((moving / inner.length) * 100)).padStart(3)}%  beku terlama ${s1(best ? frozenSec : 0)} dtk\n  energi/dtk ${perSec.map(bar).join('')}`,
+    `\n${sc.id.padEnd(14)} ${s1(sc.from / FPS)}–${s1((end + 1) / FPS)} dtk  gerak ${String(Math.round((moving / inner.length) * 100)).padStart(3)}%  beku terlama ${s1(best ? frozenSec : 0)} dtk  beat ${beats.length} (dtk ${beats.map((i) => s1(i / FPS)).join(', ') || '–'})\n  energi/dtk ${perSec.map(bar).join('')}`,
   );
   for (const i of issues.filter((x) => x.scene === sc.id)) console.log(`  ${i.level === 'error' ? '✖' : i.level === 'warn' ? '⚠' : 'ℹ'} ${i.msg}`);
 
@@ -126,10 +151,16 @@ for (const sc of targets) {
   const inputs = [...top, ...bottom].flatMap((n) => ['-i', frameFile(n)]);
   const strip = join(outDir, `${sc.id}.png`);
   await run('ffmpeg', ['-y', '-hide_banner', '-loglevel', 'error', ...inputs, '-filter_complex', `${top.map((_, k) => `[${k}]`).join('')}hstack=inputs=8[a];${bottom.map((_, k) => `[${k + 8}]`).join('')}hstack=inputs=8[b];[a][b]vstack`, strip]);
-  report.push({ scene: sc.id, fromSec: sc.from / FPS, seconds: sc.frames / FPS, movingPct: Math.round((moving / inner.length) * 100), longestFrozenSec: best ? +frozenSec.toFixed(2) : 0, entrance, energyPerSec: perSec.map((v) => +v.toFixed(3)), filmstrip: strip, entranceFrames: top.map((n) => n - sc.from), overviewFrames: bottom.map((n) => n - sc.from) });
+  report.push({ scene: sc.id, fromSec: sc.from / FPS, seconds: sc.frames / FPS, movingPct: Math.round((moving / inner.length) * 100), longestFrozenSec: best ? +frozenSec.toFixed(2) : 0, entrance, beatsAtSec: beats.map((i) => +(i / FPS).toFixed(2)),energyPerSec: perSec.map((v) => +v.toFixed(3)), filmstrip: strip, entranceFrames: top.map((n) => n - sc.from), overviewFrames: bottom.map((n) => n - sc.from) });
 }
 
-writeFileSync(join(outDir, 'report.json'), JSON.stringify({ episode: id, composition: comp, thresholds: { still: STILL, jump: JUMP, warnFrozen: WARN_FROZEN, errFrozen: ERR_FROZEN }, scenes: report, issues }, null, 2));
+// beat per 60 dtk: hanya untuk seluruh cerita (bukan --scene), peringatan saja sampai ambang dikalibrasi
+const beatsPerMin = totalSec ? (totalBeats * 60) / totalSec : 0;
+if (!only && beatsPerMin < BEATS_PER_MIN.low) issues.push({ level: 'warn', scene: '*', msg: `${s1(beatsPerMin)} beat per 60 dtk (perkiraan; target ${BEATS_PER_MIN.low}–${BEATS_PER_MIN.high}). Tambah perkembangan visual yang mengikuti narasi` });
+console.log(`\nBeat: ${totalBeats} dalam ${s1(totalSec)} dtk = ${s1(beatsPerMin)} per 60 dtk (perkiraan; target ${BEATS_PER_MIN.low}–${BEATS_PER_MIN.high})`);
+for (const i of issues.filter((x) => x.scene === '*')) console.log(`  ⚠ ${i.msg}`);
+
+writeFileSync(join(outDir, 'report.json'), JSON.stringify({ episode: id, composition: comp, thresholds: { still: STILL, jump: JUMP, warnFrozen: WARN_FROZEN, errFrozen: ERR_FROZEN, beatMin: BEAT_MIN, beatRatio: BEAT_RATIO, beatGapSec: BEAT_GAP, beatsPerMin: BEATS_PER_MIN }, beats: { total: totalBeats, seconds: +totalSec.toFixed(2), perMin: +beatsPerMin.toFixed(1) }, scenes: report, issues }, null, 2));
 if (!flag('keep')) rmSync(framesDir, { recursive: true, force: true });
 
 const errs = issues.filter((i) => i.level === 'error').length;

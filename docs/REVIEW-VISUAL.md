@@ -32,6 +32,16 @@ Agent yang membuat visual cenderung puas dengan karyanya sendiri. Karena itu set
 
 Target ≥ 14/18 tanpa nilai 0. Aspek **Fokus**, **Gerak masuk**, dan **Hidup saat hold** wajib 2 sebelum publikasi.
 
+### Catatan pendukung (tidak menambah skor)
+
+Laporkan juga tiga hal ini sebagai saran bila tidak terpenuhi (`docs/REFERENSI-GAYA-VISUAL.md` § Prinsip lintas gaya):
+
+- **Kepadatan:** sekitar 4–6 poin belajar per 60 dtk. Hitung dari filmstrip: berapa hal berbeda yang dipahami penonton?
+- **Hierarki 3 tingkat:** headline singkat, visual utama, label/anotasi. Visual utama harus memperlihatkan apa yang terjadi, bukan hanya ikon.
+- **Tanpa narasi:** bila suara dimatikan, apakah inti tiap scene masih tertangkap dari gambar?
+
+Jumlah beat per 60 dtk dari `motion:check` dipakai sebagai bahan aspek **Ritme**. Target editorial 12–18. Peringatan otomatis baru muncul di bawah 10, karena detektor menghitung lebih sedikit di scene dengan kamera yang terus bergerak.
+
 ## Format temuan
 
 ```
