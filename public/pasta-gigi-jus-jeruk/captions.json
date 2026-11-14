@@ -1,0 +1,859 @@
+{
+  "projectId": "pasta-gigi-jus-jeruk",
+  "method": "whisper.cpp 1.5.5 (small) + forced alignment ke naskah",
+  "generatedAt": "2026-11-14T05:14:29.597Z",
+  "scenes": {
+    "hook": {
+      "hash": "88b241d46668",
+      "coverage": 1,
+      "missing": [],
+      "extra": [],
+      "heard": "Jus jeruk yang sama, rasanya berubah total gara-gara sikat gigi.",
+      "captions": [
+        {
+          "text": "Jus",
+          "startMs": 60,
+          "endMs": 420,
+          "timestampMs": 240,
+          "confidence": 0.326106
+        },
+        {
+          "text": " jeruk",
+          "startMs": 420,
+          "endMs": 800,
+          "timestampMs": 610,
+          "confidence": 0.501925
+        },
+        {
+          "text": " yang",
+          "startMs": 800,
+          "endMs": 1270,
+          "timestampMs": 1035,
+          "confidence": 0.980838
+        },
+        {
+          "text": " sama,",
+          "startMs": 1270,
+          "endMs": 2010,
+          "timestampMs": 1640,
+          "confidence": 0.99939
+        },
+        {
+          "text": " rasanya",
+          "startMs": 2010,
+          "endMs": 2450,
+          "timestampMs": 2230,
+          "confidence": 0.931274
+        },
+        {
+          "text": " berubah",
+          "startMs": 2450,
+          "endMs": 3050,
+          "timestampMs": 2750,
+          "confidence": 0.987409
+        },
+        {
+          "text": " total",
+          "startMs": 3050,
+          "endMs": 3540,
+          "timestampMs": 3295,
+          "confidence": 0.970662
+        },
+        {
+          "text": " gara-gara",
+          "startMs": 3540,
+          "endMs": 4260,
+          "timestampMs": 3900,
+          "confidence": 0.354157
+        },
+        {
+          "text": " sikat",
+          "startMs": 4260,
+          "endMs": 4640,
+          "timestampMs": 4450,
+          "confidence": 0.97535
+        },
+        {
+          "text": " gigi.",
+          "startMs": 4640,
+          "endMs": 5140,
+          "timestampMs": 4890,
+          "confidence": 0.906579
+        }
+      ]
+    },
+    "lebih-dekat": {
+      "hash": "e9f86a7002a9",
+      "coverage": 1,
+      "missing": [],
+      "extra": [],
+      "heard": "Manisnya hilang, tersisa pahit dan menusuk, pagi ini kamu sikat gigi, lalu minum jus jeruk, bukan jusnya yang berubah, lidahmu yang berubah.",
+      "captions": [
+        {
+          "text": "Manisnya",
+          "startMs": 60,
+          "endMs": 830,
+          "timestampMs": 445,
+          "confidence": 0.938247
+        },
+        {
+          "text": " hilang,",
+          "startMs": 830,
+          "endMs": 1560,
+          "timestampMs": 1195,
+          "confidence": 0.99523
+        },
+        {
+          "text": " tersisa",
+          "startMs": 1560,
+          "endMs": 2080,
+          "timestampMs": 1820,
+          "confidence": 0.82752
+        },
+        {
+          "text": " pahit",
+          "startMs": 2080,
+          "endMs": 2480,
+          "timestampMs": 2280,
+          "confidence": 0.973102
+        },
+        {
+          "text": " dan",
+          "startMs": 2480,
+          "endMs": 2730,
+          "timestampMs": 2605,
+          "confidence": 0.912858
+        },
+        {
+          "text": " menusuk.",
+          "startMs": 2730,
+          "endMs": 3710,
+          "timestampMs": 3220,
+          "confidence": 0.900223
+        },
+        {
+          "text": " Pagi",
+          "startMs": 3710,
+          "endMs": 3900,
+          "timestampMs": 3805,
+          "confidence": 0.630087
+        },
+        {
+          "text": " ini",
+          "startMs": 3900,
+          "endMs": 4170,
+          "timestampMs": 4035,
+          "confidence": 0.993247
+        },
+        {
+          "text": " kamu",
+          "startMs": 4170,
+          "endMs": 4540,
+          "timestampMs": 4355,
+          "confidence": 0.975279
+        },
+        {
+          "text": " sikat",
+          "startMs": 4540,
+          "endMs": 5000,
+          "timestampMs": 4770,
+          "confidence": 0.979966
+        },
+        {
+          "text": " gigi,",
+          "startMs": 5000,
+          "endMs": 5610,
+          "timestampMs": 5305,
+          "confidence": 0.872532
+        },
+        {
+          "text": " lalu",
+          "startMs": 5610,
+          "endMs": 5840,
+          "timestampMs": 5725,
+          "confidence": 0.929743
+        },
+        {
+          "text": " minum",
+          "startMs": 5840,
+          "endMs": 6210,
+          "timestampMs": 6025,
+          "confidence": 0.992036
+        },
+        {
+          "text": " jus",
+          "startMs": 6210,
+          "endMs": 6460,
+          "timestampMs": 6335,
+          "confidence": 0.907568
+        },
+        {
+          "text": " jeruk.",
+          "startMs": 6460,
+          "endMs": 7280,
+          "timestampMs": 6870,
+          "confidence": 0.843211
+        },
+        {
+          "text": " Bukan",
+          "startMs": 7280,
+          "endMs": 7330,
+          "timestampMs": 7305,
+          "confidence": 0.63905
+        },
+        {
+          "text": " jusnya",
+          "startMs": 7330,
+          "endMs": 7750,
+          "timestampMs": 7540,
+          "confidence": 0.942489
+        },
+        {
+          "text": " yang",
+          "startMs": 7750,
+          "endMs": 8030,
+          "timestampMs": 7890,
+          "confidence": 0.997763
+        },
+        {
+          "text": " berubah,",
+          "startMs": 8030,
+          "endMs": 8940,
+          "timestampMs": 8485,
+          "confidence": 0.99409
+        },
+        {
+          "text": " lidahmu",
+          "startMs": 8940,
+          "endMs": 9260,
+          "timestampMs": 9100,
+          "confidence": 0.534493
+        },
+        {
+          "text": " yang",
+          "startMs": 9260,
+          "endMs": 9580,
+          "timestampMs": 9420,
+          "confidence": 0.995537
+        },
+        {
+          "text": " berubah.",
+          "startMs": 9580,
+          "endMs": 10400,
+          "timestampMs": 9990,
+          "confidence": 0.998296
+        }
+      ]
+    },
+    "lebih-dekat-lagi": {
+      "hash": "4875f4742c0b",
+      "coverage": 0.969,
+      "missing": [
+        "jus"
+      ],
+      "extra": [],
+      "heard": "Pasta gigi mengandung sodium laurel sulfate, deterjen pembuat busa, deterjen itu merusak lapisan lemak di sel receptor rasa di lidahmu. Receptor manis jadi tumpul, rasa pahit dari asam citrat juice malah menonjol.",
+      "captions": [
+        {
+          "text": "Pasta",
+          "startMs": 70,
+          "endMs": 380,
+          "timestampMs": 225,
+          "confidence": 0.456224
+        },
+        {
+          "text": " gigi",
+          "startMs": 380,
+          "endMs": 650,
+          "timestampMs": 515,
+          "confidence": 0.862261
+        },
+        {
+          "text": " mengandung",
+          "startMs": 650,
+          "endMs": 1420,
+          "timestampMs": 1035,
+          "confidence": 0.995338
+        },
+        {
+          "text": " sodium",
+          "startMs": 1420,
+          "endMs": 1820,
+          "timestampMs": 1620,
+          "confidence": 0.923842
+        },
+        {
+          "text": " lauryl",
+          "startMs": 1820,
+          "endMs": 2310,
+          "timestampMs": 2065,
+          "confidence": 0.253503
+        },
+        {
+          "text": " sulfate,",
+          "startMs": 2310,
+          "endMs": 2990,
+          "timestampMs": 2650,
+          "confidence": 0.680602
+        },
+        {
+          "text": " deterjen",
+          "startMs": 2990,
+          "endMs": 3600,
+          "timestampMs": 3295,
+          "confidence": 0.96141
+        },
+        {
+          "text": " pembuat",
+          "startMs": 3600,
+          "endMs": 4180,
+          "timestampMs": 3890,
+          "confidence": 0.925933
+        },
+        {
+          "text": " busa.",
+          "startMs": 4180,
+          "endMs": 4500,
+          "timestampMs": 4340,
+          "confidence": 0.734591
+        },
+        {
+          "text": " Deterjen",
+          "startMs": 4500,
+          "endMs": 5140,
+          "timestampMs": 4820,
+          "confidence": 0.944809
+        },
+        {
+          "text": " itu",
+          "startMs": 5140,
+          "endMs": 5400,
+          "timestampMs": 5270,
+          "confidence": 0.986024
+        },
+        {
+          "text": " merusak",
+          "startMs": 5400,
+          "endMs": 5960,
+          "timestampMs": 5680,
+          "confidence": 0.994141
+        },
+        {
+          "text": " lapisan",
+          "startMs": 5960,
+          "endMs": 6500,
+          "timestampMs": 6230,
+          "confidence": 0.99163
+        },
+        {
+          "text": " lemak",
+          "startMs": 6500,
+          "endMs": 6900,
+          "timestampMs": 6700,
+          "confidence": 0.991915
+        },
+        {
+          "text": " di",
+          "startMs": 6900,
+          "endMs": 7100,
+          "timestampMs": 7000,
+          "confidence": 0.868732
+        },
+        {
+          "text": " sel",
+          "startMs": 7100,
+          "endMs": 7300,
+          "timestampMs": 7200,
+          "confidence": 0.774564
+        },
+        {
+          "text": " reseptor",
+          "startMs": 7300,
+          "endMs": 7950,
+          "timestampMs": 7625,
+          "confidence": 0.443217
+        },
+        {
+          "text": " rasa",
+          "startMs": 7950,
+          "endMs": 8270,
+          "timestampMs": 8110,
+          "confidence": 0.974877
+        },
+        {
+          "text": " di",
+          "startMs": 8270,
+          "endMs": 8430,
+          "timestampMs": 8350,
+          "confidence": 0.876755
+        },
+        {
+          "text": " lidahmu.",
+          "startMs": 8430,
+          "endMs": 9060,
+          "timestampMs": 8745,
+          "confidence": 0.852096
+        },
+        {
+          "text": " Reseptor",
+          "startMs": 9060,
+          "endMs": 9780,
+          "timestampMs": 9420,
+          "confidence": 0.696403
+        },
+        {
+          "text": " manis",
+          "startMs": 9780,
+          "endMs": 10280,
+          "timestampMs": 10030,
+          "confidence": 0.971491
+        },
+        {
+          "text": " jadi",
+          "startMs": 10280,
+          "endMs": 10600,
+          "timestampMs": 10440,
+          "confidence": 0.976347
+        },
+        {
+          "text": " tumpul,",
+          "startMs": 10600,
+          "endMs": 11400,
+          "timestampMs": 11000,
+          "confidence": 0.856981
+        },
+        {
+          "text": " rasa",
+          "startMs": 11400,
+          "endMs": 11600,
+          "timestampMs": 11500,
+          "confidence": 0.605917
+        },
+        {
+          "text": " pahit",
+          "startMs": 11600,
+          "endMs": 11960,
+          "timestampMs": 11780,
+          "confidence": 0.989293
+        },
+        {
+          "text": " dari",
+          "startMs": 11960,
+          "endMs": 12260,
+          "timestampMs": 12110,
+          "confidence": 0.996976
+        },
+        {
+          "text": " asam",
+          "startMs": 12260,
+          "endMs": 12560,
+          "timestampMs": 12410,
+          "confidence": 0.897279
+        },
+        {
+          "text": " sitrat",
+          "startMs": 12560,
+          "endMs": 13040,
+          "timestampMs": 12800,
+          "confidence": 0.693167
+        },
+        {
+          "text": " jus",
+          "startMs": 13040,
+          "endMs": 13500,
+          "timestampMs": 13270,
+          "confidence": null
+        },
+        {
+          "text": " malah",
+          "startMs": 13500,
+          "endMs": 13750,
+          "timestampMs": 13625,
+          "confidence": 0.918648
+        },
+        {
+          "text": " menonjol.",
+          "startMs": 13750,
+          "endMs": 14640,
+          "timestampMs": 14195,
+          "confidence": 0.988561
+        }
+      ]
+    },
+    "inti": {
+      "hash": "da6c0b3a4f8d",
+      "coverage": 1,
+      "missing": [],
+      "extra": [],
+      "heard": "Peneliti Linda Bartosciuk membuktikannya tahun 1980. Dalam penelitianya, 7 relawan berkumur larutan deterjen mencicipi manis, asin, asam, dan pahit. Manisnya melemah dan asam sitrat berubah pahit.",
+      "captions": [
+        {
+          "text": "Peneliti",
+          "startMs": 200,
+          "endMs": 770,
+          "timestampMs": 485,
+          "confidence": 0.914679
+        },
+        {
+          "text": " Linda",
+          "startMs": 770,
+          "endMs": 1250,
+          "timestampMs": 1010,
+          "confidence": 0.92455
+        },
+        {
+          "text": " Bartoshuk",
+          "startMs": 1250,
+          "endMs": 2260,
+          "timestampMs": 1755,
+          "confidence": 0.955472
+        },
+        {
+          "text": " membuktikannya",
+          "startMs": 2260,
+          "endMs": 3540,
+          "timestampMs": 2900,
+          "confidence": 0.844047
+        },
+        {
+          "text": " tahun",
+          "startMs": 3540,
+          "endMs": 4040,
+          "timestampMs": 3790,
+          "confidence": 0.948458
+        },
+        {
+          "text": " seribu",
+          "startMs": 4040,
+          "endMs": 4292,
+          "timestampMs": 4166,
+          "confidence": 0.945905
+        },
+        {
+          "text": " sembilan",
+          "startMs": 4292,
+          "endMs": 4544,
+          "timestampMs": 4418,
+          "confidence": 0.945905
+        },
+        {
+          "text": " ratus",
+          "startMs": 4544,
+          "endMs": 4796,
+          "timestampMs": 4670,
+          "confidence": 0.945905
+        },
+        {
+          "text": " delapan",
+          "startMs": 4796,
+          "endMs": 5048,
+          "timestampMs": 4922,
+          "confidence": 0.945905
+        },
+        {
+          "text": " puluh.",
+          "startMs": 5048,
+          "endMs": 5300,
+          "timestampMs": 5174,
+          "confidence": 0.945905
+        },
+        {
+          "text": " Dalam",
+          "startMs": 5300,
+          "endMs": 5750,
+          "timestampMs": 5525,
+          "confidence": 0.987643
+        },
+        {
+          "text": " penelitiannya,",
+          "startMs": 5750,
+          "endMs": 7090,
+          "timestampMs": 6420,
+          "confidence": 0.993157
+        },
+        {
+          "text": " tujuh",
+          "startMs": 7090,
+          "endMs": 7250,
+          "timestampMs": 7170,
+          "confidence": 0.310304
+        },
+        {
+          "text": " relawan",
+          "startMs": 7250,
+          "endMs": 7780,
+          "timestampMs": 7515,
+          "confidence": 0.166015
+        },
+        {
+          "text": " berkumur",
+          "startMs": 7780,
+          "endMs": 8390,
+          "timestampMs": 8085,
+          "confidence": 0.984594
+        },
+        {
+          "text": " larutan",
+          "startMs": 8390,
+          "endMs": 8930,
+          "timestampMs": 8660,
+          "confidence": 0.885296
+        },
+        {
+          "text": " deterjen,",
+          "startMs": 8930,
+          "endMs": 9640,
+          "timestampMs": 9285,
+          "confidence": 0.975414
+        },
+        {
+          "text": " mencicipi",
+          "startMs": 9640,
+          "endMs": 10560,
+          "timestampMs": 10100,
+          "confidence": 0.846227
+        },
+        {
+          "text": " manis,",
+          "startMs": 10560,
+          "endMs": 11340,
+          "timestampMs": 10950,
+          "confidence": 0.943446
+        },
+        {
+          "text": " asin,",
+          "startMs": 11340,
+          "endMs": 11870,
+          "timestampMs": 11605,
+          "confidence": 0.941081
+        },
+        {
+          "text": " asam,",
+          "startMs": 11870,
+          "endMs": 12480,
+          "timestampMs": 12175,
+          "confidence": 0.946812
+        },
+        {
+          "text": " dan",
+          "startMs": 12480,
+          "endMs": 12790,
+          "timestampMs": 12635,
+          "confidence": 0.96773
+        },
+        {
+          "text": " pahit.",
+          "startMs": 12790,
+          "endMs": 13440,
+          "timestampMs": 13115,
+          "confidence": 0.973583
+        },
+        {
+          "text": " Manisnya",
+          "startMs": 13440,
+          "endMs": 14190,
+          "timestampMs": 13815,
+          "confidence": 0.991526
+        },
+        {
+          "text": " melemah,",
+          "startMs": 14190,
+          "endMs": 15050,
+          "timestampMs": 14620,
+          "confidence": 0.956691
+        },
+        {
+          "text": " dan",
+          "startMs": 15050,
+          "endMs": 15160,
+          "timestampMs": 15105,
+          "confidence": 0.515709
+        },
+        {
+          "text": " asam",
+          "startMs": 15160,
+          "endMs": 15540,
+          "timestampMs": 15350,
+          "confidence": 0.994856
+        },
+        {
+          "text": " sitrat",
+          "startMs": 15540,
+          "endMs": 16230,
+          "timestampMs": 15885,
+          "confidence": 0.728926
+        },
+        {
+          "text": " berubah",
+          "startMs": 16230,
+          "endMs": 16760,
+          "timestampMs": 16495,
+          "confidence": 0.96298
+        },
+        {
+          "text": " pahit.",
+          "startMs": 16760,
+          "endMs": 17440,
+          "timestampMs": 17100,
+          "confidence": 0.981175
+        }
+      ]
+    },
+    "jawaban": {
+      "hash": "02e7f77e3554",
+      "coverage": 1,
+      "missing": [],
+      "extra": [],
+      "heard": "Efeknya sementara hilang dalam beberapa menit. Mau jismu tetap manis? Minum dulu sikat gigi belakangan atau pakai pasta gigi tanpa SLS.",
+      "captions": [
+        {
+          "text": "Efeknya",
+          "startMs": 50,
+          "endMs": 580,
+          "timestampMs": 315,
+          "confidence": 0.739903
+        },
+        {
+          "text": " sementara,",
+          "startMs": 580,
+          "endMs": 1190,
+          "timestampMs": 885,
+          "confidence": 0.946779
+        },
+        {
+          "text": " hilang",
+          "startMs": 1190,
+          "endMs": 1770,
+          "timestampMs": 1480,
+          "confidence": 0.967802
+        },
+        {
+          "text": " dalam",
+          "startMs": 1770,
+          "endMs": 2030,
+          "timestampMs": 1900,
+          "confidence": 0.976972
+        },
+        {
+          "text": " beberapa",
+          "startMs": 2030,
+          "endMs": 2590,
+          "timestampMs": 2310,
+          "confidence": 0.998087
+        },
+        {
+          "text": " menit.",
+          "startMs": 2590,
+          "endMs": 3240,
+          "timestampMs": 2915,
+          "confidence": 0.986476
+        },
+        {
+          "text": " Mau",
+          "startMs": 3240,
+          "endMs": 3620,
+          "timestampMs": 3430,
+          "confidence": 0.962479
+        },
+        {
+          "text": " jusmu",
+          "startMs": 3620,
+          "endMs": 4000,
+          "timestampMs": 3810,
+          "confidence": 0.63025
+        },
+        {
+          "text": " tetap",
+          "startMs": 4000,
+          "endMs": 4480,
+          "timestampMs": 4240,
+          "confidence": 0.995025
+        },
+        {
+          "text": " manis?",
+          "startMs": 4480,
+          "endMs": 5050,
+          "timestampMs": 4765,
+          "confidence": 0.984772
+        },
+        {
+          "text": " Minum",
+          "startMs": 5050,
+          "endMs": 5510,
+          "timestampMs": 5280,
+          "confidence": 0.475314
+        },
+        {
+          "text": " dulu,",
+          "startMs": 5510,
+          "endMs": 5870,
+          "timestampMs": 5690,
+          "confidence": 0.991417
+        },
+        {
+          "text": " sikat",
+          "startMs": 5870,
+          "endMs": 6340,
+          "timestampMs": 6105,
+          "confidence": 0.894977
+        },
+        {
+          "text": " gigi",
+          "startMs": 6340,
+          "endMs": 6680,
+          "timestampMs": 6510,
+          "confidence": 0.740536
+        },
+        {
+          "text": " belakangan,",
+          "startMs": 6680,
+          "endMs": 7850,
+          "timestampMs": 7265,
+          "confidence": 0.864384
+        },
+        {
+          "text": " atau",
+          "startMs": 7850,
+          "endMs": 8030,
+          "timestampMs": 7940,
+          "confidence": 0.614115
+        },
+        {
+          "text": " pakai",
+          "startMs": 8030,
+          "endMs": 8520,
+          "timestampMs": 8275,
+          "confidence": 0.764285
+        },
+        {
+          "text": " pasta",
+          "startMs": 8520,
+          "endMs": 8960,
+          "timestampMs": 8740,
+          "confidence": 0.944709
+        },
+        {
+          "text": " gigi",
+          "startMs": 8960,
+          "endMs": 9330,
+          "timestampMs": 9145,
+          "confidence": 0.988424
+        },
+        {
+          "text": " tanpa",
+          "startMs": 9330,
+          "endMs": 9800,
+          "timestampMs": 9565,
+          "confidence": 0.98708
+        },
+        {
+          "text": " SLS.",
+          "startMs": 9800,
+          "endMs": 10400,
+          "timestampMs": 10100,
+          "confidence": 0.960169
+        }
+      ]
+    }
+  }
+}

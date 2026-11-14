@@ -10,6 +10,7 @@ import { NasiDinginV2Compositions } from './topics/nasi-dingin-v2/compositions';
 import { SteviaIsiSachetCompositions } from './topics/stevia-isi-sachet/compositions';
 import { KatalogCompositions } from './shared/katalog';
 import { BersinMatahariCompositions } from './topics/bersin-matahari/compositions';
+import { PastaGigiJusJerukCompositions } from './topics/pasta-gigi-jus-jeruk/compositions';
 
 // One line per topic. Topic code lives in src/topics/<topic>/ and registers its own compositions.
 export const RemotionRoot: React.FC = () => (
@@ -26,5 +27,6 @@ export const RemotionRoot: React.FC = () => (
     {/* acuan gerak untuk agent, bukan episode */}
     <KatalogCompositions />
     <BersinMatahariCompositions />
+    <PastaGigiJusJerukCompositions />
   </>
 );
