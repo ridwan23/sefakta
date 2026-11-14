@@ -39,8 +39,11 @@ export const calculateEpisodeMetadata: CalculateMetadataFunction<EpisodeProps> =
     return entry;
   });
   // VO CTA bersama (satu rekaman untuk semua episode); bila filenya hilang, klip CTA memakai audio aslinya.
-  const ctaAudio = (await fetch(staticFile(CTA_VO_FILE), { method: 'HEAD' }).then((r) => r.ok).catch(() => false)) ? CTA_VO_FILE : null;
-  const ctaFrom = cursor + Math.round(CTA_HOLD_SECONDS * FPS);
-  const timeline: EpisodeTimeline = { scenes, storyFrames: cursor, ctaFrom, hasVo: scenes.every((s) => s.audio), ctaAudio };
-  return { durationInFrames: ctaFrom + CTA_FRAMES, fps: FPS, width: WIDTH, height: HEIGHT, props: { ...props, timeline } };
+  // Bila brief `ending.cta === false` (mis. loop), komposisi berakhir di akhir narasi: tanpa jeda CTA dan
+  // tanpa klip CTA (durasi = storyFrames). Default (field ending tidak ada): CTA resmi seperti biasa.
+  const hasCta = brief.ending?.cta !== false;
+  const ctaAudio = hasCta ? (await fetch(staticFile(CTA_VO_FILE), { method: 'HEAD' }).then((r) => r.ok).catch(() => false)) ? CTA_VO_FILE : null : null;
+  const ctaFrom = hasCta ? cursor + Math.round(CTA_HOLD_SECONDS * FPS) : cursor;
+  const timeline: EpisodeTimeline = { scenes, storyFrames: cursor, ctaFrom, hasVo: scenes.every((s) => s.audio), ctaAudio, hasCta };
+  return { durationInFrames: hasCta ? ctaFrom + CTA_FRAMES : cursor, fps: FPS, width: WIDTH, height: HEIGHT, props: { ...props, timeline } };
 };

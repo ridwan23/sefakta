@@ -1,0 +1,66 @@
+{
+  "projectId": "pasta-gigi-jus-jeruk",
+  "sourceBrief": "pasta-gigi-jus-jeruk.json",
+  "provider": "aria",
+  "model": "avocado_v2",
+  "voice": "avocado_v2:MAI_01",
+  "loudnessTarget": -14,
+  "generatedAt": "2026-11-14T05:12:08.821Z",
+  "scenes": [
+    {
+      "id": "hook",
+      "file": "pasta-gigi-jus-jeruk/vo/hook.mp3",
+      "text": "Jus jeruk yang sama, rasanya berubah total gara-gara sikat gigi.",
+      "speed": 100,
+      "hash": "88b241d46668",
+      "voice": "avocado_v2:MAI_01",
+      "audioSeconds": 5.352,
+      "lufs": -14.5,
+      "truePeak": -1.8
+    },
+    {
+      "id": "lebih-dekat",
+      "file": "pasta-gigi-jus-jeruk/vo/lebih-dekat.mp3",
+      "text": "Manisnya hilang, tersisa pahit dan menusuk. Pagi ini kamu sikat gigi, lalu minum jus jeruk. Bukan jusnya yang berubah, lidahmu yang berubah.",
+      "speed": 100,
+      "hash": "e9f86a7002a9",
+      "voice": "avocado_v2:MAI_01",
+      "audioSeconds": 10.632,
+      "lufs": -14.3,
+      "truePeak": -1.8
+    },
+    {
+      "id": "lebih-dekat-lagi",
+      "file": "pasta-gigi-jus-jeruk/vo/lebih-dekat-lagi.mp3",
+      "text": "Pasta gigi mengandung sodium lauryl sulfate, deterjen pembuat busa. Deterjen itu merusak lapisan lemak di sel reseptor rasa di lidahmu. Reseptor manis jadi tumpul, rasa pahit dari asam sitrat jus malah menonjol.",
+      "speed": 100,
+      "hash": "4875f4742c0b",
+      "voice": "avocado_v2:MAI_01",
+      "audioSeconds": 14.832,
+      "lufs": -14.5,
+      "truePeak": -1.8
+    },
+    {
+      "id": "inti",
+      "file": "pasta-gigi-jus-jeruk/vo/inti.mp3",
+      "text": "Peneliti Linda Bartoshuk membuktikannya tahun seribu sembilan ratus delapan puluh. Dalam penelitiannya, tujuh relawan berkumur larutan deterjen, mencicipi manis, asin, asam, dan pahit. Manisnya melemah, dan asam sitrat berubah pahit.",
+      "speed": 100,
+      "hash": "da6c0b3a4f8d",
+      "voice": "avocado_v2:MAI_01",
+      "audioSeconds": 17.448,
+      "lufs": -14.4,
+      "truePeak": -1.8
+    },
+    {
+      "id": "jawaban",
+      "file": "pasta-gigi-jus-jeruk/vo/jawaban.mp3",
+      "text": "Efeknya sementara, hilang dalam beberapa menit. Mau jusmu tetap manis? Minum dulu, sikat gigi belakangan, atau pakai pasta gigi tanpa SLS.",
+      "speed": 100,
+      "hash": "02e7f77e3554",
+      "voice": "avocado_v2:MAI_01",
+      "audioSeconds": 10.632,
+      "lufs": -14.3,
+      "truePeak": -1.8
+    }
+  ]
+}

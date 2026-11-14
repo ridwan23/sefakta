@@ -1,0 +1,333 @@
+{
+  "captionMode": "headline",
+  "ending": {
+    "type": "loop",
+    "cta": false,
+    "reason": "Loop menggantikan CTA (perintah pemilik 2026-11-14 13:28 WIB: 'tidak perlu CTA, langsung looping ke frame awal saja'); frame terakhir dissolve ke shot loop yang sama persis dengan frame 0 hook; watermark konstan 0,85 (tanpa fade-out gerbang CTA)."
+  },
+  "facts": [
+    {
+      "claim": "Pasta gigi umumnya mengandung sodium lauryl sulfate (SLS), deterjen pembuat busa yang membantu membersihkan gigi.",
+      "figures": [],
+      "id": "f-sls",
+      "kind": "fakta",
+      "limits": "Narasi menyederhanakan 'membantu menghilangkan plak' menjadi 'membantu membersihkan gigi'.",
+      "sources": [
+        {
+          "accessed": "2026-11-14",
+          "origin": "ScienceAlert / The Conversation",
+          "primary": false,
+          "publisher": "ScienceAlert (republished from The Conversation)",
+          "quote": "Toothpaste contains the detergent sodium lauryl sulfate, which helps remove dental plaque from your teeth.",
+          "title": "An Ingredient in Toothpaste Makes Orange Juice Taste Vile. Here's How.",
+          "url": "https://www.sciencealert.com/an-ingredient-in-toothpaste-makes-orange-juice-taste-vile-heres-how"
+        },
+        {
+          "accessed": "2026-11-14",
+          "origin": "Colgate",
+          "primary": false,
+          "publisher": "Colgate",
+          "quote": "Sodium lauryl sulfate (SLS) is a surfactant – or a type of soap. It's found in many beauty and household products, not just toothpaste. SLS creates suds or foam while you brush and helps clean your teeth.",
+          "title": "Orange Juice And Toothpaste: Why They Don't Mix",
+          "url": "https://www.colgate.com/en-us/oral-health/brushing-and-flossing/orange-juice-and-toothpaste-why-they-dont-mix"
+        }
+      ],
+      "status": "terverifikasi"
+    },
+    {
+      "claim": "SLS menekan reseptor rasa manis dan memecah fosfolipid yang meredam rasa pahit; karena jus jeruk mengandalkan manis untuk menyeimbangkan asamnya, jus terasa pahit setelah sikat gigi.",
+      "figures": [],
+      "id": "f-mekanisme",
+      "kind": "fakta",
+      "limits": "Narasi memakai 'reseptor manis jadi tumpul' sebagai penyederhanaan dari 'intensitas manis sedikit melemah'; 'fosfolipid' tidak diucapkan di narasi, hanya tersirat lewat 'lapisan lemak'.",
+      "sources": [
+        {
+          "accessed": "2026-11-14",
+          "origin": "ScienceAlert / The Conversation",
+          "primary": false,
+          "publisher": "ScienceAlert (republished from The Conversation)",
+          "quote": "We found that the intensity of the tastes of sucrose, salt, and quinine was reduced by a small amount, but the most important change was that a bitter taste was added to the sour taste of citric acid.",
+          "title": "An Ingredient in Toothpaste Makes Orange Juice Taste Vile. Here's How.",
+          "url": "https://www.sciencealert.com/an-ingredient-in-toothpaste-makes-orange-juice-taste-vile-heres-how"
+        },
+        {
+          "accessed": "2026-11-14",
+          "origin": "Colgate",
+          "primary": false,
+          "publisher": "Colgate",
+          "quote": "OJ and other citrus juices usually have a mixture of bitter and sweet flavors. Under normal circumstances, you're able to taste the sweetness. But when your sweetness receptors are out of commission – and there's nothing to block your bitterness receptors – you're going to get a mouthful of blech.",
+          "title": "Orange Juice And Toothpaste: Why They Don't Mix",
+          "url": "https://www.colgate.com/en-us/oral-health/brushing-and-flossing/orange-juice-and-toothpaste-why-they-dont-mix"
+        }
+      ],
+      "status": "terverifikasi"
+    },
+    {
+      "claim": "Peneliti menyimpulkan kemungkinan besar SLS bekerja dengan mengganggu lapisan lemak di membran sel reseptor rasa, seperti deterjen memecah lemak di piring kotor.",
+      "figures": [],
+      "id": "f-membran",
+      "kind": "interpretasi",
+      "limits": "Ini kesimpulan peneliti ('most likely'), bukan mekanisme yang terbukti langsung; narasi memakai 'merusak lapisan lemak' sebagai penyederhanaan dari 'disrupts/breaks up'.",
+      "sources": [
+        {
+          "accessed": "2026-11-14",
+          "origin": "ScienceAlert / The Conversation",
+          "primary": false,
+          "publisher": "ScienceAlert (republished from The Conversation)",
+          "quote": "But there's another type of fat in your mouth that the detergent in toothpaste disrupts – the lipids in the cell membranes of your taste receptors. Brushing your teeth breaks up that layer of lipids, temporarily changing how you perceive taste.",
+          "title": "An Ingredient in Toothpaste Makes Orange Juice Taste Vile. Here's How.",
+          "url": "https://www.sciencealert.com/an-ingredient-in-toothpaste-makes-orange-juice-taste-vile-heres-how"
+        }
+      ],
+      "status": "terverifikasi"
+    },
+    {
+      "claim": "Dalam studi tahun 1980, tujuh relawan berkumur larutan SLS 0,05% selama satu menit, lalu mencicipi larutan manis, asin, asam, dan pahit; manis melemah dan asam sitrat mendapat rasa pahit.",
+      "figures": [
+        {
+          "text": "1980",
+          "value": 1980
+        }
+      ],
+      "id": "f-studi",
+      "kind": "fakta",
+      "limits": "Narasi menyebut 'tujuh relawan' dan 'tahun seribu sembilan ratus delapan puluh'; konsentrasi 0,05% dan durasi satu menit hanya ada di klaim fakta, tidak diucapkan di narasi.",
+      "sources": [
+        {
+          "accessed": "2026-11-14",
+          "origin": "ScienceAlert / The Conversation",
+          "primary": false,
+          "publisher": "ScienceAlert (republished from The Conversation)",
+          "quote": "Back in 1980, I conducted a study with a couple of my colleagues who were studying chemistry. We wanted to know how the tongue responds to sweet, bitter, salty, and sour after being exposed to sodium lauryl sulfate, the detergent in toothpaste. We conducted an experiment with seven student volunteers at Yale.",
+          "title": "An Ingredient in Toothpaste Makes Orange Juice Taste Vile. Here's How.",
+          "url": "https://www.sciencealert.com/an-ingredient-in-toothpaste-makes-orange-juice-taste-vile-heres-how"
+        },
+        {
+          "accessed": "2026-11-14",
+          "origin": "Chemical Senses / DeSimone dkk. 1980",
+          "primary": true,
+          "publisher": "Chemical Senses (Oxford Academic)",
+          "quote": "DeSimone JA, Heck GL, Bartoshuk LM. Surface active taste modifiers: a comparison of the physical and psychophysical properties of gymnemic acid and sodium lauryl sulfate. Chemical Senses. 1980;5(4):317-330.",
+          "title": "Surface active taste modifiers: a comparison of the physical and psychophysical properties of gymnemic acid and sodium lauryl sulfate",
+          "url": "https://doi.org/10.1093/chemse/5.4.317"
+        }
+      ],
+      "status": "terverifikasi"
+    },
+    {
+      "claim": "Gangguan rasa akibat SLS hanya sementara dan hilang dalam beberapa menit.",
+      "figures": [],
+      "id": "f-sementara",
+      "kind": "fakta",
+      "limits": "'Beberapa menit' mengikuti ScienceAlert ('only a few minutes'); Colgate hanya menyebut 'for a while'.",
+      "sources": [
+        {
+          "accessed": "2026-11-14",
+          "origin": "ScienceAlert / The Conversation",
+          "primary": false,
+          "publisher": "ScienceAlert (republished from The Conversation)",
+          "quote": "Before you decide, you need to stop brushing your teeth to save your taste buds, know that this disruption is temporary, lasting only a few minutes.",
+          "title": "An Ingredient in Toothpaste Makes Orange Juice Taste Vile. Here's How.",
+          "url": "https://www.sciencealert.com/an-ingredient-in-toothpaste-makes-orange-juice-taste-vile-heres-how"
+        },
+        {
+          "accessed": "2026-11-14",
+          "origin": "Colgate",
+          "primary": false,
+          "publisher": "Colgate",
+          "quote": "So, for a while at least, you're not able to taste \"sweet\" no matter what you drink.",
+          "title": "Orange Juice And Toothpaste: Why They Don't Mix",
+          "url": "https://www.colgate.com/en-us/oral-health/brushing-and-flossing/orange-juice-and-toothpaste-why-they-dont-mix"
+        }
+      ],
+      "status": "terverifikasi"
+    },
+    {
+      "claim": "Supaya jus tetap terasa manis, minum dulu baru sikat gigi, atau pakai pasta gigi tanpa SLS.",
+      "figures": [],
+      "id": "f-solusi",
+      "kind": "fakta",
+      "limits": "Narasi menyederhanakan 'tunggu sekitar satu jam' menjadi 'sikat gigi belakangan'; Colgate menambahkan alasan enamel (tunggu ±60 menit setelah sitrus sebelum menyikat) — tidak diucapkan di narasi.",
+      "sources": [
+        {
+          "accessed": "2026-11-14",
+          "origin": "Colgate",
+          "primary": false,
+          "publisher": "Colgate",
+          "quote": "Eat and drink first, then brush your teeth. Just keep in mind that you should wait about 60 minutes after eating/drinking any citrus foods before brushing to avoid damaging your teeth's enamel.",
+          "title": "Orange Juice And Toothpaste: Why They Don't Mix",
+          "url": "https://www.colgate.com/en-us/oral-health/brushing-and-flossing/orange-juice-and-toothpaste-why-they-dont-mix"
+        },
+        {
+          "accessed": "2026-11-14",
+          "origin": "CJ Henley, DMD",
+          "primary": false,
+          "publisher": "CJ Henley, DMD",
+          "quote": "It's harmless and temporary, and the better fix is to change the order: juice first, brush about an hour later, and spit instead of rinsing.",
+          "title": "Why Orange Juice Tastes Bad After Brushing Your Teeth",
+          "url": "https://www.cjhenleydmd.com/blog/why-orange-juice-tastes-bad-after-brushing"
+        }
+      ],
+      "status": "terverifikasi"
+    }
+  ],
+  "numbersIgnored": [],
+  "projectId": "pasta-gigi-jus-jeruk",
+  "scenes": [
+    {
+      "id": "hook",
+      "durationSeconds": 5.5,
+      "factIds": [
+        "f-mekanisme"
+      ],
+      "headline": "Kok jusnya jadi pahit?",
+      "caption": "",
+      "voiceoverText": "Jus jeruk yang sama, rasanya berubah total gara-gara sikat gigi.",
+      "visual": "Frame 0 (aksi fisik, tanpa pengantar): sikat gigi (aset 2) JATUH dari atas ke papan (fall + squash) dan mendarat di samping gelas jus (aset 1, objek pahlawan, tengah frame, besar); jus langsung berubah oranye cerah menjadi oranye gelap kusam (Swap) saat kata 'berubah total' — payoff visual detik 1–2; stempel 'PAHIT!' (SketchText merah, miring −8°) dicap di atas gelas. Gelas diperbesar dan diturunkan agar sepertiga bawah terisi; catatan papan di bawah: 'pagi ini: jus jeruk & sikat gigi'. Backdrop papan tulis (aset 10). Kamera TERKUNCI (aturan kartu 1): semua gerak dari objek."
+    },
+    {
+      "id": "lebih-dekat",
+      "durationSeconds": 11.0,
+      "factIds": [
+        "f-mekanisme"
+      ],
+      "headline": "Bukan jusnya yang berubah",
+      "caption": "",
+      "voiceoverText": "Manisnya hilang, tersisa pahit dan menusuk. Pagi ini kamu sikat gigi, lalu minum jus jeruk. Bukan jusnya yang berubah, lidahmu yang berubah.",
+      "visual": "Sikat gigi (aset 2) digambar ulang di papan, panah spidol (SketchPath, arrow) ke gelas jus (aset 1) yang mengecil ke pojok kiri atas — peran gelas: pembanding, 'jus sama ✓' (SketchText kecil). 'lidahmu yang berubah': lidah (aset 4) masuk dari bawah dan digambar garis demi garis (Reveal rise), bodi/outline dulu baru titik reseptor dan label MANIS/PAHIT (stagger) — diperbesar dan diturunkan agar sepertiga bawah terisi; label 'LIDAH' (SketchText); catatan papan di bawah: 'lidah = sensor rasa' — muncul SETELAH lidah tiba (revisi putaran 2 review: outline lidah sempat memotong teks catatan saat masuk). Kamera TERKUNCI."
+    },
+    {
+      "id": "lebih-dekat-lagi",
+      "durationSeconds": 15.7,
+      "factIds": [
+        "f-sls",
+        "f-membran",
+        "f-mekanisme"
+      ],
+      "headline": "Deterjen mengacaukan lidah",
+      "caption": "",
+      "voiceoverText": "Pasta gigi mengandung sodium lauryl sulfate, deterjen pembuat busa. Deterjen itu merusak lapisan lemak di sel reseptor rasa di lidahmu. Reseptor manis jadi tumpul, rasa pahit dari asam sitrat jus malah menonjol.",
+      "visual": "Tube pasta (aset 2) diperas (squash); busa SLS (aset 3) mengalir ke lidah (aset 4) mengikuti kata 'deterjen' — aliran digambar putus-putus (SketchPath). 'merusak lapisan lemak': membran (aset 5) MEMBESAR dari lidah (objek scale-up — pengganti push-in kamera yang dihapus kartu 1; kamera TERKUNCI); lapisan lipid retak tergambar (Hatch zigzag merah) + Burst kecil; gelembung SLS menembus celah. 'Reseptor manis jadi tumpul': titik kuning meredup; 'rasa pahit menonjol': titik merah menyala (Pulse). 'menonjol': lidah MEMUDAR saat keluar (revisi putaran 2 review: kubah/label lidah sempat menutupi catatan papan), lalu timbangan rasa (aset 6), diperbesar dan diturunkan agar sepertiga bawah terisi, sisi manis naik, sisi pahit turun (settle, massa 0,6); catatan papan di bawah: 'SLS = deterjen pembuat busa'. Gelas jus (aset 1) kecil di pojok dengan panah 'asam sitrat' ke membran — peran gelas: sumber asam; label 'asam sitrat' di kanan-atas garis panah (revisi putaran 2 review: panah sempat memotong teks labelnya sendiri). Kamera TERKUNCI."
+    },
+    {
+      "id": "inti",
+      "durationSeconds": 14.8,
+      "factIds": [
+        "f-studi",
+        "f-mekanisme"
+      ],
+      "headline": "Dibuktikan tahun 1980",
+      "caption": "",
+      "voiceoverText": "Peneliti Linda Bartoshuk membuktikannya tahun seribu sembilan ratus delapan puluh. Dalam penelitiannya, tujuh relawan berkumur larutan deterjen, mencicipi manis, asin, asam, dan pahit. Manisnya melemah, dan asam sitrat berubah pahit.",
+      "visual": "Kartu studi (aset 7) digambar di papan, diperbesar dan diturunkan agar sepertiga bawah terisi: stempel '1980' (stamp + Shake kecil) saat 'seribu sembilan ratus delapan puluh'; di samping stempel, sketsa TV tabung CRT yang jelas terbaca sebagai TV (antena V — ujung 18 px di bawah border atas kartu, layar berisi gambar matahari + bukit, alas + tombol) — pembanding sehari-hari untuk 1980 (tahun ketika TV di rumah masih tabung; hanya visual, tidak diucapkan). 7 ikon orang muncul berurutan (Stagger gap 4 frame) saat 'tujuh relawan', label 'seisi meja makan' (SketchText). 4 cangkir rasa muncul berurutan mengikuti kata 'mencicipi' — tiap cangkir adalah gelas mini (gelas pahlawan, peran: sampel uji) + label kecil. 'berubah pahit': cangkir asam sitrat berubah label 'SEGAR' menjadi 'PAHIT' (Swap) DAN isi cangkir berubah oranye→merah bersamaan (revisi putaran 2 review: dua label 'pahit' berdampingan terbaca duplikasi tanpa perubahan warna isi) + batang manis turun; panah merah menunjuk cangkir asam, ekornya dijauhkan dari teks 'seisi meja makan'. Catatan papan di bawah: 'manis melemah, asam jadi pahit'. Kamera TERKUNCI."
+    },
+    {
+      "id": "jawaban",
+      "durationSeconds": 10.5,
+      "factIds": [
+        "f-sementara",
+        "f-solusi"
+      ],
+      "headline": "Minum dulu, sikat belakangan",
+      "caption": "",
+      "voiceoverText": "Efeknya sementara, hilang dalam beberapa menit. Mau jusmu tetap manis? Minum dulu, sikat gigi belakangan, atau pakai pasta gigi tanpa SLS.",
+      "visual": "Timer (aset 8) DIPERBESAR (s 1,25) dan bertahan sampai 'Mau' — jangkar 'efek sementara' supaya 9 dtk pertama tidak kosong (revisi putaran 2 review). Urutan solusi (aset 9): gelas jus (aset 1, jangkar awal diperbesar s 0,65 di (265,665)) → panah spidol → sikat gigi, centang hijau (diperbesar) muncul (pop + Burst kecil) saat 'Minum dulu, sikat gigi belakangan'; tube 'tanpa SLS' muncul. Frame akhir (payoff penutup, bergema ke hook): gelas jus (aset 1) MEMBESAR kembali ke ukuran hook dan kembali cerah oranye + label 'MANIS LAGI' (SketchText hijau) — zoom keluar dilakukan objek yang membesar, kamera TERKUNCI. Gelas diperbesar dan diturunkan agar sepertiga bawah terisi; catatan papan di bawah: 'atau pakai pasta gigi tanpa SLS'. AKHIR LOOP (tanpa CTA, perintah pemilik 2026-11-14): CROSS-DISSOLVE tersinkron + linear di ~0,7 dtk terakhir — isi jawaban, lapisan papan, dan shot loop SEMUA pada timing yang sama 308→324 (16 frame; revisi putaran 2b review: overlap inOut-cubic sebelumnya masih menyisakan celah blank ink 1,1% di f1836) — gelas jus cerah oranye besar di tengah papan, framing/background/posisi SAMA PERSIS dengan frame 0 hook (tanpa label 'MANIS LAGI', tanpa tube 'tanpa SLS', tanpa elemen tambahan) + headline hook 'Kok jusnya jadi pahit?' — sehingga frame terakhir menyambung mulus ke frame pertama saat diputar ulang. Headline template dipudarkan 300→308 oleh lapisan krem zona headline sebelum dissolve, supaya headline template dan headline loop tidak bertumpuk (revisi putaran 2, review 15/18). Watermark konstan 0,85 (tanpa fade-out gerbang CTA; watermark ber-zIndex di atas lapisan dissolve supaya tidak tertutup). Durasi cerita saja 61,8 dtk (1854 frame), tanpa hold dan tanpa CTA."
+    }
+  ],
+  "series": "Tubuh",
+  "status": "draft",
+  "title": "Kenapa Jus Jeruk Terasa Pahit Habis Sikat Gigi?",
+  "visualStyle": {
+    "name": "Papan tulis spidol dapur pagi",
+    "reason": "Fakta terjadi di dapur setiap pagi dan mekanismenya harus digambar selangkah demi selangkah — papan tulis (kit sketch/) adalah dunia bendanya: gelas, lidah, dan membran digambar tangan di papan, dari skala sehari-hari masuk ke skala tersembunyi (zoom terus). Kamera terkunci seperti papan yang tidak bergerak; yang bergerak hanya spidol dan objeknya. Tone light membedakan episode ini dari dua episode diagram-gelap sebelumnya.",
+    "tone": "light",
+    "palette": [
+      "#F6F6F2",
+      "#22252B",
+      "#1F5FBF",
+      "#D23B32",
+      "#1E8A5A",
+      "#F3D46B",
+      "#F08A1D"
+    ],
+    "fonts": {
+      "display": "caveat",
+      "text": "plus-jakarta-sans",
+      "reason": "Caveat adalah font tulisan tangan default kit sketch (SketchText); Plus Jakarta Sans untuk teks kecil agar tetap terbaca — sekaligus font brand untuk caption."
+    }
+  },
+  "createdAt": "2026-11-14T04:38:04.244Z",
+  "creative": {
+    "drawnAt": "2026-11-14T04:38:04.244Z",
+    "seed": 1636225309,
+    "cards": [
+      {
+        "family": "papan-tulis",
+        "tone": "light",
+        "structure": "zoom-terus",
+        "opening": "aksi-tiba-tiba",
+        "camera": "kunci-statis",
+        "captionMode": "headline",
+        "constraints": [
+          "Satu objek pahlawan tampil di semua scene dan berganti peran",
+          "Setiap angka diberi pembanding benda sehari-hari"
+        ]
+      },
+      {
+        "family": "potongan-kertas",
+        "tone": "light",
+        "structure": "misteri",
+        "opening": "angka-kejutan",
+        "camera": "cut-per-beat",
+        "captionMode": "ringkasan",
+        "constraints": [
+          "Semua dilihat dari atas (top-down), seperti meja",
+          "Semua elemen masuk secara fisik (jatuh, didorong, dituang), tanpa fade"
+        ]
+      },
+      {
+        "family": "risograf",
+        "tone": "light",
+        "structure": "eksperimen",
+        "opening": "kuis-tebak",
+        "camera": "kunci-statis",
+        "captionMode": "ringkasan",
+        "constraints": [
+          "Setiap angka diberi pembanding benda sehari-hari",
+          "Transisi antarscene berupa match-cut bentuk (bentuk akhir scene = bentuk awal scene berikutnya)"
+        ]
+      }
+    ],
+    "pick": 1,
+    "chosen": {
+      "family": "papan-tulis",
+      "tone": "light",
+      "structure": "zoom-terus",
+      "opening": "aksi-tiba-tiba",
+      "camera": "kunci-statis",
+      "captionMode": "headline",
+      "constraints": [
+        "Satu objek pahlawan tampil di semua scene dan berganti peran",
+        "Setiap angka diberi pembanding benda sehari-hari"
+      ]
+    },
+    "swaps": [],
+    "concept": {
+      "idea": "Papan tulis spidol di dapur: gelas jus digambar di papan, lalu spidol masuk makin dalam — lidah, membran sel rasa — sampai deterjen SLS ketahuan merusak lapisan lemak.",
+      "signature": "Gelas jus yang digambar spidol berubah warna di detik pertama, lalu stempel spidol merah 'PAHIT!' dicap di atasnya.",
+      "onlyHere": "Hanya fakta ini yang dunia bendanya papan dapur pagi dan zoom-nya berakhir di membran sel rasa yang diacak-acak deterjen pasta gigi."
+    }
+  },
+  "revisions": [
+    {
+      "date": "2026-11-14",
+      "order": "Loop tanpa CTA (perintah pemilik 13:28 WIB) + perbaikan ruang bawah & ikon TV (13:29 WIB)",
+      "result": "MP4 loop 61,80 dtk, md5 1c0a8d361ee6b1f03be22db18be4faba; review 15/18"
+    },
+    {
+      "date": "2026-11-14",
+      "order": "Hapus jendela sketsa + matahari + ubin lantai dari backdrop (perintah pemilik 17:38 WIB, rencana disetujui)",
+      "result": "Komponen Board (parts.tsx) kini hanya BoardSurface; asset sheet kartu 10 diperbarui"
+    }
+  ]
+}

@@ -1,0 +1,324 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="2200" viewBox="0 0 1600 2200">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#F6F6F2"/><stop offset="1" stop-color="#FBFBF8"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="2200" fill="#F6F6F2"/>
+  <!-- header -->
+  <rect width="1600" height="150" fill="#F6F6F2"/>
+  <path d="M40 150 C400 146 1200 154 1560 150" stroke="#22252B" stroke-width="4" fill="none" stroke-linecap="round"/>
+  <text x="40" y="62" font-family="Caveat, cursive" font-size="44" font-weight="bold" fill="#22252B">ASSET SHEET — pasta-gigi-jus-jeruk · v2 papan tulis</text>
+  <text x="40" y="108" font-family="Caveat, cursive" font-size="26" font-weight="bold" fill="#D23B32">Kenapa Jus Jeruk Terasa Pahit Habis Sikat Gigi? · SeFakta · 2026-11-14</text>
+  <text x="1560" y="62" text-anchor="end" font-family="Caveat, cursive" font-size="24" font-weight="bold" fill="#22252B">10 aset · semua SVG prosedural</text>
+  <text x="1560" y="108" text-anchor="end" font-family="Caveat, cursive" font-size="24" font-weight="bold" fill="#1F5FBF">Gaya: papan tulis spidol · Kartu 1</text>
+
+  <!-- ============ CARD 1: gelas jus ============ -->
+  <g>
+    <rect x="40" y="170" width="760" height="370" rx="16" fill="#FFFFFF" stroke="#22252B" stroke-width="3"/>
+    <circle cx="78" cy="208" r="22" fill="#22252B"/><text x="78" y="216" text-anchor="middle" font-family="Caveat, cursive" font-size="24" font-weight="bold" fill="#FFFFFF">1</text>
+    <text x="110" y="216" font-family="Caveat, cursive" font-size="26" font-weight="bold" fill="#22252B">Gelas jus jeruk</text>
+    <rect x="600" y="192" width="180" height="32" rx="16" fill="#1E8A5A"/><text x="690" y="214" text-anchor="middle" font-family="Caveat, cursive" font-size="16" font-weight="bold" fill="#FFFFFF">SVG PROSEDURAL</text>
+    <rect x="60" y="234" width="300" height="286" rx="12" fill="#FBFBF8" stroke="#22252B" stroke-width="2.5"/>
+    <g transform="translate(210, 377)">
+      <ellipse cx="0" cy="102" rx="72" ry="10" fill="#000000" opacity="0.08"/>
+      <path d="M-70,-90 L70,-90 L55,90 L-55,90 Z" fill="#DCEFFA" opacity="0.55" stroke="#1F5FBF" stroke-width="3"/>
+      <path d="M-62,-40 L62,-40 L50,82 L-50,82 Z" fill="#F08A1D" opacity="0.9"/>
+      <ellipse cx="0" cy="-40" rx="62" ry="10" fill="#F3D46B"/>
+      <rect x="28" y="-132" width="12" height="102" rx="6" fill="#D23B32" transform="rotate(12 34 -80)"/>
+      <circle cx="-58" cy="-88" r="22" fill="#F3D46B" stroke="#F08A1D" stroke-width="3"/>
+      <circle cx="-58" cy="-88" r="13" fill="#FFF3D6"/>
+      <line x1="-58" y1="-88" x2="-58" y2="-75" stroke="#F08A1D" stroke-width="2"/>
+      <line x1="-58" y1="-88" x2="-70" y2="-82" stroke="#F08A1D" stroke-width="2"/>
+      <line x1="-58" y1="-88" x2="-46" y2="-82" stroke="#F08A1D" stroke-width="2"/>
+      <line x1="-52" y1="-70" x2="-46" y2="60" stroke="#FFFFFF" stroke-width="5" opacity="0.7"/>
+    </g>
+    <text x="380" y="268" font-family="Caveat, cursive" font-size="20" font-weight="bold" fill="#22252B">Dipakai: SEMUA scene (pahlawan).</text>
+    <text x="380" y="302" font-family="'DejaVu Sans', sans-serif" font-size="19" fill="#3A3F4A">Hook: korban — jus berubah warna.</text>
+    <text x="380" y="330" font-family="'DejaVu Sans', sans-serif" font-size="19" fill="#3A3F4A">lebih-dekat: pembanding 'jus sama'.</text>
+    <text x="380" y="358" font-family="'DejaVu Sans', sans-serif" font-size="19" fill="#3A3F4A">lebih-dekat-lagi: sumber asam sitrat.</text>
+    <text x="380" y="386" font-family="'DejaVu Sans', sans-serif" font-size="19" fill="#3A3F4A">inti + jawaban: sampel uji, lalu cerah lagi.</text>
+  </g>
+
+  <!-- ============ CARD 2: sikat gigi + tube ============ -->
+  <g>
+    <rect x="800" y="170" width="760" height="370" rx="16" fill="#FFFFFF" stroke="#22252B" stroke-width="3"/>
+    <circle cx="838" cy="208" r="22" fill="#22252B"/><text x="838" y="216" text-anchor="middle" font-family="Caveat, cursive" font-size="24" font-weight="bold" fill="#FFFFFF">2</text>
+    <text x="870" y="216" font-family="Caveat, cursive" font-size="26" font-weight="bold" fill="#22252B">Sikat gigi + tube pasta</text>
+    <rect x="1360" y="192" width="180" height="32" rx="16" fill="#1E8A5A"/><text x="1450" y="214" text-anchor="middle" font-family="Caveat, cursive" font-size="16" font-weight="bold" fill="#FFFFFF">SVG PROSEDURAL</text>
+    <rect x="820" y="234" width="300" height="286" rx="12" fill="#FBFBF8" stroke="#22252B" stroke-width="2.5"/>
+    <g transform="translate(970, 360) scale(0.85)">
+      <g transform="rotate(-28 -60 0)">
+        <rect x="-74" y="-10" width="28" height="150" rx="12" fill="#1E8A5A"/>
+        <rect x="-68" y="-52" width="16" height="46" fill="#1E8A5A"/>
+        <rect x="-76" y="-92" width="32" height="44" rx="8" fill="#FFFFFF" stroke="#22252B" stroke-width="3"/>
+        <rect x="-74" y="-112" width="7" height="22" rx="3" fill="#F3D46B"/>
+        <rect x="-64" y="-112" width="7" height="22" rx="3" fill="#F08A1D"/>
+        <rect x="-54" y="-112" width="7" height="22" rx="3" fill="#1E8A5A"/>
+      </g>
+      <rect x="30" y="-40" width="110" height="170" rx="14" fill="#FFFFFF" stroke="#22252B" stroke-width="3"/>
+      <rect x="65" y="130" width="40" height="26" rx="6" fill="#F3D46B"/>
+      <rect x="30" y="10" width="110" height="46" fill="#D23B32"/>
+      <text x="85" y="42" text-anchor="middle" font-family="Caveat, cursive" font-size="26" font-weight="bold" fill="#FFFFFF">SLS</text>
+      <ellipse cx="85" cy="168" rx="26" ry="12" fill="#1E8A5A" opacity="0.85"/>
+      <circle cx="62" cy="160" r="7" fill="#1E8A5A" opacity="0.85"/>
+      <circle cx="108" cy="160" r="7" fill="#1E8A5A" opacity="0.85"/>
+    </g>
+    <text x="1140" y="268" font-family="Caveat, cursive" font-size="20" font-weight="bold" fill="#22252B">Dipakai: hook, lebih-dekat,</text>
+    <text x="1140" y="296" font-family="Caveat, cursive" font-size="20" font-weight="bold" fill="#22252B">lebih-dekat-lagi, jawaban</text>
+    <text x="1140" y="330" font-family="'DejaVu Sans', sans-serif" font-size="19" fill="#3A3F4A">Jatuh di detik 0 (aksi fisik hook).</text>
+    <text x="1140" y="358" font-family="'DejaVu Sans', sans-serif" font-size="19" fill="#3A3F4A">Tube SLS diperas di mekanisme.</text>
+    <text x="1140" y="386" font-family="'DejaVu Sans', sans-serif" font-size="19" fill="#3A3F4A">Massa 0,3; jatuh + squash kecil.</text>
+  </g>
+
+  <!-- ============ CARD 3: busa SLS ============ -->
+  <g>
+    <rect x="40" y="560" width="760" height="370" rx="16" fill="#FFFFFF" stroke="#22252B" stroke-width="3"/>
+    <circle cx="78" cy="598" r="22" fill="#22252B"/><text x="78" y="606" text-anchor="middle" font-family="Caveat, cursive" font-size="24" font-weight="bold" fill="#FFFFFF">3</text>
+    <text x="110" y="606" font-family="Caveat, cursive" font-size="26" font-weight="bold" fill="#22252B">Busa SLS</text>
+    <rect x="600" y="582" width="180" height="32" rx="16" fill="#1E8A5A"/><text x="690" y="604" text-anchor="middle" font-family="Caveat, cursive" font-size="16" font-weight="bold" fill="#FFFFFF">SVG PROSEDURAL</text>
+    <rect x="60" y="624" width="300" height="286" rx="12" fill="#FBFBF8" stroke="#22252B" stroke-width="2.5"/>
+    <g transform="translate(210, 767)">
+      <circle cx="-60" cy="30" r="42" fill="#FFFFFF" opacity="0.95" stroke="#1F5FBF" stroke-width="3"/>
+      <circle cx="20" cy="-30" r="48" fill="#FFFFFF" opacity="0.95" stroke="#1F5FBF" stroke-width="3"/>
+      <circle cx="70" cy="50" r="34" fill="#FFFFFF" opacity="0.95" stroke="#1F5FBF" stroke-width="3"/>
+      <circle cx="-20" cy="70" r="26" fill="#FFFFFF" opacity="0.95" stroke="#1F5FBF" stroke-width="3"/>
+      <circle cx="75" cy="-70" r="20" fill="#FFFFFF" opacity="0.95" stroke="#1F5FBF" stroke-width="3"/>
+      <circle cx="-85" cy="-55" r="18" fill="#FFFFFF" opacity="0.95" stroke="#1F5FBF" stroke-width="3"/>
+      <circle cx="0" cy="0" r="14" fill="#FFFFFF" opacity="0.95" stroke="#1F5FBF" stroke-width="3"/>
+      <rect x="-38" y="-14" width="76" height="30" rx="8" fill="#22252B"/>
+      <text x="0" y="8" text-anchor="middle" font-family="Caveat, cursive" font-size="20" font-weight="bold" fill="#FFFFFF">SLS</text>
+      <path d="M-110,-95 l6,14 14,2 -10,10 2,14 -12,-7 -12,7 2,-14 -10,-10 14,-2 z" fill="#F3D46B"/>
+    </g>
+    <text x="380" y="658" font-family="Caveat, cursive" font-size="20" font-weight="bold" fill="#22252B">Dipakai: hook, lebih-dekat-lagi</text>
+    <text x="380" y="692" font-family="'DejaVu Sans', sans-serif" font-size="19" fill="#3A3F4A">Gelembung deterjen; mengalir</text>
+    <text x="380" y="720" font-family="'DejaVu Sans', sans-serif" font-size="19" fill="#3A3F4A">dari tube ke lidah, digambar</text>
+    <text x="380" y="748" font-family="'DejaVu Sans', sans-serif" font-size="19" fill="#3A3F4A">garis demi garis. Label SLS</text>
+    <text x="380" y="776" font-family="'DejaVu Sans', sans-serif" font-size="19" fill="#3A3F4A">menempel di busa.</text>
+  </g>
+
+  <!-- ============ CARD 4: lidah + reseptor ============ -->
+  <g>
+    <rect x="800" y="560" width="760" height="370" rx="16" fill="#FFFFFF" stroke="#22252B" stroke-width="3"/>
+    <circle cx="838" cy="598" r="22" fill="#22252B"/><text x="838" y="606" text-anchor="middle" font-family="Caveat, cursive" font-size="24" font-weight="bold" fill="#FFFFFF">4</text>
+    <text x="870" y="606" font-family="Caveat, cursive" font-size="26" font-weight="bold" fill="#22252B">Lidah + reseptor rasa</text>
+    <rect x="1360" y="582" width="180" height="32" rx="16" fill="#1E8A5A"/><text x="1450" y="604" text-anchor="middle" font-family="Caveat, cursive" font-size="16" font-weight="bold" fill="#FFFFFF">SVG PROSEDURAL</text>
+    <rect x="820" y="624" width="300" height="286" rx="12" fill="#FBFBF8" stroke="#22252B" stroke-width="2.5"/>
+    <g transform="translate(970, 767)">
+      <path d="M-95,60 C-110,-30 -70,-100 0,-100 C70,-100 110,-30 95,60 C80,105 -80,105 -95,60 Z" fill="#F6C6D4" stroke="#22252B" stroke-width="3"/>
+      <line x1="0" y1="-80" x2="0" y2="70" stroke="#22252B" stroke-width="3"/>
+      <circle cx="-55" cy="-40" r="9" fill="#F3D46B" stroke="#22252B" stroke-width="2"/>
+      <circle cx="-20" cy="-60" r="9" fill="#F3D46B" stroke="#22252B" stroke-width="2"/>
+      <circle cx="15" cy="-35" r="9" fill="#F3D46B" stroke="#22252B" stroke-width="2" opacity="0.45"/>
+      <circle cx="55" cy="-55" r="9" fill="#D23B32" stroke="#D23B32" stroke-width="2"/>
+      <circle cx="70" cy="-55" r="18" fill="#D23B32" opacity="0.25"/>
+      <circle cx="30" cy="10" r="9" fill="#D23B32" stroke="#D23B32" stroke-width="2"/>
+      <circle cx="45" cy="10" r="18" fill="#D23B32" opacity="0.25"/>
+      <circle cx="-45" cy="20" r="8" fill="#FFFFFF" opacity="0.8"/>
+      <circle cx="-70" cy="45" r="8" fill="#FFFFFF" opacity="0.8"/>
+      <circle cx="60" cy="45" r="8" fill="#FFFFFF" opacity="0.8"/>
+      <text x="-45" y="-114" text-anchor="middle" font-family="Caveat, cursive" font-size="16" font-weight="bold" fill="#22252B">MANIS</text>
+      <text x="55" y="-114" text-anchor="middle" font-family="Caveat, cursive" font-size="16" font-weight="bold" fill="#D23B32">PAHIT</text>
+    </g>
+    <text x="1140" y="658" font-family="Caveat, cursive" font-size="20" font-weight="bold" fill="#22252B">Dipakai: lebih-dekat,</text>
+    <text x="1140" y="692" font-family="'DejaVu Sans', sans-serif" font-size="19" fill="#3A3F4A">lebih-dekat-lagi</text>
+    <text x="1140" y="720" font-family="'DejaVu Sans', sans-serif" font-size="19" fill="#3A3F4A">Diagram lidah digambar tangan.</text>
+    <text x="1140" y="748" font-family="'DejaVu Sans', sans-serif" font-size="19" fill="#3A3F4A">Titik kuning = manis (meredup),</text>
+    <text x="1140" y="776" font-family="'DejaVu Sans', sans-serif" font-size="19" fill="#3A3F4A">titik merah = pahit (menyala).</text>
+  </g>
+
+  <!-- ============ CARD 5: membran sel ============ -->
+  <g>
+    <rect x="40" y="950" width="760" height="370" rx="16" fill="#FFFFFF" stroke="#22252B" stroke-width="3"/>
+    <circle cx="78" cy="988" r="22" fill="#22252B"/><text x="78" y="996" text-anchor="middle" font-family="Caveat, cursive" font-size="24" font-weight="bold" fill="#FFFFFF">5</text>
+    <text x="110" y="996" font-family="Caveat, cursive" font-size="26" font-weight="bold" fill="#22252B">Membran sel (lapisan lemak)</text>
+    <rect x="600" y="972" width="180" height="32" rx="16" fill="#1E8A5A"/><text x="690" y="994" text-anchor="middle" font-family="Caveat, cursive" font-size="16" font-weight="bold" fill="#FFFFFF">SVG PROSEDURAL</text>
+    <rect x="60" y="1014" width="300" height="286" rx="12" fill="#FBFBF8" stroke="#22252B" stroke-width="2.5"/>
+    <g transform="translate(210, 1157)">
+      <g>
+        <circle cx="-105" cy="-28" r="15" fill="#F3D46B" stroke="#22252B" stroke-width="2"/>
+        <circle cx="-63" cy="-28" r="15" fill="#F3D46B" stroke="#22252B" stroke-width="2"/>
+        <circle cx="-21" cy="-28" r="15" fill="#F3D46B" stroke="#22252B" stroke-width="2"/>
+        <circle cx="63" cy="-28" r="15" fill="#F3D46B" stroke="#22252B" stroke-width="2"/>
+        <circle cx="105" cy="-28" r="15" fill="#F3D46B" stroke="#22252B" stroke-width="2"/>
+        <path d="M-105,-13 L-105,15 M-63,-13 L-63,15 M-21,-13 L-21,15 M63,-13 L63,15 M105,-13 L105,15" stroke="#22252B" stroke-width="3"/>
+        <circle cx="-105" cy="30" r="15" fill="#F3D46B" stroke="#22252B" stroke-width="2"/>
+        <circle cx="-63" cy="30" r="15" fill="#F3D46B" stroke="#22252B" stroke-width="2"/>
+        <circle cx="-21" cy="30" r="15" fill="#F3D46B" stroke="#22252B" stroke-width="2"/>
+        <circle cx="63" cy="30" r="15" fill="#F3D46B" stroke="#22252B" stroke-width="2"/>
+        <circle cx="105" cy="30" r="15" fill="#F3D46B" stroke="#22252B" stroke-width="2"/>
+        <path d="M-105,15 L-105,-13 M-63,15 L-63,-13 M-21,15 L-21,-13 M63,15 L63,-13 M105,15 L105,-13" stroke="#22252B" stroke-width="3" opacity="0"/>
+        <path d="M-8,-28 L8,-10 L-6,2 L10,16 L-2,30" fill="none" stroke="#D23B32" stroke-width="4"/>
+        <path d="M22,-28 L6,-10 L20,2 L4,16 L16,30" fill="none" stroke="#D23B32" stroke-width="4"/>
+        <circle cx="14" cy="-52" r="16" fill="#FFFFFF" stroke="#1F5FBF" stroke-width="3"/>
+        <text x="14" y="-46" text-anchor="middle" font-family="'DejaVu Sans', sans-serif" font-size="13" font-weight="bold" fill="#22252B">SLS</text>
+      </g>
+      <text x="0" y="82" text-anchor="middle" font-family="Caveat, cursive" font-size="17" font-weight="bold" fill="#22252B">lemak (lipid)</text>
+    </g>
+    <text x="380" y="1048" font-family="Caveat, cursive" font-size="20" font-weight="bold" fill="#22252B">Dipakai: lebih-dekat-lagi</text>
+    <text x="380" y="1082" font-family="'DejaVu Sans', sans-serif" font-size="19" fill="#3A3F4A">Dua lapis lipid digambar (Hatch);</text>
+    <text x="380" y="1110" font-family="'DejaVu Sans', sans-serif" font-size="19" fill="#3A3F4A">retak saat SLS masuk. Metafora</text>
+    <text x="380" y="1138" font-family="'DejaVu Sans', sans-serif" font-size="19" fill="#3A3F4A">'deterjen memecah lemak' —</text>
+    <text x="380" y="1166" font-family="'DejaVu Sans', sans-serif" font-size="19" fill="#3A3F4A">kesimpulan peneliti (most likely).</text>
+  </g>
+
+  <!-- ============ CARD 6: timbangan rasa ============ -->
+  <g>
+    <rect x="800" y="950" width="760" height="370" rx="16" fill="#FFFFFF" stroke="#22252B" stroke-width="3"/>
+    <circle cx="838" cy="988" r="22" fill="#22252B"/><text x="838" y="996" text-anchor="middle" font-family="Caveat, cursive" font-size="24" font-weight="bold" fill="#FFFFFF">6</text>
+    <text x="870" y="996" font-family="Caveat, cursive" font-size="26" font-weight="bold" fill="#22252B">Timbangan rasa</text>
+    <rect x="1360" y="972" width="180" height="32" rx="16" fill="#1E8A5A"/><text x="1450" y="994" text-anchor="middle" font-family="Caveat, cursive" font-size="16" font-weight="bold" fill="#FFFFFF">SVG PROSEDURAL</text>
+    <rect x="820" y="1014" width="300" height="286" rx="12" fill="#FBFBF8" stroke="#22252B" stroke-width="2.5"/>
+    <g transform="translate(970, 1157)">
+      <path d="M0,90 L-28,110 L28,110 Z" fill="#22252B"/>
+      <g transform="rotate(12 0 0)">
+        <line x1="-110" y1="0" x2="110" y2="0" stroke="#22252B" stroke-width="6"/>
+        <line x1="-110" y1="0" x2="-110" y2="42" stroke="#22252B" stroke-width="3"/>
+        <line x1="110" y1="0" x2="110" y2="42" stroke="#22252B" stroke-width="3"/>
+        <path d="M-140,42 A30,26 0 0 0 -80,42 Z" fill="#F3D46B" stroke="#22252B" stroke-width="3"/>
+        <path d="M80,42 A30,26 0 0 0 140,42 Z" fill="#D23B32" stroke="#D23B32" stroke-width="3"/>
+      </g>
+      <circle cx="0" cy="0" r="10" fill="#F3D46B" stroke="#22252B" stroke-width="3"/>
+      <text x="-110" y="114" text-anchor="middle" font-family="Caveat, cursive" font-size="18" font-weight="bold" fill="#22252B">MANIS</text>
+      <text x="110" y="114" text-anchor="middle" font-family="Caveat, cursive" font-size="18" font-weight="bold" fill="#D23B32">PAHIT</text>
+    </g>
+    <text x="1140" y="1048" font-family="Caveat, cursive" font-size="20" font-weight="bold" fill="#22252B">Dipakai: lebih-dekat-lagi</text>
+    <text x="1140" y="1082" font-family="'DejaVu Sans', sans-serif" font-size="19" fill="#3A3F4A">Neraca manis vs pahit. Sebelum:</text>
+    <text x="1140" y="1110" font-family="'DejaVu Sans', sans-serif" font-size="19" fill="#3A3F4A">manis yang berat; sesudah SLS:</text>
+    <text x="1140" y="1138" font-family="'DejaVu Sans', sans-serif" font-size="19" fill="#3A3F4A">pahit yang turun. Settle pelan</text>
+    <text x="1140" y="1166" font-family="'DejaVu Sans', sans-serif" font-size="19" fill="#3A3F4A">menuju miring (massa 0,6).</text>
+  </g>
+
+  <!-- ============ CARD 7: kartu studi ============ -->
+  <g>
+    <rect x="40" y="1340" width="760" height="370" rx="16" fill="#FFFFFF" stroke="#22252B" stroke-width="3"/>
+    <circle cx="78" cy="1378" r="22" fill="#22252B"/><text x="78" y="1386" text-anchor="middle" font-family="Caveat, cursive" font-size="24" font-weight="bold" fill="#FFFFFF">7</text>
+    <text x="110" y="1386" font-family="Caveat, cursive" font-size="26" font-weight="bold" fill="#22252B">Kartu studi 1980</text>
+    <rect x="600" y="1362" width="180" height="32" rx="16" fill="#1E8A5A"/><text x="690" y="1384" text-anchor="middle" font-family="Caveat, cursive" font-size="16" font-weight="bold" fill="#FFFFFF">SVG PROSEDURAL</text>
+    <rect x="60" y="1404" width="300" height="286" rx="12" fill="#FBFBF8" stroke="#22252B" stroke-width="2.5"/>
+    <g transform="translate(210, 1547)">
+      <rect x="-120" y="-110" width="240" height="220" rx="10" fill="#FFFFFF" stroke="#22252B" stroke-width="3"/>
+      <g stroke="#22252B" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="-118" y="-100" width="100" height="58" rx="6" fill="#EDEDE6"/>
+        <line x1="-104" y1="-100" x2="-116" y2="-105"/><line x1="-60" y1="-100" x2="-48" y2="-105"/>
+        <circle cx="-116" cy="-105" r="2" fill="#22252B" stroke="none"/>
+        <circle cx="-48" cy="-105" r="2" fill="#22252B" stroke="none"/>
+        <rect x="-110" y="-92" width="52" height="42" rx="3" fill="#CFE8F5" stroke-width="2.5"/>
+        <circle cx="-96" cy="-82" r="6" fill="#F3D46B" stroke="none"/>
+        <line x1="-110" y1="-68" x2="-58" y2="-68" stroke-width="2"/>
+        <path d="M-110,-50 L-110,-60 Q-84,-70 -58,-60 L-58,-50 Z" fill="#1E8A5A" stroke-width="2"/>
+        <circle cx="-38" cy="-92" r="2.5" fill="#D23B32" stroke="none"/>
+        <circle cx="-38" cy="-80" r="5" fill="#FFFFFF" stroke-width="2.5"/>
+        <circle cx="-38" cy="-64" r="5" fill="#FFFFFF" stroke-width="2.5"/>
+        <line x1="-46" y1="-54" x2="-30" y2="-54" stroke-width="2"/>
+        <line x1="-46" y1="-50" x2="-30" y2="-50" stroke-width="2"/>
+        <line x1="-46" y1="-46" x2="-30" y2="-46" stroke-width="2"/>
+        <rect x="-106" y="-42" width="76" height="4" rx="2" fill="#D8D8CE" stroke-width="2"/>
+      </g>
+      <g transform="rotate(-8 60 -70)">
+        <rect x="10" y="-95" width="100" height="48" rx="6" fill="none" stroke="#D23B32" stroke-width="4"/>
+        <text x="60" y="-62" text-anchor="middle" font-family="Caveat, cursive" font-size="30" font-weight="bold" fill="#D23B32">1980</text>
+      </g>
+      <g fill="#1E8A5A">
+        <circle cx="-90" cy="-25" r="11"/><path d="M-106,5 a16,14 0 0 1 32,0 Z"/>
+        <circle cx="-55" cy="-25" r="11"/><path d="M-71,5 a16,14 0 0 1 32,0 Z"/>
+        <circle cx="-20" cy="-25" r="11"/><path d="M-36,5 a16,14 0 0 1 32,0 Z"/>
+        <circle cx="15" cy="-25" r="11"/><path d="M-1,5 a16,14 0 0 1 32,0 Z"/>
+        <circle cx="50" cy="-25" r="11"/><path d="M34,5 a16,14 0 0 1 32,0 Z"/>
+        <circle cx="85" cy="-25" r="11"/><path d="M69,5 a16,14 0 0 1 32,0 Z"/>
+        <circle cx="-72" cy="32" r="11"/><path d="M-88,62 a16,14 0 0 1 32,0 Z"/>
+      </g>
+      <g>
+        <path d="M-95,62 L-75,62 L-79,88 L-91,88 Z" fill="#F3D46B" stroke="#22252B" stroke-width="2"/>
+        <path d="M-65,62 L-45,62 L-49,88 L-61,88 Z" fill="#FFFFFF" stroke="#1F5FBF" stroke-width="2"/>
+        <path d="M-35,62 L-15,62 L-19,88 L-31,88 Z" fill="#F08A1D" stroke="#22252B" stroke-width="2"/>
+        <path d="M-5,62 L15,62 L11,88 L-1,88 Z" fill="#D23B32" stroke="#D23B32" stroke-width="2"/>
+      </g>
+      <text x="0" y="101" text-anchor="middle" font-family="'DejaVu Sans', sans-serif" font-size="12" fill="#3A3F4A">manis · asin · asam · pahit</text>
+    </g>
+    <text x="380" y="1438" font-family="Caveat, cursive" font-size="20" font-weight="bold" fill="#22252B">Dipakai: inti</text>
+    <text x="380" y="1472" font-family="'DejaVu Sans', sans-serif" font-size="19" fill="#3A3F4A">Stempel 1980 + TV tabung</text>
+    <text x="380" y="1500" font-family="'DejaVu Sans', sans-serif" font-size="19" fill="#3A3F4A">(pembanding: tahun TV masih</text>
+    <text x="380" y="1528" font-family="'DejaVu Sans', sans-serif" font-size="19" fill="#3A3F4A">tabung) + 7 relawan (seisi meja</text>
+    <text x="380" y="1556" font-family="'DejaVu Sans', sans-serif" font-size="19" fill="#3A3F4A">makan) + 4 gelas mini rasa.</text>
+  </g>
+
+  <!-- ============ CARD 8: timer ============ -->
+  <g>
+    <rect x="800" y="1340" width="760" height="370" rx="16" fill="#FFFFFF" stroke="#22252B" stroke-width="3"/>
+    <circle cx="838" cy="1378" r="22" fill="#22252B"/><text x="838" y="1386" text-anchor="middle" font-family="Caveat, cursive" font-size="24" font-weight="bold" fill="#FFFFFF">8</text>
+    <text x="870" y="1386" font-family="Caveat, cursive" font-size="26" font-weight="bold" fill="#22252B">Timer efek sementara</text>
+    <rect x="1360" y="1362" width="180" height="32" rx="16" fill="#1E8A5A"/><text x="1450" y="1384" text-anchor="middle" font-family="Caveat, cursive" font-size="16" font-weight="bold" fill="#FFFFFF">SVG PROSEDURAL</text>
+    <rect x="820" y="1404" width="300" height="286" rx="12" fill="#FBFBF8" stroke="#22252B" stroke-width="2.5"/>
+    <g transform="translate(970, 1547)">
+      <path d="M-95,-20 A97,97 0 0 1 95,-20" fill="none" stroke="#1E8A5A" stroke-width="6" stroke-dasharray="10 8" opacity="0.9"/>
+      <path d="M95,-20 l-16,-2 l8,14 z" fill="#1E8A5A"/>
+      <circle cx="0" cy="0" r="78" fill="#FFFFFF" stroke="#22252B" stroke-width="4"/>
+      <g stroke="#22252B" stroke-width="3">
+        <line x1="0" y1="-68" x2="0" y2="-58"/><line x1="0" y1="68" x2="0" y2="58"/>
+        <line x1="-68" y1="0" x2="-58" y2="0"/><line x1="68" y1="0" x2="58" y2="0"/>
+      </g>
+      <line x1="0" y1="0" x2="0" y2="-48" stroke="#22252B" stroke-width="5"/>
+      <line x1="0" y1="0" x2="34" y2="18" stroke="#F08A1D" stroke-width="5"/>
+      <circle cx="0" cy="0" r="7" fill="#22252B"/>
+      <text x="0" y="112" text-anchor="middle" font-family="Caveat, cursive" font-size="17" font-weight="bold" fill="#22252B">sementara</text>
+    </g>
+    <text x="1140" y="1438" font-family="Caveat, cursive" font-size="20" font-weight="bold" fill="#22252B">Dipakai: jawaban</text>
+    <text x="1140" y="1472" font-family="'DejaVu Sans', sans-serif" font-size="19" fill="#3A3F4A">Jam memudar; efek hilang</text>
+    <text x="1140" y="1500" font-family="'DejaVu Sans', sans-serif" font-size="19" fill="#3A3F4A">'beberapa menit'. Tidak ada</text>
+    <text x="1140" y="1528" font-family="'DejaVu Sans', sans-serif" font-size="19" fill="#3A3F4A">angka pasti — jangan tulis</text>
+  </g>
+
+  <!-- ============ CARD 9: urutan solusi ============ -->
+  <g>
+    <rect x="40" y="1730" width="760" height="370" rx="16" fill="#FFFFFF" stroke="#22252B" stroke-width="3"/>
+    <circle cx="78" cy="1768" r="22" fill="#22252B"/><text x="78" y="1776" text-anchor="middle" font-family="Caveat, cursive" font-size="24" font-weight="bold" fill="#FFFFFF">9</text>
+    <text x="110" y="1776" font-family="Caveat, cursive" font-size="26" font-weight="bold" fill="#22252B">Urutan solusi</text>
+    <rect x="600" y="1752" width="180" height="32" rx="16" fill="#1E8A5A"/><text x="690" y="1774" text-anchor="middle" font-family="Caveat, cursive" font-size="16" font-weight="bold" fill="#FFFFFF">SVG PROSEDURAL</text>
+    <rect x="60" y="1794" width="300" height="286" rx="12" fill="#FBFBF8" stroke="#22252B" stroke-width="2.5"/>
+    <g transform="translate(210, 1937)">
+      <path d="M-95,-45 L-65,-45 L-70,45 L-90,45 Z" fill="#DCEFFA" opacity="0.7" stroke="#1F5FBF" stroke-width="3"/>
+      <path d="M-90,-10 L-70,-10 L-73,38 L-87,38 Z" fill="#F08A1D" opacity="0.9"/>
+      <line x1="-62" y1="0" x2="-28" y2="0" stroke="#1E8A5A" stroke-width="6"/>
+      <path d="M-28,0 l-14,-9 v18 z" fill="#1E8A5A"/>
+      <g transform="rotate(-28 20 0)">
+        <rect x="6" y="-8" width="14" height="72" rx="7" fill="#1E8A5A"/>
+        <rect x="2" y="-26" width="22" height="20" rx="4" fill="#FFFFFF" stroke="#22252B" stroke-width="2"/>
+        <rect x="4" y="-38" width="5" height="12" rx="2" fill="#F3D46B"/>
+        <rect x="11" y="-38" width="5" height="12" rx="2" fill="#F08A1D"/>
+        <rect x="18" y="-38" width="5" height="12" rx="2" fill="#1E8A5A"/>
+      </g>
+      <rect x="44" y="-30" width="78" height="92" rx="8" fill="#FFFFFF" stroke="#22252B" stroke-width="3"/>
+      <rect x="44" y="-6" width="78" height="26" fill="#1E8A5A"/>
+      <text x="83" y="12" text-anchor="middle" font-family="'DejaVu Sans', sans-serif" font-size="12" font-weight="bold" fill="#FFFFFF">tanpa SLS</text>
+      <circle cx="0" cy="78" r="26" fill="#1E8A5A"/>
+      <path d="M-12,78 l8,9 l16,-18" fill="none" stroke="#FFFFFF" stroke-width="6"/>
+    </g>
+    <text x="380" y="1828" font-family="Caveat, cursive" font-size="20" font-weight="bold" fill="#22252B">Dipakai: jawaban</text>
+    <text x="380" y="1862" font-family="'DejaVu Sans', sans-serif" font-size="19" fill="#3A3F4A">Jus dulu, baru sikat; centang</text>
+    <text x="380" y="1890" font-family="'DejaVu Sans', sans-serif" font-size="19" fill="#3A3F4A">hijau. Tube 'tanpa SLS' sebagai</text>
+    <text x="380" y="1918" font-family="'DejaVu Sans', sans-serif" font-size="19" fill="#3A3F4A">pilihan kedua. Urutan dibaca</text>
+    <text x="380" y="1946" font-family="'DejaVu Sans', sans-serif" font-size="19" fill="#3A3F4A">kiri ke kanan, tanpa suara.</text>
+  </g>
+
+  <!-- ============ CARD 10: latar dapur pagi ============ -->
+  <g>
+    <rect x="800" y="1730" width="760" height="370" rx="16" fill="#FFFFFF" stroke="#22252B" stroke-width="3"/>
+    <circle cx="838" cy="1768" r="22" fill="#22252B"/><text x="838" y="1776" text-anchor="middle" font-family="Caveat, cursive" font-size="24" font-weight="bold" fill="#FFFFFF">10</text>
+    <text x="870" y="1776" font-family="Caveat, cursive" font-size="26" font-weight="bold" fill="#22252B">Papan tulis dapur pagi (backdrop)</text>
+    <rect x="1360" y="1752" width="180" height="32" rx="16" fill="#1E8A5A"/><text x="1450" y="1774" text-anchor="middle" font-family="Caveat, cursive" font-size="16" font-weight="bold" fill="#FFFFFF">SVG PROSEDURAL</text>
+    <rect x="820" y="1794" width="300" height="286" rx="12" fill="#FBFBF8" stroke="#22252B" stroke-width="2.5"/>
+    <g transform="translate(970, 1937)">
+      <rect x="-120" y="-110" width="240" height="220" rx="8" fill="url(#sky)"/>
+    </g>
+    <text x="1140" y="1828" font-family="Caveat, cursive" font-size="20" font-weight="bold" fill="#22252B">Dipakai: semua scene (backdrop)</text>
+    <text x="1140" y="1862" font-family="'DejaVu Sans', sans-serif" font-size="19" fill="#3A3F4A">Papan tulis (BoardSurface)</text>
+    <text x="1140" y="1890" font-family="'DejaVu Sans', sans-serif" font-size="19" fill="#3A3F4A">polos. Jendela, matahari,</text>
+    <text x="1140" y="1918" font-family="'DejaVu Sans', sans-serif" font-size="19" fill="#3A3F4A">dan ubin dihapus 2026-11-14</text>
+    <text x="1140" y="1946" font-family="'DejaVu Sans', sans-serif" font-size="19" fill="#3A3F4A">(perintah pemilik).</text>
+  </g>
+
+  <!-- footer -->
+  <text x="40" y="2145" font-family="'DejaVu Sans', sans-serif" font-size="19" fill="#3A3F4A">LEGENDA — Semua aset di atas adalah aset FINAL (kit sketch/): build memakai gambar yang sama persis (objek, label, warna).</text>
+  <text x="40" y="2178" font-family="'DejaVu Sans', sans-serif" font-size="19" fill="#3A3F4A">Gelas jus tampil di SEMUA scene; oranye hanya untuk jus. 1980 ≈ TV tabung, 7 relawan ≈ seisi meja makan. 100% SVG prosedural.</text>
+</svg>

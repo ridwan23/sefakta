@@ -29,6 +29,9 @@ export type EpisodeBrief = {
   captionMode: CaptionMode;
   visualStyle: VisualStyle;
   scenes: EpisodeScene[];
+  /** Penutup episode. Bila `ending.cta === false`, komposisi berakhir di akhir narasi tanpa jeda + klip CTA
+   *  (mis. loop: frame terakhir kembali ke frame pertama). Default (bila field ini tidak ada): CTA resmi. */
+  ending?: { type: 'loop' | 'cta'; cta: boolean; reason?: string };
 };
 
 export type ManifestEntry = { id: string; file: string; text: string; hash: string; audioSeconds: number; lufs: number; truePeak: number };
@@ -39,7 +42,8 @@ export type SceneCaptions = { hash: string; coverage: number; captions: Caption[
 export type TimelineScene = EpisodeScene & { from: number; frames: number; audio: string | null; captions: Caption[] | null };
 /** `ctaAudio` = VO CTA bersama (CTA_VO_FILE) bila filenya ada. */
 /** `storyFrames` = akhir narasi scene terakhir; `ctaFrom` = awal transisi CTA (setelah jeda CTA_HOLD_SECONDS). */
-export type EpisodeTimeline = { scenes: TimelineScene[]; storyFrames: number; ctaFrom: number; hasVo: boolean; ctaAudio: string | null };
+/** `hasCta` = false bila brief `ending.cta === false` (komposisi berakhir di akhir narasi, tanpa CTA). */
+export type EpisodeTimeline = { scenes: TimelineScene[]; storyFrames: number; ctaFrom: number; hasVo: boolean; ctaAudio: string | null; hasCta: boolean };
 
 /** Props yang bisa diserialisasi (aman untuk Studio dan render). */
 export type EpisodeProps = {
