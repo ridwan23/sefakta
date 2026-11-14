@@ -20,6 +20,7 @@ Prinsip utama: **cegah kesalahan sebelum render, jangan menemukannya dengan coba
 |---|---|---|---|
 | 0 | Persiapan | lingkungan siap | `npm run doctor` hijau |
 | 1 | Pilih fakta & sudut | satu fakta utama + 4 kalimat konflik | fakta tidak diperdebatkan, bisa dijawab dalam 60 dtk |
+| 1b | Undian kreatif | kartu terpilih + `creative.concept` di brief | `npm run creative:draw -- <id> --pick=<n>`; konsep lolos uji tukar (`docs/PANDUAN-KREATIF.md`) |
 | 2 | Riset sumber | kutipan verbatim + URL | setiap klaim punya ≥ 2 sumber berbeda asal |
 | 3 | Naskah | 5 scene, 135–150 kata | lolos aturan pelafalan (§3.3) |
 | 4 | Brief | `briefs/<id>.json` | `npm run validate:facts` 0 error, `validate:facts:online` 0 error |
@@ -57,6 +58,10 @@ npm run doctor          # semua ✓; ikuti perbaikan yang dicetak bila ada ✗
 4. **Tolak** fakta yang masih diperdebatkan (efek Mpemba, "wood wide web", asal QWERTY, mitos 10% otak). Bila angka utama berbeda jauh antarsumber (mis. pendinginan global Tambora 0,4–3 °C), jangan sebut angkanya.
 5. Buat tiga kandidat hook. Pilih yang paling spesifik dan bisa dijawab di dalam episode. Pakai kata pembatas bila perlu ("seolah", "di beberapa tempat") agar hook tidak menjadi klaim harfiah yang salah.
 6. Rencanakan *open loop*: hook menjanjikan sesuatu (mis. "… ikut melahirkan Frankenstein"), dan scene terakhir membayarnya.
+
+## 1b. Undian kreatif
+
+Setelah `npm run new:episode`, jalankan `npm run creative:draw -- <id>` sebelum menulis naskah. Undian memberi 3 kartu acak (gaya, struktur cerita, pembuka, kamera, mode caption, tone, dan 2 batasan) yang menghindari episode terbaru. Pilih satu dengan `--pick=<n>`, lalu isi `creative.concept` di brief. Cara menilai kartu dan menafsirkannya jadi konsep ada di `docs/PANDUAN-KREATIF.md`. Struktur, pembuka, mode caption, dan tone dari kartu mengikat tahap 3, 4, dan 7.
 
 ## 2. Riset sumber
 
@@ -103,6 +108,8 @@ Catat hasil pengecekan manual itu di laporan serah terima.
 
 ### 3.1 Struktur
 
+Struktur mengikuti kartu undian (§1b). `--pick` mengisi kerangka scene di brief. Anggaran kata per scene mengikuti durasi awal kerangka (±2,5 kata per detik). Tabel di bawah adalah struktur `klasik`:
+
 | Scene | Fungsi | Kira-kira |
 |---|---|---|
 | `hook` | pertanyaan spesifik + janji | 15–20 kata |
@@ -138,12 +145,13 @@ Isi `briefs/<id>.json`:
 
 - **`scenes[]`:** `voiceoverText`, `headline`, `visual` (arahan), `factIds`. Isi `durationSeconds` mendekati perkiraan audio + 0,5 dtk; validator mewajibkan totalnya 55–65 dtk, dan durasi akhir tetap mengikuti audio.
 - **`facts[]`:** `claim`, `kind`, `status`, `figures`, `sources` (`origin` berbeda), dan `limits`. Isi `limits` dengan penyederhanaan yang dilakukan naskah.
+- **`creative`:** diisi `npm run creative:draw` (seed, 3 kartu, pilihan, tukar). Jangan mengedit kartu dengan tangan. Yang diisi agent hanya `creative.concept { idea, signature, onlyHere }`. `createdAt` diisi `new:episode` dan menandai brief yang wajib diundi.
 - **`visualStyle`:**
-  - pilih sesuai isi fakta (sejarah → peta/arsip, sains → diagram, antariksa → gelap kosmik);
-  - isi `tone` sesuai kecerahan latar;
+  - wujudkan gaya kartu (`creative.chosen.family`) sesuai isi fakta: palet dan elemen dari `docs/REFERENSI-GAYA-VISUAL.md`;
+  - `tone` mengikuti kartu;
   - `captionColors` bila palet default tidak cocok (validator mengecek kontras ≥ 4,5:1);
   - `fonts: { display, text?, reason }`: font dipilih sesuai konsep (§7.6) dan diunduh dulu dengan `npm run font:add -- <id>`.
-- **`captionMode`:** `subtitle` untuk cerita bernarasi padat, `ringkasan` untuk visual yang ramai, `headline` untuk visual yang sangat sederhana. Mode `keypoint` dihapus (9 Nov 2026) karena membingungkan di visual; validator menolak brief yang masih punya `keypoints[]`.
+- **`captionMode`:** mengikuti kartu undian. Watak tiap mode: `subtitle` untuk cerita bernarasi padat, `ringkasan` untuk visual yang ramai, `headline` untuk visual yang sangat sederhana; tukar hanya dengan `--swap` beralasan. Mode `keypoint` dihapus (9 Nov 2026) karena membingungkan di visual; validator menolak brief yang masih punya `keypoints[]`.
 - **`storyDuration` (opsional, pengecualian):** `{ min, max, reason }` mengganti rentang 55–65 dtk untuk **satu** episode, hanya atas persetujuan pemilik (mis. eksperimen retensi). Batas 30–65 dtk, alasan wajib; validator selalu menampilkannya sebagai peringatan. Bukan aturan umum: jangan menyalinnya ke episode lain.
 - **CTA:** tidak diatur per episode. Semua episode memakai VO CTA bersama `public/brand/cta-vo.mp3`.
 

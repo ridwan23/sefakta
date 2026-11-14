@@ -4,14 +4,14 @@ Bahan untuk memilih `visualStyle` per episode (lihat `AGENTS.md` dan `docs/WORKF
 
 ## Cara memakai
 
-1. Tentukan isi fakta dan pilarnya, lalu pilih 1 gaya dari tabel ringkas.
+1. Gaya episode datang dari undian kreatif (`npm run creative:draw`, `docs/PANDUAN-KREATIF.md`). Kartu sudah disaring sesuai pilar dan riwayat. Baca bagian gaya kartu itu di sini.
 2. Baca bagian gaya itu: palet, elemen, gerak khas.
 3. Wujudkan dengan kit yang disebut di kolom "Kit". Gaya berstatus **belum ada** atau **sebagian** butuh komponen baru di `src/shared/` (lihat `docs/RENCANA-SHARED-OBJEK.md`). Jangan membuatnya di folder topik.
 4. Catat di brief: `visualStyle: { name, reason, tone, palette }`.
 
 ## Tabel ringkas
 
-Status kit diperiksa dari ekspor `src/shared/*/index.ts` dan komposisi katalog (KatalogGerak, KatalogPola, KatalogObjek, KatalogObjekIlustrasi, KatalogCollage) pada 2026-11-13.
+Status kit diperiksa dari ekspor `src/shared/*/index.ts` dan komposisi katalog (KatalogGerak, KatalogPola, KatalogObjek, KatalogObjekIlustrasi, KatalogCollage, KatalogGaya) pada 2026-11-14.
 
 | Gaya | Cocok untuk | tone | Kit | Status |
 |---|---|---|---|---|
@@ -19,14 +19,37 @@ Status kit diperiksa dari ekspor `src/shared/*/index.ts` dan komposisi katalog (
 | Cerita data | angka, tren, perbandingan | dark/light | `patterns/BigNumber`, `RankList`, `Compare`, `anim/CountUp`, `Highlight` | siap; grafik garis/batang belum ada komponen |
 | Vektor datar | sains, kesehatan, cara kerja benda | light | `objects/` (Sun, Person, HeadProfile, Car, Bowl, Cup, …), `labels/Label`, `render/Shaded` | siap |
 | Tipografi kinetik | hook, mitos vs fakta, tips | dark | `anim/SplitText`, `Swap`, `patterns/MythFact` | siap |
-| Papan tulis | proses langkah demi langkah | light | `anim/DrawPath`, `patterns/ProcessFlow` | sebagian: belum ada garis spidol bergoyang dan arsir |
-| Clay 3D lembut | sains keseharian, makanan, benda | light | `three/Stage3D`, `Model`, `render/Shaded` | sebagian: model hanya dari registri CC0 |
-| Isometrik garis | sistem, alur, logistik | light | `three/`, `anim/DrawPath` | sebagian: belum ada grid isometrik |
+| Papan tulis | proses langkah demi langkah | light (kapur: dark) | `sketch/` (BoardSurface putih/kapur, SketchPath bergetar, Hatch, SketchText font Caveat), `patterns/ProcessFlow` | siap |
+| Clay 3D lembut | sains keseharian, makanan, benda | light | `render/MaterialStyle material="clay"` membungkus `objects/` (2D); 3D: `three/Stage3D`, `Model` | siap (2D); 3D hanya model registri CC0 |
+| Isometrik garis | sistem, alur, logistik | light | `iso/` (isoView, IsoGrid, IsoBox, IsoFlow) | siap |
 | Kolase dokumenter | sejarah, "kenapa ini terjadi", berita | light | `collage/` (PaperSurface, Cutout, Doc, Stamp, Tag, Tape, PaperClip, Highlighter, MarkerCircle, Underline, MarkerArrow), `labels/Label` | siap |
-| Potongan kertas | cara kerja, proses, hangat | light | `collage/` (PaperSurface, Cutout `torn={[]}`) | sebagian: potongan dan permukaan ada; lipat/pita belum |
-| Siluet | kisah sejarah, alam, emosional | dark | `camera/CamLayer`, `look/Backdrop` | sebagian: latar gradien ada, siluet berlapis belum |
-| Persamaan/matematika | fisika, statistik, rumus | dark | `anim/DrawPath`, `CountUp` | sebagian: tanpa render rumus |
-| Komik, risograf, retro, piksel, kaca cair, partikel, terminal, grid Swiss, stickman | lihat katalog | — | — | belum dinilai; pakai hanya bila topik sangat cocok |
+| Potongan kertas | cara kerja, proses, hangat | light | `collage/` (PaperSurface, Cutout `torn={[]}`, PaperFold, Ribbon), `anim/stepped` | siap |
+| Siluet | kisah sejarah, alam, emosional | dark | `silhouette/` (SilhouetteSky, Ridge: mountains/hills/trees/city/grass, Haze), `camera/CamLayer` | siap |
+| Persamaan/matematika | fisika, statistik, rumus | dark | `math/Formula` (LaTeX mini: frac, sqrt, ^, _, \hl, \text), `anim/CountUp` | siap; tanpa matriks/integral |
+| Diagram gelap/kosmik | mikroskop, saraf, suara, antariksa | dark | `look/Backdrop`, `render/`, `camera/` | siap (dipakai 3 episode; undian menghindarinya untuk sementara) |
+| Komik | kisah tokoh, kejadian berurutan, humor | light | `comic/` (comicGrid, ComicPage, ComicPanel ber-zoom, SpeechBubble speech/shout/thought/box, SoundWord font Bangers, ComicBurst, SpeedLines, Halftone; teks Comic Neue) | siap (2026-11-14) |
+| Risograf | sejarah, budaya, alam | light | `riso/` (RisoPaper, RisoInk per pelat, RisoPrint membungkus gaya lain dengan pemisahan kanal; palet `RISO`) | siap (2026-11-14) |
+| Stickman | tubuh, eksperimen, kebiasaan | light | `stickman/` (Stickman bersendi, POSES bernama, siklus jalan/lari, masuk tergambar) + `sketch/` | siap (2026-11-14) |
+| Grid Swiss | data, sejarah teknologi, editorial | light | `swiss/` (swissGrid 6×12 dalam area aman, SwissGridLines, SwissBlock, SwissType Inter 900, SwissRule) | siap (2026-11-14) |
+| Medan partikel | antariksa, gas, cahaya, kerumunan | dark | sebagian (`anim/Particles`) | dinilai: **prioritas 3** |
+| Terminal | keamanan siber, data, internet | dark | — (butuh font mono di registri) | dinilai: **prioritas 3**, hanya Teknologi |
+| Retro, piksel 8-bit, kaca cair | — | — | — | dinilai: **tidak diprioritaskan** (lihat bawah) |
+
+## Penilaian 9 gaya sisa (2026-11-14)
+
+Dasar penilaian: nama dan "best for" di katalog. Prompt lengkap gaya-gaya ini belum dibaca. Dinilai juga kecocokan dengan 6 pilar, kemampuan menjelaskan mekanisme, biaya membuat kit di Remotion, dan risiko terhadap identitas. Gaya yang kitnya belum ada tercatat di dek kreatif dengan `ready: false` dan hanya keluar di undian `--wild`. Setelah kit dibuat dan diperagakan di katalog, ubah menjadi `ready: true` (`scripts/lib/creative.ts`). Komik, risograf, stickman, dan grid Swiss sudah `ready: true` (2026-11-14; peragaan: katalog → KatalogGaya). Catatan pakai: risograf adalah *perlakuan* — gabungkan dengan gaya lain lewat `RisoPrint`; kombinasi itu tetap satu `visualStyle` per episode.
+
+| Gaya | Kecocokan | Kekuatan menjelaskan | Biaya kit | Keputusan |
+|---|---|---|---|---|
+| Komik | Sejarah (tokoh), Tubuh, Sains | tinggi: urutan sebab-akibat per panel, balon kata menggantikan headline | sedang: grid panel yang bisa beranimasi, balon kata, halftone, efek suara tulisan | prioritas 1. Paling berbeda dari semua episode yang sudah ada |
+| Risograf | Sejarah, Alam, Tubuh | sedang: perlakuan, bukan tata letak | rendah: filter 2–3 tinta, geser register, butir. Bisa membungkus gaya lain | prioritas 1. Murah, dan menggandakan variasi gaya yang sudah siap |
+| Stickman | Tubuh, Sains, Teknologi | tinggi untuk kebiasaan dan eksperimen | sedang: figur dengan pose dan sendi (`physics/Joint` bisa dipakai) | prioritas 2 |
+| Grid Swiss | Sejarah, Teknologi, Sains (data) | tinggi untuk angka dan kronologi | rendah: grid dan aturan tipografi di atas `anim/` | prioritas 2 |
+| Medan partikel | Antariksa, Sains, Alam | tinggi untuk gas, cahaya, dan populasi | sedang: medan aliran, ribuan titik, perlu dijaga waktu render | prioritas 3 |
+| Terminal | Teknologi saja | sedang | rendah: font mono via `font:add` | prioritas 3. Hindari kemiripan dengan video arsip matrix-effect |
+| Retro (70-an/VHS) | Teknologi (sejarah gadget) | rendah: kesannya gaya, bukan penjelasan | rendah | tidak diprioritaskan. Mudah terasa murahan; lebih baik jadi batasan sesekali |
+| Piksel 8-bit | Teknologi (game) | rendah | sedang: sprite dari kode, font piksel | tidak diprioritaskan. Kesannya kekanak-kanakan untuk kanal fakta |
+| Kaca cair | Teknologi (UI) | rendah | tinggi: blur latar berat saat render | tidak diprioritaskan |
 
 ## Detail gaya prioritas
 

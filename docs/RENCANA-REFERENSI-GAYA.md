@@ -1,6 +1,6 @@
 # Rencana: Referensi Gaya Visual dari Katalog "Explainer Videos with Claude"
 
-Status: Fase 1–2 selesai (2026-11-13). Fase 3 siap dikerjakan (Fase 1–4 `docs/RENCANA-SHARED-OBJEK.md` selesai). Fase 4 menunggu naskah contoh dari pemilik.
+Status: Fase 1–2 selesai (2026-11-13). Fase 3 sebagian (2026-11-14): 6 gaya "sebagian" dilengkapi di kit (`sketch/`, `iso/`, `silhouette/`, `math/`, `collage/fold`, material clay, `anim/stepped`), diperagakan di katalog → KatalogGaya; pola scene kolase dan episode uji (review ≥ 14/18) belum. 9 gaya sisa dinilai (2026-11-14, `docs/REFERENSI-GAYA-VISUAL.md`): komik dan risograf prioritas 1; kit komik (`comic/`), risograf (`riso/`), stickman (`stickman/`), dan grid Swiss (`swiss/`) selesai dan siap diundi (2026-11-14). Dek kreatif dan undian (`npm run creative:draw`, `docs/PANDUAN-KREATIF.md`) memilih gaya per episode secara acak. Fase 4 menunggu naskah contoh dari pemilik.
 
 Hasil:
 - Fase 1: `docs/REFERENSI-GAYA-VISUAL.md` dibuat. Rujukan ditambahkan di `docs/WORKFLOW-AI-AGENT.md` §7.
