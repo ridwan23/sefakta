@@ -31,13 +31,13 @@ Status kit diperiksa dari ekspor `src/shared/*/index.ts` dan komposisi katalog (
 | Risograf | sejarah, budaya, alam | light | `riso/` (RisoPaper, RisoInk per pelat, RisoPrint membungkus gaya lain dengan pemisahan kanal; palet `RISO`) | siap (2026-11-14) |
 | Stickman | tubuh, eksperimen, kebiasaan | light | `stickman/` (Stickman bersendi, POSES bernama, siklus jalan/lari, masuk tergambar) + `sketch/` | siap (2026-11-14) |
 | Grid Swiss | data, sejarah teknologi, editorial | light | `swiss/` (swissGrid 6×12 dalam area aman, SwissGridLines, SwissBlock, SwissType Inter 900, SwissRule) | siap (2026-11-14) |
-| Medan partikel | antariksa, gas, cahaya, kerumunan | dark | sebagian (`anim/Particles`) | dinilai: **prioritas 3** |
-| Terminal | keamanan siber, data, internet | dark | — (butuh font mono di registri) | dinilai: **prioritas 3**, hanya Teknologi |
+| Medan partikel | antariksa, gas, cahaya, kerumunan | dark | `particles/` (ParticleField di canvas: aliran noise + ekor, `gather` ke bentuk/teks lalu `release`; useTextPoints, ringPoints, discPoints, gridPoints; palet `FIELD`) | siap (2026-11-15) |
+| Terminal | keamanan siber, data, internet | dark | `terminal/` (TerminalWindow, TermScript: perintah diketik, keluaran, progres ASCII, **sorotan**; TypeLine; font `jetbrains-mono`; palet `TERM`) | siap (2026-11-15), hanya Teknologi |
 | Retro, piksel 8-bit, kaca cair | — | — | — | dinilai: **tidak diprioritaskan** (lihat bawah) |
 
 ## Penilaian 9 gaya sisa (2026-11-14)
 
-Dasar penilaian: nama dan "best for" di katalog. Prompt lengkap gaya-gaya ini belum dibaca. Dinilai juga kecocokan dengan 6 pilar, kemampuan menjelaskan mekanisme, biaya membuat kit di Remotion, dan risiko terhadap identitas. Gaya yang kitnya belum ada tercatat di dek kreatif dengan `ready: false` dan hanya keluar di undian `--wild`. Setelah kit dibuat dan diperagakan di katalog, ubah menjadi `ready: true` (`scripts/lib/creative.ts`). Komik, risograf, stickman, dan grid Swiss sudah `ready: true` (2026-11-14; peragaan: katalog → KatalogGaya). Catatan pakai: risograf adalah *perlakuan* — gabungkan dengan gaya lain lewat `RisoPrint`; kombinasi itu tetap satu `visualStyle` per episode.
+Dasar penilaian: nama dan "best for" di katalog. Prompt lengkap gaya-gaya ini belum dibaca. Dinilai juga kecocokan dengan 6 pilar, kemampuan menjelaskan mekanisme, biaya membuat kit di Remotion, dan risiko terhadap identitas. Gaya yang kitnya belum ada tercatat di dek kreatif dengan `ready: false` dan hanya keluar di undian `--wild`. Setelah kit dibuat dan diperagakan di katalog, ubah menjadi `ready: true` (`scripts/lib/creative.ts`). Komik, risograf, stickman, dan grid Swiss sudah `ready: true` (2026-11-14); terminal dan medan partikel menyusul (2026-11-15). Peragaan: katalog → KatalogGaya. Catatan pakai: risograf adalah *perlakuan* — gabungkan dengan gaya lain lewat `RisoPrint`; kombinasi itu tetap satu `visualStyle` per episode.
 
 | Gaya | Kecocokan | Kekuatan menjelaskan | Biaya kit | Keputusan |
 |---|---|---|---|---|

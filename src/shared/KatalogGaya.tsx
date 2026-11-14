@@ -1,6 +1,6 @@
 // Katalog gaya visual tambahan (katalog → KatalogGaya). Bukan episode. Satu scene per gaya yang dilengkapi:
 // papan tulis, potongan kertas (lipat + pita), isometrik garis, siluet berlapis, rumus, clay, komik, risograf,
-// grid Swiss, stickman.
+// grid Swiss, stickman, terminal, medan partikel.
 import React from 'react';
 import { AbsoluteFill, Sequence } from 'remotion';
 import { Reveal } from './anim/Reveal';
@@ -8,7 +8,9 @@ import { FONT_JAKARTA } from './brand/fonts';
 import { Cutout, PAPER, PaperSurface } from './collage/pieces';
 import { COMIC, comicGrid, ComicPage, ComicPanel, SoundWord, SpeechBubble, SpeedLines } from './comic/Comic';
 import { RISO, RisoInk, RisoPaper, RisoPrint } from './riso/Riso';
+import { FIELD, FieldSurface, ParticleField, useTextPoints } from './particles/Particles';
 import { Stickman } from './stickman/Stickman';
+import { TERM, TerminalWindow, TermScript, TermSurface, TypeLine } from './terminal/Terminal';
 import { SWISS, swissGrid, SwissBlock, SwissGridLines, SwissRule, SwissSurface, SwissType } from './swiss/Swiss';
 import { PaperFold, Ribbon } from './collage/fold';
 import { isoView, IsoBox, IsoFlow, IsoGrid, ISO } from './iso/Iso';
@@ -222,6 +224,41 @@ const Stick: React.FC = () => (
   </>
 );
 
+const Term: React.FC = () => (
+  <>
+    <TermSurface />
+    <Title name="Terminal" code={'<TerminalWindow title at> <TermScript lines={[{kind:"cmd"|"out"|"ok"|"err"|"progress", text}]} />\n<TypeLine text at />   **kata** = sorotan'} ink={TERM.teks} muted={TERM.redup} />
+    <TerminalWindow x={60} y={380} w={960} h={760} title="bash — sefakta" at={4}>
+      <TermScript
+        at={14}
+        lines={[
+          { kind: 'cmd', text: 'ping google.com' },
+          { kind: 'out', text: 'balasan dari 142.250.4.100: waktu=**23 ms**', gap: 6 },
+          { kind: 'out', text: 'balasan dari 142.250.4.100: waktu=**25 ms**', gap: 4 },
+          { kind: 'cmd', text: 'curl -O video.mp4' },
+          { kind: 'progress', text: 'unduh', to: 1, dur: 40 },
+          { kind: 'ok', text: 'selesai: **48 MB** dalam 3,1 dtk' },
+          { kind: 'err', text: 'paket hilang: 2 dari 100', gap: 6 },
+          { kind: 'info', text: 'dikirim ulang otomatis (TCP)', gap: 4 },
+        ]}
+      />
+    </TerminalWindow>
+    <TypeLine x={60} y={1240} text="23 ms = **0,023 detik**" at={110} size={58} />
+  </>
+);
+
+const Field: React.FC = () => {
+  const pts = useTextPoints('1 juta', { x: 540, y: 900, size: 260, n: 2200 });
+  return (
+    <>
+      <FieldSurface />
+      <ParticleField count={2200} at={0} gather={{ at: 30, to: pts, dur: 50, release: 120 }} />
+      <ParticleField count={300} seed={7} palette={FIELD.api} size={[1, 2.4]} speed={30} trail={0} opacity={0.6} />
+      <Title name="Medan partikel" code={'<ParticleField count palette trail gather={{ at, to, release }} />\nuseTextPoints(text) ringPoints discPoints gridPoints'} ink="#EAF2FF" muted="#7A8AA6" />
+    </>
+  );
+};
+
 const S: [string, React.FC, number][] = [
   ['Papan tulis', Board, 175],
   ['Papan kapur', Chalk, 100],
@@ -235,6 +272,8 @@ const S: [string, React.FC, number][] = [
   ['Risograf', Riso, 90],
   ['Grid Swiss', Swiss, 130],
   ['Stickman', Stick, 120],
+  ['Terminal', Term, 150],
+  ['Medan partikel', Field, 170],
 ];
 
 export const KATALOG_GAYA_FRAMES = S.reduce((a, [, , n]) => a + n, 0);

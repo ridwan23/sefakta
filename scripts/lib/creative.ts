@@ -34,8 +34,8 @@ export const FAMILIES: Family[] = [
   { id: 'stickman', label: 'Stickman', fits: ['Tubuh', 'Sains', 'Teknologi'], tones: ['light'], ready: true, kit: 'stickman/Stickman (POSES, cycle jalan/lari) + sketch/BoardSurface, SketchPath' },
   { id: 'risograf', label: 'Cetak risograf', fits: ['Sejarah', 'Alam', 'Tubuh'], tones: ['light'], ready: true, kit: 'riso/RisoInk, RisoPrint (membungkus gaya lain), RisoPaper' },
   { id: 'grid-swiss', label: 'Grid Swiss', fits: ['Sejarah', 'Teknologi', 'Sains'], tones: ['light'], ready: true, kit: 'swiss/swissGrid, SwissType, SwissBlock, SwissRule, SwissGridLines' },
-  { id: 'terminal', label: 'Terminal', fits: ['Teknologi'], tones: ['dark'], ready: false, kit: 'belum: layar terminal, font mono di registri' },
-  { id: 'partikel', label: 'Medan partikel', fits: ['Antariksa', 'Sains', 'Alam'], tones: ['dark'], ready: false, kit: 'sebagian: anim/Particles' },
+  { id: 'terminal', label: 'Terminal', fits: ['Teknologi'], tones: ['dark'], ready: true, kit: 'terminal/TerminalWindow, TermScript (cmd diketik, keluaran, progres), TypeLine, TermSurface; font jetbrains-mono' },
+  { id: 'partikel', label: 'Medan partikel', fits: ['Antariksa', 'Sains', 'Alam'], tones: ['dark'], ready: true, kit: 'particles/ParticleField (aliran + ekor, gather ke bentuk/teks lalu pecah), useTextPoints, ringPoints, FieldSurface' },
 ];
 
 export type Structure = { id: string; label: string; fits?: Series[]; scenes: [string, number, string][] };

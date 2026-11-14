@@ -6,7 +6,8 @@
 //   KatalogCollage : kolase, coretan spidol, label penunjuk (src/shared/collage, labels)
 //   KatalogGaya    : papan tulis (sketch), lipat/pita kertas (collage/fold), isometrik (iso), siluet (silhouette),
 //                    rumus (math), material clay (render/MaterialStyle), komik (comic), risograf (riso),
-//                    grid Swiss (swiss), stickman (stickman)
+//                    grid Swiss (swiss), stickman (stickman), terminal (terminal),
+//                    medan partikel (particles)
 import React from 'react';
 import { Composition, Folder } from 'remotion';
 import { KatalogGerak, KATALOG_GERAK_FRAMES } from './anim/Catalog';
