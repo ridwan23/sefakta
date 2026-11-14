@@ -27,7 +27,7 @@ export const POSES = {
   berdiri: P(0, 0, -12, 6, 12, 6, -6, 0, 6, 0),
   tunjuk: P(4, 6, -14, 10, 80, 4, -6, 0, 8, 0),
   kaget: P(-8, -10, -130, -30, 130, 30, -16, 0, 16, 0),
-  sorak: P(0, -12, -160, -10, 160, 10, -8, 0, 8, 0),
+  sorak: P(0, -12, -135, 15, 135, -15, -8, 0, 8, 0),
   bingung: P(-2, 14, -14, 8, 150, 120, -4, 0, 6, 0),
   lelah: P(28, 30, 10, 0, 18, 0, -4, -6, 10, -8),
   mikir: P(2, 8, -10, 6, 40, 135, -4, 0, 6, 0),
@@ -53,7 +53,8 @@ export const cyclePose = (kind: 'jalan' | 'lari', phase: number): Pose => {
   const s = Math.sin(phase * Math.PI * 2);
   const c = Math.cos(phase * Math.PI * 2);
   if (kind === 'lari') {
-    return P(14, -4, -s * 60, 80, s * 60, 80, s * 50, 18 + Math.max(0, -c) * 75, -s * 50, 18 + Math.max(0, c) * 75);
+    // kaki depan hampir lurus; kaki yang sedang ditarik ke belakang menekuk dalam (fase ayun)
+    return P(12, -4, -s * 60, 80, s * 60, 80, s * 45, 12 + Math.max(0, -s) * 95, -s * 45, 12 + Math.max(0, s) * 95);
   }
   return P(3, 0, -s * 28, 12, s * 28, 12, s * 26, Math.max(0, -c) * 40, -s * 26, Math.max(0, c) * 40);
 };
