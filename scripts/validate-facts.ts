@@ -18,8 +18,11 @@
 //  4. Fakta "bertentangan" dengan sumber yang masih dipakai scene = error selalu; "belum-terverifikasi" =
 //     peringatan (draft) / error (publish).
 //  5. Durasi total 55–65 detik; mode caption "ringkasan" = 8–14 kata per scene (mode "keypoint" sudah dihapus).
+//  6. Undian kreatif (`creative`, scripts/lib/creative.ts): kartu dipilih, maks. 1 sumbu ditukar beralasan, konsep diisi,
+//     dan tidak mengulang gaya episode sebelumnya / ≥ 4 dari 6 sumbu salah satu dari 3 episode terakhir.
 // Exit code 1 bila ada error.
 import { storyRange } from './lib/episode.ts';
+import { checkCreative, checkRepetition, fingerprint, history } from './lib/creative.ts';
 import { existsSync, readdirSync, readFileSync } from 'node:fs';
 import { join, resolve } from 'node:path';
 import { pathToFileURL } from 'node:url';
@@ -125,6 +128,8 @@ export const validateBrief = (b: Json, file: string, forcePublish: boolean): Iss
     }
   }
   if (vs?.palette !== undefined && (!Array.isArray(vs.palette) || vs.palette.some((c: unknown) => typeof c !== 'string' || !/^#[0-9a-f]{6}$/i.test(c)))) add('error', 'visualStyle.palette', 'harus array warna hex 6 digit');
+  // undian kreatif (docs/PANDUAN-KREATIF.md): wajib untuk brief yang dibuat setelah dek kreatif ada (punya createdAt)
+  issues.push(...checkCreative(b, publish));
   if (!Array.isArray(b.scenes) || b.scenes.length === 0) { add('error', 'scenes', 'minimal 1 scene'); return issues; }
   if (!Array.isArray(b.facts)) { add('error', 'facts', 'wajib berupa array (boleh kosong bila tidak ada klaim)'); b.facts = []; }
 
@@ -328,6 +333,10 @@ const main = async () => {
   if (episode && files.length === 0) { console.log(`Brief ${dir}/${episode}.json tidak ada.`); return 1; }
   if (files.length === 0) { console.log(`Tidak ada brief di ${dir}/.`); return 0; }
   let errors = 0, warns = 0;
+  // riwayat lintas episode untuk penjaga pengulangan kreatif (selalu seluruh folder, juga saat --episode)
+  const everything = readdirSync(dir).filter((f) => f.endsWith('.json') && !f.startsWith('_') && !f.startsWith('example')).flatMap((f) => {
+    try { return [{ file: join(dir, f), b: JSON.parse(readFileSync(join(dir, f), 'utf8')) }]; } catch { return []; }
+  });
   for (const f of files) {
     let issues: Issue[];
     let stats: Record<string, number> | undefined;
@@ -335,6 +344,7 @@ const main = async () => {
       const brief = JSON.parse(readFileSync(join(dir, f), 'utf8'));
       if (brief.status === 'arsip') { console.log(`\n- ${f}  [arsip] dilewati (video lama, dibuat sebelum aturan ini)`); continue; }
       issues = validateBrief(brief, f, publish);
+      issues.push(...checkRepetition(fingerprint(brief, join(dir, f)), history(everything, brief.projectId)));
       issues.push(...(await checkCaptions(brief)));
       if (online) { const r = await checkUrls(brief, timeoutMs); issues.push(...r.issues); stats = r.stats; }
     } catch (e) { issues = [{ level: 'error', where: f, msg: `JSON tidak bisa dibaca: ${(e as Error).message}` }]; }

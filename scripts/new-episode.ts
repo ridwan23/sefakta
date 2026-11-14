@@ -33,7 +33,8 @@ const brief = {
   title,
   series,
   status: 'draft',
-  captionMode: 'subtitle',
+  createdAt: new Date().toISOString(),
+  captionMode: 'subtitle', // diganti kartu undian (npm run creative:draw)
   visualStyle: {
     name: 'TODO nama gaya (mis. peta arsip sepia, diagram sains bersih, infografis neon)',
     reason: 'TODO kenapa gaya ini cocok dengan isi fakta episode',
@@ -110,8 +111,9 @@ console.log(`Episode dibuat:
   ${topicDir}/compositions.tsx  komposisi "${compId}" (terdaftar di src/Root.tsx)
 
 Langkah berikutnya:
-  1. Isi naskah dan facts[]           → npm run validate:facts
-  2. Voice-over Fish Audio            → npm run vo -- --brief=${briefPath}
-  3. Caption tersinkron (whisper)     → npm run align -- --brief=${briefPath}
-  4. Visual per scene di scenes.tsx   → npm start (pratinjau)
-  5. Gerbang                          → npm run quality   (sebelum tayang: npm run check:publish)`);
+  1. Undian kreatif (sebelum naskah)  → npm run creative:draw -- ${id}   lalu --pick=<n> (docs/PANDUAN-KREATIF.md)
+  2. Isi naskah dan facts[]           → npm run validate:facts
+  3. Voice-over Fish Audio            → npm run vo -- --brief=${briefPath}
+  4. Caption tersinkron (whisper)     → npm run align -- --brief=${briefPath}
+  5. Visual per scene di scenes.tsx   → npm start (pratinjau)
+  6. Gerbang                          → npm run quality   (sebelum tayang: npm run check:publish)`);
