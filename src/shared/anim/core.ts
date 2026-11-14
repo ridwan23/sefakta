@@ -59,6 +59,10 @@ export const noise1 = (t: number, seed = 0) => {
   return a + (b - a) * (f * f * (3 - 2 * f));
 };
 
+/** Frame "on twos/threes" ala stop-motion: gerak hanya berubah tiap `n` frame. Pakai untuk kertas, papan tulis, garis
+ *  "boiling". `n` = 1 → frame asli. Contoh: const fs = stepped(f, 2); const p = prog(fs, at, 12) */
+export const stepped = (frame: number, n = 2) => (n <= 1 ? frame : Math.floor(frame / n) * n);
+
 /** Getaran yang meluruh setelah `at` (untuk benturan/penekanan). Kembalikan offset px. */
 export const impact = (frame: number, at: number, amp: number, len: number, seed = 0) => {
   const d = frame - at;

@@ -24,7 +24,7 @@ export const PAPER = {
 } as const;
 
 /** Serat kertas statis (feTurbulence), dipakai sebagai overlay di permukaan dan potongan. */
-const Fiber: React.FC<{ opacity?: number; seed?: number; freq?: number }> = ({ opacity = 0.18, seed = 4, freq = 0.75 }) => {
+export const Fiber: React.FC<{ opacity?: number; seed?: number; freq?: number }> = ({ opacity = 0.18, seed = 4, freq = 0.75 }) => {
   const id = useId().replace(/:/g, '');
   return (
     <svg width="100%" height="100%" style={{ position: 'absolute', inset: 0, mixBlendMode: 'multiply', opacity, pointerEvents: 'none' }}>

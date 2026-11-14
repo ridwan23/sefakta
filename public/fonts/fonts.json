@@ -1,4 +1,28 @@
 {
+  "bangers": {
+    "family": "Bangers",
+    "category": "display",
+    "license": "OFL-1.1",
+    "attribution": "Copyright 2010 The Bangers Project Authors (https://github.com/googlefonts/bangers)",
+    "source": "fontsource @fontsource/bangers@5.3.0 (v25)",
+    "version": "5.3.0",
+    "files": [
+      {
+        "file": "bangers-latin-400-normal.woff2",
+        "weight": 400,
+        "style": "normal",
+        "subset": "latin",
+        "unicodeRange": "U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD"
+      },
+      {
+        "file": "bangers-latin-ext-400-normal.woff2",
+        "weight": 400,
+        "style": "normal",
+        "subset": "latin-ext",
+        "unicodeRange": "U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF"
+      }
+    ]
+  },
   "caveat": {
     "family": "Caveat",
     "category": "handwriting",
@@ -17,6 +41,82 @@
       {
         "file": "caveat-latin-ext-700-normal.woff2",
         "weight": 700,
+        "style": "normal",
+        "subset": "latin-ext",
+        "unicodeRange": "U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF"
+      }
+    ]
+  },
+  "comic-neue": {
+    "family": "Comic Neue",
+    "category": "handwriting",
+    "license": "OFL-1.1",
+    "attribution": "Copyright 2014 The Comic Neue Project Authors (https://github.com/crozynski/comicneue) ComicNeue-LightItalic.ttf: Copyright 2014 The Comic Neue Project Authors (https://github.com/crozynski/comicneue) ComicNeue-Regular.ttf: Copyright 2014 The Comic Neue Project Authors (https://github.com/crozynski/comicneue) ComicNeue-Italic.ttf: Copyright 2014 The Comic Neue Project Authors (https://github.com/crozynski/comicneue) ComicNeue-Bold.ttf: Copyright 2014 The Comic Neue Project Authors (https://github.com/crozynski/comicneue) ComicNeue-BoldItalic.ttf: Copyright 2014 The Comic Neue Project Authors (https://github.com/crozynski/comicneue)",
+    "source": "fontsource @fontsource/comic-neue@5.3.0 (v9)",
+    "version": "5.3.0",
+    "files": [
+      {
+        "file": "comic-neue-latin-400-normal.woff2",
+        "weight": 400,
+        "style": "normal",
+        "subset": "latin",
+        "unicodeRange": "U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD"
+      },
+      {
+        "file": "comic-neue-latin-700-normal.woff2",
+        "weight": 700,
+        "style": "normal",
+        "subset": "latin",
+        "unicodeRange": "U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD"
+      }
+    ]
+  },
+  "inter": {
+    "family": "Inter",
+    "category": "sans-serif",
+    "license": "OFL-1.1",
+    "attribution": "Copyright 2016 The Inter Project Authors (https://github.com/rsms/inter) Inter-Italic[opsz,wght].ttf: Copyright 2016 The Inter Project Authors (https://github.com/rsms/inter)",
+    "source": "fontsource @fontsource/inter@5.3.0 (v20)",
+    "version": "5.3.0",
+    "files": [
+      {
+        "file": "inter-latin-400-normal.woff2",
+        "weight": 400,
+        "style": "normal",
+        "subset": "latin",
+        "unicodeRange": "U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD"
+      },
+      {
+        "file": "inter-latin-700-normal.woff2",
+        "weight": 700,
+        "style": "normal",
+        "subset": "latin",
+        "unicodeRange": "U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD"
+      },
+      {
+        "file": "inter-latin-900-normal.woff2",
+        "weight": 900,
+        "style": "normal",
+        "subset": "latin",
+        "unicodeRange": "U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD"
+      },
+      {
+        "file": "inter-latin-ext-400-normal.woff2",
+        "weight": 400,
+        "style": "normal",
+        "subset": "latin-ext",
+        "unicodeRange": "U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF"
+      },
+      {
+        "file": "inter-latin-ext-700-normal.woff2",
+        "weight": 700,
+        "style": "normal",
+        "subset": "latin-ext",
+        "unicodeRange": "U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF"
+      },
+      {
+        "file": "inter-latin-ext-900-normal.woff2",
+        "weight": 900,
         "style": "normal",
         "subset": "latin-ext",
         "unicodeRange": "U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF"

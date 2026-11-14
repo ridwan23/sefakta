@@ -6,11 +6,12 @@
 //     <Shaded d={rectPath(340, 600, 400, 520, 40)} color="#2E8B57" material="plastic" />
 //     <Shaded d={ellipsePath(540, 900, 120, 120)} color="#C0C6D0" material="metal" />
 //   </svg>
-import React, { useId } from 'react';
+import React, { createContext, useContext, useId } from 'react';
 import { alpha, litOf, mix, shadowOf } from '../look/color';
 import { useLight } from './light';
 
-export type Material = 'matte' | 'plastic' | 'metal' | 'glass' | 'paper' | 'fabric';
+/** clay = plastisin/tanah liat lembut (gaya Clay 3D): bayangan dalam lebar, sorotan lebar redup, permukaan sedikit bergelombang */
+export type Material = 'matte' | 'plastic' | 'metal' | 'glass' | 'paper' | 'fabric' | 'clay';
 
 type Stop = [number, string, number?];
 
@@ -28,7 +29,21 @@ export type ShadedProps = {
   children?: React.ReactNode;
 };
 
-export const Shaded: React.FC<ShadedProps> = ({ d, color, material = 'matte', depth = 18, outline, outlineWidth = 3, opacity = 1, children }) => {
+const Override = createContext<Material | null>(null);
+
+/**
+ * Paksa satu material untuk semua Shaded di dalamnya (kecuali kaca), mis. seluruh objek ilustrasi bergaya clay:
+ *   <MaterialStyle material="clay"><Bowl … /><Cup … /></MaterialStyle>
+ */
+export const MaterialStyle: React.FC<{ material: Material; children: React.ReactNode }> = ({ material, children }) => (
+  <Override.Provider value={material}>{children}</Override.Provider>
+);
+
+export const Shaded: React.FC<ShadedProps> = ({ d, color, material: own = 'matte', depth: ownDepth = 18, outline, outlineWidth = 3, opacity = 1, children }) => {
+  const forced = useContext(Override);
+  const material: Material = forced && own !== 'glass' ? forced : own;
+  // clay terlihat lebih tebal: bayangan dalam diperlebar
+  const depth = material === 'clay' && own !== 'clay' ? ownDepth * 1.5 : ownDepth;
   const L = useLight();
   const id = useId().replace(/:/g, '');
   const [lx, ly] = L.toLight;
@@ -39,6 +54,7 @@ export const Shaded: React.FC<ShadedProps> = ({ d, color, material = 'matte', de
     matte: [[0, litOf(color, 0.22 * k, L.color)], [0.55, color], [1, shadowOf(color, 0.3 * k)]],
     paper: [[0, litOf(color, 0.12 * k, L.color)], [0.6, color], [1, shadowOf(color, 0.16 * k)]],
     fabric: [[0, litOf(color, 0.16 * k, L.color)], [0.5, color], [1, shadowOf(color, 0.34 * k)]],
+    clay: [[0, litOf(color, 0.3 * k, L.color)], [0.5, color], [1, shadowOf(color, 0.24 * k)]],
     plastic: [[0, litOf(color, 0.3 * k, L.color)], [0.45, color], [1, shadowOf(color, 0.36 * k)]],
     metal: [
       [0, litOf(color, 0.55 * k, L.color)], [0.18, shadowOf(color, 0.25 * k)], [0.42, litOf(color, 0.35 * k)],
@@ -48,6 +64,7 @@ export const Shaded: React.FC<ShadedProps> = ({ d, color, material = 'matte', de
   };
   const spec: Record<Material, { o: number; r: number; sharp: number } | null> = {
     matte: null, paper: null, fabric: null,
+    clay: { o: 0.4, r: 0.36, sharp: 0.55 },
     plastic: { o: 0.75, r: 0.22, sharp: 0.35 },
     metal: { o: 0.9, r: 0.16, sharp: 0.2 },
     glass: { o: 0.95, r: 0.14, sharp: 0.15 },
@@ -74,7 +91,7 @@ export const Shaded: React.FC<ShadedProps> = ({ d, color, material = 'matte', de
         {/* bayangan dalam (sisi jauh dari lampu) + pantulan tepi (sisi lampu) */}
         <filter id={`f${id}`} x="-10%" y="-10%" width="120%" height="120%">
           <feOffset in="SourceAlpha" dx={lx * off} dy={ly * off} result="o1" />
-          <feGaussianBlur in="o1" stdDeviation={depth * 0.35} result="b1" />
+          <feGaussianBlur in="o1" stdDeviation={depth * (material === 'clay' ? 0.6 : 0.35)} result="b1" />
           <feComposite in="SourceAlpha" in2="b1" operator="out" result="edgeDark" />
           <feFlood floodColor={innerDark} />
           <feComposite in2="edgeDark" operator="in" result="dark" />
@@ -83,10 +100,11 @@ export const Shaded: React.FC<ShadedProps> = ({ d, color, material = 'matte', de
           <feComposite in="SourceAlpha" in2="b2" operator="out" result="edgeLit" />
           <feFlood floodColor={rim} />
           <feComposite in2="edgeLit" operator="in" result="lit" />
-          {material === 'paper' || material === 'fabric' ? (
+          {material === 'paper' || material === 'fabric' || material === 'clay' ? (
             <>
-              <feTurbulence type="fractalNoise" baseFrequency={material === 'fabric' ? '0.9 0.25' : 0.8} numOctaves={2} seed={7} result="n" />
-              <feColorMatrix in="n" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.12 0" result="na" />
+              <feTurbulence type="fractalNoise" baseFrequency={material === 'fabric' ? '0.9 0.25' : material === 'clay' ? 0.05 : 0.8} numOctaves={2} seed={7} result="n" />
+              {/* clay: gelombang lebar (bekas pijatan), bukan serat */}
+              <feColorMatrix in="n" type="matrix" values={material === 'clay' ? '0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.22 -0.05' : '0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.12 0'} result="na" />
               <feComposite in="na" in2="SourceAlpha" operator="in" result="tex" />
               <feMerge>
                 <feMergeNode in="SourceGraphic" />
