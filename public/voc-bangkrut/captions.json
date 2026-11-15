@@ -1,0 +1,843 @@
+{
+  "projectId": "voc-bangkrut",
+  "method": "whisper.cpp 1.5.5 (small) + forced alignment ke naskah",
+  "generatedAt": "2026-11-15T11:08:01.504Z",
+  "scenes": {
+    "akhir": {
+      "hash": "97beb3f389c1",
+      "coverage": 1,
+      "missing": [],
+      "extra": [],
+      "heard": "Akhir tahun 1799, perusahaan dagang terkaya di dunia resmi bubar. Utangnya diambil alih negara Belanda.",
+      "captions": [
+        {
+          "text": "Akhir",
+          "startMs": 60,
+          "endMs": 800,
+          "timestampMs": 430,
+          "confidence": 0.6836
+        },
+        {
+          "text": " tahun",
+          "startMs": 800,
+          "endMs": 1400,
+          "timestampMs": 1100,
+          "confidence": 0.958022
+        },
+        {
+          "text": " 1799.",
+          "startMs": 1400,
+          "endMs": 3460,
+          "timestampMs": 2430,
+          "confidence": 0.792376
+        },
+        {
+          "text": " Perusahaan",
+          "startMs": 3460,
+          "endMs": 4080,
+          "timestampMs": 3770,
+          "confidence": 0.552786
+        },
+        {
+          "text": " dagang",
+          "startMs": 4080,
+          "endMs": 4560,
+          "timestampMs": 4320,
+          "confidence": 0.847391
+        },
+        {
+          "text": " terkaya",
+          "startMs": 4560,
+          "endMs": 5120,
+          "timestampMs": 4840,
+          "confidence": 0.972605
+        },
+        {
+          "text": " di",
+          "startMs": 5120,
+          "endMs": 5280,
+          "timestampMs": 5200,
+          "confidence": 0.958656
+        },
+        {
+          "text": " dunia",
+          "startMs": 5280,
+          "endMs": 5800,
+          "timestampMs": 5540,
+          "confidence": 0.972029
+        },
+        {
+          "text": " resmi",
+          "startMs": 5800,
+          "endMs": 6300,
+          "timestampMs": 6050,
+          "confidence": 0.570558
+        },
+        {
+          "text": " bubar.",
+          "startMs": 6300,
+          "endMs": 7200,
+          "timestampMs": 6750,
+          "confidence": 0.858854
+        },
+        {
+          "text": " Utangnya",
+          "startMs": 7200,
+          "endMs": 7850,
+          "timestampMs": 7525,
+          "confidence": 0.475912
+        },
+        {
+          "text": " diambil",
+          "startMs": 7850,
+          "endMs": 8450,
+          "timestampMs": 8150,
+          "confidence": 0.96449
+        },
+        {
+          "text": " alih",
+          "startMs": 8450,
+          "endMs": 8790,
+          "timestampMs": 8620,
+          "confidence": 0.474726
+        },
+        {
+          "text": " negara",
+          "startMs": 8790,
+          "endMs": 9310,
+          "timestampMs": 9050,
+          "confidence": 0.951262
+        },
+        {
+          "text": " Belanda.",
+          "startMs": 9310,
+          "endMs": 10000,
+          "timestampMs": 9655,
+          "confidence": 0.79525
+        }
+      ]
+    },
+    "sebelumnya": {
+      "hash": "24701c440d17",
+      "coverage": 1,
+      "missing": [],
+      "extra": [],
+      "heard": "Tapi tunggu, mundur ke masa jayanya. Perusahaan ini masih raja lautan, kapalnya berlayar ke Asia 4785 kali.",
+      "captions": [
+        {
+          "text": "Tapi",
+          "startMs": 150,
+          "endMs": 280,
+          "timestampMs": 215,
+          "confidence": 0.93506
+        },
+        {
+          "text": " tunggu.",
+          "startMs": 280,
+          "endMs": 920,
+          "timestampMs": 600,
+          "confidence": 0.949653
+        },
+        {
+          "text": " Mundur",
+          "startMs": 920,
+          "endMs": 1250,
+          "timestampMs": 1085,
+          "confidence": 0.971493
+        },
+        {
+          "text": " ke",
+          "startMs": 1250,
+          "endMs": 1400,
+          "timestampMs": 1325,
+          "confidence": 0.991573
+        },
+        {
+          "text": " masa",
+          "startMs": 1400,
+          "endMs": 1680,
+          "timestampMs": 1540,
+          "confidence": 0.816749
+        },
+        {
+          "text": " jayanya.",
+          "startMs": 1680,
+          "endMs": 2400,
+          "timestampMs": 2040,
+          "confidence": 0.772899
+        },
+        {
+          "text": " Perusahaan",
+          "startMs": 2400,
+          "endMs": 3060,
+          "timestampMs": 2730,
+          "confidence": 0.947819
+        },
+        {
+          "text": " ini",
+          "startMs": 3060,
+          "endMs": 3260,
+          "timestampMs": 3160,
+          "confidence": 0.99775
+        },
+        {
+          "text": " masih",
+          "startMs": 3260,
+          "endMs": 3600,
+          "timestampMs": 3430,
+          "confidence": 0.972533
+        },
+        {
+          "text": " raja",
+          "startMs": 3600,
+          "endMs": 3930,
+          "timestampMs": 3765,
+          "confidence": 0.403399
+        },
+        {
+          "text": " lautan.",
+          "startMs": 3930,
+          "endMs": 4530,
+          "timestampMs": 4230,
+          "confidence": 0.626817
+        },
+        {
+          "text": " Kapalnya",
+          "startMs": 4530,
+          "endMs": 5230,
+          "timestampMs": 4880,
+          "confidence": 0.721391
+        },
+        {
+          "text": " berlayar",
+          "startMs": 5230,
+          "endMs": 6090,
+          "timestampMs": 5660,
+          "confidence": 0.982428
+        },
+        {
+          "text": " ke",
+          "startMs": 6090,
+          "endMs": 6260,
+          "timestampMs": 6175,
+          "confidence": 0.992022
+        },
+        {
+          "text": " Asia",
+          "startMs": 6260,
+          "endMs": 6670,
+          "timestampMs": 6465,
+          "confidence": 0.966105
+        },
+        {
+          "text": " empat",
+          "startMs": 6670,
+          "endMs": 6847,
+          "timestampMs": 6759,
+          "confidence": 0.546658
+        },
+        {
+          "text": " ribu",
+          "startMs": 6847,
+          "endMs": 7024,
+          "timestampMs": 6936,
+          "confidence": 0.546658
+        },
+        {
+          "text": " tujuh",
+          "startMs": 7024,
+          "endMs": 7201,
+          "timestampMs": 7113,
+          "confidence": 0.546658
+        },
+        {
+          "text": " ratus",
+          "startMs": 7201,
+          "endMs": 7379,
+          "timestampMs": 7290,
+          "confidence": 0.546658
+        },
+        {
+          "text": " delapan",
+          "startMs": 7379,
+          "endMs": 7556,
+          "timestampMs": 7468,
+          "confidence": 0.546658
+        },
+        {
+          "text": " puluh",
+          "startMs": 7556,
+          "endMs": 7733,
+          "timestampMs": 7645,
+          "confidence": 0.546658
+        },
+        {
+          "text": " lima",
+          "startMs": 7733,
+          "endMs": 7910,
+          "timestampMs": 7822,
+          "confidence": 0.546658
+        },
+        {
+          "text": " kali.",
+          "startMs": 7910,
+          "endMs": 8700,
+          "timestampMs": 8305,
+          "confidence": 0.878465
+        }
+      ]
+    },
+    "lebih-awal": {
+      "hash": "303320a0fced",
+      "coverage": 1,
+      "missing": [],
+      "extra": [],
+      "heard": "Mundur lagi, tahun 1619 Batavia jadi markasnya. Dari sini, VOC menguasai rempah. Cuma VOC yang boleh dagang, keuntungan yang dibagikan delapan belas persen setiap tahun.",
+      "captions": [
+        {
+          "text": "Mundur",
+          "startMs": 290,
+          "endMs": 550,
+          "timestampMs": 420,
+          "confidence": 0.944087
+        },
+        {
+          "text": " lagi.",
+          "startMs": 550,
+          "endMs": 1230,
+          "timestampMs": 890,
+          "confidence": 0.982457
+        },
+        {
+          "text": " Tahun",
+          "startMs": 1230,
+          "endMs": 1560,
+          "timestampMs": 1395,
+          "confidence": 0.7183
+        },
+        {
+          "text": " 1619,",
+          "startMs": 1560,
+          "endMs": 2820,
+          "timestampMs": 2190,
+          "confidence": 0.923402
+        },
+        {
+          "text": " Batavia",
+          "startMs": 2820,
+          "endMs": 3330,
+          "timestampMs": 3075,
+          "confidence": 0.444415
+        },
+        {
+          "text": " jadi",
+          "startMs": 3330,
+          "endMs": 3700,
+          "timestampMs": 3515,
+          "confidence": 0.855707
+        },
+        {
+          "text": " markasnya.",
+          "startMs": 3700,
+          "endMs": 4600,
+          "timestampMs": 4150,
+          "confidence": 0.85601
+        },
+        {
+          "text": " Dari",
+          "startMs": 4600,
+          "endMs": 4970,
+          "timestampMs": 4785,
+          "confidence": 0.986607
+        },
+        {
+          "text": " sini,",
+          "startMs": 4970,
+          "endMs": 5730,
+          "timestampMs": 5350,
+          "confidence": 0.994101
+        },
+        {
+          "text": " V-O-C",
+          "startMs": 5730,
+          "endMs": 5820,
+          "timestampMs": 5775,
+          "confidence": 0.242204
+        },
+        {
+          "text": " menguasai",
+          "startMs": 5820,
+          "endMs": 6670,
+          "timestampMs": 6245,
+          "confidence": 0.990842
+        },
+        {
+          "text": " rempah.",
+          "startMs": 6670,
+          "endMs": 7620,
+          "timestampMs": 7145,
+          "confidence": 0.736745
+        },
+        {
+          "text": " Cuma",
+          "startMs": 7620,
+          "endMs": 7860,
+          "timestampMs": 7740,
+          "confidence": 0.684964
+        },
+        {
+          "text": " V-O-C",
+          "startMs": 7860,
+          "endMs": 8100,
+          "timestampMs": 7980,
+          "confidence": 0.893919
+        },
+        {
+          "text": " yang",
+          "startMs": 8100,
+          "endMs": 8420,
+          "timestampMs": 8260,
+          "confidence": 0.996542
+        },
+        {
+          "text": " boleh",
+          "startMs": 8420,
+          "endMs": 8820,
+          "timestampMs": 8620,
+          "confidence": 0.993729
+        },
+        {
+          "text": " dagang.",
+          "startMs": 8820,
+          "endMs": 9500,
+          "timestampMs": 9160,
+          "confidence": 0.88829
+        },
+        {
+          "text": " Keuntungan",
+          "startMs": 9500,
+          "endMs": 10200,
+          "timestampMs": 9850,
+          "confidence": 0.96463
+        },
+        {
+          "text": " yang",
+          "startMs": 10200,
+          "endMs": 10490,
+          "timestampMs": 10345,
+          "confidence": 0.991898
+        },
+        {
+          "text": " dibagikan",
+          "startMs": 10490,
+          "endMs": 11140,
+          "timestampMs": 10815,
+          "confidence": 0.923862
+        },
+        {
+          "text": " delapan",
+          "startMs": 11140,
+          "endMs": 11650,
+          "timestampMs": 11395,
+          "confidence": 0.362657
+        },
+        {
+          "text": " belas",
+          "startMs": 11650,
+          "endMs": 12070,
+          "timestampMs": 11860,
+          "confidence": 0.94822
+        },
+        {
+          "text": " persen",
+          "startMs": 12070,
+          "endMs": 12450,
+          "timestampMs": 12260,
+          "confidence": 0.908241
+        },
+        {
+          "text": " setiap",
+          "startMs": 12450,
+          "endMs": 12870,
+          "timestampMs": 12660,
+          "confidence": 0.99891
+        },
+        {
+          "text": " tahun.",
+          "startMs": 12870,
+          "endMs": 13320,
+          "timestampMs": 13095,
+          "confidence": 0.993451
+        }
+      ]
+    },
+    "awal": {
+      "hash": "0808b21543b8",
+      "coverage": 1,
+      "missing": [],
+      "extra": [],
+      "heard": "Mundur keawal, tahun 1602, perusahaan ini lahir dari selembar kertas, saham pertama yang bisa di beli siapa saja. Selembar kertas yang artinya, kamu punya bagian dari perusahaan.",
+      "captions": [
+        {
+          "text": "Mundur",
+          "startMs": 200,
+          "endMs": 680,
+          "timestampMs": 440,
+          "confidence": 0.935167
+        },
+        {
+          "text": " ke",
+          "startMs": 680,
+          "endMs": 1065,
+          "timestampMs": 873,
+          "confidence": 0.902259
+        },
+        {
+          "text": " awal.",
+          "startMs": 1065,
+          "endMs": 1450,
+          "timestampMs": 1258,
+          "confidence": 0.902259
+        },
+        {
+          "text": " Tahun",
+          "startMs": 1450,
+          "endMs": 1950,
+          "timestampMs": 1700,
+          "confidence": 0.830072
+        },
+        {
+          "text": " 1602,",
+          "startMs": 1950,
+          "endMs": 3290,
+          "timestampMs": 2620,
+          "confidence": 0.88244
+        },
+        {
+          "text": " perusahaan",
+          "startMs": 3290,
+          "endMs": 3930,
+          "timestampMs": 3610,
+          "confidence": 0.730916
+        },
+        {
+          "text": " ini",
+          "startMs": 3930,
+          "endMs": 4120,
+          "timestampMs": 4025,
+          "confidence": 0.996556
+        },
+        {
+          "text": " lahir",
+          "startMs": 4120,
+          "endMs": 4440,
+          "timestampMs": 4280,
+          "confidence": 0.95384
+        },
+        {
+          "text": " dari",
+          "startMs": 4440,
+          "endMs": 4730,
+          "timestampMs": 4585,
+          "confidence": 0.992852
+        },
+        {
+          "text": " selembar",
+          "startMs": 4730,
+          "endMs": 5270,
+          "timestampMs": 5000,
+          "confidence": 0.188775
+        },
+        {
+          "text": " kertas.",
+          "startMs": 5270,
+          "endMs": 5680,
+          "timestampMs": 5475,
+          "confidence": 0.799318
+        },
+        {
+          "text": " Saham",
+          "startMs": 5680,
+          "endMs": 6060,
+          "timestampMs": 5870,
+          "confidence": 0.858652
+        },
+        {
+          "text": " pertama",
+          "startMs": 6060,
+          "endMs": 6590,
+          "timestampMs": 6325,
+          "confidence": 0.987586
+        },
+        {
+          "text": " yang",
+          "startMs": 6590,
+          "endMs": 6890,
+          "timestampMs": 6740,
+          "confidence": 0.998235
+        },
+        {
+          "text": " bisa",
+          "startMs": 6890,
+          "endMs": 7190,
+          "timestampMs": 7040,
+          "confidence": 0.998534
+        },
+        {
+          "text": " dibeli",
+          "startMs": 7190,
+          "endMs": 7640,
+          "timestampMs": 7415,
+          "confidence": 0.374755
+        },
+        {
+          "text": " siapa",
+          "startMs": 7640,
+          "endMs": 8020,
+          "timestampMs": 7830,
+          "confidence": 0.989121
+        },
+        {
+          "text": " saja.",
+          "startMs": 8020,
+          "endMs": 8420,
+          "timestampMs": 8220,
+          "confidence": 0.984155
+        },
+        {
+          "text": " Selembar",
+          "startMs": 8420,
+          "endMs": 8980,
+          "timestampMs": 8700,
+          "confidence": 0.784149
+        },
+        {
+          "text": " kertas",
+          "startMs": 8980,
+          "endMs": 9450,
+          "timestampMs": 9215,
+          "confidence": 0.980017
+        },
+        {
+          "text": " yang",
+          "startMs": 9450,
+          "endMs": 9680,
+          "timestampMs": 9565,
+          "confidence": 0.973574
+        },
+        {
+          "text": " artinya",
+          "startMs": 9680,
+          "endMs": 10530,
+          "timestampMs": 10105,
+          "confidence": 0.995338
+        },
+        {
+          "text": " kamu",
+          "startMs": 10530,
+          "endMs": 10640,
+          "timestampMs": 10585,
+          "confidence": 0.949465
+        },
+        {
+          "text": " punya",
+          "startMs": 10640,
+          "endMs": 11040,
+          "timestampMs": 10840,
+          "confidence": 0.999035
+        },
+        {
+          "text": " bagian",
+          "startMs": 11040,
+          "endMs": 11520,
+          "timestampMs": 11280,
+          "confidence": 0.994065
+        },
+        {
+          "text": " dari",
+          "startMs": 11520,
+          "endMs": 11840,
+          "timestampMs": 11680,
+          "confidence": 0.999558
+        },
+        {
+          "text": " perusahaan.",
+          "startMs": 11840,
+          "endMs": 12920,
+          "timestampMs": 12380,
+          "confidence": 0.996723
+        }
+      ]
+    },
+    "jawaban": {
+      "hash": "08c0a0e6e0df",
+      "coverage": 1,
+      "missing": [],
+      "extra": [],
+      "heard": "Lalu apa yang salah? Perang menghabiskan uang, korupsi menggrogoti dari dalam. Utang menumpuk sampai tak terbayar. Perusahaan sebesar itu ternyata bisa bangkrut juga.",
+      "captions": [
+        {
+          "text": "Lalu",
+          "startMs": 100,
+          "endMs": 420,
+          "timestampMs": 260,
+          "confidence": 0.876592
+        },
+        {
+          "text": " apa",
+          "startMs": 420,
+          "endMs": 740,
+          "timestampMs": 580,
+          "confidence": 0.817572
+        },
+        {
+          "text": " yang",
+          "startMs": 740,
+          "endMs": 1230,
+          "timestampMs": 985,
+          "confidence": 0.998367
+        },
+        {
+          "text": " salah?",
+          "startMs": 1230,
+          "endMs": 1910,
+          "timestampMs": 1570,
+          "confidence": 0.996894
+        },
+        {
+          "text": " Perang",
+          "startMs": 1910,
+          "endMs": 2260,
+          "timestampMs": 2085,
+          "confidence": 0.453372
+        },
+        {
+          "text": " menghabiskan",
+          "startMs": 2260,
+          "endMs": 2950,
+          "timestampMs": 2605,
+          "confidence": 0.991378
+        },
+        {
+          "text": " uang.",
+          "startMs": 2950,
+          "endMs": 3380,
+          "timestampMs": 3165,
+          "confidence": 0.992314
+        },
+        {
+          "text": " Korupsi",
+          "startMs": 3380,
+          "endMs": 3870,
+          "timestampMs": 3625,
+          "confidence": 0.961468
+        },
+        {
+          "text": " menggerogoti",
+          "startMs": 3870,
+          "endMs": 4640,
+          "timestampMs": 4255,
+          "confidence": 0.861096
+        },
+        {
+          "text": " dari",
+          "startMs": 4640,
+          "endMs": 4920,
+          "timestampMs": 4780,
+          "confidence": 0.989987
+        },
+        {
+          "text": " dalam.",
+          "startMs": 4920,
+          "endMs": 5400,
+          "timestampMs": 5160,
+          "confidence": 0.93201
+        },
+        {
+          "text": " Utang",
+          "startMs": 5400,
+          "endMs": 5750,
+          "timestampMs": 5575,
+          "confidence": 0.950737
+        },
+        {
+          "text": " menumpuk",
+          "startMs": 5750,
+          "endMs": 6320,
+          "timestampMs": 6035,
+          "confidence": 0.981691
+        },
+        {
+          "text": " sampai",
+          "startMs": 6320,
+          "endMs": 6730,
+          "timestampMs": 6525,
+          "confidence": 0.983712
+        },
+        {
+          "text": " tak",
+          "startMs": 6730,
+          "endMs": 6940,
+          "timestampMs": 6835,
+          "confidence": 0.943905
+        },
+        {
+          "text": " terbayar.",
+          "startMs": 6940,
+          "endMs": 7890,
+          "timestampMs": 7415,
+          "confidence": 0.998616
+        },
+        {
+          "text": " Perusahaan",
+          "startMs": 7890,
+          "endMs": 8540,
+          "timestampMs": 8215,
+          "confidence": 0.845253
+        },
+        {
+          "text": " sebesar",
+          "startMs": 8540,
+          "endMs": 9120,
+          "timestampMs": 8830,
+          "confidence": 0.830824
+        },
+        {
+          "text": " itu,",
+          "startMs": 9120,
+          "endMs": 9480,
+          "timestampMs": 9300,
+          "confidence": 0.9866
+        },
+        {
+          "text": " ternyata",
+          "startMs": 9480,
+          "endMs": 9920,
+          "timestampMs": 9700,
+          "confidence": 0.763719
+        },
+        {
+          "text": " bisa",
+          "startMs": 9920,
+          "endMs": 10180,
+          "timestampMs": 10050,
+          "confidence": 0.994716
+        },
+        {
+          "text": " bangkrut",
+          "startMs": 10180,
+          "endMs": 10690,
+          "timestampMs": 10435,
+          "confidence": 0.93332
+        },
+        {
+          "text": " juga.",
+          "startMs": 10690,
+          "endMs": 11200,
+          "timestampMs": 10945,
+          "confidence": 0.997748
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,359 @@
+{
+ "captionMode": "ringkasan",
+ "createdAt": "2026-11-15T10:12:29.009Z",
+ "creative": {
+  "cards": [
+   {
+    "camera": "one-take",
+    "captionMode": "ringkasan",
+    "constraints": [
+     "Satu warna = satu konsep, dipertahankan sampai akhir",
+     "Satu objek pahlawan tampil di semua scene dan berganti peran"
+    ],
+    "family": "potongan-kertas",
+    "opening": "salah-kaprah",
+    "structure": "mundur-waktu",
+    "tone": "light"
+   },
+   {
+    "camera": "zoom-masuk",
+    "captionMode": "headline",
+    "constraints": [
+     "Sudut pandang orang pertama: tangan/benda \"kamu\" tampil di layar",
+     "Satu momen visual hening ±1 dtk di puncak cerita (tanpa teks baru)"
+    ],
+    "family": "papan-kapur",
+    "opening": "salah-kaprah",
+    "structure": "hitung-mundur",
+    "tone": "dark"
+   },
+   {
+    "camera": "cut-per-beat",
+    "captionMode": "headline",
+    "constraints": [
+     "Latar bergeser gelap ↔ terang mengikuti alur cerita",
+     "Semua elemen masuk secara fisik (jatuh, didorong, dituang), tanpa fade"
+    ],
+    "family": "tipografi-kinetik",
+    "opening": "kuis-tebak",
+    "structure": "dua-dunia",
+    "tone": "light"
+   }
+  ],
+  "chosen": {
+   "camera": "one-take",
+   "captionMode": "ringkasan",
+   "constraints": [
+    "Satu warna = satu konsep, dipertahankan sampai akhir",
+    "Satu objek pahlawan tampil di semua scene dan berganti peran"
+   ],
+   "family": "potongan-kertas",
+   "opening": "salah-kaprah",
+   "structure": "mundur-waktu",
+   "tone": "light"
+  },
+  "concept": {
+   "idea": "Arsip kertas VOC yang dibuka mundur: satu dunia kertas panjang dilewati kamera dalam satu tarikan — dari papan pengumuman pembubaran 1799, lewat lautan kapal dan gudang rempah Batavia, sampai ke selembar saham pertama tahun 1602 — dan koin VOC yang sama berubah peran di tiap stasiun.",
+   "onlyHere": "Hanya fakta ini yang dunianya arsip kertas perusahaan dan waktunya berjalan mundur — dari kebangkrutan ke selembar saham pertama — karena ceritanya memang soal kertas yang melahirkan perusahaan lalu kertas utang yang membunuhnya.",
+   "signature": "Koin VOC kertas yang sama muncul di semua scene: di hook ia retak dan berubah emas jadi merah bata saat pengumuman bubar dicap; di tengah ia jadi matahari emas di atas laut dan meterai di atas saham 1602; di jawaban ia terbelah dua — setengah emas, setengah merah bata."
+  },
+  "drawnAt": "2026-11-15T10:12:31.264Z",
+  "pick": 1,
+  "seed": 1441722823,
+  "swaps": []
+ },
+ "ending": {
+  "cta": false,
+  "reason": "Loop menggantikan CTA (perintah pemilik 2026-11-15: 'Frame terakhir loop ke frame awal hook'); frame terakhir dissolve ke shot loop yang sama persis dengan frame 0 hook (menara koin emas saja — pengumuman masih di luar frame di frame 0 — + caption ringkasan + pita garis waktu; tanpa pengumuman/headline); watermark konstan 0,85 (tanpa fade-out gerbang CTA).",
+  "type": "loop"
+ },
+ "facts": [
+  {
+   "claim": "VOC dibubarkan secara resmi pada 31 Desember 1799; utang dan wilayahnya diambil alih pemerintah Belanda (Republik Batavia).",
+   "figures": [
+    {
+     "text": "1799",
+     "value": 1799
+    }
+   ],
+   "id": "f-bubar",
+   "kind": "fakta",
+   "limits": "Narasi menyederhanakan '31 Desember 1799' menjadi 'akhir tahun 1799'; 'negara Belanda' = pemerintah Republik Batavia.",
+   "sources": [
+    {
+     "accessed": "2026-11-15",
+     "origin": "Britannica",
+     "primary": false,
+     "publisher": "Britannica",
+     "quote": "The Dutch government eventually revoked the company's charter and in 1799 took over its debts and possessions.",
+     "title": "Dutch East India Company | Facts, History, & Significance",
+     "url": "https://britannica.com/topic/Dutch-East-India-Company"
+    },
+    {
+     "accessed": "2026-11-15",
+     "origin": "Wikipedia",
+     "primary": false,
+     "publisher": "Wikipedia",
+     "quote": "Weighed down by smuggling, corruption and growing administrative costs in the late 18th century, the company went bankrupt and was formally dissolved in 1799.",
+     "title": "Dutch East India Company",
+     "url": "https://en.wikipedia.org/wiki/Dutch_East_India_Company"
+    }
+   ],
+   "status": "terverifikasi"
+  },
+  {
+   "claim": "VOC didirikan 20 Maret 1602 oleh States General (pemerintah Belanda) sebagai salah satu perusahaan saham gabungan pertama di dunia, dengan monopoli 21 tahun untuk berdagang di Asia; sahamnya bisa dibeli siapa saja dan diperjualbelikan.",
+   "figures": [
+    {
+     "text": "1602",
+     "value": 1602
+    }
+   ],
+   "id": "f-lahir",
+   "kind": "fakta",
+   "limits": "Narasi menjelaskan 'saham' dengan kata biasa ('selembar kertas yang artinya kamu punya bagian dari perusahaan'); angka 21 tahun monopoli hanya ada di klaim, tidak diucapkan di narasi.",
+   "sources": [
+    {
+     "accessed": "2026-11-15",
+     "origin": "Britannica",
+     "primary": false,
+     "publisher": "Britannica",
+     "quote": "Dutch East India Company, trading company founded in the Dutch Republic (present-day Netherlands) in 1602 to protect that state's trade in the Indian Ocean and to assist in the Dutch war of independence from Spain.",
+     "title": "Dutch East India Company | Facts, History, & Significance",
+     "url": "https://britannica.com/topic/Dutch-East-India-Company"
+    },
+    {
+     "accessed": "2026-11-15",
+     "origin": "Wikipedia",
+     "primary": false,
+     "publisher": "Wikipedia",
+     "quote": "In 1602, the Dutch government followed suit, sponsoring the creation of a single \"United East Indies Company\" that was also granted monopoly over the Asian trade.",
+     "title": "Dutch East India Company",
+     "url": "https://en.wikipedia.org/wiki/Dutch_East_India_Company"
+    }
+   ],
+   "status": "terverifikasi"
+  },
+  {
+   "claim": "Antara 1602 dan 1796, VOC mengirim hampir satu juta orang Eropa ke Asia dengan 4.785 kapal, dan membawa lebih dari 2,5 juta ton barang dagangan Asia.",
+   "figures": [
+    {
+     "text": "4.785",
+     "value": 4785
+    }
+   ],
+   "id": "f-kapal",
+   "kind": "fakta",
+   "limits": "Kedua sumber menelusur ke kumpulan data yang sama (Dutch-Asiatic Shipping, Bruijn dkk.) — angka 4.785 adalah angka baku dari data pelayaran VOC, dikutip dua dokumen independen (ensiklopedia + dokumen nominasi arsip UNESCO oleh Nationaal Archief). Narasi mengucapkannya ejaan kata ('empat ribu tujuh ratus delapan puluh lima kali').",
+   "sources": [
+    {
+     "accessed": "2026-11-15",
+     "origin": "Wikipedia",
+     "primary": false,
+     "publisher": "Wikipedia",
+     "quote": "Between 1602 and 1796, the VOC sent nearly one million Europeans to work in the Asia trade on 4,785 ships, and netted for their efforts more than 2.5 million tonnes of Asian trade goods and slaves.",
+     "title": "Dutch East India Company",
+     "url": "https://en.wikipedia.org/wiki/Dutch_East_India_Company"
+    },
+    {
+     "accessed": "2026-11-15",
+     "origin": "UNESCO Memory of the World nomination (Nationaal Archief)",
+     "primary": false,
+     "publisher": "UNESCO Memory of the World / Nationaal Archief (via Docslib)",
+     "quote": "Between 1602 and 1796, the VOC sent almost a million Europeans to work in the Asia trade on 4,785 ships, and netted for their efforts more than 2.5 million tons of Asian trade goods.",
+     "title": "Nomination VOC Archives for Memory of the World Register",
+     "url": "https://docslib.org/download/7486495/nomination-voc-archives-for-memory-of-the-world-register"
+    }
+   ],
+   "status": "terverifikasi"
+  },
+  {
+   "claim": "Tahun 1619 VOC menjadikan Batavia (kini Jakarta) sebagai markas di Asia; dari sana VOC menguasai perdagangan rempah dengan monopoli dan kekuasaan nyaris seperti negara: boleh membuat perjanjian, membangun benteng, dan memelihara tentara.",
+   "figures": [
+    {
+     "text": "1619",
+     "value": 1619
+    }
+   ],
+   "id": "f-batavia",
+   "kind": "fakta",
+   "limits": "Narasi menyederhanakan 'monopoli' menjadi 'cuma VOC yang boleh dagang' dan tidak menyebut detail kekuasaan kenegaraan (perjanjian, benteng, tentara) — hanya 'menguasai rempah'.",
+   "sources": [
+    {
+     "accessed": "2026-11-15",
+     "origin": "Britannica",
+     "primary": false,
+     "publisher": "Britannica",
+     "quote": "In 1619 the company renamed Jacatra Batavia (now Jakarta) and used it as a base to conquer Java and the outer islands.",
+     "title": "Dutch East India Company | Facts, History, & Significance",
+     "url": "https://britannica.com/topic/Dutch-East-India-Company"
+    },
+    {
+     "accessed": "2026-11-15",
+     "origin": "Market Histories",
+     "primary": false,
+     "publisher": "Market Histories",
+     "quote": "From its Asian headquarters at Batavia (modern Jakarta), established in 1619, the VOC administered a commercial empire that generated returns few modern investors could imagine.",
+     "title": "The Dutch East India Company: The World's First Megacorporation (1602-1799)",
+     "url": "https://www.markethistories.com/en/the-dutch-east-india-company-the-worlds-first-megacorporation-1602-1799"
+    }
+   ],
+   "status": "terverifikasi"
+  },
+  {
+   "claim": "VOC membagikan keuntungan rata-rata sekitar 18 persen setiap tahun selama hampir 200 tahun.",
+   "figures": [
+    {
+     "text": "18",
+     "value": 18
+    }
+   ],
+   "id": "f-dividen",
+   "kind": "fakta",
+   "limits": "Narasi memakai 'keuntungan yang dibagikan' sebagai pengganti kata 'dividen'; frasa 'selama hampir 200 tahun' tidak diucapkan di narasi (hanya 'setiap tahun').",
+   "sources": [
+    {
+     "accessed": "2026-11-15",
+     "origin": "Wikipedia",
+     "primary": false,
+     "publisher": "Wikipedia",
+     "quote": "It remained an important trading concern and paid annual dividends that averaged about 18% of the capital for almost 200 years.",
+     "title": "Dutch East India Company",
+     "url": "https://en.wikipedia.org/wiki/Dutch_East_India_Company"
+    },
+    {
+     "accessed": "2026-11-15",
+     "origin": "Market Histories",
+     "primary": false,
+     "publisher": "Market Histories",
+     "quote": "Dividends — paid primarily in spices rather than cash in the early decades — averaged approximately 18 percent per year over the company's first two centuries of operation.",
+     "title": "The Dutch East India Company: The World's First Megacorporation (1602-1799)",
+     "url": "https://www.markethistories.com/en/the-dutch-east-india-company-the-worlds-first-megacorporation-1602-1799"
+    }
+   ],
+   "status": "terverifikasi"
+  },
+  {
+   "claim": "VOC merosot karena penyelundupan, korupsi, dan biaya administrasi yang membengkak; Perang Inggris-Belanda keempat tahun 1780-1784 menghancurkan kapal dan pos dagangnya, dan utang perusahaan membengkak sampai tak terbayar.",
+   "figures": [],
+   "id": "f-jatuh",
+   "kind": "fakta",
+   "limits": "Narasi tidak menyebut tahun perang (1780-1784) — hanya 'perang menghabiskan uang'. Angka 1780-1784 hanya ada di klaim dan kutipan, bukan di narasi.",
+   "sources": [
+    {
+     "accessed": "2026-11-15",
+     "origin": "Wikipedia",
+     "primary": false,
+     "publisher": "Wikipedia",
+     "quote": "Weighed down by smuggling, corruption and growing administrative costs in the late 18th century, the company went bankrupt and was formally dissolved in 1799.",
+     "title": "Dutch East India Company",
+     "url": "https://en.wikipedia.org/wiki/Dutch_East_India_Company"
+    },
+    {
+     "accessed": "2026-11-15",
+     "origin": "Market Histories",
+     "primary": false,
+     "publisher": "Market Histories",
+     "quote": "The Fourth Anglo-Dutch War of 1780-1784 proved devastating — the English navy captured several VOC ships and trading posts, and the company never recovered.",
+     "title": "The Dutch East India Company: The World's First Megacorporation (1602-1799)",
+     "url": "https://www.markethistories.com/en/the-dutch-east-india-company-the-worlds-first-megacorporation-1602-1799"
+    }
+   ],
+   "status": "terverifikasi"
+  }
+ ],
+ "numbersIgnored": [],
+ "projectId": "voc-bangkrut",
+ "scenes": [
+  {
+   "caption": "Perusahaan dagang terkaya di dunia resmi bubar tahun 1799.",
+   "durationSeconds": 7,
+   "factIds": [
+    "f-bubar"
+   ],
+   "headline": "Terkaya, lalu bubar",
+   "id": "akhir",
+   "visual": "Frame 0 (aksi fisik, tanpa pengantar): menara koin emas (aset 2, objek pahlawan) menjulang di tengah frame dunia kertas (aset 10) — citra 'terlalu besar untuk jatuh'; lalu pengumuman pembubaran (aset 1) JATUH dari atas menutupi menara (fall + squash) dan stempel merah 'BUBAR 1799' dicap di atasnya (Stamp) saat kata 'resmi bubar' — paradoksnya terlihat detik 1–2. Koin di kaki menara RETAK dan berubah emas → merah bata (Swap) saat 'utangnya diambil alih'. Pita garis waktu (aset 9) di bawah menunjukkan '1799' yang dilingkari merah. Kamera: SATU TARIKAN dimulai di stasiun 1799 (x=0 dunia) — diam di frame 0, mulai bergeser saat 'Tapi tunggu' di scene berikut.",
+   "voiceoverText": "Akhir tahun 1799. Perusahaan dagang terkaya di dunia resmi bubar. Utangnya diambil alih negara Belanda."
+  },
+  {
+   "caption": "Di masa jayanya, kapalnya berlayar ribuan kali ke Asia.",
+   "durationSeconds": 9.5,
+   "factIds": [
+    "f-kapal"
+   ],
+   "headline": "Raja lautan",
+   "id": "sebelumnya",
+   "visual": "Kamera BERGESER (one-take, Reveal) ke stasiun laut (x≈1080 dunia): laut kertas biru pudar (aset 4) dengan tiga kapal kertas (aset 3) berlayar beriringan — kapal besar di depan dengan rigging, sarang gagak, dan lubang meriam, dua kapal kecil di belakang — mengikuti kata 'raja lautan'; peta kertas sesuai realita (garis pantai dari data Natural Earth, file briefs/voc-bangkrut-map.svg) — jejak pelayaran (garis putus-putus merah bata) tergambar dari Belanda, mengelilingi Tanjung Harapan di ujung Afrika, lalu ke Asia. Koin pahlawan (aset 2) kini jadi MATAHARI emas di atas laut — peran: kekayaan yang menyinari — dan di bawahnya tumpukan koin kecil tumbuh (CountUp) saat angka kapal diucapkan. Label kertas '4.785 kapal' (Tag, angka tercakup f-kapal) ditempel di bawah kapal saat 'empat ribu tujuh ratus delapan puluh lima kali'. Pita garis waktu (aset 9) bergeser ke '1602–1796'.",
+   "voiceoverText": "Tapi tunggu. Mundur ke masa jayanya. Perusahaan ini masih raja lautan. Kapalnya berlayar ke Asia empat ribu tujuh ratus delapan puluh lima kali."
+  },
+  {
+   "caption": "Dari Batavia, VOC menguasai rempah dan membagi keuntungan.",
+   "durationSeconds": 14,
+   "factIds": [
+    "f-batavia",
+    "f-dividen"
+   ],
+   "headline": "Batavia 1619",
+   "id": "lebih-awal",
+   "visual": "Kamera BERGESER (one-take, Reveal) ke stasiun Batavia (x≈2160 dunia): benteng Batavia (aset 5) berdiri besar di tengah, bendera VOC berkibar (Idle); karung rempah goni (aset 6) menumpuk di kaki benteng — satu terikat tali, satu terbuka, pala dan cengkeh (sage) terlihat jelas. Koin pahlawan (aset 2) kini DICAP di atas karung rempah — peran: stempel harga/monopoli — saat 'cuma VOC yang boleh dagang'. 'delapan belas persen': koin MEMBELAH jadi potongan-potongan kecil yang dibagikan ke tangan-tangan kertas (animasi bagi, Stagger) + label '18% tiap tahun' (Tag, angka tercakup f-dividen). Pita garis waktu (aset 9) bergeser ke '1619'.",
+   "voiceoverText": "Mundur lagi. Tahun 1619, Batavia jadi markasnya. Dari sini, V-O-C menguasai rempah. Cuma V-O-C yang boleh dagang. Keuntungan yang dibagikan delapan belas persen setiap tahun."
+  },
+  {
+   "caption": "Semuanya bermula dari selembar saham pada tahun 1602.",
+   "durationSeconds": 14,
+   "factIds": [
+    "f-lahir"
+   ],
+   "headline": "Saham pertama",
+   "id": "awal",
+   "visual": "Kamera BERGESER (one-take, Reveal) ke stasiun 1602 (x≈3240 dunia): sertifikat saham pertama (aset 7) terbuka besar (PaperFold) di tengah — kertas krem dengan monogram VOC besar dan garis tanda tangan samar; KOIN pahlawan (aset 2) kini jadi METERAI EMAS di atas sertifikat — peran: segel kelahiran — menempel (pop + Burst kecil) saat 'lahir dari selembar kertas'. Tangan-tangan kertas kecil (Cutout) bermunculan di tepi sertifikat saat 'bisa dibeli siapa saja' (Stagger) — siapa saja boleh punya bagian. Pita garis waktu (aset 9) bergeser ke '1602' — ujung pita. Kamera melambat di stasiun ini, lalu di jawaban bergeser sekali lagi ke zona utang.",
+   "voiceoverText": "Mundur ke awal. Tahun 1602, perusahaan ini lahir dari selembar kertas. Saham pertama yang bisa dibeli siapa saja. Selembar kertas yang artinya kamu punya bagian dari perusahaan."
+  },
+  {
+   "caption": "Perang, korupsi, dan utang menumpuk sampai perusahaan itu tumbang.",
+   "durationSeconds": 11,
+   "factIds": [
+    "f-jatuh"
+   ],
+   "headline": "Apa yang salah?",
+   "id": "jawaban",
+   "visual": "Kamera BERGESER sekali lagi (one-take, Connect — narasi menghubungkan saham ke utang yang membunuhnya) ke zona utang (x≈4320 dunia): dinding buku utang merah (aset 8) memenuhi frame — tiga penyebab muncul berurutan mengikuti kata: pedang kertas + kapal terbakar mini (perang) → lubang menggerogoti di tepi dinding (korupsi, Hatch merah) → lembar-lembar utang merah menumpuk dari atas (utang). Koin pahlawan (aset 2) TERBELAH DUA di tengah zona — dua keping terpisah dengan celah terlihat, tepi patahan bergerigi, setengah emas dan setengah merah bata (monogram V…C) — saat 'ternyata bisa bangkrut juga'. AKHIR LOOP (tanpa CTA, perintah pemilik 2026-11-15): CROSS-DISSOLVE tersinkron + linear di ~0,7 dtk terakhir — isi jawaban dan shot loop SEMUA pada timing yang sama — menara koin emas + pengumuman 'BUBAR 1799' (aset 1 + 2), framing/background/posisi SAMA PERSIS dengan frame 0 hook (tanpa buku utang, tanpa sertifikat, tanpa elemen tambahan) + headline hook 'Bubar tahun 1799' — frame terakhir menyambung mulus ke frame pertama saat diputar ulang. Watermark konstan 0,85 (tanpa fade-out gerbang CTA).",
+   "voiceoverText": "Lalu apa yang salah? Perang menghabiskan uang. Korupsi menggerogoti dari dalam. Utang menumpuk sampai tak terbayar. Perusahaan sebesar itu, ternyata bisa bangkrut juga."
+  }
+ ],
+ "series": "Sejarah",
+ "status": "draft",
+ "title": "Kenapa Perusahaan Terkaya di Dunia Bisa Bangkrut?",
+ "visualStyle": {
+  "fonts": {
+   "display": "playfair-display",
+   "reason": "Playfair Display adalah serif arsip untuk angka tahun besar dan judul dokumen; Plus Jakarta Sans untuk teks kecil agar tetap terbaca — sekaligus font brand untuk caption.",
+   "text": "plus-jakarta-sans"
+  },
+  "name": "Potongan kertas arsip VOC",
+  "palette": [
+   "#F3EBDD",
+   "#243139",
+   "#C56B50",
+   "#E8B65C",
+   "#8A9B7C",
+   "#7C9DA5",
+   "#FFF8EB"
+  ],
+  "reason": "Fakta ini adalah jejak kertas: perusahaan lahir dari selembar saham dan mati oleh kertas utang. Kit collage/ (Cutout tepi sobek, Doc, Stamp, Ribbon, PaperFold) membangun satu dunia arsip kertas yang dilewati kamera dalam satu tarikan — dari pengumuman bubar 1799 mundur ke saham pertama 1602. Tone light menjaga 200 tahun naik-turun ini tetap terbaca. Satu warna = satu konsep dipertahankan sampai akhir: emas = kekayaan, merah bata = utang/bahaya, biru pudar = laut, sage = rempah.",
+  "tone": "light"
+ },
+ "revisions": [
+  {
+   "tanggal": "2026-11-15",
+   "alasan": "Review visual independen R1: 10/18 — tidak lolos (Fokus/Gerak masuk/Hidup saat hold hanya 1)",
+   "perubahan": "Shot loop disamakan dengan frame 0 persis (menara koin saja + caption + pita; tanpa pengumuman/headline). Pengumuman mendarat di kanan menara supaya menara terlihat; headline hook jadi \"Terkaya, lalu bubar\". Label peta diperbaiki (plakat \"Belanda\", halo semua label, AFRIKA digeser). Tag 4.785 kapal diperbesar + pindah ke bawah peta; tag 18% pindah ke ruang sendiri di bawah headline. Buku tengah S5 diperbesar jadi jangkar; pedang + kapal terbakar diperbesar; lubang korupsi digambar ulang sebagai robekan + label \"korupsi\"; koin terbelah pindah ke atas barisan buku. Entrance kapal (berlayar masuk) + matahari (terbit) + lipatan sertifikat (membuka setelah kamera tiba) dibuat terlihat; beat tengah ditambah (karung melompat saat \"rempah\", tangan masuk sejak \"Saham\"); idle hold diperkuat (goyang pengumuman, denyut sertifikat/meterai, ayunan pedang). Pita: bintang menandai tahun aktif (range = tengah rentang, tanpa lingkaran dua tahun)."
+  },
+  {
+   "tanggal": "2026-11-15",
+   "alasan": "Review visual independen R2: 13/18 — tidak lolos (Komposisi 1, Ritme 1, Fisika 1; tiga aspek wajib sudah 2)",
+   "perubahan": "Menara naik 950->780 (celah headline->visual S1 ~415px jadi ~230px, patokan S4) + denyut diperkuat 2%; headline S2 \"Raja lautan\" kini tampil di atas matahari-koin; armada diperbesar s=1,45; tumpukan koin muncul bersama rute (\"berlayar\"). Benteng naik 960->820 + karung 1340->1230 (celah S3 ~370px jadi ~220px); tangan pindah ke samping karung (160/920, y1180); koin stempel monopoli diperbesar r90, koin terbang r34; lipatan sertifikat diperlambat dur 36 frame, buka f70 (kertas terlipat mendarat dulu ~0,8 dtk supaya pembukaannya terbaca sebagai beat tersendiri); kapal terbakar S5 geser ke x860. Keping merah kaki menara bergeser keluar dari balik pengumuman saat memerah + retak merambat ke koin tegak \"V\". Squash pendaratan jadi pulse Gaussian ~6 frame + pantulan 0,3; goyangan settle pengumuman diperkuat (5,5 derajat) + ayunan idle kontinu dua frekuensi; stempel BUBAR pop diperbesar (dari skala 0,3); lembar utang bounce 0,35 + goyangan 12 derajat. Garis abu-abu pengumuman/sertifikat jadi coretan tulisan tangan; ContactShadow tipis di bawah benteng + barisan buku."
+  }
+ ]
+}

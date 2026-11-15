@@ -1,0 +1,66 @@
+{
+  "projectId": "voc-bangkrut",
+  "sourceBrief": "voc-bangkrut.json",
+  "provider": "aria-tts",
+  "model": "avocado_v2:MAI_01",
+  "voice": "avocado_v2:MAI_01",
+  "loudnessTarget": -14,
+  "generatedAt": "2026-11-15T11:05:55.687Z",
+  "scenes": [
+    {
+      "id": "akhir",
+      "file": "voc-bangkrut/vo/akhir.mp3",
+      "text": "Akhir tahun 1799. Perusahaan dagang terkaya di dunia resmi bubar. Utangnya diambil alih negara Belanda.",
+      "speed": 1,
+      "hash": "97beb3f389c1",
+      "voice": "avocado_v2:MAI_01",
+      "audioSeconds": 9.888,
+      "lufs": -14.2,
+      "truePeak": -2
+    },
+    {
+      "id": "sebelumnya",
+      "file": "voc-bangkrut/vo/sebelumnya.mp3",
+      "text": "Tapi tunggu. Mundur ke masa jayanya. Perusahaan ini masih raja lautan. Kapalnya berlayar ke Asia empat ribu tujuh ratus delapan puluh lima kali.",
+      "speed": 1,
+      "hash": "24701c440d17",
+      "voice": "avocado_v2:MAI_01",
+      "audioSeconds": 8.808,
+      "lufs": -14.1,
+      "truePeak": -1.9
+    },
+    {
+      "id": "lebih-awal",
+      "file": "voc-bangkrut/vo/lebih-awal.mp3",
+      "text": "Mundur lagi. Tahun 1619, Batavia jadi markasnya. Dari sini, V-O-C menguasai rempah. Cuma V-O-C yang boleh dagang. Keuntungan yang dibagikan delapan belas persen setiap tahun.",
+      "speed": 1,
+      "hash": "303320a0fced",
+      "voice": "avocado_v2:MAI_01",
+      "audioSeconds": 13.488,
+      "lufs": -14.1,
+      "truePeak": -1.8
+    },
+    {
+      "id": "awal",
+      "file": "voc-bangkrut/vo/awal.mp3",
+      "text": "Mundur ke awal. Tahun 1602, perusahaan ini lahir dari selembar kertas. Saham pertama yang bisa dibeli siapa saja. Selembar kertas yang artinya kamu punya bagian dari perusahaan.",
+      "speed": 1,
+      "hash": "0808b21543b8",
+      "voice": "avocado_v2:MAI_01",
+      "audioSeconds": 13.08,
+      "lufs": -14.2,
+      "truePeak": -2
+    },
+    {
+      "id": "jawaban",
+      "file": "voc-bangkrut/vo/jawaban.mp3",
+      "text": "Lalu apa yang salah? Perang menghabiskan uang. Korupsi menggerogoti dari dalam. Utang menumpuk sampai tak terbayar. Perusahaan sebesar itu, ternyata bisa bangkrut juga.",
+      "speed": 1,
+      "hash": "08c0a0e6e0df",
+      "voice": "avocado_v2:MAI_01",
+      "audioSeconds": 11.328,
+      "lufs": -14.2,
+      "truePeak": -1.8
+    }
+  ]
+}
