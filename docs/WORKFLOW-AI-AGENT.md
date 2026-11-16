@@ -165,6 +165,7 @@ npm run vo -- --brief=briefs/<id>.json             # semua scene (VO CTA bersama
 ```
 
 - **Jalankan VO dan align sebagai dua perintah terpisah.** Menggabungkannya dalam satu perintah pernah membuat proses mati kehabisan memori (exit 137).
+- **Periksa naskah terhadap `docs/PELAFALAN.md` SEBELUM generate VO.** Kata yang sudah tercatat di sana ditulis dengan ejaannya; kata baru yang berisiko (singkatan, istilah asing, nama) diuji dulu dengan satu klip pendek + align, dan bila salah, tulis ulang katanya lalu tambahkan ke daftar itu. (Keputusan pemilik 2026-11-16: hentikan pola regen karena salah ucap yang berulang.)
 - Baca keluaran: loudness tiap scene -14 ±1 LUFS, true peak ≤ -1 dBTP.
 - Hitung durasi cerita: Σ max(`durationSeconds`, audio + 0,5). Bila di luar 55–65 dtk, ubah naskah (tahap 3), bukan kecepatan.
 
@@ -469,7 +470,11 @@ Gerbang: 0 error. Waktu jalan ±20 dtk per episode.
 
 Ikuti `docs/REVIEW-VISUAL.md`: reviewer dengan konteks segar menilai filmstrip, still, dan laporan dengan rubrik 9 aspek (0–2), tanpa membaca kode scene. Di Claude Code pakai subagent `visual-reviewer`. Perbaiki temuan "wajib" minimal satu putaran, lalu jalankan ulang `motion:check` dan `layout:check`.
 
+**Nilai sendiri dulu sebelum review independen.** Sebelum menyerahkan ke reviewer, builder menilai karyanya sendiri dengan rubrik 9 aspek yang sama (dari filmstrip + still) dan memperbaiki temuan yang jelas — ini BUKAN pengganti review independen, hanya menaikkan titik awalnya supaya putaran pertama tidak dipenuhi temuan yang sebenarnya sudah terlihat. (Keputusan pemilik 2026-11-16.)
+
 **Review ulang hanya scene yang berubah.** Putaran pertama menilai SEMUA scene. Pada putaran revisi, reviewer me-render ulang dan menilai HANYA scene yang diubah sejak putaran sebelumnya — builder wajib menulis daftar scene yang berubah di laporan revisi; skor scene yang tidak berubah dibawa dari putaran sebelumnya, dan skor akhir adalah gabungan keduanya. Pengecualian: bila perubahan menyentuh komponen bersama (dunia/kamera, pita garis waktu, watermark, loop, atau kit yang dipakai banyak scene), reviewer menilai semua scene yang tersentuh komponen itu; bila skor gabungan persis 14/18 atau ada aspek yang turun, reviewer boleh memperluas ke review penuh. (Keputusan pemilik 2026-11-16: optimasi waktu build; putaran pertama tetap penuh dan target ≥ 14/18 tanpa nilai 0 tidak berubah.)
+
+**Review berakhir di putaran 2 bila putaran 2 sudah lolos** (≥ 14/18, tanpa nilai 0, tanpa temuan wajib yang tersisa). Bila putaran 2 masih < 14/18 atau ada temuan wajib, lanjutkan ke putaran 3 dan seterusnya seperti biasa. Syarat minimal satu putaran revisi tetap terpenuhi (putaran 1 → perbaikan → putaran 2). (Keputusan pemilik 2026-11-16.)
 
 Gerbang: skor ≥ 14/18, tanpa nilai 0; Fokus, Gerak masuk, dan Hidup saat hold bernilai 2.
 
@@ -518,6 +523,10 @@ Belum dilakukan: render MP4 (menunggu permintaan), commit, tonton utuh dengan su
 Preview: npm start → <CompId>
 Di luar episode ini (informasi, bukan tugas): … (kosongkan bila tidak ada)
 ```
+
+**Catat jam tiap tahap di run log.** Tulis jam mulai/selesai VO, align, tiap scene, tiap putaran review + revisi, QC akhir, dan render — supaya durasi tiap proses terukur dan optimasi berikutnya berdasar angka, bukan perkiraan. (Keputusan pemilik 2026-11-16.)
+
+**Caption sosial disimpan ke file.** Caption YouTube Short + Facebook Reels ditulis ke `out/<id>/captions.md` SEBELUM pengiriman — pengiriman hanya dilakukan bila file itu ada. (Keputusan pemilik 2026-11-16.)
 
 Urutkan laporan dari yang penting bagi episode ini. Hal yang perlu tindakan pengguna hanya yang menyangkut episode ini (mis. dengarkan scene tertentu, pilihan render).
 

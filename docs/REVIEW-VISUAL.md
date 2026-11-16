@@ -9,11 +9,11 @@ Agent yang membuat visual cenderung puas dengan karyanya sendiri. Karena itu set
    npm run motion:check -- <id>     # filmstrip out/<id>/motion/<scene>.png + report.json
    npm run layout:check -- <id>     # out/<id>/layout/report.json
    ```
-   ditambah lembar kontak still §9.2 dan storyboard (tabel §7.1) dari brief/rencana.
+   ditambah lembar kontak still §9.2 dan storyboard (tabel §7.1) dari brief/rencana. Bahan yang sama dipakai builder untuk menilai sendiri dulu (rubrik yang sama) dan memperbaiki temuan yang jelas sebelum diserahkan ke reviewer — review independen tetap wajib.
 2. Jalankan reviewer:
    - **Claude Code:** subagent `visual-reviewer` (`.claude/agents/visual-reviewer.md`) dengan argumen id episode.
    - **Agent lain:** buka sesi/agent baru tanpa riwayat produksi, beri dokumen ini + path bahan di atas.
-3. Perbaiki semua temuan "wajib" dalam satu putaran, jalankan ulang `motion:check`/`layout:check` **hanya untuk scene yang diubah** (pakai `--scene=<id>`; bila perubahan menyentuh komponen bersama, cek semua scene yang tersentuh), lalu minta review ulang **hanya scene yang berubah** — skor scene yang tidak berubah dibawa dari putaran sebelumnya. Review penuh semua scene hanya dilakukan pada putaran pertama, atau bila skor gabungan persis 14/18, ada aspek yang turun, atau reviewer meminta. (Keputusan pemilik 2026-11-16: optimasi waktu build; putaran pertama tetap menilai semua scene, dan target ≥ 14/18 tanpa nilai 0 tidak berubah.)
+3. Perbaiki semua temuan "wajib" dalam satu putaran, jalankan ulang `motion:check`/`layout:check` **hanya untuk scene yang diubah** (pakai `--scene=<id>`; bila perubahan menyentuh komponen bersama, cek semua scene yang tersentuh), lalu minta review ulang **hanya scene yang berubah** — skor scene yang tidak berubah dibawa dari putaran sebelumnya. Review penuh semua scene hanya dilakukan pada putaran pertama, atau bila skor gabungan persis 14/18, ada aspek yang turun, atau reviewer meminta. Review berakhir di putaran 2 bila putaran 2 sudah ≥ 14/18 tanpa nilai 0 dan tanpa temuan wajib yang tersisa; bila belum lolos, lanjutkan ke putaran 3 dan seterusnya. (Keputusan pemilik 2026-11-16: optimasi waktu build; putaran pertama tetap menilai semua scene, dan target ≥ 14/18 tanpa nilai 0 tidak berubah.)
 4. Tulis ringkasan review di laporan serah terima (baris "Review").
 
 ## Rubrik (0–2 per aspek, total 18)
