@@ -469,6 +469,8 @@ Gerbang: 0 error. Waktu jalan ±20 dtk per episode.
 
 Ikuti `docs/REVIEW-VISUAL.md`: reviewer dengan konteks segar menilai filmstrip, still, dan laporan dengan rubrik 9 aspek (0–2), tanpa membaca kode scene. Di Claude Code pakai subagent `visual-reviewer`. Perbaiki temuan "wajib" minimal satu putaran, lalu jalankan ulang `motion:check` dan `layout:check`.
 
+**Review ulang hanya scene yang berubah.** Putaran pertama menilai SEMUA scene. Pada putaran revisi, reviewer me-render ulang dan menilai HANYA scene yang diubah sejak putaran sebelumnya — builder wajib menulis daftar scene yang berubah di laporan revisi; skor scene yang tidak berubah dibawa dari putaran sebelumnya, dan skor akhir adalah gabungan keduanya. Pengecualian: bila perubahan menyentuh komponen bersama (dunia/kamera, pita garis waktu, watermark, loop, atau kit yang dipakai banyak scene), reviewer menilai semua scene yang tersentuh komponen itu; bila skor gabungan persis 14/18 atau ada aspek yang turun, reviewer boleh memperluas ke review penuh. (Keputusan pemilik 2026-11-16: optimasi waktu build; putaran pertama tetap penuh dan target ≥ 14/18 tanpa nilai 0 tidak berubah.)
+
 Gerbang: skor ≥ 14/18, tanpa nilai 0; Fokus, Gerak masuk, dan Hidup saat hold bernilai 2.
 
 ## 10. Gerbang kualitas
@@ -477,6 +479,8 @@ Gerbang: skor ≥ 14/18, tanpa nilai 0; Fokus, Gerak masuk, dan Hidup saat hold 
 npm run quality                               # fakta, episode, lint, tsc, bundle (semua episode)
 npm run check:publish:episode -- <id>         # sebelum tayang, HANYA episode ini: validate:facts:online + check:episodes --publish
 ```
+
+**Pemeriksaan akhir berjalan paralel.** `layout:check` (§9.5), `motion:check` (§9.4), `npm run quality`, dan `check:publish:episode` saling independen — jalankan keempatnya secara bersamaan (misalnya empat proses latar lalu `wait`), bukan satu per satu. Keempatnya wajib 0 error/exit 0. Standar pemeriksaannya tidak berubah, hanya urutannya. (Keputusan pemilik 2026-11-16: optimasi waktu build.)
 
 **Gerbang publikasi berlaku per episode.** `npm run check:publish` (tanpa `:episode`) memeriksa semua brief sekaligus, jadi bisa gagal karena episode lain (mis. halaman sumber episode lama berubah). Itu bukan penghambat episode yang sedang dikerjakan.
 

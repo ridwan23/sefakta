@@ -13,7 +13,7 @@ Agent yang membuat visual cenderung puas dengan karyanya sendiri. Karena itu set
 2. Jalankan reviewer:
    - **Claude Code:** subagent `visual-reviewer` (`.claude/agents/visual-reviewer.md`) dengan argumen id episode.
    - **Agent lain:** buka sesi/agent baru tanpa riwayat produksi, beri dokumen ini + path bahan di atas.
-3. Perbaiki semua temuan "wajib" dalam satu putaran, jalankan ulang `motion:check`/`layout:check`, lalu minta review kedua bila skor masih < 14/18.
+3. Perbaiki semua temuan "wajib" dalam satu putaran, jalankan ulang `motion:check`/`layout:check` **hanya untuk scene yang diubah** (pakai `--scene=<id>`; bila perubahan menyentuh komponen bersama, cek semua scene yang tersentuh), lalu minta review ulang **hanya scene yang berubah** — skor scene yang tidak berubah dibawa dari putaran sebelumnya. Review penuh semua scene hanya dilakukan pada putaran pertama, atau bila skor gabungan persis 14/18, ada aspek yang turun, atau reviewer meminta. (Keputusan pemilik 2026-11-16: optimasi waktu build; putaran pertama tetap menilai semua scene, dan target ≥ 14/18 tanpa nilai 0 tidak berubah.)
 4. Tulis ringkasan review di laporan serah terima (baris "Review").
 
 ## Rubrik (0–2 per aspek, total 18)
