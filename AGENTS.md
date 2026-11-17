@@ -21,6 +21,8 @@ Ikuti `docs/WORKFLOW-AI-AGENT.md` (urutan kerja langkah demi langkah, gerbang ti
 7. Jalankan `npm run quality` sebelum menyerahkan preview; sebelum tayang `npm run check:publish:episode -- <id>` (hanya episode yang sedang dikerjakan). Masalah di episode lain **bukan** penghambat episode ini: jangan menjadikannya tugas atau syarat di laporan; cukup satu baris informasi di bagian "Di luar episode ini" (lihat `docs/WORKFLOW-AI-AGENT.md` §10–11).
 8. Render MP4 hanya ketika pengguna memintanya secara eksplisit.
 
+**LARANGAN REFERENSI EPISODE SEBELUMNYA (keputusan Ridwan 2026-11-17):** episode baru TIDAK BOLEH mengambil referensi dari episode sebelumnya — untuk alasan apa pun. Jangan membaca, meniru, atau menjadikan preseden: brief, `scenes.tsx`, `parts.tsx`, asset sheet, naskah visual, render, atau run log episode sebelumnya — baik untuk gaya visual, struktur cerita, teknik, kamera, QC, tempo VO, maupun peringatan validator. Setiap episode dibangun baru dari fakta yang terverifikasi + kartu yang diundi + dokumen repo ini. Keputusan dinilai dari episode ini sendiri; jangan membenarkan kekurangan dengan "episode lalu juga begitu". Pengecualian SATU-SATUNYA: cek anti-ulang (hanya memeriksa apakah FAKTA/topik sudah pernah dipakai, via grep kata kunci di `briefs/*.json` dan `used-facts.md`). Aturan lengkap: `docs/PANDUAN-KREATIF.md` §8; nada harus berganti tiap episode (`scripts/lib/creative.ts`, `RECENT_TONE = 1`).
+
 ## Batas arsitektur
 
 - `src/topics/<topik>/`: kode satu topik video. `compositions.tsx` mendaftarkan komposisinya; `src/Root.tsx` hanya memanggil per topik.

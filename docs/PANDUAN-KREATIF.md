@@ -37,7 +37,7 @@ Satu kartu berisi enam sumbu ditambah dua batasan:
 | Pembuka | 7 cara membuka detik 0–5 | 2 episode terakhir |
 | Kamera | 6 bahasa kamera | 2 episode terakhir |
 | Caption | `subtitle` / `ringkasan` / `headline` | makin sering dipakai, makin kecil peluangnya |
-| Tone | light / dark sesuai gaya | — |
+| Tone | light / dark sesuai gaya | 1 episode terakhir (harus beda dari episode sebelumnya — keputusan Ridwan 2026-11-17) |
 | Batasan | 2 aturan pemicu ide, mis. "angka sebagai benda fisik" atau "match-cut bentuk" | — |
 
 Isi dek ada di `scripts/lib/creative.ts`. Gaya yang kitnya belum ada hanya keluar dengan `--wild`. Kitnya harus dibuat dulu di `src/shared/` dan diperagakan di katalog.
@@ -129,6 +129,7 @@ Undian membuat episode berbeda. Kebiasaan berikut membuat hasilnya tetap bagus:
 | `captionMode` dan `visualStyle.tone` mengikuti kartu | `validate:facts` | error |
 | `concept.idea/signature/onlyHere` terisi | `validate:facts` | peringatan (draft), error (publikasi) |
 | Gaya tidak sama dengan episode sebelumnya | `validate:facts` | error (sama dalam 3 terakhir: peringatan) |
+| Nada tidak sama dengan episode sebelumnya | `validate:facts` | error (hanya brief yang diundi ≥ 2026-11-17; episode lama tidak dihitung mundur) |
 | ≥ 4 dari 6 sumbu tidak sama dengan salah satu dari 3 episode terakhir | `validate:facts` | error |
 | id scene mengikuti struktur | `validate:facts` | peringatan |
 
@@ -143,3 +144,12 @@ Dek yang lebih besar berarti lebih banyak kombinasi yang tidak bisa ditebak. Uba
 - Pembuka, kamera, atau batasan baru → `OPENINGS`, `CAMERAS`, `CONSTRAINTS`.
 
 Hanya masukkan pilihan yang sudah terbukti bisa dibuat dengan kualitas produksi.
+
+## 8. Larangan referensi episode sebelumnya (keputusan Ridwan 2026-11-17)
+
+Episode baru TIDAK BOLEH mengambil referensi dari episode sebelumnya — untuk alasan apa pun.
+
+- **Jangan membaca, meniru, atau menjadikan preseden:** brief, `scenes.tsx`, `parts.tsx`, asset sheet, naskah visual, render, atau run log episode sebelumnya — baik untuk gaya visual, struktur cerita, teknik, kamera, QC, tempo VO, maupun peringatan validator.
+- **Setiap episode dibangun baru dari:** fakta yang terverifikasi + kartu yang diundi + dokumen repo ini (`AGENTS.md`, `WORKFLOW-AI-AGENT.md`, `TATA-GERAK.md`, `TATA-OBJEK.md`, `REVIEW-VISUAL.md`, `PANDUAN-KREATIF.md`, `PELAFALAN.md`, `REFERENSI-GAYA-VISUAL.md`). Dokumen repo adalah aturan; episode lama bukan.
+- **Keputusan dinilai dari episode ini sendiri.** Jangan membenarkan kekurangan dengan "episode lalu juga begitu" (preseden). Bila sebuah peringatan atau masalah muncul, putuskan dari rubrik dan dokumen — bukan dari bagaimana episode lalu menanganinya.
+- **Pengecualian SATU-SATUNYA — cek anti-ulang:** hanya memeriksa apakah FAKTA/topik sudah pernah dipakai, via grep kata kunci di `briefs/*.json` dan `used-facts.md`. Cek ini hanya membaca klaim faktanya (`facts[]`), bukan `visualStyle`, `creative`, atau `scenes` episode lama. Bila ada kecocokan topik, baca entri fakta itu saja sebelum memutuskan.

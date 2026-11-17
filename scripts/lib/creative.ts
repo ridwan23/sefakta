@@ -145,6 +145,7 @@ const weighted = <T>(r: () => number, xs: T[], w: (x: T) => number): T => {
 
 export const RECENT_FAMILY = 4; // gaya yang sama tidak keluar lagi dalam 4 episode terakhir
 export const RECENT_AXIS = 2; // struktur/pembuka/kamera tidak keluar lagi dalam 2 episode terakhir
+export const RECENT_TONE = 1; // nada harus beda dari episode sebelumnya (keputusan Ridwan 2026-11-17: nada gelap tidak boleh mengikuti nada gelap)
 
 /** Tiga kartu berbeda gaya dan struktur, cocok dengan pilar, menghindari riwayat terbaru. */
 export const draw = (seed: number, series: Series, hist: Fingerprint[], wild = false): Card[] => {
@@ -152,11 +153,13 @@ export const draw = (seed: number, series: Series, hist: Fingerprint[], wild = f
   const recent = (axis: Axis, n: number) => new Set(hist.slice(0, n).map((h) => h[axis]).filter(Boolean));
   const avoidFam = recent('family', RECENT_FAMILY);
   const avoid = { structure: recent('structure', RECENT_AXIS), opening: recent('opening', RECENT_AXIS), camera: recent('camera', RECENT_AXIS) };
+  const avoidTone = recent('tone', RECENT_TONE); // nada episode sebelumnya — ketiga kartu yang diundi harus beda nadanya
   const count = (axis: Axis, v: string, n = 4) => hist.slice(0, n).filter((h) => h[axis] === v).length;
   const fresh = <T>(xs: T[], bad: (x: T) => boolean) => (xs.some((x) => !bad(x)) ? xs.filter((x) => !bad(x)) : xs);
 
   let fams = FAMILIES.filter((f) => f.fits.includes(series) && (wild || f.ready));
   fams = fresh(fams, (f) => avoidFam.has(f.id));
+  fams = fresh(fams, (f) => !f.tones.some((t) => !avoidTone.has(t))); // gaya yang nadanya semua terlarang tidak bisa dipakai
   const structs = fresh(STRUCTURES.filter((s) => !s.fits || s.fits.includes(series)), (s) => avoid.structure.has(s.id));
   const cards: Card[] = [];
   const used = { family: new Set<string>(), structure: new Set<string>() };
@@ -171,9 +174,10 @@ export const draw = (seed: number, series: Series, hist: Fingerprint[], wild = f
       const c = pick(r, CONSTRAINTS);
       if (!cons.includes(c)) cons.push(c);
     }
+    const tones = f.tones.filter((t) => !avoidTone.has(t));
     cards.push({
       family: f.id,
-      tone: weighted(r, f.tones, (t) => 1 / (1 + count('tone', t, 3))),
+      tone: weighted(r, tones.length ? tones : f.tones, (t) => 1 / (1 + count('tone', t, 3))),
       structure: s.id,
       opening: pick(r, fresh(OPENINGS.map((o) => o[0]), (o) => avoid.opening.has(o))),
       camera: pick(r, cams),
@@ -225,6 +229,10 @@ export const checkRepetition = (me: Fingerprint, hist: Fingerprint[]): Issue[] =
   const before = hist.filter((h) => h.date < me.date).slice(0, 3);
   if (before[0] && before[0].family && before[0].family === me.family) out.push({ level: 'error', where: 'creative.chosen.family', msg: `gaya "${me.family}" sama dengan episode sebelumnya (${before[0].id})` });
   else if (before.some((h) => h.family === me.family)) out.push({ level: 'warn', where: 'creative.chosen.family', msg: `gaya "${me.family}" sudah dipakai dalam 3 episode terakhir` });
+  // Nada harus berganti tiap episode (keputusan Ridwan 2026-11-17). Hanya untuk brief yang
+  // diundi pada/setelah 2026-11-17 — episode lama (wabah vs inflasi, keduanya dark) tidak
+  // dihitung mundur, supaya validasi repo yang sudah berjalan tidak rusak.
+  if (me.date >= '2026-11-17' && before[0] && before[0].tone && before[0].tone === me.tone) out.push({ level: 'error', where: 'creative.chosen.tone', msg: `nada "${me.tone}" sama dengan episode sebelumnya (${before[0].id}); nada harus berganti tiap episode` });
   for (const h of before) {
     const same = AXES.filter((a) => h[a] && h[a] === me[a]);
     if (same.length >= 4) out.push({ level: 'error', where: 'creative', msg: `terlalu mirip ${h.id}: ${same.join(', ')} sama (maks. 3 dari 6 sumbu)` });
